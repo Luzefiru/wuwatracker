@@ -10,7 +10,7 @@ export default function Header() {
     <div>
       <Button
         variant="outline"
-        className="w-[10%]"
+        size="lg"
         onClick={() => router.push("/import")}
       >
         Import

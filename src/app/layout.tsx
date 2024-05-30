@@ -30,8 +30,8 @@ export default function RootLayout({
         >
           <div className="flex min-h-screen w-full flex-col bg-accent dark:bg-background">
             <Header />
-            <div className="h-[80%]">
-              <div className="flex h-full">
+            <div className="h-[80%] mb-3">
+              <div className="flex h-full flex-col desktop:flex-row">
                 <Sidebar />
                 <div className="w-full">{children}</div>
               </div>

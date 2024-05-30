@@ -1,21 +1,28 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
-import { ImportTutorial } from '@/components/convenes/import-tutorial';
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { ImportTutorial } from "@/components/convenes/import-tutorial";
 
 export default function Import() {
   const router = useRouter();
 
   const handleBack = () => {
-    router.push('/');
+    router.push("/");
   };
 
   return (
     <div className="flex flex-col h-full w-full p-5 gap-3">
-      <Button variant="outline" className="w-[10%] mb-3" onClick={handleBack}>
-        Back
-      </Button>
+      <div>
+        <Button
+          variant="outline"
+          size="lg"
+          className="mb-3"
+          onClick={handleBack}
+        >
+          Back
+        </Button>
+      </div>
       <h2 className="text-2xl font-medium leading-none">
         Import Convene History
       </h2>
