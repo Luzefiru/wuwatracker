@@ -1,16 +1,17 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
   const router = useRouter();
+
   return (
     <>
       <Button
         variant="outline"
         className="w-[10%]"
-        onClick={() => router.push("/import")}
+        onClick={() => router.push('/import')}
       >
         Import
       </Button>
