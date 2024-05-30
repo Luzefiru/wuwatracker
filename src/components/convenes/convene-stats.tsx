@@ -13,8 +13,8 @@ import { WeaponLifetimeStats } from "./weapon-lifetime-statistics";
 export function ConveneStats() {
   return (
     <div className="flex gap-2 w-full flex-col ">
-      <div className="flex w-full gap-4">
-        <Card className=" mt-5 bg-accent w-[50%]">
+      <div className="flex w-full gap-6">
+        <Card className=" mt-5 dark:bg-accent bg-background w-[50%]">
           <div className="flex">
             <div className="w-full">
               <CardHeader>
@@ -27,7 +27,7 @@ export function ConveneStats() {
             </div>
           </div>
         </Card>
-        <Card className=" mt-5 bg-accent w-[50%]">
+        <Card className=" mt-5 dark:bg-accent bg-background w-[50%]">
           <div className="flex">
             <div className="w-full">
               <CardHeader>
@@ -41,7 +41,7 @@ export function ConveneStats() {
           </div>
         </Card>
       </div>
-      <Card className="mt-5 bg-accent w-full">
+      <Card className="mt-5 dark:bg-accent bg-background w-full">
         <div className="w-full">
           <CardHeader>
             <CardTitle>Recent 5 Stars Received</CardTitle>

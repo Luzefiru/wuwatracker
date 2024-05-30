@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="sticky top-0 flex h-16 items-center gap-4 border-b px-4 md:px-6 bg-background z-40 opacity-[0.97]">
+    <header className="sticky top-0 flex h-16 items-center gap-4 border-b px-4 md:px-6 z-40 opacity-[0.97] bg-background">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           href="#"
@@ -18,7 +18,7 @@ export function Header() {
         >
           <div className="aspect-square relative w-14">
             <Image
-              className="object-cover"
+              className="object-cover invert dark:invert-0"
               src="/icons/convene-icon.png"
               layout="fill"
               alt="Wuwa Convene Tracker"

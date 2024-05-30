@@ -1,16 +1,16 @@
-import * as React from 'react';
-import Image from 'next/image';
+import * as React from "react";
+import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="border-t mt-16 pt-4">
+    <footer className="border-t mt-auto pt-4 bg-background">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center gap-2">
               <div className="aspect-square relative w-14">
                 <Image
-                  className="object-cover"
+                  className="object-cover invert dark:invert-0"
                   src="/icons/convene-icon.png"
                   layout="fill"
                   alt="Wuwa Convene Tracker"
@@ -78,10 +78,10 @@ export function Footer() {
         </div>
         <div className="sm:flex sm:items-center sm:justify-between mt-12">
           <span className="text-sm sm:text-center text-muted-foreground">
-            © 2024{' '}
+            © 2024{" "}
             <a href="https://flowbite.com/" className="hover:underline">
               Tenjin,
-            </a>{' '}
+            </a>{" "}
             All assets and data are sourced from Guangzhou Kuro Technology Co.,
             Ltd and its licensors.
           </span>
