@@ -12,9 +12,9 @@ import { WeaponLifetimeStats } from "./weapon-lifetime-statistics";
 
 export function ConveneStats() {
   return (
-    <div className="flex gap-3 w-full flex-col">
-      <div className="flex w-full ">
-        <Card className="mx-2 mt-5 bg-accent w-[50%]">
+    <div className="flex gap-2 w-full flex-col ">
+      <div className="flex w-full gap-4">
+        <Card className=" mt-5 bg-accent w-[50%]">
           <div className="flex">
             <div className="w-full">
               <CardHeader>
@@ -27,7 +27,7 @@ export function ConveneStats() {
             </div>
           </div>
         </Card>
-        <Card className="mx-2 mt-5 bg-accent w-[50%]">
+        <Card className=" mt-5 bg-accent w-[50%]">
           <div className="flex">
             <div className="w-full">
               <CardHeader>
@@ -41,20 +41,18 @@ export function ConveneStats() {
           </div>
         </Card>
       </div>
-      <Card className="mx-2 mt-5  bg-accent w-full">
-        <div className="flex">
-          <div className="w-full">
-            <CardHeader>
-              <CardTitle>Recent 5 Stars Received</CardTitle>
-            </CardHeader>
-            <CardContent className="flex mt-5 mb-3 gap-2 ">
-              <div className="bg-blue-300 w-12 h-12 rounded-full"></div>
-              <div className="bg-blue-300 w-12 h-12 rounded-full"></div>
-              <div className="bg-blue-300 w-12 h-12 rounded-full"></div>
-              <div className="bg-blue-300 w-12 h-12 rounded-full"></div>
-              <div className="bg-blue-300 w-12 h-12 rounded-full"></div>
-            </CardContent>
-          </div>
+      <Card className="mt-5 bg-accent w-full">
+        <div className="w-full">
+          <CardHeader>
+            <CardTitle>Recent 5 Stars Received</CardTitle>
+          </CardHeader>
+          <CardContent className="flex mt-5 mb-3 gap-2 ">
+            <div className="bg-background w-12 h-12 rounded-full"></div>
+            <div className="bg-background w-12 h-12 rounded-full"></div>
+            <div className="bg-background w-12 h-12 rounded-full"></div>
+            <div className="bg-background w-12 h-12 rounded-full"></div>
+            <div className="bg-background w-12 h-12 rounded-full"></div>
+          </CardContent>
         </div>
       </Card>
     </div>

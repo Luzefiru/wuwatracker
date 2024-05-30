@@ -10,7 +10,7 @@ import {
 export function ConveneCategories() {
   return (
     <>
-      <Card className="mx-5 mt-5">
+      <Card className="ml-5 mt-5">
         <div className="flex">
           <div className="w-[20%] rounded-xl my-3 ml-3 bg-blue-300"></div>
           <div className="w-full">
@@ -31,7 +31,7 @@ export function ConveneCategories() {
           </div>
         </div>
       </Card>
-      <Card className="mx-5">
+      <Card className="ml-5 ">
         <div className="flex">
           <div className="w-[20%] rounded-xl my-3 ml-3 bg-blue-300"></div>
           <div className="w-full">
@@ -52,7 +52,7 @@ export function ConveneCategories() {
           </div>
         </div>
       </Card>
-      <Card className="mx-5">
+      <Card className="ml-5 ">
         <div className="flex">
           <div className="w-[20%] rounded-xl my-3 ml-3 bg-blue-300"></div>
           <div className="w-full">
@@ -73,7 +73,7 @@ export function ConveneCategories() {
           </div>
         </div>
       </Card>
-      <Card className="mx-5">
+      <Card className="ml-5 ">
         <div className="flex">
           <div className="w-[20%] rounded-xl my-3 ml-3 bg-blue-300"></div>
           <div className="w-full">

@@ -1,12 +1,12 @@
-'use client';
-import { ModeToggle } from './mode-toggle';
-import * as React from 'react';
-import Link from 'next/link';
-import { Package2 } from 'lucide-react';
-import { Button } from './button';
-import { Sheet, SheetTrigger, SheetContent } from './sheet';
-import { Menu } from 'lucide-react';
-import Image from 'next/image';
+"use client";
+import { ModeToggle } from "./mode-toggle";
+import * as React from "react";
+import Link from "next/link";
+import { Package2 } from "lucide-react";
+import { Button } from "./button";
+import { Sheet, SheetTrigger, SheetContent } from "./sheet";
+import { Menu } from "lucide-react";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -40,6 +40,7 @@ export function Header() {
           Privacy Policy
         </Link>
       </nav>
+
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="shrink-0 md:hidden">
@@ -78,6 +79,7 @@ export function Header() {
           </nav>
         </SheetContent>
       </Sheet>
+      <ModeToggle />
     </header>
   );
 }
