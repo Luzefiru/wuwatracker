@@ -26,7 +26,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/types/GachaRecordQueryResult.ts"
+    "src/types/GachaRecordQuery.ts"
   ],
   "exclude": ["node_modules"]
 }
