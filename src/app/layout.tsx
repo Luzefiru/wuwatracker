@@ -28,7 +28,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="h-screen">
+          <div className="flex min-h-screen w-full flex-col">
             <Header />
             <div className="h-[80%]">
               <div className="flex h-full">
@@ -37,7 +37,7 @@ export default function RootLayout({
               </div>
             </div>
             <Footer />
-          </main>
+          </div>
         </ThemeProvider>
         <Toaster richColors />
       </body>
