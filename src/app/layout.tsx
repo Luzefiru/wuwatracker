@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Footer } from "@/components/ui/footer";
 import "./globals.css";
 import { Header } from "@/components/ui/header";
+import { Sidebar } from "@/components/ui/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +29,12 @@ export default function RootLayout({
         >
           <main className="h-screen">
             <Header />
-            <div className="h-[80%]">{children}</div>
+            <div className="h-[80%]">
+              <div className="flex h-full">
+                <Sidebar />
+                <div>{children}</div>
+              </div>
+            </div>
             <Footer />
           </main>
         </ThemeProvider>
