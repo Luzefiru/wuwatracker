@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -24,6 +25,9 @@ export default function Home() {
               height={24}
               priority
             />
+            <Button color="red" variant="">
+              Edit profile
+            </Button>
           </a>
         </div>
       </div>
