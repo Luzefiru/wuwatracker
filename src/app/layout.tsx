@@ -32,7 +32,7 @@ export default function RootLayout({
             <div className="h-[80%]">
               <div className="flex h-full">
                 <Sidebar />
-                <div>{children}</div>
+                <div className="w-full">{children}</div>
               </div>
             </div>
             <Footer />
