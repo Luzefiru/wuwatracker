@@ -1,10 +1,11 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
   const router = useRouter();
+
   return (
     <div className="self-end">
       <Button
