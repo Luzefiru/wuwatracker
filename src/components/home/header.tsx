@@ -6,14 +6,14 @@ import { useRouter } from "next/navigation";
 export default function Header() {
   const router = useRouter();
   return (
-    <>
+    <div className="self-end">
       <Button
         variant="outline"
-        className="w-[10%]"
+        size="lg"
         onClick={() => router.push("/import")}
       >
         Import
       </Button>
-    </>
+    </div>
   );
 }
