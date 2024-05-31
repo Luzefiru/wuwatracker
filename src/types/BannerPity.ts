@@ -9,7 +9,6 @@ export type BannerPity = z.infer<typeof BannerPitySchema>;
 export const BannerPityDisplayStatsSchema = BannerPitySchema.extend({
   fiveStarCurrent: z.number().gte(0),
   fourStarCurrent: z.number().gte(0),
-  totalPulls: z.number().gte(0),
 });
 export type BannerPityDisplayStats = z.infer<
   typeof BannerPityDisplayStatsSchema
