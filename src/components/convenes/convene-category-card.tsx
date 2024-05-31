@@ -23,7 +23,7 @@ export default function ConveneCategoryCard({ title, imgSrc, stats }: Props) {
         </div>
         <div className="w-full">
           <CardHeader>
-            <CardTitle className="text-md desktop:text-xl">{title}</CardTitle>
+            <CardTitle className="text-md sm:text-lg pb-2">{title}</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col text-sm desktop:text-md">
             <div className="flex justify-between text-yellow-500 font-semibold">
