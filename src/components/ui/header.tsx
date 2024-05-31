@@ -51,7 +51,7 @@ export function Header() {
         <SheetContent side="left">
           <nav className="grid gap-6 text-lg font-medium">
             <Link
-              href="#"
+              href="/"
               className="flex items-center gap-2 text-lg font-semibold"
             >
               <div className="aspect-square relative w-14">
@@ -59,19 +59,25 @@ export function Header() {
                   className="object-cover"
                   src="/icons/convene-icon.png"
                   layout="fill"
-                  alt="Wuwa Convene Tracker"
+                  alt="Wuwa Tracker"
                 />
               </div>
-              <span className="sr-only">Acme Inc</span>
+              <span className="sr-only">Wuwa Tracker</span>
             </Link>
             <Link
-              href="#"
+              href="/"
               className="text-muted-foreground hover:text-foreground"
             >
               Tracker
             </Link>
             <Link
-              href="#"
+              href="/import"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              Import
+            </Link>
+            <Link
+              href="/privacy-policy"
               className="text-muted-foreground hover:text-foreground"
             >
               Privacy Policy
