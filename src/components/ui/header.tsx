@@ -13,7 +13,7 @@ export function Header() {
     <header className="sticky top-0 flex h-16 items-center gap-4 border-b px-2 z-40 opacity-[0.97] bg-background mb-10">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
-          href="#"
+          href="/"
           className="flex items-center gap-2 text-lg font-semibold md:text-base"
         >
           <div className="aspect-square relative w-14">
@@ -21,23 +21,23 @@ export function Header() {
               className="object-cover invert dark:invert-0"
               src="/icons/convene-icon.png"
               layout="fill"
-              alt="Wuwa Convene Tracker"
+              alt="Wuwa Tracker"
             />
           </div>
 
-          <span className="sr-only">Acme Inc</span>
+          <span className="sr-only">Wuwa Tracker</span>
         </Link>
         <Link
-          href="#"
+          href="/"
           className="text-muted-foreground transition-colors hover:text-foreground"
         >
-          Tracker
+          History
         </Link>
         <Link
-          href="#"
+          href="/import"
           className="text-muted-foreground transition-colors hover:text-foreground"
         >
-          Privacy Policy
+          Import
         </Link>
       </nav>
 
