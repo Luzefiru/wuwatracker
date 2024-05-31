@@ -17,38 +17,61 @@ export function Footer() {
                 />
               </div>
               <span className="self-center text-2xl font-semibold whitespace-nowrap">
-                WuwaTracker
+                Wuwa Tracker
               </span>
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase">
                 Resources
               </h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
-                    Flowbite
+                  <a
+                    href="https://wutheringwaves.kurogames.com/"
+                    className="hover:underline"
+                  >
+                    Wuthering Waves
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
-                    Tailwind CSS
+                  <a href="https://kurogames.com/" className="hover:underline">
+                    Kuro Games
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase">
-                Follow us
+                Support Us
               </h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline ">
+                  <a
+                    href="https://wutheringwaves.kurogames.com/"
+                    className="hover:underline"
+                  >
+                    Wuthering Waves
+                  </a>
+                </li>
+                <li>
+                  <a href="https://kurogames.com/" className="hover:underline">
+                    Kuro Games
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-sm font-semibold uppercase">
+                Developers
+              </h2>
+              <ul className="text-muted-foreground">
+                <li className="mb-4">
+                  <a
+                    href="https://github.com/Luzefiru/wuwatracker"
+                    className="hover:underline "
+                  >
                     Github
                   </a>
                 </li>
