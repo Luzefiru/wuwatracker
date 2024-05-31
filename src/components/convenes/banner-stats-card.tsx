@@ -102,8 +102,7 @@ export function BannerStatsCard({
           <CardHeader className="text-center md:text-start">
             <div className="flex items-center gap-3">
               <CardTitle>
-                Recent <span className="text-purple-500">4✦</span> and{' '}
-                <span className="text-yellow-500">5✦</span> Convenes
+                Recent <span className="text-yellow-500">5✦</span> Convenes
               </CardTitle>
               <p className="text-xs text-muted-foreground opacity-60">
                 wuwatracker.tech
@@ -111,6 +110,7 @@ export function BannerStatsCard({
             </div>
           </CardHeader>
           <CardContent className="grid md:flex md:flex-wrap gap-4 grid-auto-fit-[4rem] pt-6">
+            {/* TODO - add filters for; both 4* and 5*, 4*, and 5* pulls */}
             {stats?.fiveStarObjects.length ? (
               stats?.fiveStarObjects.map((o) => {
                 return <ConveneAvatar key={String(o.time) + o.name} {...o} />;
