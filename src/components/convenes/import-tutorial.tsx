@@ -9,17 +9,14 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import createImportScript from '@/lib/createImportScript';
-import { useLocalStorage } from 'usehooks-ts';
+import { useConveneHistory } from '@/hooks/useConveneHistory';
 
 interface Props {
   handleBack: () => void;
 }
 
 export function ImportTutorial({ handleBack }: Props) {
-  const [_, setSavedConveneHistoryUrl] = useLocalStorage(
-    'convene-history-url', // TODO: extract this to a config file or shared hook
-    ''
-  );
+  const { saveConveneHistoryUrl } = useConveneHistory();
 
   const [gamePath, setGamePath] = useState('');
   const [conveneHistoryUrl, setConveneHistoryUrl] = useState('');
@@ -45,7 +42,7 @@ export function ImportTutorial({ handleBack }: Props) {
       toast.error('Invalid Convene History URL', {});
     }
 
-    setSavedConveneHistoryUrl(conveneHistoryUrl);
+    saveConveneHistoryUrl(conveneHistoryUrl);
 
     toast.success('Successfully imported Convene History URL!');
     handleBack();
