@@ -4,35 +4,48 @@ about: Create a report to help us improve
 title: ''
 labels: bug
 assignees: ''
-
 ---
 
-**Describe the bug**
+# Bug Description
+
+_Describe the bug in detail so that the maintainers can help you._
 A clear and concise description of what the bug is.
 
-**To Reproduce**
+## How to Reproduce
+
+_A reproduction repository is greatly appreciated._
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
+## Expected Behavior
+
+_What is the expected behavior without the bug?_
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
+## Screenshots
+
+_Full-size screenshots are highly appreciated._
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## Platform/OS
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+_Desktop (please complete the following information):_
 
-**Additional context**
-Add any other context about the problem here.
+- OS: [e.g. iOS]
+- Browser [e.g. chrome, safari]
+- Version [e.g. 22]
+
+_Smartphone (please complete the following information):_
+
+- Device: [e.g. iPhone6]
+- OS: [e.g. iOS8.1]
+- Browser [e.g. stock browser, safari]
+- Version [e.g. 22]
+
+## Additional Context
+
+_Add any other context about the problem here._
