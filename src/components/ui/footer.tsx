@@ -1,5 +1,5 @@
-import * as React from 'react';
-import Image from 'next/image';
+import * as React from "react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -79,10 +79,10 @@ export function Footer() {
           </div>
           <div className="sm:flex sm:items-center sm:justify-between mt-12">
             <span className="text-sm sm:text-center text-muted-foreground">
-              © 2024{' '}
+              © 2024{" "}
               <a href="https://flowbite.com/" className="hover:underline">
                 Tenjin,
-              </a>{' '}
+              </a>{" "}
               All assets and data are sourced from Guangzhou Kuro Technology
               Co., Ltd and its licensors.
             </span>
