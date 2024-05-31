@@ -2,8 +2,10 @@ import { useLocalStorage } from 'usehooks-ts';
 import extractGachaRecordQueryArgs from '@/lib/extractGachaRecordQueryArgs';
 import fetchGachaRecordByCardPoolType from '@/services/fetchGachaRecordByCardPoolType';
 import parsePityCounterStats from '@/lib/parsePityCounterStats';
+import parseBannerStatistics from '@/lib/parseBannerStatistics';
 import { GachaRecordQueryResult } from '@/types/GachaRecordQuery';
 import { BannerPityDisplayStats } from '@/types/BannerPity';
+import { BannerStats } from '@/types/BannerStats';
 
 const LOCALSTORAGE_KEY = 'convene-history-url';
 
@@ -66,11 +68,26 @@ export function useConveneHistory() {
     );
   }
 
+  async function getCardPoolTypeStatistics(
+    cardPoolType: number,
+    pullCost: number
+  ): Promise<BannerStats | null> {
+    const cardPoolHistory = await getHistoryByCardPoolType(cardPoolType);
+
+    if (!cardPoolHistory) {
+      return null;
+    }
+
+    // TODO - featured five & four star IDs cannot be used at the moment due to incapability to easily fetch them
+    return parseBannerStatistics(pullCost, [], [], cardPoolHistory);
+  }
+
   return {
     conveneHistoryUrl: savedConveneHistoryUrl,
     saveConveneHistoryUrl: setSavedConveneHistoryUrl,
     removeConveneHistoryUrl: removeSavedConveneHistoryUrl,
     getHistoryByCardPoolType,
     getCardPoolTypePity,
+    getCardPoolTypeStatistics,
   };
 }
