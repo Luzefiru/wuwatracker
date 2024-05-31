@@ -1,6 +1,7 @@
 import { BannerStats } from '@/types/BannerStats';
 import { GachaRecordQueryResult } from '@/types/GachaRecordQuery';
 
+// TODO - refactor this mess, I apologize to all my teachers & mentors
 export default function parseBannerStatistics(
   pullCost: number,
   // TODO - there isn't a reliable way to fetch the resource ID of a resonator/weapon, so these are unused
@@ -12,8 +13,47 @@ export default function parseBannerStatistics(
   const pulls = gachaRecord.data;
   pulls.reverse();
 
-  const fiveStars = pulls.filter((p) => p.qualityLevel === 5);
-  const fourStars = pulls.filter((p) => p.qualityLevel === 4);
+  let fiveStarCurrentPity = 0,
+    fourStarCurrentPity = 0,
+    previousFiveStarPullNumber = 0,
+    previousFourStarPullNumber = 0;
+
+  // Starting from the oldest record,
+  // we track the pull number and current pity to derive what pity did the user pull an object
+  const pullsWithPity = pulls.map((p, index) => {
+    const currentPullNumber = index + 1;
+    let previousFiveStarTmp = previousFiveStarPullNumber;
+    let previousFourStarTmp = previousFourStarPullNumber;
+
+    switch (p.qualityLevel) {
+      case 5:
+        previousFiveStarPullNumber = currentPullNumber;
+        previousFourStarPullNumber = currentPullNumber;
+        fiveStarCurrentPity = 0;
+        fourStarCurrentPity = 0;
+        break;
+      case 4:
+        previousFourStarPullNumber = currentPullNumber;
+        fiveStarCurrentPity++;
+        fourStarCurrentPity = 0;
+        break;
+      default:
+        fiveStarCurrentPity++;
+        fourStarCurrentPity++;
+    }
+
+    return {
+      ...p,
+      pullNumber: currentPullNumber,
+      fiveStarCurrentPity,
+      fourStarCurrentPity,
+      previousFiveStarPullNumber: previousFiveStarTmp,
+      previousFourStarPullNumber: previousFourStarTmp,
+    };
+  });
+
+  const fiveStars = pullsWithPity.filter((p) => p.qualityLevel === 5);
+  const fourStars = pullsWithPity.filter((p) => p.qualityLevel === 4);
   const totalAstrites = pullCost * pulls.length;
   const totalPulls = pulls.length;
   const featuredFiveStars = fiveStars.filter((f) =>
@@ -31,5 +71,6 @@ export default function parseBannerStatistics(
     featuredFiveStars: featuredFiveStars.length,
     featuredFourStars: featuredFourStars.length,
     fiveStarObjects: fiveStars,
+    fourStarObjects: fourStars,
   };
 }
