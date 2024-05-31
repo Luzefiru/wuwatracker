@@ -13,7 +13,7 @@ import {
   CardTitle,
 } from '../ui/card';
 import { BannerStats } from '@/types/BannerStats';
-import { fiveStarObjects } from '@/data/gachaObjects';
+import { ConveneAvatar } from './convene-avatar';
 
 interface Props {
   title: string;
@@ -100,31 +100,17 @@ export function BannerStatsCard({
         <div className="w-full">
           <CardHeader className="text-center md:text-start">
             <CardTitle>
-              Recent <span className="text-yellow-500">5✦</span> Convenes
+              Recent <span className="text-purple-500">4✦</span> and{' '}
+              <span className="text-yellow-500">5✦</span> Convenes
             </CardTitle>
           </CardHeader>
           <CardContent className="grid md:flex md:flex-wrap gap-4 grid-auto-fit-[4rem] pt-6">
             {stats?.fiveStarObjects.length ? (
               stats?.fiveStarObjects.map((o) => {
-                return (
-                  <div
-                    key={String(o.time) + o.name}
-                    className="bg-background w-16 h-16 rounded-full place-self-center overflow-hidden"
-                  >
-                    <Image
-                      src={
-                        /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
-                        fiveStarObjects[o.name].imgSrc
-                      }
-                      width="404"
-                      height="560"
-                      alt={o.name}
-                    />
-                  </div>
-                );
+                return <ConveneAvatar key={String(o.time) + o.name} {...o} />;
               })
             ) : (
-              <p className="text-muted-foreground text-sm">No 5✦ pulls yet.</p>
+              <p className="text-muted-foreground text-sm">No records yet.</p>
             )}
           </CardContent>
         </div>
