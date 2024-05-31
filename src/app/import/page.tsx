@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { ImportTutorial } from '@/components/convenes/import-tutorial';
+import { ChevronLeft } from 'lucide-react';
 
 export default function Import() {
   const router = useRouter();
@@ -12,16 +13,29 @@ export default function Import() {
   };
 
   return (
-    <div className="flex flex-col h-full w-full p-5 gap-3">
-      <Button variant="outline" className="w-[10%] mb-3" onClick={handleBack}>
-        Back
-      </Button>
-      <h2 className="text-2xl font-medium leading-none">
-        Import Convene History
-      </h2>
-      <p className="text-muted-foreground">
-        Note: This method is only confirmed to work with Windows 10 and above.
-      </p>
+    <div className="flex flex-col h-full w-full gap-3">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center sm:text-start">
+        <div>
+          <h2 className="scroll-m-20 text-2xl md:text-3xl font-semibold tracking-tight pb-2">
+            Import Convene History
+          </h2>
+          <p className="text-muted-foreground">
+            Note: This method is only confirmed to work with Windows 10 and
+            above.
+          </p>
+        </div>
+
+        <div className="flex justify-around md:justify-end w-full md:w-auto">
+          <Button
+            variant="outline"
+            size="lg"
+            className="gap-2 pr-10"
+            onClick={handleBack}
+          >
+            <ChevronLeft className="h-5 w-5" /> Back
+          </Button>
+        </div>
+      </div>
       <ImportTutorial handleBack={handleBack} />
     </div>
   );

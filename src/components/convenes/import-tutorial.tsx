@@ -128,10 +128,11 @@ export function ImportTutorial({ handleBack }: Props) {
             </div>
           </li>
         </ol>
-
-        <Button type="submit" className="me-auto">
-          <Import className="mr-2 h-4 w-4" /> Import History
-        </Button>
+        <div className="flex w-full">
+          <Button type="submit" className="w-full sm:w-auto ms-auto">
+            <Import className="mr-2 h-4 w-4" /> Import History
+          </Button>
+        </div>
       </form>
     </>
   );
