@@ -1,10 +1,9 @@
-import { BannerTypeSlug, BannerTypeSlugEnum } from "@/types/BannerTypeSlugEnum";
-import Header from "@/components/home/header";
-import { Sidebar } from "@/components/ui/sidebar";
-import { BannerStatsCard } from "@/components/convenes/banner-stats-card";
-import { bannerMetadata } from "@/data/banners";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { notFound } from "next/navigation";
+import { BannerTypeSlug, BannerTypeSlugEnum } from '@/types/BannerTypeSlugEnum';
+import Header from '@/components/home/header';
+import { Sidebar } from '@/components/ui/sidebar';
+import { BannerStatsCard } from '@/components/convenes/banner-stats-card';
+import { bannerMetadata } from '@/data/banners';
+import { notFound } from 'next/navigation';
 
 export default function Page({
   params,

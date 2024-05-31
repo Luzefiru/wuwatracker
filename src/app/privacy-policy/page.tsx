@@ -1,6 +1,12 @@
-'use client';
+import { Metadata } from 'next';
 
-export default function Import() {
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Wuwa Tracker',
+  description:
+    'This privacy policy document outlines the types of personal information that is received and collected by Wuwa Tracker and how it is used. Wuwa Tracker is a pity counter for Wuthering Waves, using the up-to-date data with global statistics and more.',
+};
+
+export default function PrivacyPolicy() {
   return (
     <div className="flex flex-col items-center h-full w-full gap-16 py-8">
       <div className="flex flex-col sm:text-start max-w-screen-md">
