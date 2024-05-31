@@ -13,6 +13,7 @@ export function ConveneCategories() {
         cardPoolType={1}
         fiveStarPity={80}
         fourStarPity={10}
+        href="/banner/limited-character-convene"
       />
       <ConveneCategoryCard
         title="Weapon Event Convene"
@@ -20,6 +21,7 @@ export function ConveneCategories() {
         cardPoolType={2}
         fiveStarPity={80}
         fourStarPity={10}
+        href="/banner/limited-weapon-convene"
       />
       <ConveneCategoryCard
         title="Character Permanent Convene"
@@ -27,6 +29,7 @@ export function ConveneCategories() {
         cardPoolType={3}
         fiveStarPity={80}
         fourStarPity={10}
+        href="/banner/permanent-character-convene"
       />
       <ConveneCategoryCard
         title="Weapon Permanent Convene"
@@ -34,6 +37,7 @@ export function ConveneCategories() {
         cardPoolType={4}
         fiveStarPity={80}
         fourStarPity={10}
+        href="/banner/permanent-weapon-convene"
       />
     </>
   );
