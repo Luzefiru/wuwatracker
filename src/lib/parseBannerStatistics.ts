@@ -30,5 +30,6 @@ export default function parseBannerStatistics(
     fourStars: fourStars.length,
     featuredFiveStars: featuredFiveStars.length,
     featuredFourStars: featuredFourStars.length,
+    fiveStarObjects: fiveStars,
   };
 }

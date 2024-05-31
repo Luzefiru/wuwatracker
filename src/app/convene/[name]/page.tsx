@@ -3,6 +3,7 @@ import Header from "@/components/home/header";
 import { Sidebar } from "@/components/ui/sidebar";
 import { BannerStatsCard } from "@/components/convenes/banner-stats-card";
 import { bannerMetadata } from "@/data/banners";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { notFound } from "next/navigation";
 
 export default function Page({
@@ -20,9 +21,7 @@ export default function Page({
       <div className="flex h-full flex-col lg:flex-row gap-8 lg:gap-12 desktop:gap-24">
         <Sidebar />
         <section className="flex w-full flex-col gap-8">
-          <div className="flex w-full flex-col desktop:flex-row">
-            <BannerStatsCard {...bannerMetadata[params.name]} />
-          </div>
+          <BannerStatsCard {...bannerMetadata[params.name]} />
         </section>
       </div>
     </div>
