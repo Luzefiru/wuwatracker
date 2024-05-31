@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/components/ui/theme-provider';
 import { Footer } from '@/components/ui/footer';
 import { Header } from '@/components/ui/header';
 import { Toaster } from '@/components/ui/sonner';
-import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -40,6 +40,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Toaster richColors />
+        <Analytics />
       </body>
     </html>
   );
