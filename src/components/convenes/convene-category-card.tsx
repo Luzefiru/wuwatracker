@@ -14,7 +14,7 @@ export default function ConveneCategoryCard({ title, imgSrc, stats }: Props) {
       <div className="flex">
         <div className="relative w-24 h-24 rounded-xl self-center">
           <Image
-            className="object-cover invert dark:invert-0"
+            className="object-cover"
             src={imgSrc}
             width="404"
             height="560"
