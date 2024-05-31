@@ -4,7 +4,7 @@ import { useConveneHistory } from '@/hooks/useConveneHistory';
 
 import Image from 'next/image';
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import {
   Card,
   CardContent,
@@ -19,6 +19,7 @@ interface Props {
   description: string;
   pullCost: number;
   cardPoolType: number;
+  bgImgSrc: string;
 }
 
 export function BannerStatsCard({
@@ -26,27 +27,31 @@ export function BannerStatsCard({
   description,
   pullCost,
   cardPoolType,
+  bgImgSrc,
 }: Props) {
   const { getCardPoolTypeStatistics } = useConveneHistory();
 
   const [stats, setStats] = useState<BannerStats | null>(null);
 
   useEffect(() => {
-    const fetchPityStats = async () => {
-      const fetchedPityStats = await getCardPoolTypeStatistics(
+    const getBannerStats = async () => {
+      const fetchedBannerStats = await getCardPoolTypeStatistics(
         cardPoolType,
         pullCost
       );
-      setStats(fetchedPityStats);
+      setStats(fetchedBannerStats);
     };
-    fetchPityStats();
+    getBannerStats();
   }, [cardPoolType, getCardPoolTypeStatistics, pullCost]);
 
   return (
     <>
       <div className="flex w-full flex-col gap-8">
         <div className="flex w-full flex-col desktop:flex-row">
-          <Card className="dark:bg-accent bg-background w-full">
+          <Card
+            className="dark:bg-accent bg-background w-full"
+            style={{ backgroundImage: `url${bgImgSrc}` }}
+          >
             <div className="w-full">
               <CardHeader className="text-center md:text-start">
                 <CardTitle>{title}</CardTitle>

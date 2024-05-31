@@ -10,6 +10,7 @@ import Link from 'next/link';
 interface Props {
   title: string;
   imgSrc: string;
+  bgImgSrc: string;
   cardPoolType: number;
   fiveStarPity: number;
   fourStarPity: number;
@@ -37,7 +38,7 @@ export default function ConveneCategoryCard({
       setStats(fetchedPityStats);
     };
     fetchPityStats();
-  }, [getCardPoolTypePity, cardPoolType, fiveStarPity, fourStarPity]);
+  }, [cardPoolType, getCardPoolTypePity, fiveStarPity, fourStarPity]);
 
   return (
     <Link href={href}>

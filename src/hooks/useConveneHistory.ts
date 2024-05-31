@@ -1,4 +1,5 @@
 import { useLocalStorage } from 'usehooks-ts';
+import { useCallback, useMemo } from 'react';
 import extractGachaRecordQueryArgs from '@/lib/extractGachaRecordQueryArgs';
 import fetchGachaRecordByCardPoolType from '@/services/fetchGachaRecordByCardPoolType';
 import parsePityCounterStats from '@/lib/parsePityCounterStats';
@@ -15,10 +16,13 @@ export function useConveneHistory() {
     setSavedConveneHistoryUrl,
     removeSavedConveneHistoryUrl,
   ] = useLocalStorage(LOCALSTORAGE_KEY, '');
-  const queryArgs =
-    savedConveneHistoryUrl && savedConveneHistoryUrl !== ''
-      ? extractGachaRecordQueryArgs(savedConveneHistoryUrl)
-      : null;
+  const queryArgs = useMemo(
+    () =>
+      savedConveneHistoryUrl && savedConveneHistoryUrl !== ''
+        ? extractGachaRecordQueryArgs(savedConveneHistoryUrl)
+        : null,
+    [savedConveneHistoryUrl]
+  );
 
   /**
    * After saving the Convene History URL to LocalStorage, you can call this function to fetch the user's Convene History for a specific banner.
@@ -26,20 +30,21 @@ export function useConveneHistory() {
    * @param cardPoolType 1-7
    * @returns
    */
-  async function getHistoryByCardPoolType(
-    cardPoolType: number
-  ): Promise<GachaRecordQueryResult | null> {
-    if (!queryArgs) {
-      return null;
-    }
+  const getHistoryByCardPoolType = useCallback(
+    async (cardPoolType: number): Promise<GachaRecordQueryResult | null> => {
+      if (!queryArgs) {
+        return null;
+      }
 
-    const historyData = await fetchGachaRecordByCardPoolType(
-      cardPoolType,
-      queryArgs
-    );
+      const historyData = await fetchGachaRecordByCardPoolType(
+        cardPoolType,
+        queryArgs
+      );
 
-    return historyData;
-  }
+      return historyData;
+    },
+    [queryArgs]
+  );
 
   /**
    * Helper function to get the pity countdown of a user's Convene History.
@@ -49,38 +54,41 @@ export function useConveneHistory() {
    * @param fourStarPity the maximum pity for a 4*
    * @returns
    */
-  async function getCardPoolTypePity(
-    cardPoolType: number,
-    {
-      fiveStarPity,
-      fourStarPity,
-    }: { fiveStarPity: number; fourStarPity: number }
-  ): Promise<BannerPityDisplayStats | null> {
-    const cardPoolHistory = await getHistoryByCardPoolType(cardPoolType);
+  const getCardPoolTypePity = useCallback(
+    async (
+      cardPoolType: number,
+      {
+        fiveStarPity,
+        fourStarPity,
+      }: { fiveStarPity: number; fourStarPity: number }
+    ): Promise<BannerPityDisplayStats | null> => {
+      const historyData = await getHistoryByCardPoolType(cardPoolType);
 
-    if (!cardPoolHistory) {
-      return null;
-    }
+      if (!historyData) {
+        return null;
+      }
 
-    return parsePityCounterStats(
-      { fiveStarPity, fourStarPity },
-      cardPoolHistory
-    );
-  }
+      return parsePityCounterStats({ fiveStarPity, fourStarPity }, historyData);
+    },
+    [getHistoryByCardPoolType]
+  );
 
-  async function getCardPoolTypeStatistics(
-    cardPoolType: number,
-    pullCost: number
-  ): Promise<BannerStats | null> {
-    const cardPoolHistory = await getHistoryByCardPoolType(cardPoolType);
+  const getCardPoolTypeStatistics = useCallback(
+    async (
+      cardPoolType: number,
+      pullCost: number
+    ): Promise<BannerStats | null> => {
+      const historyData = await getHistoryByCardPoolType(cardPoolType);
 
-    if (!cardPoolHistory) {
-      return null;
-    }
+      if (!historyData) {
+        return null;
+      }
 
-    // TODO - featured five & four star IDs cannot be used at the moment due to incapability to easily fetch them
-    return parseBannerStatistics(pullCost, [], [], cardPoolHistory);
-  }
+      // TODO - featured five & four star IDs cannot be used at the moment due to incapability to easily fetch them
+      return parseBannerStatistics(pullCost, [], [], historyData);
+    },
+    [getHistoryByCardPoolType]
+  );
 
   return {
     conveneHistoryUrl: savedConveneHistoryUrl,
