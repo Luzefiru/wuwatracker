@@ -28,20 +28,12 @@ export function Footer() {
               </h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <a
-                    href="https://github.com/Luzefiru/wuwatracker"
-                    className="hover:underline "
-                  >
+                  <a href="https://github.com/Luzefiru/wuwatracker">
                     Report a Bug
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://ko-fi.com/manage/mypage"
-                    className="hover:underline"
-                  >
-                    Ko-fi
-                  </a>
+                  <a href="https://ko-fi.com/manage/mypage">Ko-fi</a>
                 </li>
               </ul>
             </div>
@@ -51,17 +43,12 @@ export function Footer() {
               </h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <a
-                    href="https://wutheringwaves.kurogames.com/"
-                    className="hover:underline"
-                  >
+                  <a href="https://wutheringwaves.kurogames.com/">
                     Wuthering Waves
                   </a>
                 </li>
                 <li>
-                  <a href="https://kurogames.com/" className="hover:underline">
-                    Kuro Games
-                  </a>
+                  <a href="https://kurogames.com/">Kuro Games</a>
                 </li>
               </ul>
             </div>
@@ -70,14 +57,10 @@ export function Footer() {
               <h2 className="mb-6 text-sm font-semibold uppercase">Legal</h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <a href="/terms-and-conditions" className="hover:underline">
-                    Terms &amp; Conditions
-                  </a>
+                  <a href="/terms-and-conditions">Terms &amp; Conditions</a>
                 </li>
                 <li>
-                  <a href="/privacy-policy" className="hover:underline">
-                    Privacy Policy
-                  </a>
+                  <a href="/privacy-policy">Privacy Policy</a>
                 </li>
               </ul>
             </div>
@@ -86,7 +69,7 @@ export function Footer() {
         <div className="text-center sm:text-start sm:flex sm:items-center sm:justify-between mt-12">
           <span className="text-sm text-muted-foreground">
             © 2024{' '}
-            <a href="https://flowbite.com/" className="hover:underline">
+            <a href="/" className="hover:text-primary transition-all">
               Wuwa Tracker
             </a>
             <br />
@@ -96,7 +79,7 @@ export function Footer() {
           <div className="flex justify-center mt-4 sm:mt-0">
             <a
               href="https://discord.com/invite/wutheringwaves"
-              className="text-muted-foreground"
+              className="text-muted-foreground hover:text-primary transition-all"
             >
               <svg
                 className="w-4 h-4"
@@ -111,7 +94,7 @@ export function Footer() {
             </a>
             <a
               href="https://x.com/luzefiru"
-              className="text-muted-foreground ms-5"
+              className="text-muted-foreground ms-5 hover:text-primary transition-all"
             >
               <svg
                 className="w-4 h-4"
@@ -130,7 +113,7 @@ export function Footer() {
             </a>
             <a
               href="https://github.com/Luzefiru"
-              className="text-muted-foreground ms-5"
+              className="text-muted-foreground ms-5 hover:text-primary transition-all"
             >
               <svg
                 className="w-4 h-4"
