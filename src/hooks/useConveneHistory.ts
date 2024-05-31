@@ -49,8 +49,10 @@ export function useConveneHistory() {
    */
   async function getCardPoolTypePity(
     cardPoolType: number,
-    fiveStarPity: number,
-    fourStarPity: number
+    {
+      fiveStarPity,
+      fourStarPity,
+    }: { fiveStarPity: number; fourStarPity: number }
   ): Promise<BannerPityDisplayStats | null> {
     const cardPoolHistory = await getHistoryByCardPoolType(cardPoolType);
 
