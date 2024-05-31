@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/ui/theme-provider';
 import { Footer } from '@/components/ui/footer';
 import { Header } from '@/components/ui/header';
 import { Toaster } from '@/components/ui/sonner';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 

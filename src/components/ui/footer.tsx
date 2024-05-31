@@ -33,7 +33,21 @@ export function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://ko-fi.com/manage/mypage">Ko-fi</a>
+                  <a
+                    href="https://ko-fi.com/manage/mypage"
+                    className="flex gap-2 items-center"
+                  >
+                    <span>Ko-fi</span>{' '}
+                    <div className="aspect-square relative w-6 flex items-center">
+                      <Image
+                        className="object-cover"
+                        src="/icons/ko-fi.png"
+                        width="1239"
+                        height="853"
+                        alt="Support Us on Ko-fi"
+                      />
+                    </div>
+                  </a>
                 </li>
               </ul>
             </div>
