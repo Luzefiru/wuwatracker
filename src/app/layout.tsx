@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import { Footer } from '@/components/ui/footer';
 import { Header } from '@/components/ui/header';
-import { Sidebar } from '@/components/ui/sidebar';
 import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -29,14 +28,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen w-full flex-col">
+          <div className="flex min-h-screen w-full flex-col bg-accent dark:bg-background">
             <Header />
-            <div className="h-[80%]">
-              <div className="flex h-full">
-                <Sidebar />
-                <div className="w-full">{children}</div>
+            <main className="flex justify-center w-full">
+              <div className="w-full px-3 sm:px-10 max-w-screen-desktop">
+                {children}
               </div>
-            </div>
+            </main>
             <Footer />
           </div>
         </ThemeProvider>
