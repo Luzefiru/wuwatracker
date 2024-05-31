@@ -1,8 +1,9 @@
-import { BannerTypeSlug, BannerTypeSlugEnum } from '@/types/BannerTypeSlugEnum';
-import Header from '@/components/home/header';
-import { Sidebar } from '@/components/ui/sidebar';
-import { BannerStatsCard } from '@/components/convenes/banner-stats-card';
-import { bannerMetadata } from '@/data/banners';
+import { BannerTypeSlug, BannerTypeSlugEnum } from "@/types/BannerTypeSlugEnum";
+import Header from "@/components/home/header";
+import { Sidebar } from "@/components/ui/sidebar";
+import { BannerStatsCard } from "@/components/convenes/banner-stats-card";
+import { bannerMetadata } from "@/data/banners";
+import { notFound } from "next/navigation";
 
 export default function Page({
   params,
@@ -10,8 +11,7 @@ export default function Page({
   params: { name: BannerTypeSlugEnum };
 }) {
   if (!Object.keys(BannerTypeSlug).includes(params.name)) {
-    // TODO - use 404 component
-    return <h1>This does not exist.</h1>;
+    notFound();
   }
 
   return (
