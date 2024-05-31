@@ -30,7 +30,7 @@ export default function RootLayout({
           <div className="flex min-h-screen w-full flex-col bg-accent dark:bg-background">
             <Header />
             <main className="flex justify-center w-full">
-              <div className="w-full px-3 lg:px-8 max-w-screen-desktop">
+              <div className="w-full px-3 sm:px-10 max-w-screen-desktop">
                 {children}
               </div>
             </main>
