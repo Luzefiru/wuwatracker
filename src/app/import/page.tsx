@@ -1,29 +1,30 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { ImportTutorial } from "@/components/convenes/import-tutorial";
+import { useRouter } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { ImportTutorial } from '@/components/convenes/import-tutorial';
+import { ChevronLeft } from 'lucide-react';
 
 export default function Import() {
   const router = useRouter();
 
   const handleBack = () => {
-    router.push("/");
+    router.push('/');
   };
 
   return (
-    <div className="flex flex-col h-full w-full p-5 gap-3">
+    <div className="flex flex-col h-full w-full gap-3">
       <div>
         <Button
           variant="outline"
           size="lg"
-          className="mb-3"
+          className="mb-3 gap-2 pr-10"
           onClick={handleBack}
         >
-          Back
+          <ChevronLeft className="h-5 w-5" /> Back
         </Button>
       </div>
-      <h2 className="text-2xl font-medium leading-none">
+      <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">
         Import Convene History
       </h2>
       <p className="text-muted-foreground">

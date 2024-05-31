@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-full justify-between">
       <Header />
-      <div className="flex h-full flex-col desktop:flex-row">
+      <div className="flex h-full flex-col lg:flex-row gap-8 lg:gap-12 desktop:gap-24">
         <Sidebar />
         <ConveneStats />
       </div>

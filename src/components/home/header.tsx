@@ -4,7 +4,7 @@ import { Import } from 'lucide-react';
 
 export default function Header() {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center my-4 gap-4">
+    <div className="flex flex-col md:flex-row justify-between items-center mb-4 gap-4">
       <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight text-center">
         Convene Tracker
       </h2>
