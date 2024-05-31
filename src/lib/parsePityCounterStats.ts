@@ -32,6 +32,5 @@ export default function parsePityCounterStats(
     ...bannerPityStats,
     fiveStarCurrent,
     fourStarCurrent,
-    totalPulls: pulls.length,
   };
 }
