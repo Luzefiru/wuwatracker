@@ -1,16 +1,16 @@
-"use client";
-import { ModeToggle } from "./mode-toggle";
-import * as React from "react";
-import Link from "next/link";
-import { Package2 } from "lucide-react";
-import { Button } from "./button";
-import { Sheet, SheetTrigger, SheetContent } from "./sheet";
-import { Menu } from "lucide-react";
-import Image from "next/image";
+'use client';
+import { ModeToggle } from './mode-toggle';
+import * as React from 'react';
+import Link from 'next/link';
+import { Package2 } from 'lucide-react';
+import { Button } from './button';
+import { Sheet, SheetTrigger, SheetContent } from './sheet';
+import { Menu } from 'lucide-react';
+import Image from 'next/image';
 
 export function Header() {
   return (
-    <header className="sticky top-0 flex h-16 items-center gap-4 border-b px-4 md:px-6 z-40 opacity-[0.97] bg-background">
+    <header className="sticky top-0 flex h-16 items-center gap-4 border-b px-2 z-40 opacity-[0.97] bg-background mb-4">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           href="#"
@@ -79,7 +79,9 @@ export function Header() {
           </nav>
         </SheetContent>
       </Sheet>
-      <ModeToggle />
+      <span className="ms-auto">
+        <ModeToggle />
+      </span>
     </header>
   );
 }

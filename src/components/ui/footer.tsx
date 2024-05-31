@@ -1,9 +1,9 @@
-import * as React from "react";
-import Image from "next/image";
+import * as React from 'react';
+import Image from 'next/image';
 
 export function Footer() {
   return (
-    <footer className="border-t mt-auto pt-4 bg-background">
+    <footer className="border-t mt-4 pt-2 bg-background">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -78,10 +78,10 @@ export function Footer() {
         </div>
         <div className="sm:flex sm:items-center sm:justify-between mt-12">
           <span className="text-sm sm:text-center text-muted-foreground">
-            © 2024{" "}
+            © 2024{' '}
             <a href="https://flowbite.com/" className="hover:underline">
               Tenjin,
-            </a>{" "}
+            </a>{' '}
             All assets and data are sourced from Guangzhou Kuro Technology Co.,
             Ltd and its licensors.
           </span>
