@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { fiveStarObjects } from '@/data/gachaObjects';
-import { Badge } from '@/components/ui/badge';
+import Image from "next/image";
+import { fiveStarObjects } from "@/data/gachaObjects";
+import { Badge } from "@/components/ui/badge";
 
 interface Props {
   name: string;
@@ -31,11 +31,11 @@ export function ConveneAvatar({
 
   function getBadgeVariant(pullNumber: number) {
     if (pullNumber >= 65) {
-      return 'destructive';
+      return "destructive";
     } else if (pullNumber >= 30) {
-      return 'warning';
+      return "warning";
     } else {
-      return 'success';
+      return "success";
     }
   }
 
@@ -56,7 +56,7 @@ export function ConveneAvatar({
           />
         </div>
         <Badge
-          className="absolute -right-1 -bottom-1 aspect-square"
+          className="absolute w-7 -right-1 -bottom-1 aspect-square flex items-center justify-center"
           variant={getBadgeVariant(pullNumberToDisplay)}
         >
           <span>{pullNumberToDisplay}</span>
