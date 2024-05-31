@@ -4,7 +4,7 @@ import Image from 'next/image';
 export function Footer() {
   return (
     <footer className="border-t mt-10 pt-2 bg-background">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div className="mx-auto w-full max-w-screen-desktop p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center gap-2">
@@ -83,19 +83,20 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="sm:flex sm:items-center sm:justify-between mt-12">
-          <span className="text-sm sm:text-center text-muted-foreground">
+        <div className="text-center sm:text-start sm:flex sm:items-center sm:justify-between mt-12">
+          <span className="text-sm text-muted-foreground">
             © 2024{' '}
             <a href="https://flowbite.com/" className="hover:underline">
-              Wuwa Tracker,
-            </a>{' '}
-            All Rights Reserved. All game assets and trademarks are the property
-            of their respective owners.
+              Wuwa Tracker
+            </a>
+            <br />
+            All game assets and trademarks are the property of their respective
+            owners.
           </span>
-          <div className="flex mt-4 sm:justify-center sm:mt-0">
+          <div className="flex justify-center mt-4 sm:mt-0">
             <a
               href="https://discord.com/invite/wutheringwaves"
-              className="text-muted-foreground ms-5"
+              className="text-muted-foreground"
             >
               <svg
                 className="w-4 h-4"
