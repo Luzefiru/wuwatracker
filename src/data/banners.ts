@@ -8,7 +8,8 @@ export const bannerMetadata = {
     pullCost: 160,
     fiveStarPity: 80,
     fourStarPity: 10,
-    imgSrc: '/banners/jiyan.png',
+    imgSrc:
+      'https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw_jiyan_UI.png',
     href: '/convene/limited-character',
   },
   [BannerTypeSlug['limited-weapon']]: {
@@ -18,7 +19,8 @@ export const bannerMetadata = {
     pullCost: 160,
     fiveStarPity: 80,
     fourStarPity: 10,
-    imgSrc: '/banners/limited-weapon.png',
+    imgSrc:
+      'https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21010016_UI.png',
     href: '/convene/limited-weapon',
   },
   [BannerTypeSlug['permanent-character']]: {
@@ -28,7 +30,8 @@ export const bannerMetadata = {
     pullCost: 160,
     fiveStarPity: 80,
     fourStarPity: 10,
-    imgSrc: '/banners/encore.png',
+    imgSrc:
+      'https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw_anke_UI.png',
     href: '/convene/permanent-character',
   },
   [BannerTypeSlug['permanent-weapon']]: {
@@ -38,7 +41,8 @@ export const bannerMetadata = {
     pullCost: 160,
     fiveStarPity: 80,
     fourStarPity: 10,
-    imgSrc: '/banners/permanent-weapon.png',
+    imgSrc:
+      'https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21010015_UI.png',
     href: '/convene/permanent-weapon',
   },
 } as const;
