@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import { useConveneHistory } from "@/hooks/useConveneHistory";
+import { useConveneHistory } from '@/hooks/useConveneHistory';
 
-import Image from "next/image";
-import * as React from "react";
-import { useState, useEffect } from "react";
+import Image from 'next/image';
+import * as React from 'react';
+import { useState, useEffect } from 'react';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card";
-import { BannerStats } from "@/types/BannerStats";
-import { fiveStarObjects } from "@/data/gachaObjects";
-import { ConveneAvatar } from "./convene-avatar";
+} from '../ui/card';
+import { BannerStats } from '@/types/BannerStats';
+import { fiveStarObjects } from '@/data/gachaObjects';
+import { ConveneAvatar } from './convene-avatar';
 
 interface Props {
   title: string;
@@ -63,7 +63,7 @@ export function BannerStatsCard({
               <div className="flex gap-1">
                 <h1 className="text-lg">{stats ? stats.totalAstrites : 0}</h1>
                 <Image
-                  src={"/icons/astrites.png"}
+                  src={'/icons/astrites.png'}
                   width={30}
                   height={8}
                   alt="Astrites"
@@ -75,7 +75,7 @@ export function BannerStatsCard({
               <div className="flex gap-1">
                 <h1 className="text-lg">{stats ? stats.totalPulls : 0}</h1>
                 <Image
-                  src={"/icons/special-convene.png"}
+                  src={'/icons/special-convene.png'}
                   width={30}
                   height={8}
                   alt="Special Convene"
@@ -100,10 +100,15 @@ export function BannerStatsCard({
       <Card className="dark:bg-accent bg-background w-full">
         <div className="w-full">
           <CardHeader className="text-center md:text-start">
-            <CardTitle>
-              Recent <span className="text-purple-500">4✦</span> and{" "}
-              <span className="text-yellow-500">5✦</span> Convenes
-            </CardTitle>
+            <div className="flex items-center gap-3">
+              <CardTitle>
+                Recent <span className="text-purple-500">4✦</span> and{' '}
+                <span className="text-yellow-500">5✦</span> Convenes
+              </CardTitle>
+              <p className="text-xs text-muted-foreground opacity-60">
+                wuwatracker.tech
+              </p>
+            </div>
           </CardHeader>
           <CardContent className="grid md:flex md:flex-wrap gap-4 grid-auto-fit-[4rem] pt-6">
             {stats?.fiveStarObjects.length ? (
