@@ -56,10 +56,10 @@ export function ImportTutorial({ handleBack }: Props) {
             <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
               <p className="text-sm">1</p>
             </span>
-            <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+            <h3 className="flex items-center mb-1 text-lg font-semibold text-foreground">
               Copy Your Installation Directory
             </h3>
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+            <p className="mb-4 text-base font-normal text-muted-foreground">
               Find the folder that contains &quot;Wuthering Waves.exe&quot; and
               a &quot;Client&quot; folder.
             </p>
@@ -80,10 +80,10 @@ export function ImportTutorial({ handleBack }: Props) {
             <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
               <p className="text-sm">2</p>
             </span>
-            <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+            <h3 className="flex items-center mb-1 text-lg font-semibold text-foreground">
               Launch Wuthering Waves on PC and Open Your In-game Convene History
             </h3>
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+            <p className="mb-4 text-base font-normal text-muted-foreground">
               Afterwards, open Windows PowerShell, and then paste the following
               script.
               <br />
@@ -106,9 +106,10 @@ export function ImportTutorial({ handleBack }: Props) {
             <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
               <p className="text-sm">3</p>
             </span>
-            <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+            <h3 className="mb-4 text-lg font-semibold text-foreground">
               Paste the URL Here
             </h3>
+
             <div className="grid w-full items-center gap-1.5">
               <Input
                 className={cn({
@@ -123,6 +124,14 @@ export function ImportTutorial({ handleBack }: Props) {
                 }}
               />
             </div>
+          </li>
+          <li className="mb-10 ms-8">
+            <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
+              <p className="text-sm">4</p>
+            </span>
+            <h3 className="mb-4 text-lg font-semibold text-foreground">
+              Press the Import History Button on this Website
+            </h3>
           </li>
         </ol>
         <div className="flex w-full">
