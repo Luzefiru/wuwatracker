@@ -1,7 +1,9 @@
-import Image from "next/image";
-import { fiveStarObjects, fourStarObjects } from "@/data/gachaObjects";
-import { Badge } from "@/components/ui/badge";
-import { Sparkles, Star } from "lucide-react";
+'use client';
+
+import Image from 'next/image';
+import { fiveStarObjects, fourStarObjects } from '@/data/gachaObjects';
+import { Badge } from '@/components/ui/badge';
+import { Sparkles } from 'lucide-react';
 
 interface Props {
   name: string;
@@ -32,32 +34,28 @@ export function ConveneAvatar({
 
   function getBadgeVariant(pullNumber: number) {
     if (pullNumber >= 65) {
-      return "destructive";
+      return 'destructive';
     } else if (pullNumber >= 30) {
-      return "warning";
+      return 'warning';
     } else {
-      return "success";
+      return 'success';
     }
   }
 
   const pullNumberToDisplay = getPullNumber(qualityLevel, fourStarCurrentPity);
 
+  const imgSrc =
+    qualityLevel === 5
+      ? /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
+        fiveStarObjects[name]?.imgSrc ?? '/icons/unknown-five-star.png'
+      : /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
+        fourStarObjects[name]?.imgSrc ?? '/icons/unknown-four-star.png';
+
   return (
     <>
       <div className="relative w-16 h-16 place-self-center">
         <div className="rounded-full w-16 h-16 bg-background overflow-hidden">
-          <Image
-            src={
-              qualityLevel === 5
-                ? /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
-                  fiveStarObjects[name].imgSrc
-                : /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
-                  fourStarObjects[name].imgSrc
-            }
-            width="404"
-            height="560"
-            alt={name}
-          />
+          <Image src={imgSrc} width="404" height="560" alt={name} />
         </div>
         <Badge
           className="absolute w-7 -right-1 -bottom-1 aspect-square flex items-center justify-center"
