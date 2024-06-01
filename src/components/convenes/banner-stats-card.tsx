@@ -100,7 +100,7 @@ export function BannerStatsCard({
       <Card className="bg-background/80 backdrop-blur-sm w-full">
         <div className="w-full">
           <CardHeader className="text-center md:text-start">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-wrap">
               <CardTitle>
                 Recent <span className="text-yellow-500">5✦</span> Convenes
               </CardTitle>
