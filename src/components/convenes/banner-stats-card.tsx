@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { useConveneHistory } from '@/hooks/useConveneHistory';
+import { useConveneHistory } from "@/hooks/useConveneHistory";
 
-import Image from 'next/image';
-import * as React from 'react';
-import { useState, useEffect } from 'react';
+import Image from "next/image";
+import * as React from "react";
+import { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '../ui/card';
-import { BannerStats } from '@/types/BannerStats';
-import { ConveneAvatar } from './convene-avatar';
-import { AvatarFilter as Filtertype } from '@/types/avatarFilter';
-import AvatarFilter from './avatar-filter';
+} from "../ui/card";
+import { BannerStats } from "@/types/BannerStats";
+import { ConveneAvatar } from "./convene-avatar";
+import { AvatarFilter as Filtertype } from "@/types/avatarFilter";
+import AvatarFilter from "./avatar-filter";
 
 interface Props {
   title: string;
@@ -87,7 +87,7 @@ export function BannerStatsCard({
               <div className="flex gap-1">
                 <h1 className="text-lg">{stats ? stats.totalAstrites : 0}</h1>
                 <Image
-                  src={'/icons/astrites.png'}
+                  src={"/icons/astrites.png"}
                   width={30}
                   height={8}
                   alt="Astrites"
@@ -99,7 +99,7 @@ export function BannerStatsCard({
               <div className="flex gap-1">
                 <h1 className="text-lg">{stats ? stats.totalPulls : 0}</h1>
                 <Image
-                  src={'/icons/special-convene.png'}
+                  src={"/icons/special-convene.png"}
                   width={30}
                   height={8}
                   alt="Special Convene"
@@ -129,7 +129,7 @@ export function BannerStatsCard({
                 filter.includes(Filtertype.FOUR_STARS)) ||
               filter.length === 0 ? (
                 <CardTitle>
-                  Recent <span className="text-yellow-500">5✦</span> and{' '}
+                  Recent <span className="text-yellow-500">5✦</span> and{" "}
                   <span className="text-purple-500">4✦</span> Convenes
                 </CardTitle>
               ) : filter.includes(Filtertype.FIVE_STARS) ? (
@@ -151,7 +151,7 @@ export function BannerStatsCard({
             {filter.length !== 0 &&
             (stats?.fiveStarObjects.length || stats?.fourStarObjects.length) ? (
               filterAvatars()
-                ?.sort((a, b) => b.time.getTime() - a.time.getTime())
+                ?.sort((a, b) => a.time.getTime() - b.time.getTime())
                 .reverse()
                 .map((o) => {
                   /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
