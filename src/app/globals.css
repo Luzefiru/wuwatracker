@@ -74,3 +74,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .mask-gradient-to-b {
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.9) 80%,
+      transparent 100%,
+      transparent 100%
+    );
+  }
+}
