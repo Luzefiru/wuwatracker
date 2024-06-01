@@ -115,12 +115,12 @@ export function BannerStatsCard({
           <CardContent className="grid md:flex md:flex-wrap gap-4 grid-auto-fit-[4rem] pt-6">
             {/* TODO - add filters for; both 4* and 5*, 4*, and 5* pulls */}
             {stats?.fiveStarObjects.length || stats?.fourStarObjects.length ? (
-              [...stats?.fiveStarObjects, ...stats?.fourStarObjects].map(
-                (o) => {
+              [...stats?.fourStarObjects, ...stats?.fiveStarObjects]
+                .reverse()
+                .map((o) => {
                   /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
                   return <ConveneAvatar key={String(o.time) + o.name} {...o} />;
-                }
-              )
+                })
             ) : (
               <p className="text-muted-foreground text-sm">No records yet.</p>
             )}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { fiveStarObjects, fourStarObjects } from "@/data/gachaObjects";
 import { Badge } from "@/components/ui/badge";
+import { Sparkles, Star } from "lucide-react";
 
 interface Props {
   name: string;
@@ -24,7 +25,7 @@ export function ConveneAvatar({
     const isFourStar = qualityLevel === 4 && fourStarCurrentPity === 0;
 
     if (isFourStar) {
-      return pullNumber - previousFourStarPullNumber;
+      return pullNumber - previousFiveStarPullNumber;
     }
     return pullNumber - previousFiveStarPullNumber;
   }
@@ -64,6 +65,9 @@ export function ConveneAvatar({
         >
           <span>{pullNumberToDisplay}</span>
         </Badge>
+        {qualityLevel === 5 && (
+          <Sparkles className="h-[1rem] w-[1rem] rotate-0 scale-100 transition-all absolute text-yellow-400 fill-yellow-400 left-[8px] top-1 aspect-square" />
+        )}
       </div>
     </>
   );
