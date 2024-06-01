@@ -23,7 +23,7 @@ export default function NotFound() {
         </p>
         <Button asChild variant="default" size="lg">
           <Link href="/">
-            <Home className="w-4 h-4 mr-2" /> Return to Home
+            <Home className="w-4 h-4 mr-2" /> Go Home
           </Link>
         </Button>
       </section>
