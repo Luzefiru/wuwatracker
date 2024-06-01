@@ -145,7 +145,7 @@ export function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="sr-only">GitHub account</span>
+              <span className="sr-only">GitHub</span>
             </Link>
           </div>
         </div>
