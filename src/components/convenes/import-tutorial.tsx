@@ -130,7 +130,7 @@ export function ImportTutorial({ handleBack }: Props) {
               <p className="text-sm">4</p>
             </span>
             <h3 className="mb-4 text-lg font-semibold text-foreground">
-              Press the Import History Button on this Website
+              Press the &ldquo;Import History&rdquo; Button on this Website
             </h3>
           </li>
         </ol>
