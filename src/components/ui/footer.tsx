@@ -35,7 +35,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="https://ko-fi.com/manage/mypage"
+                    href="https://ko-fi.com/luzefiru"
                     className="flex gap-2 items-center"
                   >
                     <span>Ko-fi</span>{' '}

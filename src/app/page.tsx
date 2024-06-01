@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import getFirstConveneBannerHref from '@/lib/getFirstConveneBannerHref';
 import { Spotlight } from '@/components/ui/spotlight';
+import { FAQ } from '@/components/home/faq';
 
 export default function LandingPage() {
   return (
     <>
       <section>
-        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+        <div className="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12">
           <a
             href="https://github.com/Luzefiru/wuwatracker"
             className="font-medium inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm dark:border-none border dark:bg-accent bg-background rounded-full"
@@ -55,6 +56,9 @@ export default function LandingPage() {
             </Button>
           </div>
         </div>
+      </section>
+      <section className="flex justify-center">
+        <FAQ />
       </section>
     </>
   );
