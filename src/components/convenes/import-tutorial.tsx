@@ -218,6 +218,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                         width="1893"
                         height="968"
                         alt="Import Tutorial"
+                        loading="eager"
                       />
                     </div>
                   </DrawerDescription>
