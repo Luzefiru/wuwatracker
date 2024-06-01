@@ -123,8 +123,9 @@ export function BannerStatsCard({
         <div className="w-full">
           <CardHeader className="text-center md:text-start flex flex-row justify-between items-center ">
             <div className="flex flex-col sm:flex-row items-center gap-3 flex-wrap">
-              {filter.includes(Filtertype.FIVE_STARS) &&
-              filter.includes(Filtertype.FOUR_STARS) ? (
+              {(filter.includes(Filtertype.FIVE_STARS) &&
+                filter.includes(Filtertype.FOUR_STARS)) ||
+              filter.length === 0 ? (
                 <CardTitle>
                   Recent <span className="text-yellow-500">5✦</span> and{" "}
                   <span className="text-purple-500">4✦</span> Convenes

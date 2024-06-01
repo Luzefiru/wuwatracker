@@ -37,7 +37,7 @@ export default function AvatarFilter({ avatarFilter, setAvatarFilter }: Props) {
         onClick={() => handleClick(Filtertype.FIVE_STARS)}
         className={`${isActiveFilter(
           Filtertype.FIVE_STARS
-        )} + bg-yellow-600 flex items-center justify-center text-yellow-700`}
+        )} + bg-yellow-600 flex items-center justify-center text-yellow-700 border border-yellow-800`}
       >
         <p>asdasd</p>✦
       </Checkbox>
@@ -46,7 +46,7 @@ export default function AvatarFilter({ avatarFilter, setAvatarFilter }: Props) {
         onClick={() => handleClick(Filtertype.FOUR_STARS)}
         className={`${isActiveFilter(
           Filtertype.FOUR_STARS
-        )} + bg-purple-600 flex items-center justify-center text-purple-800`}
+        )} + bg-purple-600 flex items-center justify-center text-purple-800 border border-purple-800`}
       >
         ✦
       </Checkbox>
