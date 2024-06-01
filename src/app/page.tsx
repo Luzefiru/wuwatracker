@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import getFirstConveneBannerHref from '@/lib/getFirstConveneBannerHref';
+import { Spotlight } from '@/components/ui/spotlight';
 
 export default function LandingPage() {
   return (
@@ -31,13 +32,18 @@ export default function LandingPage() {
               />
             </svg>
           </a>
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-foreground md:text-5xl lg:text-6xl">
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
             Track your Convene History
+            <Spotlight
+              className="-top-40 left-0 md:left-60 md:-top-20"
+              fill="white"
+            />
           </h1>
-          <p className="mb-8 text-lg font-normal dark:text-muted-foreground lg:text-xl sm:px-16 xl:px-48">
+          <p className="mb-8 leading-7 [&:not(:first-child)]:mt-6">
             Wuwa Tracker makes counting your pity easy. Once you set it up, your
             statistics will automatically refresh whenever you pull.
           </p>
+
           <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             <Button size="lg" asChild>
               <Link href="/import">Import Tutorial</Link>
