@@ -26,6 +26,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import CopyButton from '@/components/ui/copy-button';
+import { useHover } from 'usehooks-ts';
 
 interface Props {
   redirectToHistory: () => void;
@@ -36,6 +38,9 @@ export function ImportTutorial({ redirectToHistory }: Props) {
 
   const [gamePath, setGamePath] = useState('');
   const [conveneHistoryUrl, setConveneHistoryUrl] = useState('');
+
+  const codeBlockContainerRef = useRef<HTMLDivElement | null>(null);
+  const isHoverCodeBlockContainer = useHover(codeBlockContainerRef); // for the conditional hover state
 
   const script = createImportScript(gamePath);
   const codeBlockRef = useRef<HTMLTextAreaElement | null>(null);
@@ -53,9 +58,9 @@ export function ImportTutorial({ redirectToHistory }: Props) {
     e.preventDefault();
 
     if (!isValidGamePath) {
-      toast.error('Invalid Game Path', {});
+      toast.error('Invalid Game Path');
     } else if (!isValidConveneHistoryUrl) {
-      toast.error('Invalid Convene History URL', {});
+      toast.error('Invalid Convene History URL');
     }
 
     saveConveneHistoryUrl(conveneHistoryUrl);
@@ -109,20 +114,33 @@ export function ImportTutorial({ redirectToHistory }: Props) {
               <div className="flex w-full items-center space-x-2">
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Textarea
-                      ref={codeBlockRef}
-                      disabled
-                      cols={3}
-                      className="font-mono focus:outline-none focus-visible:ring-none disabled:cursor-text bg-muted"
-                      value={
-                        isValidGamePath
-                          ? script
-                          : 'Input a valid installation directory first!'
-                      }
-                    />
+                    <div
+                      className="relative w-full"
+                      ref={codeBlockContainerRef}
+                    >
+                      <Textarea
+                        ref={codeBlockRef}
+                        disabled
+                        cols={3}
+                        className="font-mono focus:outline-none focus-visible:ring-none disabled:cursor-text bg-muted"
+                        value={
+                          isValidGamePath
+                            ? script
+                            : 'Input a valid installation directory first!'
+                        }
+                      ></Textarea>
+                      {isValidGamePath && isHoverCodeBlockContainer ? (
+                        <CopyButton
+                          className="absolute top-2 right-2"
+                          textToCopy={script}
+                        />
+                      ) : (
+                        ''
+                      )}
+                    </div>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Stuck? Click the “Need Help?” button.</p>
+                    <p>Stuck? Click the “Need Help?” button</p>
                   </TooltipContent>
                 </Tooltip>
               </div>
@@ -162,23 +180,18 @@ export function ImportTutorial({ redirectToHistory }: Props) {
 
           <div className="grid md:flex gap-4 md:justify-end">
             <Drawer>
-              <DrawerTrigger>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      type="button"
-                      className="w-full"
-                    >
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <DrawerTrigger asChild>
+                    <Button variant="outline" size="lg" type="button">
                       <FileQuestion className="h-4 w-4 mr-2" /> Need Help?
                     </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>View a Video Tutorial</p>
-                  </TooltipContent>
-                </Tooltip>
-              </DrawerTrigger>
+                  </DrawerTrigger>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>View a Video Tutorial</p>
+                </TooltipContent>
+              </Tooltip>
               <DrawerContent className="justify-center">
                 <DrawerHeader>
                   <DrawerTitle className="text-3xl text-center">

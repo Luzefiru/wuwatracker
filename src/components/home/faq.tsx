@@ -50,7 +50,7 @@ export function FAQ() {
           </p>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-3">
+      <AccordionItem value="item-3" className="border-none">
         <AccordionTrigger>
           I&apos;d like to support this website. How can I do that?
         </AccordionTrigger>
