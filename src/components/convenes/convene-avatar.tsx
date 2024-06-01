@@ -66,7 +66,7 @@ export function ConveneAvatar({
           <span>{pullNumberToDisplay}</span>
         </Badge>
         {qualityLevel === 5 && (
-          <Sparkles className="h-[1rem] w-[1rem] rotate-0 scale-100 transition-all absolute text-yellow-400 fill-yellow-400 left-[8px] top-1 aspect-square" />
+          <Sparkles className="h-[1rem] w-[1rem] rotate-0 scale-100 text-xl transition-all absolute text-yellow-400 fill-yellow-400 left-0 top-0 aspect-square"></Sparkles>
         )}
       </div>
     </>

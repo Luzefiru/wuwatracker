@@ -15,6 +15,8 @@ import {
 import { BannerStats } from "@/types/BannerStats";
 import { fiveStarObjects } from "@/data/gachaObjects";
 import { ConveneAvatar } from "./convene-avatar";
+import { AvatarFilter as Filtertype } from "@/types/avatarFilter";
+import AvatarFilter from "./avatar-filter";
 
 interface Props {
   title: string;
@@ -34,6 +36,26 @@ export function BannerStatsCard({
   const { getCardPoolTypeStatistics } = useConveneHistory();
 
   const [stats, setStats] = useState<BannerStats | null>(null);
+  const [filter, setFilter] = useState<Array<Filtertype>>([
+    Filtertype.FIVE_STARS,
+    Filtertype.FOUR_STARS,
+  ]);
+
+  function filterAvatars() {
+    console.log(filter);
+    if (stats?.fiveStarObjects.length || stats?.fourStarObjects.length) {
+      if (
+        filter.includes(Filtertype.FIVE_STARS) &&
+        filter.includes(Filtertype.FOUR_STARS)
+      ) {
+        return [...stats?.fourStarObjects, ...stats?.fiveStarObjects];
+      } else if (filter.includes(Filtertype.FIVE_STARS)) {
+        return stats?.fiveStarObjects;
+      } else if (filter.includes(Filtertype.FOUR_STARS)) {
+        return stats?.fourStarObjects;
+      }
+    }
+  }
 
   useEffect(() => {
     const getBannerStats = async () => {
@@ -45,8 +67,6 @@ export function BannerStatsCard({
     };
     getBannerStats();
   }, [cardPoolType, getCardPoolTypeStatistics, pullCost]);
-
-  console.log(stats);
 
   return (
     <>
@@ -101,28 +121,40 @@ export function BannerStatsCard({
       </Card>
       <Card className="bg-background/80 backdrop-blur-sm w-full">
         <div className="w-full">
-          <CardHeader className="text-center md:text-start">
+          <CardHeader className="text-center md:text-start flex flex-row justify-between items-center ">
             <div className="flex flex-col sm:flex-row items-center gap-3 flex-wrap">
-              <CardTitle>
-                Recent <span className="text-yellow-500">5✦</span> and{" "}
-                <span className="text-purple-500">4✦</span> Convenes
-              </CardTitle>
+              {filter.includes(Filtertype.FIVE_STARS) &&
+              filter.includes(Filtertype.FOUR_STARS) ? (
+                <CardTitle>
+                  Recent <span className="text-yellow-500">5✦</span> and{" "}
+                  <span className="text-purple-500">4✦</span> Convenes
+                </CardTitle>
+              ) : filter.includes(Filtertype.FIVE_STARS) ? (
+                <CardTitle>
+                  Recent <span className="text-yellow-500">5✦</span> Convenes
+                </CardTitle>
+              ) : (
+                <CardTitle>
+                  Recent <span className="text-purple-500">4✦</span> Convenes
+                </CardTitle>
+              )}
               <p className="text-xs text-muted-foreground opacity-60 ">
                 wuwatracker.tech
               </p>
             </div>
+            <AvatarFilter avatarFilter={filter} setAvatarFilter={setFilter} />
           </CardHeader>
           <CardContent className="grid md:flex md:flex-wrap gap-4 grid-auto-fit-[4rem] pt-6">
-            {/* TODO - add filters for; both 4* and 5*, 4*, and 5* pulls */}
-            {stats?.fiveStarObjects.length || stats?.fourStarObjects.length ? (
-              [...stats?.fourStarObjects, ...stats?.fiveStarObjects]
-                .reverse()
+            {filter.length !== 0 &&
+            (stats?.fiveStarObjects.length || stats?.fourStarObjects.length) ? (
+              filterAvatars()
+                ?.reverse()
                 .map((o) => {
                   /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
                   return <ConveneAvatar key={String(o.time) + o.name} {...o} />;
                 })
             ) : (
-              <p className="text-muted-foreground text-sm">No records yet.</p>
+              <p className="text-muted-foreground text-sm">No records found.</p>
             )}
           </CardContent>
         </div>
