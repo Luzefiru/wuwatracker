@@ -56,7 +56,7 @@ export function Header() {
             >
               <div className="aspect-square relative w-14">
                 <Image
-                  className="object-cover"
+                  className="object-cover invert dark:invert-0"
                   src="/icons/convene-icon.png"
                   layout="fill"
                   alt="Wuwa Tracker"
