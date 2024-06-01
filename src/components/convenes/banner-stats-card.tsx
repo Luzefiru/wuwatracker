@@ -46,6 +46,8 @@ export function BannerStatsCard({
     getBannerStats();
   }, [cardPoolType, getCardPoolTypeStatistics, pullCost]);
 
+  console.log(stats);
+
   return (
     <>
       <Card
@@ -102,7 +104,8 @@ export function BannerStatsCard({
           <CardHeader className="text-center md:text-start">
             <div className="flex flex-col sm:flex-row items-center gap-3 flex-wrap">
               <CardTitle>
-                Recent <span className="text-yellow-500">5✦</span> Convenes
+                Recent <span className="text-yellow-500">5✦</span> and{" "}
+                <span className="text-purple-500">4✦</span> Convenes
               </CardTitle>
               <p className="text-xs text-muted-foreground opacity-60 ">
                 wuwatracker.tech
@@ -111,10 +114,13 @@ export function BannerStatsCard({
           </CardHeader>
           <CardContent className="grid md:flex md:flex-wrap gap-4 grid-auto-fit-[4rem] pt-6">
             {/* TODO - add filters for; both 4* and 5*, 4*, and 5* pulls */}
-            {stats?.fiveStarObjects.length ? (
-              stats?.fiveStarObjects.map((o) => {
-                return <ConveneAvatar key={String(o.time) + o.name} {...o} />;
-              })
+            {stats?.fiveStarObjects.length || stats?.fourStarObjects.length ? (
+              [...stats?.fiveStarObjects, ...stats?.fourStarObjects].map(
+                (o) => {
+                  /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
+                  return <ConveneAvatar key={String(o.time) + o.name} {...o} />;
+                }
+              )
             ) : (
               <p className="text-muted-foreground text-sm">No records yet.</p>
             )}

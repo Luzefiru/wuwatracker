@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { fiveStarObjects } from "@/data/gachaObjects";
+import { fiveStarObjects, fourStarObjects } from "@/data/gachaObjects";
 import { Badge } from "@/components/ui/badge";
 
 interface Props {
@@ -47,8 +47,11 @@ export function ConveneAvatar({
         <div className="rounded-full w-16 h-16 bg-background overflow-hidden">
           <Image
             src={
-              /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
-              fiveStarObjects[name].imgSrc
+              qualityLevel === 5
+                ? /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
+                  fiveStarObjects[name].imgSrc
+                : /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
+                  fourStarObjects[name].imgSrc
             }
             width="404"
             height="560"
