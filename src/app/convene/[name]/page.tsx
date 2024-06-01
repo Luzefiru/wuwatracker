@@ -17,7 +17,7 @@ export default function Page({
   return (
     <div className="flex flex-col h-full justify-between">
       <Header />
-      <div className="flex h-full flex-col lg:flex-row gap-8 lg:gap-12 desktop:gap-24">
+      <div className="flex h-full flex-col lg:flex-row gap-8 lg:gap-12 desktop:gap-16">
         <Sidebar />
         <section className="flex w-full flex-col gap-8">
           <BannerStatsCard {...bannerMetadata[params.name]} />
