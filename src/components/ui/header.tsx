@@ -10,7 +10,7 @@ import getFirstConveneBannerHref from '@/lib/getFirstConveneBannerHref';
 
 export function Header() {
   return (
-    <header className="sticky top-0 flex h-16 items-center gap-4 border-b px-2 z-40 bg-background">
+    <header className="sticky top-0 flex h-16 items-center gap-4 border-b px-4 z-40 bg-background">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           href="/"
