@@ -12,10 +12,10 @@ import createImportScript from '@/lib/createImportScript';
 import { useConveneHistory } from '@/hooks/useConveneHistory';
 
 interface Props {
-  handleBack: () => void;
+  redirectToHistory: () => void;
 }
 
-export function ImportTutorial({ handleBack }: Props) {
+export function ImportTutorial({ redirectToHistory }: Props) {
   const { saveConveneHistoryUrl } = useConveneHistory();
 
   const [gamePath, setGamePath] = useState('');
@@ -45,7 +45,7 @@ export function ImportTutorial({ handleBack }: Props) {
     saveConveneHistoryUrl(conveneHistoryUrl);
 
     toast.success('Successfully imported Convene History URL!');
-    handleBack();
+    redirectToHistory();
   };
 
   return (
