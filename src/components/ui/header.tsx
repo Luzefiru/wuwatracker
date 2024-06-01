@@ -2,15 +2,15 @@
 import { ModeToggle } from './mode-toggle';
 import * as React from 'react';
 import Link from 'next/link';
-import { Package2 } from 'lucide-react';
 import { Button } from './button';
 import { Sheet, SheetTrigger, SheetContent } from './sheet';
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
+import getFirstConveneBannerHref from '@/lib/getFirstConveneBannerHref';
 
 export function Header() {
   return (
-    <header className="sticky top-0 flex h-16 items-center gap-4 border-b px-2 z-40 bg-background">
+    <header className="sticky top-0 flex py-1.5 items-center gap-4 border-b px-4 z-40 bg-background">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           href="/"
@@ -28,7 +28,7 @@ export function Header() {
           <span className="sr-only">Wuwa Tracker</span>
         </Link>
         <Link
-          href="/"
+          href={getFirstConveneBannerHref()}
           className="text-muted-foreground transition-colors hover:text-foreground"
         >
           History
@@ -65,10 +65,10 @@ export function Header() {
               <span className="sr-only">Wuwa Tracker</span>
             </Link>
             <Link
-              href="/"
+              href={getFirstConveneBannerHref()}
               className="text-muted-foreground hover:text-foreground"
             >
-              Tracker
+              History
             </Link>
             <Link
               href="/import"

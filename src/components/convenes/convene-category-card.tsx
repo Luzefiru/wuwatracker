@@ -42,7 +42,7 @@ export default function ConveneCategoryCard({
 
   return (
     <Link href={href}>
-      <Card className="hover:bg-accent overflow-hidden hover:cursor-pointer">
+      <Card className="bg-background/80 backdrop-blur-sm dark:hover:bg-accent/80 overflow-hidden hover:cursor-pointer">
         <div className="flex">
           <div className="relative w-24 h-24 rounded-xl self-center">
             <Image

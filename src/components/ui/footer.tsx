@@ -5,7 +5,7 @@ import Link from 'next/link';
 export function Footer() {
   return (
     <footer className="border-t pt-2 bg-background">
-      <div className="mx-auto w-full max-w-screen-desktop p-4 py-6 lg:py-8">
+      <div className="w-full max-w-screen-desktop p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="flex items-center gap-2">
@@ -35,7 +35,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="https://ko-fi.com/manage/mypage"
+                    href="https://ko-fi.com/luzefiru"
                     className="flex gap-2 items-center"
                   >
                     <span>Ko-fi</span>{' '}
@@ -145,7 +145,7 @@ export function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="sr-only">GitHub account</span>
+              <span className="sr-only">GitHub</span>
             </Link>
           </div>
         </div>

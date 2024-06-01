@@ -49,7 +49,7 @@ export function BannerStatsCard({
   return (
     <>
       <Card
-        className="dark:bg-accent bg-background w-full"
+        className="bg-background/80 backdrop-blur-sm w-full"
         style={{ backgroundImage: `url${bgImgSrc}` }}
       >
         <div className="w-full">
@@ -58,7 +58,7 @@ export function BannerStatsCard({
             <CardDescription>{description}</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col mt-3 gap-3">
-            <div className="py-4 px-3 flex justify-between bg-accent dark:bg-background rounded-lg">
+            <div className="py-4 px-3 flex justify-between bg-accent dark:opacity-80 rounded-lg">
               <h1 className="text-lg">Astrites Spent</h1>
               <div className="flex gap-1">
                 <h1 className="text-lg">{stats ? stats.totalAstrites : 0}</h1>
@@ -70,7 +70,7 @@ export function BannerStatsCard({
                 />
               </div>
             </div>
-            <div className="py-4 px-3 flex justify-between bg-accent dark:bg-background rounded-lg">
+            <div className="py-4 px-3 flex justify-between bg-accent dark:opacity-80 rounded-lg">
               <h1 className="text-lg">Total Convenes</h1>
               <div className="flex gap-1">
                 <h1 className="text-lg">{stats ? stats.totalPulls : 0}</h1>
@@ -82,13 +82,13 @@ export function BannerStatsCard({
                 />
               </div>
             </div>
-            <div className="py-4 px-3 flex justify-between bg-accent dark:bg-background rounded-lg">
+            <div className="py-4 px-3 flex justify-between bg-accent dark:opacity-80 rounded-lg">
               <h1 className="text-lg">5✦ Pulls</h1>
               <div className="flex">
                 <h1 className="text-lg">{stats ? stats.fiveStars : 0}</h1>
               </div>
             </div>
-            <div className="py-4 px-3 flex justify-between bg-accent dark:bg-background rounded-lg">
+            <div className="py-4 px-3 flex justify-between bg-accent dark:opacity-80 rounded-lg">
               <h1 className="text-lg">4✦ Pulls</h1>
               <div className="flex">
                 <h1 className="text-lg">{stats ? stats.fourStars : 0}</h1>
@@ -97,10 +97,10 @@ export function BannerStatsCard({
           </CardContent>
         </div>
       </Card>
-      <Card className="dark:bg-accent bg-background w-full">
+      <Card className="bg-background/80 backdrop-blur-sm w-full">
         <div className="w-full">
           <CardHeader className="text-center md:text-start">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-wrap">
               <CardTitle>
                 Recent <span className="text-yellow-500">5✦</span> Convenes
               </CardTitle>
