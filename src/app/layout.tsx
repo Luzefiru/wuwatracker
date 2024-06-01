@@ -6,6 +6,7 @@ import { Footer } from '@/components/ui/footer';
 import { Header } from '@/components/ui/header';
 import { Toaster } from '@/components/ui/sonner';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -41,6 +42,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Toaster richColors />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
