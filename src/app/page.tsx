@@ -1,6 +1,7 @@
-import { ArrowRight, Import } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import getFirstConveneBannerHref from '@/lib/getFirstConveneBannerHref';
 
 export default function LandingPage() {
   return (
@@ -42,7 +43,7 @@ export default function LandingPage() {
               <Link href="/import">Import Tutorial</Link>
             </Button>
             <Button size="lg" asChild variant="ghost">
-              <Link href="/convene">
+              <Link href={getFirstConveneBannerHref()}>
                 Go to History <ArrowRight className="ml-2 h-5 w-5" />{' '}
               </Link>
             </Button>
