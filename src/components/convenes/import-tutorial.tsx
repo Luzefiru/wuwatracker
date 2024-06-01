@@ -180,18 +180,18 @@ export function ImportTutorial({ redirectToHistory }: Props) {
 
           <div className="grid md:flex gap-4 md:justify-end">
             <Drawer>
-              <DrawerTrigger asChild>
-                <Tooltip>
-                  <TooltipTrigger asChild>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <DrawerTrigger asChild>
                     <Button variant="outline" size="lg" type="button">
                       <FileQuestion className="h-4 w-4 mr-2" /> Need Help?
                     </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>View a Video Tutorial</p>
-                  </TooltipContent>
-                </Tooltip>
-              </DrawerTrigger>
+                  </DrawerTrigger>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>View a Video Tutorial</p>
+                </TooltipContent>
+              </Tooltip>
               <DrawerContent className="justify-center">
                 <DrawerHeader>
                   <DrawerTitle className="text-3xl text-center">
