@@ -21,7 +21,10 @@ export function FAQ() {
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
             More information regarding our data collection can be found in our{' '}
-            <Link className="text-yellow-500" href="/privacy-policy">
+            <Link
+              className="text-yellow-500 hover:text-yellow-600"
+              href="/privacy-policy"
+            >
               Privacy Policy page.
             </Link>
           </p>
@@ -41,7 +44,7 @@ export function FAQ() {
             If you suspect that there&apos;s something wrong with this website,
             please create a{' '}
             <Link
-              className="text-yellow-500"
+              className="text-yellow-500 hover:text-yellow-600"
               href="https://github.com/Luzefiru/wuwatracker/issues"
             >
               GitHub Issue
@@ -63,7 +66,10 @@ export function FAQ() {
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
             Otherwise, we have a{' '}
-            <Link className="text-yellow-500" href="https://ko-fi.com/luzefiru">
+            <Link
+              className="text-yellow-500 hover:text-yellow-600"
+              href="https://ko-fi.com/luzefiru"
+            >
               Ko-fi page
             </Link>{' '}
             to accept any donations to keep the website running!

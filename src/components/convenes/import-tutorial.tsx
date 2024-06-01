@@ -28,6 +28,7 @@ import {
 } from '@/components/ui/tooltip';
 import CopyButton from '@/components/ui/copy-button';
 import { useHover } from 'usehooks-ts';
+import Link from 'next/link';
 
 interface Props {
   redirectToHistory: () => void;
@@ -109,7 +110,6 @@ export function ImportTutorial({ redirectToHistory }: Props) {
               <p className="mb-4 text-base font-normal text-muted-foreground">
                 Afterwards, open Windows PowerShell, and then paste the
                 following script.
-                <br />
               </p>
               <div className="flex w-full items-center space-x-2">
                 <Tooltip>
@@ -144,6 +144,17 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                   </TooltipContent>
                 </Tooltip>
               </div>
+              <p className="my-4 text-sm font-normal text-muted-foreground">
+                Note: The script does not edit your files, it simply extracts
+                the URL from your logs. You can view the script{' '}
+                <Link
+                  className="text-yellow-500 hover:text-yellow-600"
+                  href="https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c"
+                >
+                  here
+                </Link>
+                .
+              </p>
             </li>
             <li className="mb-10 ms-8">
               <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
