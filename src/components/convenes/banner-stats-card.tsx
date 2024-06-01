@@ -41,14 +41,17 @@ export function BannerStatsCard({
     Filtertype.FOUR_STARS,
   ]);
 
+  console.log(stats);
+
   function filterAvatars() {
-    console.log(filter);
     if (stats?.fiveStarObjects.length || stats?.fourStarObjects.length) {
       if (
         filter.includes(Filtertype.FIVE_STARS) &&
         filter.includes(Filtertype.FOUR_STARS)
       ) {
-        return [...stats?.fourStarObjects, ...stats?.fiveStarObjects];
+        return [...stats?.fourStarObjects, ...stats?.fiveStarObjects].sort(
+          (a, b) => b.time.getTime() - a.time.getTime()
+        );
       } else if (filter.includes(Filtertype.FIVE_STARS)) {
         return stats?.fiveStarObjects;
       } else if (filter.includes(Filtertype.FOUR_STARS)) {
@@ -121,7 +124,7 @@ export function BannerStatsCard({
       </Card>
       <Card className="bg-background/80 backdrop-blur-sm w-full">
         <div className="w-full">
-          <CardHeader className="text-center md:text-start flex flex-row justify-between items-center ">
+          <CardHeader className="text-center md:text-start flex flex-col sm:flex-row justify-between items-center ">
             <div className="flex flex-col sm:flex-row items-center gap-3 flex-wrap">
               {(filter.includes(Filtertype.FIVE_STARS) &&
                 filter.includes(Filtertype.FOUR_STARS)) ||
@@ -149,7 +152,8 @@ export function BannerStatsCard({
             {filter.length !== 0 &&
             (stats?.fiveStarObjects.length || stats?.fourStarObjects.length) ? (
               filterAvatars()
-                ?.reverse()
+                ?.sort((a, b) => b.time.getTime() - a.time.getTime())
+                .reverse()
                 .map((o) => {
                   /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
                   return <ConveneAvatar key={String(o.time) + o.name} {...o} />;
