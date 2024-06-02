@@ -1,5 +1,5 @@
-import { z } from 'zod';
-import { GachaRecordQueryResultDataSchema } from './GachaRecordQuery';
+import { z } from "zod";
+import { GachaRecordQueryResultDataSchema } from "./GachaRecordQuery";
 
 export const BannerStatsSchema = z.object({
   totalAstrites: z.number().gte(0),
@@ -15,7 +15,7 @@ export const BannerStatsSchema = z.object({
       fourStarCurrentPity: z.number().gte(0),
       previousFiveStarPullNumber: z.number().gte(0),
       previousFourStarPullNumber: z.number().gte(0),
-    })
+    }),
   ),
   fourStarObjects: z.array(GachaRecordQueryResultDataSchema),
 });

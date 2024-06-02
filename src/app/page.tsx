@@ -1,9 +1,9 @@
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import getFirstConveneBannerHref from '@/lib/getFirstConveneBannerHref';
-import { Spotlight } from '@/components/ui/spotlight';
-import { FAQ } from '@/components/home/faq';
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
+import { Spotlight } from "@/components/ui/spotlight";
+import { FAQ } from "@/components/home/faq";
 
 export default function LandingPage() {
   return (
@@ -51,7 +51,7 @@ export default function LandingPage() {
             </Button>
             <Button size="lg" asChild variant="ghost">
               <Link href={getFirstConveneBannerHref()}>
-                Go to History <ArrowRight className="ml-2 h-5 w-5" />{' '}
+                Go to History <ArrowRight className="ml-2 h-5 w-5" />{" "}
               </Link>
             </Button>
           </div>

@@ -1,8 +1,8 @@
-import { ConveneHistoryURLParamsSchema } from '@/types/ConveneHistoryURLParams';
+import { ConveneHistoryURLParamsSchema } from "@/types/ConveneHistoryURLParams";
 import {
   GachaRecordQueryArgs,
   GachaRecordQueryArgsSchema,
-} from '@/types/GachaRecordQuery';
+} from "@/types/GachaRecordQuery";
 
 /**
  * Extracts the query string parameters from a Convene History URL.
@@ -24,9 +24,9 @@ import {
  * @returns An object containing the extracted query string parameters.
  */
 export default function extractGachaRecordQueryArgs(
-  conveneHistoryUrl: string
+  conveneHistoryUrl: string,
 ): GachaRecordQueryArgs {
-  const queryString = conveneHistoryUrl.split('?')[1];
+  const queryString = conveneHistoryUrl.split("?")[1];
   const params = new URLSearchParams(queryString);
   const queryArgs: Record<string, string> = {};
 

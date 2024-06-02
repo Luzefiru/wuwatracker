@@ -1,5 +1,5 @@
-import { BannerStats } from '@/types/BannerStats';
-import { GachaRecordQueryResult } from '@/types/GachaRecordQuery';
+import { BannerStats } from "@/types/BannerStats";
+import { GachaRecordQueryResult } from "@/types/GachaRecordQuery";
 
 // TODO - refactor this mess, I apologize to all my teachers & mentors
 export default function parseBannerStatistics(
@@ -7,7 +7,7 @@ export default function parseBannerStatistics(
   // TODO - there isn't a reliable way to fetch the resource ID of a resonator/weapon, so these are unused
   featuredFiveStarResourceIds: number[], // multiple in case future banners have multiple 5* rate ups
   featuredFourStarResourceIds: number[], // multiple 4* are rate up
-  gachaRecord: GachaRecordQueryResult
+  gachaRecord: GachaRecordQueryResult,
 ): BannerStats {
   // The 0th index is the newest record, so we reverse the start with the earliest pull
   const pulls = gachaRecord.data;
@@ -57,10 +57,10 @@ export default function parseBannerStatistics(
   const totalAstrites = pullCost * pulls.length;
   const totalPulls = pulls.length;
   const featuredFiveStars = fiveStars.filter((f) =>
-    featuredFiveStarResourceIds.includes(f.resourceId)
+    featuredFiveStarResourceIds.includes(f.resourceId),
   );
   const featuredFourStars = fourStars.filter((f) =>
-    featuredFourStarResourceIds.includes(f.resourceId)
+    featuredFourStarResourceIds.includes(f.resourceId),
   );
 
   return {

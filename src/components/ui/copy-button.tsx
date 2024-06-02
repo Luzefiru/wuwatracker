@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 interface Props {
   textToCopy: string;
@@ -10,12 +10,12 @@ import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
-} from '@/components/ui/tooltip';
-import { Button } from '@/components/ui/button';
-import { Clipboard } from 'lucide-react';
-import { ClipboardCheck } from 'lucide-react';
-import { useState } from 'react';
-import { toast } from 'sonner';
+} from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
+import { Clipboard } from "lucide-react";
+import { ClipboardCheck } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 
 export default function CopyButton({ className, textToCopy }: Props) {
   const [isCopied, setIsCopied] = useState(false);
@@ -33,9 +33,9 @@ export default function CopyButton({ className, textToCopy }: Props) {
     const copyToClipboard = async () => {
       try {
         navigator.clipboard.writeText(textToCopy);
-        toast.success('Successfully copied to clipboard!');
+        toast.success("Successfully copied to clipboard!");
       } catch (e) {
-        toast.error('Could not copy to clipboard!');
+        toast.error("Could not copy to clipboard!");
       }
     };
 
@@ -48,7 +48,7 @@ export default function CopyButton({ className, textToCopy }: Props) {
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
-              variant={isCopied ? 'success' : 'outline'}
+              variant={isCopied ? "success" : "outline"}
               size="icon"
               onClick={handleCopy}
               className={className}

@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
-import { ImportTutorial } from '@/components/convenes/import-tutorial';
-import { ChevronLeft } from 'lucide-react';
-import getFirstConveneBannerHref from '@/lib/getFirstConveneBannerHref';
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { ImportTutorial } from "@/components/convenes/import-tutorial";
+import { ChevronLeft } from "lucide-react";
+import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
 
 export default function Import() {
   const router = useRouter();
 
   const handleBack = () => {
-    router.push('/');
+    router.push("/");
   };
 
   const redirectToHistory = () => {

@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { ConveneCategories } from '../convenes/convene-categories';
+import * as React from "react";
+import { ConveneCategories } from "../convenes/convene-categories";
 
 export function Sidebar() {
   return (

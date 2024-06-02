@@ -1,6 +1,6 @@
-import * as React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import * as React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -38,7 +38,7 @@ export function Footer() {
                     href="https://ko-fi.com/luzefiru"
                     className="flex gap-2 items-center"
                   >
-                    <span>Ko-fi</span>{' '}
+                    <span>Ko-fi</span>{" "}
                     <div className="aspect-square relative w-6 flex items-center">
                       <Image
                         className="object-cover"
@@ -85,7 +85,7 @@ export function Footer() {
         </div>
         <div className="text-center sm:text-start sm:flex sm:items-center sm:justify-between mt-12">
           <span className="text-sm text-muted-foreground">
-            © 2024{' '}
+            © 2024{" "}
             <Link href="/" className="hover:text-primary transition-all">
               Wuwa Tracker
             </Link>

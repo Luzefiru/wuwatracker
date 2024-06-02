@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
-import { BannerPityDisplayStats } from '@/types/BannerPity';
-import { useConveneHistory } from '@/hooks/useConveneHistory';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { BannerPityDisplayStats } from "@/types/BannerPity";
+import { useConveneHistory } from "@/hooks/useConveneHistory";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface Props {
   title: string;

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { fiveStarObjects, fourStarObjects } from '@/data/gachaObjects';
-import { Badge } from '@/components/ui/badge';
-import { Sparkles } from 'lucide-react';
+import Image from "next/image";
+import { fiveStarObjects, fourStarObjects } from "@/data/gachaObjects";
+import { Badge } from "@/components/ui/badge";
+import { Sparkles } from "lucide-react";
 
 interface Props {
   name: string;
@@ -34,11 +34,11 @@ export function ConveneAvatar({
 
   function getBadgeVariant(pullNumber: number) {
     if (pullNumber >= 65) {
-      return 'destructive';
+      return "destructive";
     } else if (pullNumber >= 30) {
-      return 'warning';
+      return "warning";
     } else {
-      return 'success';
+      return "success";
     }
   }
 
@@ -47,9 +47,9 @@ export function ConveneAvatar({
   const imgSrc =
     qualityLevel === 5
       ? /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
-        fiveStarObjects[name]?.imgSrc ?? '/icons/unknown-five-star.png'
+        fiveStarObjects[name]?.imgSrc ?? "/icons/unknown-five-star.png"
       : /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
-        fourStarObjects[name]?.imgSrc ?? '/icons/unknown-four-star.png';
+        fourStarObjects[name]?.imgSrc ?? "/icons/unknown-four-star.png";
 
   return (
     <>
