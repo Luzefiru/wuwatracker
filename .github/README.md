@@ -1,8 +1,10 @@
-# wuwatracker.tech
+# [wuwatracker.tech](https://wuwatracker.tech)
 
-A Wuthering Waves Convene History &amp; Pity Tracker
+A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!
 
-<img src="./README-banner.png" />
+Built with [Next.js](https://nextjs.org/) + [TypeScript](https://www.typescriptlang.org/), deployed on [Vercel](https://vercel.com/) @ [wuwatracker.tech](https://wuwatracker.tech).
+
+<img width="1080" src="./README-banner.png" />
 
 ## Setup
 
@@ -17,7 +19,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Contributing
 
-Please read our [Contributing Guide](./CONTRIBUTING.md) before making an issue or pull request.
+We'd love your help in improving the website with features, bug reports, and patches. But before doing so, please;
+
+1. Read our [Contributing Guide](./CONTRIBUTING.md) before making an issue or pull request.
+2. [Fork this repository](https://github.com/Luzefiru/wuwatracker/fork) and start working on your own repository before making a pull request.
+
+### For Feature Requests or Bug Reports
+
+[Create an issue](https://github.com/Luzefiru/wuwatracker/issues/new/choose) while following the specific templates.
 
 ## Credits
 
