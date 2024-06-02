@@ -11,10 +11,10 @@ export function FAQ() {
     <Accordion
       type="single"
       collapsible
-      className="max-w-screen-md w-full pb-8"
+      className="max-w-screen-md w-full pb-8 px-4"
     >
       <AccordionItem value="item-1">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-start">
           Do you store my data when I import my history?
         </AccordionTrigger>
         <AccordionContent>
@@ -35,7 +35,7 @@ export function FAQ() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-start">
           How do I know this website won&apos;t steal my data anyway?
         </AccordionTrigger>
         <AccordionContent>
@@ -58,7 +58,7 @@ export function FAQ() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-start">
           My history is not automatically updating, what&apos;s wrong?
         </AccordionTrigger>
         <AccordionContent>
@@ -81,7 +81,7 @@ export function FAQ() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-4">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-start">
           How do I raise a bug report or suggest a feature?
         </AccordionTrigger>
         <AccordionContent>
@@ -100,7 +100,9 @@ export function FAQ() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-5" className="border-none">
-        <AccordionTrigger>How can I support this website?</AccordionTrigger>
+        <AccordionTrigger className="text-start">
+          How can I support this website?
+        </AccordionTrigger>
         <AccordionContent>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
             Thank you for using this website. As you continue to use it, you
