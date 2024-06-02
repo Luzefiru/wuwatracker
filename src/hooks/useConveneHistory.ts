@@ -1,27 +1,27 @@
-import { useLocalStorage } from 'usehooks-ts';
-import { useCallback, useMemo } from 'react';
-import extractGachaRecordQueryArgs from '@/lib/extractGachaRecordQueryArgs';
-import fetchGachaRecordByCardPoolType from '@/services/fetchGachaRecordByCardPoolType';
-import parsePityCounterStats from '@/lib/parsePityCounterStats';
-import parseBannerStatistics from '@/lib/parseBannerStatistics';
-import { GachaRecordQueryResult } from '@/types/GachaRecordQuery';
-import { BannerPityDisplayStats } from '@/types/BannerPity';
-import { BannerStats } from '@/types/BannerStats';
+import { useLocalStorage } from "usehooks-ts";
+import { useCallback, useMemo } from "react";
+import extractGachaRecordQueryArgs from "@/lib/extractGachaRecordQueryArgs";
+import fetchGachaRecordByCardPoolType from "@/services/fetchGachaRecordByCardPoolType";
+import parsePityCounterStats from "@/lib/parsePityCounterStats";
+import parseBannerStatistics from "@/lib/parseBannerStatistics";
+import { GachaRecordQueryResult } from "@/types/GachaRecordQuery";
+import { BannerPityDisplayStats } from "@/types/BannerPity";
+import { BannerStats } from "@/types/BannerStats";
 
-const LOCALSTORAGE_KEY = 'convene-history-url';
+const LOCALSTORAGE_KEY = "convene-history-url";
 
 export function useConveneHistory() {
   const [
     savedConveneHistoryUrl,
     setSavedConveneHistoryUrl,
     removeSavedConveneHistoryUrl,
-  ] = useLocalStorage(LOCALSTORAGE_KEY, '');
+  ] = useLocalStorage(LOCALSTORAGE_KEY, "");
   const queryArgs = useMemo(
     () =>
-      savedConveneHistoryUrl && savedConveneHistoryUrl !== ''
+      savedConveneHistoryUrl && savedConveneHistoryUrl !== ""
         ? extractGachaRecordQueryArgs(savedConveneHistoryUrl)
         : null,
-    [savedConveneHistoryUrl]
+    [savedConveneHistoryUrl],
   );
 
   /**
@@ -38,12 +38,12 @@ export function useConveneHistory() {
 
       const historyData = await fetchGachaRecordByCardPoolType(
         cardPoolType,
-        queryArgs
+        queryArgs,
       );
 
       return historyData;
     },
-    [queryArgs]
+    [queryArgs],
   );
 
   /**
@@ -60,7 +60,7 @@ export function useConveneHistory() {
       {
         fiveStarPity,
         fourStarPity,
-      }: { fiveStarPity: number; fourStarPity: number }
+      }: { fiveStarPity: number; fourStarPity: number },
     ): Promise<BannerPityDisplayStats | null> => {
       const historyData = await getHistoryByCardPoolType(cardPoolType);
 
@@ -70,13 +70,13 @@ export function useConveneHistory() {
 
       return parsePityCounterStats({ fiveStarPity, fourStarPity }, historyData);
     },
-    [getHistoryByCardPoolType]
+    [getHistoryByCardPoolType],
   );
 
   const getCardPoolTypeStatistics = useCallback(
     async (
       cardPoolType: number,
-      pullCost: number
+      pullCost: number,
     ): Promise<BannerStats | null> => {
       const historyData = await getHistoryByCardPoolType(cardPoolType);
 
@@ -87,7 +87,7 @@ export function useConveneHistory() {
       // TODO - featured five & four star IDs cannot be used at the moment due to incapability to easily fetch them
       return parseBannerStatistics(pullCost, [], [], historyData);
     },
-    [getHistoryByCardPoolType]
+    [getHistoryByCardPoolType],
   );
 
   return {

@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 export const BannerPitySchema = z.object({
   fiveStarPity: z.number().gt(0),

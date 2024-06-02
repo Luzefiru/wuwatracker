@@ -1,6 +1,6 @@
-import { Button } from '../ui/button';
-import Link from 'next/link';
-import { Import } from 'lucide-react';
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { Import } from "lucide-react";
 
 export default function Header() {
   return (

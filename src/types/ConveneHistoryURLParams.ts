@@ -1,11 +1,11 @@
-import { z } from 'zod';
-import { LanguageCodeEnumSchema } from './LangaugeCode';
+import { z } from "zod";
+import { LanguageCodeEnumSchema } from "./LangaugeCode";
 
 export const ConveneHistoryURLSchema = z
   .string()
   .regex(
     /^(https?:\/\/)([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/,
-    'Invalid Convene History URL'
+    "Invalid Convene History URL",
   );
 export type ConveneHistoryURL = z.infer<typeof ConveneHistoryURLSchema>;
 

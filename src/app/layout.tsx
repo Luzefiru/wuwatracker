@@ -1,19 +1,19 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/components/ui/theme-provider';
-import { Footer } from '@/components/ui/footer';
-import { Header } from '@/components/ui/header';
-import { Toaster } from '@/components/ui/sonner';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/ui/theme-provider";
+import { Footer } from "@/components/ui/footer";
+import { Header } from "@/components/ui/header";
+import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Wuwa Tracker',
+  title: "Wuwa Tracker",
   description:
-    'A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!',
+    "A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!",
 };
 
 export default function RootLayout({

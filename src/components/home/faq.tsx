@@ -3,8 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
-import Link from 'next/link';
+} from "@/components/ui/accordion";
+import Link from "next/link";
 
 export function FAQ() {
   return (
@@ -20,7 +20,7 @@ export function FAQ() {
             want to check your history, you&apos;ll need to import it again.
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
-            More information regarding our data collection can be found in our{' '}
+            More information regarding our data collection can be found in our{" "}
             <Link
               className="text-yellow-500 hover:text-yellow-600"
               href="/privacy-policy"
@@ -42,13 +42,13 @@ export function FAQ() {
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
             If you suspect that there&apos;s something wrong with this website,
-            please create a{' '}
+            please create a{" "}
             <Link
               className="text-yellow-500 hover:text-yellow-600"
               href="https://github.com/Luzefiru/wuwatracker/issues"
             >
               GitHub Issue
-            </Link>{' '}
+            </Link>{" "}
             on our repository.
           </p>
         </AccordionContent>
@@ -65,13 +65,13 @@ export function FAQ() {
             us develop.
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
-            Otherwise, we have a{' '}
+            Otherwise, we have a{" "}
             <Link
               className="text-yellow-500 hover:text-yellow-600"
               href="https://ko-fi.com/luzefiru"
             >
               Ko-fi page
-            </Link>{' '}
+            </Link>{" "}
             to accept any donations to keep the website running!
           </p>
         </AccordionContent>

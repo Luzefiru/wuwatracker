@@ -1,9 +1,9 @@
-import { z } from 'zod';
-import { LanguageCode } from './LangaugeCode';
+import { z } from "zod";
+import { LanguageCode } from "./LangaugeCode";
 
 export const ResourceType = {
-  Resonators: 'Resonators',
-  Weapons: 'Weapons',
+  Resonators: "Resonators",
+  Weapons: "Weapons",
 } as const;
 export const ResourceTypeEnumSchema = z.nativeEnum(ResourceType);
 export type ResourceTypeEnum = z.infer<typeof ResourceTypeEnumSchema>;
@@ -62,8 +62,8 @@ export type GachaRecordQueryResultData = z.infer<
  */
 export const GachaRecordQueryResultSchema = z.object({
   code: z.number(),
-  message: z.string().refine((s) => s === 'success', {
-    message: 'There was an error fetching gacha records!',
+  message: z.string().refine((s) => s === "success", {
+    message: "There was an error fetching gacha records!",
   }),
   data: z.array(GachaRecordQueryResultDataSchema),
 });

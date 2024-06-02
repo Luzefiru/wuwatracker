@@ -2,8 +2,8 @@ import {
   GachaRecordQueryResult,
   GachaRecordQueryResultSchema,
   GachaRecordQueryArgs,
-} from '@/types/GachaRecordQuery';
-import axios from 'axios';
+} from "@/types/GachaRecordQuery";
+import axios from "axios";
 
 /**
  * Fetches the gacha records of a cardPoolType given the `GachaRecordQueryArgs` fetched from a user's Convene History URL fetched from the game logs.
@@ -41,10 +41,10 @@ import axios from 'axios';
  */
 export default async function fetchGachaRecordByCardPoolType(
   cardPoolType: number,
-  args: GachaRecordQueryArgs
+  args: GachaRecordQueryArgs,
 ): Promise<GachaRecordQueryResult> {
   // TODO: Consider decoupling this when this API endpoint is reused in multiple places
-  const BASE_URL = 'https://gmserver-api.aki-game2.net';
+  const BASE_URL = "https://gmserver-api.aki-game2.net";
   const requestUrl = `${BASE_URL}/gacha/record/query`;
   const requestBody = {
     cardPoolType: cardPoolType,

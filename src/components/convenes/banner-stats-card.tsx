@@ -49,7 +49,7 @@ export function BannerStatsCard({
         filter.includes(Filtertype.FOUR_STARS)
       ) {
         return [...stats?.fourStarObjects, ...stats?.fiveStarObjects].sort(
-          (a, b) => b.time.getTime() - a.time.getTime()
+          (a, b) => b.time.getTime() - a.time.getTime(),
         );
       } else if (filter.includes(Filtertype.FIVE_STARS)) {
         return stats?.fiveStarObjects;
@@ -63,7 +63,7 @@ export function BannerStatsCard({
     const getBannerStats = async () => {
       const fetchedBannerStats = await getCardPoolTypeStatistics(
         cardPoolType,
-        pullCost
+        pullCost,
       );
       setStats(fetchedBannerStats);
     };

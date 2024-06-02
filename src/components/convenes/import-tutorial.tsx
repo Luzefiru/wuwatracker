@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import { useState, useRef } from 'react';
-import { cn } from '@/lib/utils';
-import { toast } from 'sonner';
-import { Import, FileQuestion } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import createImportScript from '@/lib/createImportScript';
-import { useConveneHistory } from '@/hooks/useConveneHistory';
-import Image from 'next/image';
+import * as React from "react";
+import { useState, useRef } from "react";
+import { cn } from "@/lib/utils";
+import { toast } from "sonner";
+import { Import, FileQuestion } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import createImportScript from "@/lib/createImportScript";
+import { useConveneHistory } from "@/hooks/useConveneHistory";
+import Image from "next/image";
 import {
   Drawer,
   DrawerContent,
@@ -19,16 +19,16 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@/components/ui/drawer';
+} from "@/components/ui/drawer";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/tooltip';
-import CopyButton from '@/components/ui/copy-button';
-import { useHover } from 'usehooks-ts';
-import Link from 'next/link';
+} from "@/components/ui/tooltip";
+import CopyButton from "@/components/ui/copy-button";
+import { useHover } from "usehooks-ts";
+import Link from "next/link";
 
 interface Props {
   redirectToHistory: () => void;
@@ -37,8 +37,8 @@ interface Props {
 export function ImportTutorial({ redirectToHistory }: Props) {
   const { saveConveneHistoryUrl } = useConveneHistory();
 
-  const [gamePath, setGamePath] = useState('');
-  const [conveneHistoryUrl, setConveneHistoryUrl] = useState('');
+  const [gamePath, setGamePath] = useState("");
+  const [conveneHistoryUrl, setConveneHistoryUrl] = useState("");
 
   const codeBlockContainerRef = useRef<HTMLDivElement | null>(null);
   const isHoverCodeBlockContainer = useHover(codeBlockContainerRef); // for the conditional hover state
@@ -53,20 +53,20 @@ export function ImportTutorial({ redirectToHistory }: Props) {
   const conveneHistoryUrlRegex =
     /^https:\/\/aki-gm-resources-oversea\.aki-game\.net\/aki\/gacha\/index\.html\#\/record\?(?=.*\bplayer_id=\w+\b)(?=.*\blang=\w+\b)(?=.*\brecord_id=\w+\b)(?=.*\bsvr_id=\w+\b).*$/;
   const isValidConveneHistoryUrl =
-    conveneHistoryUrl !== '' && conveneHistoryUrlRegex.test(conveneHistoryUrl);
+    conveneHistoryUrl !== "" && conveneHistoryUrlRegex.test(conveneHistoryUrl);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!isValidGamePath) {
-      toast.error('Invalid Game Path');
+      toast.error("Invalid Game Path");
     } else if (!isValidConveneHistoryUrl) {
-      toast.error('Invalid Convene History URL');
+      toast.error("Invalid Convene History URL");
     }
 
     saveConveneHistoryUrl(conveneHistoryUrl);
 
-    toast.success('Successfully imported Convene History URL!');
+    toast.success("Successfully imported Convene History URL!");
     redirectToHistory();
   };
 
@@ -89,7 +89,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
               <div className="grid w-full items-center gap-1.5">
                 <Input
                   className={cn({
-                    'border-red-500 focus-visible:ring-0 focus-visible:outline-none':
+                    "border-red-500 focus-visible:ring-0 focus-visible:outline-none":
                       gamePath && !isValidGamePath,
                   })}
                   id="wuwa-install-path"
@@ -126,7 +126,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                         value={
                           isValidGamePath
                             ? script
-                            : 'Input a valid installation directory first!'
+                            : "Input a valid installation directory first!"
                         }
                       ></Textarea>
                       {isValidGamePath && isHoverCodeBlockContainer ? (
@@ -135,7 +135,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                           textToCopy={script}
                         />
                       ) : (
-                        ''
+                        ""
                       )}
                     </div>
                   </TooltipTrigger>
@@ -146,7 +146,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
               </div>
               <p className="my-4 text-sm font-normal text-muted-foreground">
                 Note: The script does not edit your files, it simply extracts
-                the URL from your logs. You can view the script{' '}
+                the URL from your logs. You can view the script{" "}
                 <Link
                   className="text-yellow-500 hover:text-yellow-600"
                   href="https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c"
@@ -167,7 +167,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
               <div className="grid w-full items-center gap-1.5">
                 <Input
                   className={cn({
-                    'border-red-500 focus-visible:ring-0 focus-visible:outline-none':
+                    "border-red-500 focus-visible:ring-0 focus-visible:outline-none":
                       conveneHistoryUrl && !isValidConveneHistoryUrl,
                   })}
                   id="wuwa-convene-url"

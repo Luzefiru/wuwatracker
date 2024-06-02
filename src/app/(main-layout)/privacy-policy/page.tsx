@@ -1,9 +1,9 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Wuwa Tracker',
+  title: "Privacy Policy | Wuwa Tracker",
   description:
-    'This privacy policy document outlines the types of personal information that is received and collected by Wuwa Tracker and how it is used. Wuwa Tracker is a pity counter for Wuthering Waves, using the up-to-date data with global statistics and more.',
+    "This privacy policy document outlines the types of personal information that is received and collected by Wuwa Tracker and how it is used. Wuwa Tracker is a pity counter for Wuthering Waves, using the up-to-date data with global statistics and more.",
 };
 
 export default function PrivacyPolicy() {

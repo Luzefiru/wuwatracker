@@ -1,9 +1,9 @@
-import { GachaRecordQueryResult } from '@/types/GachaRecordQuery';
-import { BannerPity, BannerPityDisplayStats } from '@/types/BannerPity';
+import { GachaRecordQueryResult } from "@/types/GachaRecordQuery";
+import { BannerPity, BannerPityDisplayStats } from "@/types/BannerPity";
 
 export default function parsePityCounterStats(
   bannerPityStats: BannerPity,
-  gachaRecord: GachaRecordQueryResult
+  gachaRecord: GachaRecordQueryResult,
 ): BannerPityDisplayStats {
   // The 0th index is the newest record, so we reverse the start with the earliest pull
   const pulls = gachaRecord.data;
