@@ -8,7 +8,11 @@ import Link from "next/link";
 
 export function FAQ() {
   return (
-    <Accordion type="single" collapsible className="max-w-screen-md w-full">
+    <Accordion
+      type="single"
+      collapsible
+      className="max-w-screen-md w-full pb-8"
+    >
       <AccordionItem value="item-1">
         <AccordionTrigger>
           Do you store my data when I import my history?
@@ -32,6 +36,29 @@ export function FAQ() {
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger>
+          How do I know this website won&apos;t steal my data anyway?
+        </AccordionTrigger>
+        <AccordionContent>
+          <p className="leading-7 [&:not(:first-child)]:mt-4">
+            Rest assured, we are players just like you and want to help
+            Wuthering Waves grow by building useful tools for the all the Rovers
+            in the world.
+          </p>
+          <p className="leading-7 [&:not(:first-child)]:mt-4">
+            If you want to make sure, this website is open source and you can
+            view the code & scripts anytime at our{" "}
+            <Link
+              className="text-yellow-500 hover:text-yellow-600"
+              href="https://github.com/Luzefiru/wuwatracker"
+            >
+              GitHub repository
+            </Link>
+            .
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>
           My history is not automatically updating, what&apos;s wrong?
         </AccordionTrigger>
         <AccordionContent>
@@ -42,30 +69,45 @@ export function FAQ() {
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
             If you suspect that there&apos;s something wrong with this website,
-            please create a{" "}
+            please{" "}
             <Link
               className="text-yellow-500 hover:text-yellow-600"
-              href="https://github.com/Luzefiru/wuwatracker/issues"
+              href="https://ko-fi.com/luzefiru"
             >
-              GitHub Issue
-            </Link>{" "}
-            on our repository.
+              create an issue in our GitHub repository
+            </Link>
+            .
           </p>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-3" className="border-none">
+      <AccordionItem value="item-4">
         <AccordionTrigger>
-          I&apos;d like to support this website. How can I do that?
+          How do I raise a bug report or suggest a feature?
         </AccordionTrigger>
         <AccordionContent>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
-            Thank you for using our website. As of the moment, our GitHub
-            repository is not yet open to the public as we are creating some
-            essential features. So stay tuned for that if you would like to help
-            us develop.
+            You can{" "}
+            <Link
+              className="text-yellow-500 hover:text-yellow-600"
+              href="https://ko-fi.com/luzefiru"
+            >
+              create an issue in our GitHub repository
+            </Link>{" "}
+            using the proper template so that we can address your concern as
+            soon as possible. Your contribution will help us create a better
+            experience for our users, so we would greatly appreciate it!
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-5" className="border-none">
+        <AccordionTrigger>How can I support this website?</AccordionTrigger>
+        <AccordionContent>
+          <p className="leading-7 [&:not(:first-child)]:mt-4">
+            Thank you for using this website. As you continue to use it, you
+            also inspire us to keep improving it.
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
-            Otherwise, we have a{" "}
+            If you want to support us financially, we have a{" "}
             <Link
               className="text-yellow-500 hover:text-yellow-600"
               href="https://ko-fi.com/luzefiru"
