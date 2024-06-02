@@ -95,7 +95,7 @@ export function Footer() {
           </span>
           <div className="flex justify-center mt-4 sm:mt-0">
             <Link
-              href="https://discord.com/invite/wutheringwaves"
+              href="https://discord.gg/mADnEXwZGT"
               className="text-muted-foreground hover:text-primary transition-all"
             >
               <svg
