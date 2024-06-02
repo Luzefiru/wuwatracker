@@ -5,7 +5,7 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="border-t pt-2 bg-background flex justify-center">
-      <div className="w-full max-w-screen-desktop p-4 py-6 lg:py-8">
+      <div className="w-full max-w-screen-desktop p-4 py-6 lg:py-8 lg:px-12">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="flex items-center gap-2">

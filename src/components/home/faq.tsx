@@ -36,7 +36,7 @@ export function FAQ() {
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger>
-          How do I know this website won't steal my data anyway?
+          How do I know this website won&apos;t steal my data anyway?
         </AccordionTrigger>
         <AccordionContent>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
