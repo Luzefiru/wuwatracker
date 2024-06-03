@@ -14,7 +14,7 @@ import {
 } from "../ui/card";
 import { BannerStats } from "@/types/BannerStats";
 import { ConveneAvatar } from "./convene-avatar";
-import { AvatarFilter as Filtertype } from "@/types/avatarFilter";
+import { AvatarFilter as Filtertype } from "@/types/AvatarFilter";
 import AvatarFilter from "./avatar-filter";
 
 interface Props {

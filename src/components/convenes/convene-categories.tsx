@@ -1,15 +1,26 @@
 "use client";
 
 import * as React from "react";
+
 import ConveneCategoryCard from "./convene-category-card";
 import { bannerMetadata } from "@/data/banners";
-import { BannerTypeSlug } from "@/types/BannerTypeSlugEnum";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Import, Filter } from "lucide-react";
+import { Filter } from "lucide-react";
 import { ConveneFilter } from "./convene-filter";
+import { useBannerFilters } from "@/hooks/useBannerFilters";
+import { useState, useEffect } from "react";
+import { ConveneCategoryCardSkeleton } from "./convene-category-card-skeleton";
 
 export function ConveneCategories() {
+  const [isLoading, setIsLoading] = useState(false);
+  const { bannerFilters } = useBannerFilters();
+
+  // Two-pass rendering to avoid hydration mismatches, see: https://react.dev/reference/react-dom/client/hydrateRoot#handling-different-client-and-server-content
+  useEffect(() => {
+    setIsLoading(true);
+  }, []);
+
   return (
     <>
       <div className="mb-2 flex flex-col md:flex-row justify-between gap-8">
@@ -17,16 +28,7 @@ export function ConveneCategories() {
           <h2 className="scroll-m-20 text-4xl font-semibold tracking-tight text-center md:text-start">
             Convene Tracker
           </h2>
-          <Button
-            asChild
-            className="lg:inline-flex hidden ml-auto size-11"
-            variant="outline"
-            size="icon"
-          >
-            <Link href="/import">
-              <Filter className="h-4 w-4" />
-            </Link>
-          </Button>
+          <ConveneFilter btnClassName="lg:inline-flex hidden ml-auto size-11" />
         </div>
         <div className="flex w-full gap-2 lg:hidden">
           <Button
@@ -36,38 +38,25 @@ export function ConveneCategories() {
             size="lg"
           >
             <Link href="/import">
-              <Import className="mr-2 h-4 w-4" /> Import
+              <Filter className="mr-2 h-4 w-4" /> Import
             </Link>
           </Button>
-          <Button
-            asChild
-            className="lg:hidden size-11"
-            variant="outline"
-            size="icon"
-          >
-            <Link href="/import">
-              <Filter className="h-4 w-4" />
-            </Link>
-          </Button>
+          <ConveneFilter btnClassName="lg:hidden size-11" />
         </div>
       </div>
 
-      <ConveneCategoryCard
-        {...bannerMetadata[BannerTypeSlug["limited-character"]]}
-      />
-      <ConveneCategoryCard
-        {...bannerMetadata[BannerTypeSlug["limited-weapon"]]}
-      />
-      <ConveneCategoryCard
-        {...bannerMetadata[BannerTypeSlug["permanent-character"]]}
-      />
-      <ConveneCategoryCard
-        {...bannerMetadata[BannerTypeSlug["permanent-weapon"]]}
-      />
-      <ConveneCategoryCard {...bannerMetadata[BannerTypeSlug["starter"]]} />
-      <ConveneCategoryCard
-        {...bannerMetadata[BannerTypeSlug["starter-selector"]]}
-      />
+      {isLoading
+        ? bannerFilters.map((f) => {
+            return (
+              <ConveneCategoryCard
+                key={`show-banner-${f.cardPoolType}`}
+                {...bannerMetadata[f.slug]}
+              />
+            );
+          })
+        : [1, 2, 3, 4].map((n) => {
+            return <ConveneCategoryCardSkeleton key={`loading-banner-${n}`} />;
+          })}
     </>
   );
 }

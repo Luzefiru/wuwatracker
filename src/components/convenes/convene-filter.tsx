@@ -12,41 +12,76 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Filter } from "lucide-react";
+import { BannerTypeSlugEnum } from "@/types/BannerTypeSlugEnum";
+import { bannerMetadata } from "@/data/banners";
+import { useBannerFilters } from "@/hooks/useBannerFilters";
 
-type Checked = DropdownMenuCheckboxItemProps["checked"];
+interface Props {
+  btnClassName: string;
+}
 
-export function ConveneFilter() {
-  const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true);
-  const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false);
-  const [showPanel, setShowPanel] = React.useState<Checked>(false);
+export function ConveneFilter({ btnClassName }: Props) {
+  const isChecked = (slug: BannerTypeSlugEnum) =>
+    [...bannerFilters.map((i) => i.slug)].includes(slug);
+
+  const {
+    bannerFilters,
+    allBannerFilters,
+    addBannerFilter,
+    removeBannerFilter,
+    resetBannerFilters,
+    selectAllBannerFilters,
+  } = useBannerFilters();
+
+  const handleClickItem = (slug: BannerTypeSlugEnum) => {
+    if (isChecked(slug)) {
+      removeBannerFilter(slug);
+    } else {
+      addBannerFilter(slug);
+    }
+  };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button className={btnClassName} variant="outline" size="icon">
+          <Filter className="h-4 w-4" />
+        </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+      <DropdownMenuContent className="px-2 gap-2">
+        <DropdownMenuLabel className="text-lg">
+          Banners to Display
+        </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuCheckboxItem
-          checked={showStatusBar}
-          onCheckedChange={setShowStatusBar}
-        >
-          Status Bar
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
-          checked={showActivityBar}
-          onCheckedChange={setShowActivityBar}
-          disabled
-        >
-          Activity Bar
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
-          checked={showPanel}
-          onCheckedChange={setShowPanel}
-        >
-          Panel
-        </DropdownMenuCheckboxItem>
+        {allBannerFilters.map((f) => {
+          return (
+            <DropdownMenuCheckboxItem
+              key={`filter-${f.slug}-${btnClassName.replaceAll(" ", "-")}`}
+              checked={isChecked(f.slug)}
+              onCheckedChange={() => handleClickItem(f.slug)}
+              onSelect={(e) => {
+                e.preventDefault();
+              }}
+            >
+              {bannerMetadata[f.slug].title}
+            </DropdownMenuCheckboxItem>
+          );
+        })}
+        <DropdownMenuSeparator />
+        <div className="flex gap-2 w-full justify-between py-2">
+          <Button
+            className="text-sm text-muted-foreground font-normal"
+            variant="ghost"
+            size="sm"
+            onClick={resetBannerFilters}
+          >
+            Reset
+          </Button>{" "}
+          <Button onClick={selectAllBannerFilters} variant="outline" size="sm">
+            Select All
+          </Button>
+        </div>
       </DropdownMenuContent>
     </DropdownMenu>
   );

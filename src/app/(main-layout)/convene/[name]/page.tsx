@@ -20,7 +20,7 @@ export default function Page({
     <div className="flex flex-col h-full justify-between">
       <div className="flex h-full flex-col lg:flex-row gap-8 lg:gap-12 desktop:gap-16">
         <Sidebar />
-        <section>
+        <section className="w-full">
           <div className="justify-around md:justify-end w-full md:w-auto mb-4 hidden lg:flex">
             <Button asChild variant="default" size="lg">
               <Link href="/import">
