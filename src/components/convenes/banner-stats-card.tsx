@@ -40,8 +40,6 @@ export function BannerStatsCard({
     Filtertype.FOUR_STARS,
   ]);
 
-  console.log(stats);
-
   function filterAvatars() {
     if (stats?.fiveStarObjects.length || stats?.fourStarObjects.length) {
       if (
@@ -141,7 +139,7 @@ export function BannerStatsCard({
                   Recent <span className="text-purple-500">4✦</span> Convenes
                 </CardTitle>
               )}
-              <p className="text-xs text-muted-foreground opacity-60 ">
+              <p className="text-xs text-muted-foreground opacity-60 mb-1 md:mb-0">
                 wuwatracker.tech
               </p>
             </div>
