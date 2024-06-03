@@ -69,7 +69,7 @@ export function BannerStatsCard({
   }, [cardPoolType, getCardPoolTypeStatistics, pullCost]);
 
   return (
-    <>
+    <div className="flex w-full flex-col gap-8">
       <Card
         className="bg-background/80 backdrop-blur-sm w-full"
         style={{ backgroundImage: `url${bgImgSrc}` }}
@@ -161,6 +161,6 @@ export function BannerStatsCard({
           </CardContent>
         </div>
       </Card>
-    </>
+    </div>
   );
 }
