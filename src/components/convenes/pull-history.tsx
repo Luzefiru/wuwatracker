@@ -4,22 +4,16 @@ import InfiniteScroll from "../ui/scroll-area";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
 import { BannerStats } from "@/types/BannerStats";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { TableItemName } from "../ui/table-item-name";
 
 interface DummyProductResponse {
   products: DummyProduct[];
@@ -85,7 +79,7 @@ export function PullHistory({ stats }: Props) {
             <CardTitle>Pull History</CardTitle>
           </CardHeader>
           <CardContent>
-            <Table>
+            <Table className="text-md">
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[100px]">Pull No.</TableHead>
@@ -98,9 +92,15 @@ export function PullHistory({ stats }: Props) {
                 {stats?.fourStarObjects.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell className="font-medium">
-                      {item.cardPoolType}
+                      {/* @ts-ignore */}
+                      {item.pullNumber}
                     </TableCell>
-                    <TableCell>Paid</TableCell>
+                    <TableCell>
+                      <TableItemName
+                        name={item.name}
+                        qualityLevel={item.qualityLevel}
+                      />
+                    </TableCell>
                     <TableCell>Credit Card</TableCell>
                     <TableCell className="text-right">$250.00</TableCell>
                   </TableRow>
@@ -115,9 +115,7 @@ export function PullHistory({ stats }: Props) {
           isLoading={loading}
           next={next}
           threshold={1}
-        >
-          {hasMore && <Loader2 className="my-4 h-8 w-8 animate-spin" />}
-        </InfiniteScroll>
+        ></InfiniteScroll>
       </div>
     </div>
   );
