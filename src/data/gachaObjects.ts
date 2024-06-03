@@ -115,11 +115,6 @@ export const fourStarCharacterMetadata = {
     imgSrc:
       "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw_bailian_UI.png",
   },
-  Yuanwu: {
-    qualityLevel: 4,
-    imgSrc:
-      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw_yuanwu_UI.png",
-  },
 } as const;
 
 export const fourStarWeaponMetadata = {
@@ -198,11 +193,6 @@ export const fourStarWeaponMetadata = {
     imgSrc:
       "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21030023_UI.png",
   },
-  Overture: {
-    qualityLevel: 4,
-    imgSrc:
-      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21030013_UI.png",
-  },
   "Undying Flame": {
     qualityLevel: 4,
     imgSrc:
@@ -239,12 +229,6 @@ export const fourStarWeaponMetadata = {
       "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21040064_UI.png",
   },
   Lumingloss: {
-    qualityLevel: 4,
-    imgSrc:
-      // TODO - replace for consistent angle version, wanderer.moe doesn't have the image last time I checked
-      "https://static.wikia.nocookie.net/wutheringwaves/images/2/2d/Weapon_Lumingloss.png/revision/latest?cb=20240526015614",
-  },
-  Overture: {
     qualityLevel: 4,
     imgSrc:
       "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21020024_UI.png",
