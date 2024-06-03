@@ -49,7 +49,7 @@ export default function PrivacyPolicy() {
           behavior, improve our application, and enhance user experience.
         </p>
         <p className="leading-7 [&:not(:first-child)]:mt-6 dark:text-muted-foreground">
-          ercel Analytics collects data such as page views, clicks, and other
+          Vercel Analytics collects data such as page views, clicks, and other
           interactions within the application. This data is anonymized and
           aggregated, meaning it does not personally identify individual users.
         </p>
