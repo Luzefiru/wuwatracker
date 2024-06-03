@@ -6,7 +6,6 @@ export const BannerStatsSchema = z.object({
   totalPulls: z.number().gte(0),
   fiveStars: z.number().gte(0),
   fourStars: z.number().gte(0),
-  pullNumber: z.number().gte(0),
   featuredFiveStars: z.number().gte(0),
   featuredFourStars: z.number().gte(0),
   fiveStarObjects: z.array(
