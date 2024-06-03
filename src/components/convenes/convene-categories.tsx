@@ -21,6 +21,21 @@ export function ConveneCategories() {
     setIsLoading(true);
   }, []);
 
+  const bannerCards = bannerFilters.length ? (
+    bannerFilters.map((f) => {
+      return (
+        <ConveneCategoryCard
+          key={`show-banner-${f.cardPoolType}`}
+          {...bannerMetadata[f.slug]}
+        />
+      );
+    })
+  ) : (
+    <p className="text-muted-foreground text-sm text-center md:text-start">
+      No banners selected.
+    </p>
+  );
+
   return (
     <>
       <div className="mb-2 flex flex-col md:flex-row justify-between gap-8">
@@ -46,14 +61,7 @@ export function ConveneCategories() {
       </div>
 
       {isLoading
-        ? bannerFilters.map((f) => {
-            return (
-              <ConveneCategoryCard
-                key={`show-banner-${f.cardPoolType}`}
-                {...bannerMetadata[f.slug]}
-              />
-            );
-          })
+        ? bannerCards
         : [1, 2, 3, 4].map((n) => {
             return <ConveneCategoryCardSkeleton key={`loading-banner-${n}`} />;
           })}

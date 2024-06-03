@@ -37,10 +37,8 @@ export function ConveneFilter({ btnClassName }: Props) {
   const handleClickItem = (slug: BannerTypeSlugEnum) => {
     if (isChecked(slug)) {
       removeBannerFilter(slug);
-      console.log("remove", bannerFilters);
     } else {
       addBannerFilter(slug);
-      console.log("add", bannerFilters);
     }
   };
 

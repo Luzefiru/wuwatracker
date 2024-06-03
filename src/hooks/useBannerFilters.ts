@@ -65,7 +65,7 @@ export function useBannerFilters() {
   const removeBannerFilter = useCallback(
     (slug: BannerTypeSlugEnum) => {
       setSavedBannerFilters(
-        [...savedBannerFilters.filter((f) => f.slug === slug)].sort(
+        [...savedBannerFilters.filter((f) => f.slug !== slug)].sort(
           (a, b) => a.cardPoolType - b.cardPoolType,
         ),
       );
