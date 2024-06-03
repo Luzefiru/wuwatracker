@@ -86,3 +86,25 @@
     );
   }
 }
+
+::-webkit-scrollbar {
+  width: 0.2em;
+  border-radius: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #241e2f;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #241e2f;
+}

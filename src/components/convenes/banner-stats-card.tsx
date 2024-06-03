@@ -16,6 +16,7 @@ import { BannerStats } from "@/types/BannerStats";
 import { ConveneAvatar } from "./convene-avatar";
 import { AvatarFilter as Filtertype } from "@/types/AvatarFilter";
 import AvatarFilter from "./avatar-filter";
+import { PullHistory } from "./pull-history";
 
 interface Props {
   title: string;
@@ -46,14 +47,30 @@ export function BannerStatsCard({
         filter.includes(Filtertype.FIVE_STARS) &&
         filter.includes(Filtertype.FOUR_STARS)
       ) {
-        return [...stats?.fourStarObjects, ...stats?.fiveStarObjects].sort(
-          (a, b) => b.time.getTime() - a.time.getTime(),
-        );
+        return [...stats?.fourStarObjects, ...stats?.fiveStarObjects];
       } else if (filter.includes(Filtertype.FIVE_STARS)) {
         return stats?.fiveStarObjects;
       } else if (filter.includes(Filtertype.FOUR_STARS)) {
         return stats?.fourStarObjects;
       }
+    }
+  }
+
+  function determineFilter() {
+    if (stats?.fiveStarObjects.length && stats?.fourStarObjects.length) {
+      return true;
+    } else if (
+      stats?.fiveStarObjects.length &&
+      filter.includes(Filtertype.FIVE_STARS)
+    ) {
+      return true;
+    } else if (
+      stats?.fourStarObjects.length &&
+      filter.includes(Filtertype.FOUR_STARS)
+    ) {
+      return true;
+    } else {
+      return false;
     }
   }
 
@@ -146,14 +163,12 @@ export function BannerStatsCard({
             <AvatarFilter avatarFilter={filter} setAvatarFilter={setFilter} />
           </CardHeader>
           <CardContent className="grid md:flex md:flex-wrap gap-4 grid-auto-fit-[4rem] pt-6">
-            {filter.length !== 0 &&
-            (stats?.fiveStarObjects.length || stats?.fourStarObjects.length) ? (
+            {filter.length !== 0 && determineFilter() ? (
               filterAvatars()
                 ?.sort((a, b) => a.time.getTime() - b.time.getTime())
                 .reverse()
                 .map((o) => {
                   return (
-                    /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
                     <ConveneAvatar key={String(o.time) + o.pullNumber} {...o} />
                   );
                 })
@@ -163,6 +178,7 @@ export function BannerStatsCard({
           </CardContent>
         </div>
       </Card>
+      <PullHistory stats={stats} />
     </div>
   );
 }

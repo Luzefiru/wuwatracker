@@ -183,6 +183,11 @@ export const fourStarWeaponMetadata = {
     imgSrc:
       "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21030064_UI.png",
   },
+  Overture: {
+    qualityLevel: 4,
+    imgSrc:
+      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21030013_UI.png",
+  },
   Novaburst: {
     qualityLevel: 4,
     imgSrc:
@@ -238,11 +243,6 @@ export const fourStarWeaponMetadata = {
     imgSrc:
       // TODO - replace for consistent angle version, wanderer.moe doesn't have the image last time I checked
       "https://static.wikia.nocookie.net/wutheringwaves/images/2/2d/Weapon_Lumingloss.png/revision/latest?cb=20240526015614",
-  },
-  Overture: {
-    qualityLevel: 4,
-    imgSrc:
-      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21020024_UI.png",
   },
   "Lunar Cutter": {
     qualityLevel: 4,

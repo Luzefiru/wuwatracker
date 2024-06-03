@@ -1,6 +1,16 @@
 import { z } from "zod";
 import { GachaRecordQueryResultDataSchema } from "./GachaRecordQuery";
 
+// Represents a single pull's data after being parsed by `parseBannerStatistics()`
+export const BannerStatEntrySchema = GachaRecordQueryResultDataSchema.extend({
+  pullNumber: z.number().gte(0),
+  fiveStarCurrentPity: z.number().gte(0),
+  fourStarCurrentPity: z.number().gte(0),
+  previousFiveStarPullNumber: z.number().gte(0),
+  previousFourStarPullNumber: z.number().gte(0),
+});
+export type BannerStatEntry = z.infer<typeof BannerStatEntrySchema>;
+
 export const BannerStatsSchema = z.object({
   totalAstrites: z.number().gte(0),
   totalPulls: z.number().gte(0),
@@ -8,15 +18,7 @@ export const BannerStatsSchema = z.object({
   fourStars: z.number().gte(0),
   featuredFiveStars: z.number().gte(0),
   featuredFourStars: z.number().gte(0),
-  fiveStarObjects: z.array(
-    GachaRecordQueryResultDataSchema.extend({
-      pullNumber: z.number().gte(0),
-      fiveStarCurrentPity: z.number().gte(0),
-      fourStarCurrentPity: z.number().gte(0),
-      previousFiveStarPullNumber: z.number().gte(0),
-      previousFourStarPullNumber: z.number().gte(0),
-    }),
-  ),
-  fourStarObjects: z.array(GachaRecordQueryResultDataSchema),
+  fiveStarObjects: z.array(BannerStatEntrySchema),
+  fourStarObjects: z.array(BannerStatEntrySchema),
 });
 export type BannerStats = z.infer<typeof BannerStatsSchema>;
