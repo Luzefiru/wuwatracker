@@ -169,7 +169,6 @@ export function BannerStatsCard({
                 .reverse()
                 .map((o) => {
                   return (
-                    /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
                     <ConveneAvatar key={String(o.time) + o.pullNumber} {...o} />
                   );
                 })
