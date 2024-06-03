@@ -16,6 +16,7 @@ import { BannerStats } from "@/types/BannerStats";
 import { ConveneAvatar } from "./convene-avatar";
 import { AvatarFilter as Filtertype } from "@/types/avatarFilter";
 import AvatarFilter from "./avatar-filter";
+import { PullHistory } from "./pull-history";
 
 interface Props {
   title: string;
@@ -40,17 +41,13 @@ export function BannerStatsCard({
     Filtertype.FOUR_STARS,
   ]);
 
-  console.log(stats);
-
   function filterAvatars() {
     if (stats?.fiveStarObjects.length || stats?.fourStarObjects.length) {
       if (
         filter.includes(Filtertype.FIVE_STARS) &&
         filter.includes(Filtertype.FOUR_STARS)
       ) {
-        return [...stats?.fourStarObjects, ...stats?.fiveStarObjects].sort(
-          (a, b) => b.time.getTime() - a.time.getTime(),
-        );
+        return [...stats?.fourStarObjects, ...stats?.fiveStarObjects];
       } else if (filter.includes(Filtertype.FIVE_STARS)) {
         return stats?.fiveStarObjects;
       } else if (filter.includes(Filtertype.FOUR_STARS)) {
@@ -163,6 +160,7 @@ export function BannerStatsCard({
           </CardContent>
         </div>
       </Card>
+      <PullHistory stats={stats} />
     </>
   );
 }
