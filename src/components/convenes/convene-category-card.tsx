@@ -41,7 +41,7 @@ export default function ConveneCategoryCard({
   }, [cardPoolType, getCardPoolTypePity, fiveStarPity, fourStarPity]);
 
   return (
-    <Link href={href}>
+    <Link href={href} scroll={false}>
       <Card className="bg-background/80 backdrop-blur-sm dark:hover:bg-accent/80 overflow-hidden hover:cursor-pointer">
         <div className="flex">
           <div className="relative w-24 h-24 rounded-xl self-center">

@@ -1,4 +1,4 @@
-import { AvatarFilter as Filtertype } from "@/types/avatarFilter";
+import { AvatarFilter as Filtertype } from "@/types/AvatarFilter";
 import { Checkbox } from "../ui/checkbox";
 
 interface Props {

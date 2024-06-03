@@ -14,7 +14,7 @@ import {
 } from "../ui/card";
 import { BannerStats } from "@/types/BannerStats";
 import { ConveneAvatar } from "./convene-avatar";
-import { AvatarFilter as Filtertype } from "@/types/avatarFilter";
+import { AvatarFilter as Filtertype } from "@/types/AvatarFilter";
 import AvatarFilter from "./avatar-filter";
 import { PullHistory } from "./pull-history";
 
@@ -86,7 +86,7 @@ export function BannerStatsCard({
   }, [cardPoolType, getCardPoolTypeStatistics, pullCost]);
 
   return (
-    <>
+    <div className="flex w-full flex-col gap-8">
       <Card
         className="bg-background/80 backdrop-blur-sm w-full"
         style={{ backgroundImage: `url${bgImgSrc}` }}
@@ -156,7 +156,7 @@ export function BannerStatsCard({
                   Recent <span className="text-purple-500">4✦</span> Convenes
                 </CardTitle>
               )}
-              <p className="text-xs text-muted-foreground opacity-60 ">
+              <p className="text-xs text-muted-foreground opacity-60 mb-1 md:mb-0">
                 wuwatracker.tech
               </p>
             </div>
@@ -180,6 +180,6 @@ export function BannerStatsCard({
         </div>
       </Card>
       <PullHistory stats={stats} />
-    </>
+    </div>
   );
 }

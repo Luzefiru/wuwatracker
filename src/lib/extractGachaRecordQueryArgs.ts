@@ -10,7 +10,7 @@ import {
  * @example
  * const url = "https://aki-gm-resources-oversea.aki-game.net/aki/gacha/index.html#/record?svr_id=10cd7254d57e58ae560b15d51e34b4c8&player_id=900643805&lang=en&gacha_id=100001&gacha_type=1&svr_area=global&record_id=e005b89e3a163ff66d2bbc9263b9a434&resources_id=5c13a63f85465e9fcc0f24d6efb15083";
  * const gachaQueryArgs = extractGachaRecordQueryArgs(url);
- * console.log(gachaQueryArgs);
+ *
  * // Outputs:
  * {
  *   cardPoolId: "5c13a63f85465e9fcc0f24d6efb15083",
