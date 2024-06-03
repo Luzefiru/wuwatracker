@@ -80,35 +80,11 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                 <p className="text-sm">1</p>
               </span>
               <h3 className="flex items-center mb-1 text-lg font-semibold text-foreground">
-                Copy Your Installation Directory
-              </h3>
-              <p className="mb-4 text-base font-normal text-muted-foreground">
-                Find the folder that contains &quot;Wuthering Waves.exe&quot;
-                and a &quot;Client&quot; folder.
-              </p>
-              <div className="grid w-full items-center gap-1.5">
-                <Input
-                  className={cn({
-                    "border-red-500 focus-visible:ring-0 focus-visible:outline-none":
-                      gamePath && !isValidGamePath,
-                  })}
-                  id="wuwa-install-path"
-                  placeholder="Your installation directory"
-                  required
-                  onBlur={(e) => setGamePath(e.target.value)}
-                />
-              </div>
-            </li>
-            <li className="mb-10 ms-8">
-              <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
-                <p className="text-sm">2</p>
-              </span>
-              <h3 className="flex items-center mb-1 text-lg font-semibold text-foreground">
                 Launch Wuthering Waves on PC and Open Your In-game Convene
                 History
               </h3>
               <p className="mb-4 text-base font-normal text-muted-foreground">
-                Afterwards, open Windows PowerShell, and then paste the
+                Open Windows PowerShell, and then paste the
                 following script.
               </p>
               <div className="flex w-full items-center space-x-2">
@@ -158,7 +134,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
             </li>
             <li className="mb-10 ms-8">
               <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
-                <p className="text-sm">3</p>
+                <p className="text-sm">2</p>
               </span>
               <h3 className="mb-4 text-lg font-semibold text-foreground">
                 Paste the URL Here
@@ -181,7 +157,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
             </li>
             <li className="mb-10 ms-8">
               <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
-                <p className="text-sm">4</p>
+                <p className="text-sm">3</p>
               </span>
               <h3 className="mb-4 text-lg font-semibold text-foreground">
                 Press the &ldquo;Import History&rdquo; Button on this Website
