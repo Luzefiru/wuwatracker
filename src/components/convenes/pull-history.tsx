@@ -23,13 +23,13 @@ interface Props {
 
 export function PullHistory({ stats }: Props) {
   return (
-    <div className="max-h-[300px] w-full  overflow-y-auto">
-      <div className="flex w-full flex-col items-center  gap-3">
-        <Card className="w-full">
-          <CardHeader className="pb-6">
-            <CardTitle>Pull History</CardTitle>
-          </CardHeader>
-          <CardContent>
+    <Card className="w-full">
+      <CardHeader className="pb-6">
+        <CardTitle>Pull History</CardTitle>
+      </CardHeader>
+      <div className="max-h-[300px] w-full  overflow-y-auto">
+        <div className="flex w-full flex-col items-center  gap-3">
+          <CardContent className="w-full">
             {stats?.fiveStarObjects.length || stats?.fourStarObjects.length ? (
               <Table className="text-md">
                 <TableHeader>
@@ -74,9 +74,9 @@ export function PullHistory({ stats }: Props) {
               <p className="text-muted-foreground text-sm">No records found.</p>
             )}
           </CardContent>
-        </Card>
-        <InfiniteScroll threshold={1}></InfiniteScroll>
+          <InfiniteScroll threshold={1}></InfiniteScroll>
+        </div>
       </div>
-    </div>
+    </Card>
   );
 }
