@@ -115,6 +115,11 @@ export const fourStarCharacterMetadata = {
     imgSrc:
       "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw_bailian_UI.png",
   },
+  Yuanwu: {
+    qualityLevel: 4,
+    imgSrc:
+      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw_yuanwu_UI.png",
+  },
 } as const;
 
 export const fourStarWeaponMetadata = {
@@ -192,6 +197,11 @@ export const fourStarWeaponMetadata = {
     qualityLevel: 4,
     imgSrc:
       "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21030023_UI.png",
+  },
+  Overture: {
+    qualityLevel: 4,
+    imgSrc:
+      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21030013_UI.png",
   },
   "Undying Flame": {
     qualityLevel: 4,

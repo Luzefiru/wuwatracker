@@ -20,8 +20,8 @@ export function TableItemName({ qualityLevel, name }: Props) {
       <p
         className={
           qualityLevel === 4
-            ? "text-purple-600 font-semibold"
-            : "text-yellow-600 font-semibold"
+            ? "text-purple-500 font-semibold"
+            : "text-yellow-500 font-semibold"
         }
       >
         {name}
