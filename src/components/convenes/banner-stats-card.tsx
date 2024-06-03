@@ -152,8 +152,10 @@ export function BannerStatsCard({
                 ?.sort((a, b) => a.time.getTime() - b.time.getTime())
                 .reverse()
                 .map((o) => {
-                  /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
-                  return <ConveneAvatar key={String(o.time) + o.name} {...o} />;
+                  return (
+                    /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
+                    <ConveneAvatar key={String(o.time) + o.pullNumber} {...o} />
+                  );
                 })
             ) : (
               <p className="text-muted-foreground text-sm">No records found.</p>
