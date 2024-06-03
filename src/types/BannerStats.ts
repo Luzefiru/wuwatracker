@@ -17,6 +17,14 @@ export const BannerStatsSchema = z.object({
       previousFourStarPullNumber: z.number().gte(0),
     }),
   ),
-  fourStarObjects: z.array(GachaRecordQueryResultDataSchema),
+  fourStarObjects: z.array(
+    GachaRecordQueryResultDataSchema.extend({
+      pullNumber: z.number().gte(0),
+      fiveStarCurrentPity: z.number().gte(0),
+      fourStarCurrentPity: z.number().gte(0),
+      previousFiveStarPullNumber: z.number().gte(0),
+      previousFourStarPullNumber: z.number().gte(0),
+    }),
+  ),
 });
 export type BannerStats = z.infer<typeof BannerStatsSchema>;
