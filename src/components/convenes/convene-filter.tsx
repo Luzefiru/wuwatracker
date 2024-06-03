@@ -1,17 +1,17 @@
 "use client";
 
 import * as React from "react";
-import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
+import { Eye } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  FilterDropdownMenu,
+  FilterDropdownMenuCheckboxItem,
+  FilterDropdownMenuContent,
+  FilterDropdownMenuLabel,
+  FilterDropdownMenuSeparator,
+  FilterDropdownMenuTrigger,
+} from "@/components/ui/filter-dropdown-menu";
 import { Filter } from "lucide-react";
 import { BannerTypeSlugEnum } from "@/types/BannerTypeSlugEnum";
 import { bannerMetadata } from "@/data/banners";
@@ -37,26 +37,28 @@ export function ConveneFilter({ btnClassName }: Props) {
   const handleClickItem = (slug: BannerTypeSlugEnum) => {
     if (isChecked(slug)) {
       removeBannerFilter(slug);
+      console.log("remove", bannerFilters);
     } else {
       addBannerFilter(slug);
+      console.log("add", bannerFilters);
     }
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+    <FilterDropdownMenu>
+      <FilterDropdownMenuTrigger asChild>
         <Button className={btnClassName} variant="outline" size="icon">
           <Filter className="h-4 w-4" />
         </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="px-2 gap-2">
-        <DropdownMenuLabel className="text-lg">
+      </FilterDropdownMenuTrigger>
+      <FilterDropdownMenuContent className="px-2 gap-2">
+        <FilterDropdownMenuLabel className="text-lg">
           Banners to Display
-        </DropdownMenuLabel>
-        <DropdownMenuSeparator />
+        </FilterDropdownMenuLabel>
+        <FilterDropdownMenuSeparator />
         {allBannerFilters.map((f) => {
           return (
-            <DropdownMenuCheckboxItem
+            <FilterDropdownMenuCheckboxItem
               key={`filter-${f.slug}-${btnClassName.replaceAll(" ", "-")}`}
               checked={isChecked(f.slug)}
               onCheckedChange={() => handleClickItem(f.slug)}
@@ -65,10 +67,10 @@ export function ConveneFilter({ btnClassName }: Props) {
               }}
             >
               {bannerMetadata[f.slug].title}
-            </DropdownMenuCheckboxItem>
+            </FilterDropdownMenuCheckboxItem>
           );
         })}
-        <DropdownMenuSeparator />
+        <FilterDropdownMenuSeparator />
         <div className="flex gap-2 w-full justify-between py-2">
           <Button
             className="text-sm text-muted-foreground font-normal"
@@ -82,7 +84,7 @@ export function ConveneFilter({ btnClassName }: Props) {
             Select All
           </Button>
         </div>
-      </DropdownMenuContent>
-    </DropdownMenu>
+      </FilterDropdownMenuContent>
+    </FilterDropdownMenu>
   );
 }
