@@ -56,6 +56,24 @@ export function BannerStatsCard({
     }
   }
 
+  function determineFilter() {
+    if (stats?.fiveStarObjects.length && stats?.fourStarObjects.length) {
+      return true;
+    } else if (
+      stats?.fiveStarObjects.length &&
+      filter.includes(Filtertype.FIVE_STARS)
+    ) {
+      return true;
+    } else if (
+      stats?.fourStarObjects.length &&
+      filter.includes(Filtertype.FOUR_STARS)
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   useEffect(() => {
     const getBannerStats = async () => {
       const fetchedBannerStats = await getCardPoolTypeStatistics(
@@ -66,8 +84,6 @@ export function BannerStatsCard({
     };
     getBannerStats();
   }, [cardPoolType, getCardPoolTypeStatistics, pullCost]);
-
-  console.log(stats);
 
   return (
     <>
@@ -147,8 +163,7 @@ export function BannerStatsCard({
             <AvatarFilter avatarFilter={filter} setAvatarFilter={setFilter} />
           </CardHeader>
           <CardContent className="grid md:flex md:flex-wrap gap-4 grid-auto-fit-[4rem] pt-6">
-            {filter.length !== 0 &&
-            (stats?.fiveStarObjects.length || stats?.fourStarObjects.length) ? (
+            {filter.length !== 0 && determineFilter() ? (
               filterAvatars()
                 ?.sort((a, b) => a.time.getTime() - b.time.getTime())
                 .reverse()
