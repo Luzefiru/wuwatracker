@@ -53,4 +53,30 @@ export const bannerMetadata = {
       "https://cdn.wanderer.moe/wuthering-waves/backgrounds/T_WeaponShare_03.png",
     href: "/convene/permanent-weapon",
   },
+  [BannerTypeSlug["starter"]]: {
+    cardPoolType: 5,
+    title: "Beginner Convene",
+    description: "Utterance of Marvels",
+    pullCost: 128, // average pulls since it's always discounted
+    fiveStarPity: 50,
+    fourStarPity: 10,
+    imgSrc:
+      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw_jianxin_UI.png",
+    bgImgSrc:
+      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_LuckdraRole00.png",
+    href: "/convene/starter",
+  },
+  [BannerTypeSlug["starter-selector"]]: {
+    cardPoolType: 6,
+    title: "Beginner's Choice Convene",
+    description: "Beginner Selector",
+    pullCost: 160,
+    fiveStarPity: 80,
+    fourStarPity: 10,
+    imgSrc:
+      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw_jueyuan_UI.png",
+    bgImgSrc:
+      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_LuckdraRoleWeilinaiBg.png",
+    href: "/convene/starter-selector",
+  },
 } as const;

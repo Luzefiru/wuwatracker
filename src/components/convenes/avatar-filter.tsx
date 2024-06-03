@@ -1,4 +1,4 @@
-import { AvatarFilter as Filtertype } from "@/types/avatarFilter";
+import { AvatarFilter as Filtertype } from "@/types/AvatarFilter";
 import { Checkbox } from "../ui/checkbox";
 
 interface Props {
@@ -39,7 +39,7 @@ export default function AvatarFilter({ avatarFilter, setAvatarFilter }: Props) {
           Filtertype.FIVE_STARS,
         )} + bg-yellow-600 flex items-center justify-center text-yellow-700 border border-yellow-800`}
       >
-        <p>asdasd</p>✦
+        ✦
       </Checkbox>
       <Checkbox
         defaultChecked
