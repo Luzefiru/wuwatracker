@@ -36,8 +36,10 @@ export function PullHistory({ stats }: Props) {
                   <TableRow>
                     <TableHead className="w-[100px]">Pull No.</TableHead>
                     <TableHead>Item</TableHead>
-                    <TableHead>Pity</TableHead>
-                    <TableHead className="text-right">Date Received</TableHead>
+                    <TableHead className="hidden sm:table-cell">Pity</TableHead>
+                    <TableHead className="text-right hidden sm:table-cell">
+                      Date Received
+                    </TableHead>
                   </TableRow>
                 </TableHeader>
 
@@ -55,7 +57,7 @@ export function PullHistory({ stats }: Props) {
                             qualityLevel={item.qualityLevel}
                           />
                         </TableCell>
-                        <TableCell>
+                        <TableCell className="hidden sm:table-cell">
                           {getPullNumber(
                             item.qualityLevel,
                             item.fourStarCurrentPity,
@@ -63,7 +65,7 @@ export function PullHistory({ stats }: Props) {
                             item.previousFiveStarPullNumber,
                           )}
                         </TableCell>
-                        <TableCell className="text-right">
+                        <TableCell className="text-right hidden sm:table-cell">
                           {item.time.toLocaleString()}
                         </TableCell>
                       </TableRow>
