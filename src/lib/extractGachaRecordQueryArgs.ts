@@ -3,6 +3,7 @@ import {
   GachaRecordQueryArgs,
   GachaRecordQueryArgsSchema,
 } from "@/types/GachaRecordQuery";
+import { LanguageCode } from "@/types/LangaugeCode";
 
 /**
  * Extracts the query string parameters from a Convene History URL.
@@ -13,7 +14,6 @@ import {
  *
  * // Outputs:
  * {
- *   cardPoolId: "5c13a63f85465e9fcc0f24d6efb15083",
  *   languageCode: "en",
  *   playerId: "900643805",
  *   recordId: "e005b89e3a163ff66d2bbc9263b9a434",
