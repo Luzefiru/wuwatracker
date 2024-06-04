@@ -49,3 +49,8 @@ _Smartphone (please complete the following information):_
 ## Additional Context
 
 _Add any other context about the problem here._
+
+<!-- If you want to contribute to the codebase, uncomment the section below and feel free to fork the repo and make a PR to close this issue. -->
+
+<!-- ## Would I like to work on this? -->
+<!-- Yes. -->
