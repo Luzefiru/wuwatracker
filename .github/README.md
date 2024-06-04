@@ -56,6 +56,10 @@ We'd love your help in improving the website with features, bug reports, and pat
 1. Read our [Contributing Guide](./CONTRIBUTING.md) before making an issue or pull request.
 2. [Fork this repository](https://github.com/Luzefiru/wuwatracker/fork) and start working on your own repository before making a pull request.
 
+#### Apply as a Tester
+
+If you're interested in testing new features, head over to our [Discord Server](https://discord.gg/mADnEXwZGT) and read the pinned messages in the `#tester-application` text channel.
+
 ### For Feature Requests or Bug Reports
 
 [Create an issue](https://github.com/Luzefiru/wuwatracker/issues/new/choose) while following the specific templates.
