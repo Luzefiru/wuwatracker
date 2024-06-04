@@ -16,7 +16,7 @@ export default function LandingPage() {
             role="alert"
           >
             <span className="text-xs bg-primary-600 rounded-full text-muted-foreground px-2.5 py-1.5">
-              v1.0.0
+              v1.1.0
             </span>
             <span className="text-sm">Wuwa Tracker</span>
             <svg
