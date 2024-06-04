@@ -3,7 +3,6 @@ import {
   GachaRecordQueryArgs,
   GachaRecordQueryArgsSchema,
 } from "@/types/GachaRecordQuery";
-import { LanguageCode } from "@/types/LangaugeCode";
 
 /**
  * Extracts the query string parameters from a Convene History URL.

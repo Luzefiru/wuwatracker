@@ -4,7 +4,6 @@ import {
   GachaRecordQueryArgs,
 } from "@/types/GachaRecordQuery";
 import axios from "axios";
-import { LanguageCode } from "@/types/LangaugeCode";
 
 /**
  * Fetches the gacha records of a cardPoolType given the `GachaRecordQueryArgs` fetched from a user's Convene History URL fetched from the game logs.

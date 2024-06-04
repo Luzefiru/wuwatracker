@@ -51,7 +51,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
   const isValidGamePath = gamePathRegex.test(gamePath);
   // matches valid Convene History API URLs
   const conveneHistoryUrlRegex =
-    /^https:\/\/aki-gm-resources-oversea\.aki-game\.net\/aki\/gacha\/index\.html\#\/record\?(?=.*\bplayer_id=\w+\b)(?=.*\blang=\w+\b)(?=.*\brecord_id=\w+\b)(?=.*\bsvr_id=\w+\b).*$/;
+    /^https:\/\/aki-gm-resources-oversea\.aki-game\.net\/aki\/gacha\/index\.html\#\/record\?(?=.*\bplayer_id=\w+\b)(?=.*\brecord_id=\w+\b)(?=.*\bsvr_id=\w+\b).*$/;
   const isValidConveneHistoryUrl =
     conveneHistoryUrl !== "" && conveneHistoryUrlRegex.test(conveneHistoryUrl);
 
