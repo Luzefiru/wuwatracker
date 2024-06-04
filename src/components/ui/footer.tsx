@@ -110,7 +110,7 @@ export function Footer() {
               <span className="sr-only">Discord community</span>
             </Link>
             <Link
-              href="https://x.com/luzefiru"
+              href="https://x.com/wuwatracker"
               className="text-muted-foreground ms-5 hover:text-primary transition-all"
             >
               <svg
