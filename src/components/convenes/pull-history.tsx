@@ -4,7 +4,6 @@ import React from "react";
 import InfiniteScroll from "../ui/scroll-area";
 import getPullNumber from "@/lib/getPullNumber";
 
-import { useState } from "react";
 import { BannerStats } from "@/types/BannerStats";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -62,6 +61,7 @@ export function PullHistory({ stats }: Props) {
                             item.qualityLevel,
                             item.fourStarCurrentPity,
                             item.pullNumber,
+                            item.previousFourStarPullNumber,
                             item.previousFiveStarPullNumber,
                           )}
                         </TableCell>
