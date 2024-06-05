@@ -56,7 +56,12 @@ export default function CloudSyncSetting() {
       </CardHeader>
       <CardContent>
         {!user ? (
-          <Button size="lg" onClick={signInWithGoogle}>
+          <Button
+            size="lg"
+            onClick={() => {
+              signInWithGoogle(window.location.href);
+            }}
+          >
             <svg
               className="h-4 w-4 mr-2"
               xmlns="http://www.w3.org/2000/svg"
