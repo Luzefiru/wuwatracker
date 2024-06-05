@@ -7,6 +7,7 @@ import { Sheet, SheetTrigger, SheetContent } from "./sheet";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
+import { SettingsDropdownButton } from "./settings-dropdown-button";
 
 export function Header() {
   return (
@@ -85,8 +86,9 @@ export function Header() {
           </nav>
         </SheetContent>
       </Sheet>
-      <span className="ms-auto">
+      <span className="ms-auto flex gap-2">
         <ModeToggle />
+        <SettingsDropdownButton />
       </span>
     </header>
   );
