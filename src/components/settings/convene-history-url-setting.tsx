@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { SettingCardSkeleton } from "./setting-card-skeleton";
 import isValidConveneHistoryUrl from "@/lib/isValidConveneHistoryUrl";
-import { FileQuestion } from "lucide-react";
+import { FileQuestion, Trash } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -26,8 +26,11 @@ import Link from "next/link";
 import { toast } from "sonner";
 
 export default function ConveneHistoryUrlSetting() {
-  const { conveneHistoryUrl: localConveneHistoryUrl, saveConveneHistoryUrl } =
-    useConveneHistory();
+  const {
+    conveneHistoryUrl: localConveneHistoryUrl,
+    saveConveneHistoryUrl,
+    removeConveneHistoryUrl,
+  } = useConveneHistory();
   const [conveneHistoryUrlInput, setConveneHistoryUrlInput] = useState(
     localConveneHistoryUrl,
   );
@@ -40,7 +43,7 @@ export default function ConveneHistoryUrlSetting() {
 
   const handleSave = () => {
     if (!isValidConveneHistoryUrlInput) {
-      return toast.error("Invalid Convene History URL");
+      return toast.error("Please input a valid Convene History URL.");
     }
 
     saveConveneHistoryUrl(conveneHistoryUrlInput);
@@ -48,9 +51,18 @@ export default function ConveneHistoryUrlSetting() {
     toast.success("Successfully imported Convene History URL!");
   };
 
+  const handleDelete = () => {
+    removeConveneHistoryUrl();
+    toast.error("Your local Convene History was deleted.");
+  };
+
   useEffect(() => {
     setIsLoading(false);
   }, []);
+
+  useEffect(() => {
+    setConveneHistoryUrlInput(localConveneHistoryUrl);
+  }, [localConveneHistoryUrl]);
 
   if (isLoading) {
     return <SettingCardSkeleton />;
@@ -89,7 +101,7 @@ export default function ConveneHistoryUrlSetting() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-                className="ml-auto mr-2 h-11 w-11"
+                className="mr-2 h-11 w-11"
                 variant="outline"
                 size="icon"
                 type="button"
@@ -102,6 +114,22 @@ export default function ConveneHistoryUrlSetting() {
             </TooltipTrigger>
             <TooltipContent>
               <p>Go to Import Tutorial</p>
+            </TooltipContent>
+          </Tooltip>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                onClick={handleDelete}
+                className="ml-auto mr-2 h-11 w-11"
+                variant="outline"
+                size="icon"
+                type="button"
+              >
+                <Trash className="h-4 w-4" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Delete your local data</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>

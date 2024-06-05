@@ -17,7 +17,6 @@ import useAuth from "@/hooks/useAuth";
 export default function CloudSyncSetting() {
   const isClient = useIsClient();
   const { user, signOut, signInWithGoogle } = useAuth();
-  console.log(user);
 
   if (!isClient) {
     return <SettingCardSkeleton />;
@@ -37,13 +36,13 @@ export default function CloudSyncSetting() {
             <span className="relative flex h-3.5 w-3.5">
               <span
                 className={cn(
-                  "animate-ping absolute inline-flex h-full w-full rounded-full opacity-75",
+                  "animate-pulse absolute inline-flex h-full w-full rounded-full opacity-75",
                   user ? "bg-green-500" : "bg-destructive",
                 )}
               ></span>
               <span
                 className={cn(
-                  "relative inline-flex rounded-full h-3.5 w-3.5",
+                  "relative inline-flex rounded-full h-3.5 w-3.5 animate-ping",
                   user ? "bg-green-500" : "bg-destructive",
                 )}
               ></span>
