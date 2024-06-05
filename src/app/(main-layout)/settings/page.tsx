@@ -1,28 +1,6 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import { createClient } from "@/lib/supabase/server";
 import ConveneHistoryUrlSetting from "@/components/settings/convene-history-url-setting";
 
 export default async function Settings() {
-  const supabase = createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    return <>Pls login</>;
-  }
-
   return (
     <>
       <div>

@@ -39,7 +39,7 @@ export function SettingsDropdownButton() {
     setIsLoggingOut(true);
     supabase.auth.signOut();
     setIsLoggingOut(false);
-    router.push("/login");
+    router.push("/auth/login");
   };
 
   return (
@@ -92,7 +92,7 @@ export function SettingsDropdownButton() {
             <span>Log out</span>
           </DropdownMenuItem>
         ) : (
-          <Link href="/login">
+          <Link href="/auth/login">
             <DropdownMenuItem>
               <LogIn className="mr-2 h-4 w-4" />
               <span>Log in</span>
