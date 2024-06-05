@@ -30,15 +30,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen w-full flex-col relative bg-accent dark:bg-transparent">
-            <Header />
-            <main className="flex justify-center w-full h-full my-10">
-              <div className="w-full h-full px-3 sm:px-10 max-w-screen-desktop grid">
-                {children}
-              </div>
-            </main>
-            <Footer />
-          </div>
+          {children}
         </ThemeProvider>
         <Toaster richColors />
         <Analytics />

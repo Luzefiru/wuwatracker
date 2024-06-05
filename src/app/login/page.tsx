@@ -1,11 +1,15 @@
+import Image from "next/image";
 import Link from "next/link";
-import { headers } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { AlertDestructive } from "@/components/ui/alert-destructive";
 import { SubmitButton } from "./submit-button";
 
 export default function Login({
-  searchParams,
+  searchParams: { message },
 }: {
   searchParams: { message: string };
 }) {
@@ -22,7 +26,7 @@ export default function Login({
     });
 
     if (error) {
-      return redirect("/login?message=Could not authenticate user");
+      return redirect("/login?message=Could not authenticate user.");
     }
 
     return redirect("/convene/limited-character");
@@ -45,75 +49,92 @@ export default function Login({
     });
 
     if (error) {
-      return redirect("/login?message=Could not authenticate user");
+      return redirect("/login?message=Could not authenticate user.");
     }
 
-    return redirect("/login?message=Check email to continue sign in process");
+    return redirect("/login?message=Check your inbox for a verification code.");
   };
 
   return (
-    <div className="flex-1 mx-auto flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
-      <Link
-        href="/"
-        className="absolute left-8 top-8 py-2 px-4 rounded-md no-underline text-foreground bg-btn-background hover:bg-btn-background-hover flex items-center group text-sm"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1"
-        >
-          <polyline points="15 18 9 12 15 6" />
-        </svg>{" "}
-        Back
-      </Link>
+    <>
+      <main className="w-full lg:grid lg:grid-cols-2 h-screen place-content-center px-7 lg:p-0 lg:place-content-stretch">
+        <div className="flex items-center justify-center py-12">
+          <div className="mx-auto grid w-[350px] gap-6">
+            <div className="grid gap-2 text-center">
+              <h1 className="text-3xl font-bold">Login to Wuwa Tracker</h1>
+              <p className="text-balance text-muted-foreground">
+                Enter your email below to login and start saving your data
+              </p>
+            </div>
 
-      <form className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground">
-        <label className="text-md" htmlFor="email">
-          Email
-        </label>
-        <input
-          className="rounded-md px-4 py-2 bg-inherit border mb-6"
-          name="email"
-          placeholder="you@example.com"
-          required
-        />
-        <label className="text-md" htmlFor="password">
-          Password
-        </label>
-        <input
-          className="rounded-md px-4 py-2 bg-inherit border mb-6"
-          type="password"
-          name="password"
-          placeholder="••••••••"
-          required
-        />
-        <SubmitButton
-          formAction={signIn}
-          className="bg-green-700 hover:bg-green-700/80 rounded-md px-4 py-2 text-foreground mb-2"
-          pendingText="Signing In..."
-        >
-          Sign In
-        </SubmitButton>
-        <SubmitButton
-          formAction={signUp}
-          className="border border-foreground/20 rounded-md px-4 py-2 text-foreground mb-2"
-          pendingText="Signing Up..."
-        >
-          Sign Up
-        </SubmitButton>
-        {searchParams?.message && (
-          <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
-            {searchParams.message}
-          </p>
-        )}
-      </form>
-    </div>
+            <form className="grid gap-4">
+              <div className="grid gap-2">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div className="grid gap-2">
+                <div className="flex items-center">
+                  <Label htmlFor="password">Password</Label>
+                  <Link
+                    href="/forgot-password"
+                    className="ml-auto inline-block text-sm underline"
+                  >
+                    Forgot your password?
+                  </Link>
+                </div>
+                <Input
+                  id="password"
+                  type="password"
+                  name="password"
+                  placeholder="••••••••"
+                  required
+                />
+              </div>
+              <SubmitButton formAction={signIn} pendingText="Signing In...">
+                Log in
+              </SubmitButton>
+            </form>
+
+            <div className="text-center text-sm">
+              Don&apos;t have an account?{" "}
+              <Link
+                href="#"
+                className="underline text-yellow-500 hover:text-yellow-700"
+              >
+                Sign up
+              </Link>
+            </div>
+
+            {message ? (
+              <AlertDestructive title="Error" message={message} />
+            ) : (
+              ""
+            )}
+          </div>
+        </div>
+        <div className="hidden bg-muted lg:block order-first">
+          <Image
+            src="/bg/auth-cover.png"
+            alt="Image"
+            width="1920"
+            height="1080"
+            className="h-full w-full object-cover object-left-bottom"
+          />
+        </div>
+      </main>
+      <Image
+        src="/bg/cover.png"
+        width="2560"
+        height="1440"
+        alt="Cover Image"
+        className="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-35 mix-blend-lighten"
+      />
+    </>
   );
 }
