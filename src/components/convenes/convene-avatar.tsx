@@ -25,12 +25,24 @@ export function ConveneAvatar({
   previousFourStarPullNumber,
 }: Props) {
   function getBadgeVariant(pullNumber: number) {
-    if (pullNumber >= 65) {
-      return "destructive";
-    } else if (pullNumber >= 30) {
-      return "warning";
+    const isFourStar = qualityLevel === 4 && fourStarCurrentPity === 0;
+
+    if (isFourStar) {
+      if (pullNumber >= 8) {
+        return "destructive";
+      } else if (pullNumber >= 4) {
+        return "warning";
+      } else {
+        return "success";
+      }
     } else {
-      return "success";
+      if (pullNumber >= 65) {
+        return "destructive";
+      } else if (pullNumber >= 40) {
+        return "warning";
+      } else {
+        return "success";
+      }
     }
   }
 
@@ -38,6 +50,7 @@ export function ConveneAvatar({
     qualityLevel,
     fourStarCurrentPity,
     pullNumber,
+    previousFourStarPullNumber,
     previousFiveStarPullNumber,
   );
 
