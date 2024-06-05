@@ -17,5 +17,8 @@ export default function getPullNumber(
 ) {
   const isFourStar = qualityLevel === 4 && fourStarCurrentPity === 0;
 
-  return pullNumber - (isFourStar ? previousFourStarPullNumber : previousFiveStarPullNumber);
+  return (
+    pullNumber -
+    (isFourStar ? previousFourStarPullNumber : previousFiveStarPullNumber)
+  );
 }
