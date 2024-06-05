@@ -1,7 +1,5 @@
 "use client";
 
-import { useConveneHistory } from "@/hooks/useConveneHistory";
-
 import Image from "next/image";
 import * as React from "react";
 import { useState, useEffect } from "react";
@@ -19,23 +17,18 @@ import AvatarFilter from "./avatar-filter";
 import { PullHistory } from "./pull-history";
 
 interface Props {
+  stats: BannerStats | null;
   title: string;
   description: string;
-  pullCost: number;
-  cardPoolType: number;
   bgImgSrc: string;
 }
 
 export function BannerStatsCard({
+  stats,
   title,
   description,
-  pullCost,
-  cardPoolType,
   bgImgSrc,
 }: Props) {
-  const { getCardPoolTypeStatistics } = useConveneHistory();
-
-  const [stats, setStats] = useState<BannerStats | null>(null);
   const [filter, setFilter] = useState<Array<Filtertype>>([
     Filtertype.FIVE_STARS,
     Filtertype.FOUR_STARS,
@@ -74,17 +67,6 @@ export function BannerStatsCard({
     }
   }
 
-  useEffect(() => {
-    const getBannerStats = async () => {
-      const fetchedBannerStats = await getCardPoolTypeStatistics(
-        cardPoolType,
-        pullCost,
-      );
-      setStats(fetchedBannerStats);
-    };
-    getBannerStats();
-  }, [cardPoolType, getCardPoolTypeStatistics, pullCost]);
-
   return (
     <div className="flex w-full flex-col gap-8">
       <Card
@@ -102,7 +84,7 @@ export function BannerStatsCard({
               <div className="flex gap-1">
                 <h1 className="text-lg">{stats ? stats.totalAstrites : 0}</h1>
                 <Image
-                  src={"/icons/astrites.png"}
+                  src={"/icons/astrite.png"}
                   width={30}
                   height={8}
                   alt="Astrites"
@@ -114,9 +96,13 @@ export function BannerStatsCard({
               <div className="flex gap-1">
                 <h1 className="text-lg">{stats ? stats.totalPulls : 0}</h1>
                 <Image
-                  src={"/icons/special-convene.png"}
-                  width={30}
-                  height={8}
+                  src={
+                    description.includes("Event")
+                      ? "/icons/radiant-tide.webp"
+                      : "/icons/lustrous-tide.webp"
+                  }
+                  width={25}
+                  height={7}
                   alt="Special Convene"
                 />
               </div>

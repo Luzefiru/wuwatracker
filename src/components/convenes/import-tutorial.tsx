@@ -93,6 +93,16 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                   onBlur={(e) => setGamePath(e.target.value)}
                 />
               </div>
+              <ul className="flex flex-col gap-2 md:ps-8 md:list-disc mt-2 mb-4">
+                <li>
+                  <p className="text-sm font-normal text-muted-foreground">
+                    Warning: If you edited your <code>Engine.ini</code> file to
+                    disable logs, you&apos;ll have to re-enable them before
+                    opening your convene history, otherwise the script
+                    won&apos;t work.
+                  </p>
+                </li>
+              </ul>
             </li>
             <li className="mb-10 ms-8">
               <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
@@ -139,17 +149,21 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                   </TooltipContent>
                 </Tooltip>
               </div>
-              <p className="my-4 text-sm font-normal text-muted-foreground">
-                Note: The script does not edit your files, it simply extracts
-                the URL from your logs. You can view the script{" "}
-                <Link
-                  className="text-yellow-500 hover:text-yellow-600"
-                  href="https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c"
-                >
-                  here
-                </Link>
-                .
-              </p>
+              <ul className="flex flex-col gap-2 md:ps-8 md:list-disc mt-2 mb-4">
+                <li>
+                  <p className="text-sm font-normal text-muted-foreground">
+                    Note: The script does not edit your files, it simply
+                    extracts the URL from your logs. You can view the script{" "}
+                    <Link
+                      className="text-yellow-500 hover:text-yellow-600"
+                      href="https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c"
+                    >
+                      here
+                    </Link>
+                    .
+                  </p>
+                </li>
+              </ul>
             </li>
             <li className="mb-10 ms-8">
               <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
