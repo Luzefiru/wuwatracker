@@ -1,7 +1,5 @@
 "use client";
 
-import { useConveneHistory } from "@/hooks/useConveneHistory";
-
 import Image from "next/image";
 import * as React from "react";
 import { useState, useEffect } from "react";
@@ -19,23 +17,18 @@ import AvatarFilter from "./avatar-filter";
 import { PullHistory } from "./pull-history";
 
 interface Props {
+  stats: BannerStats | null;
   title: string;
   description: string;
-  pullCost: number;
-  cardPoolType: number;
   bgImgSrc: string;
 }
 
 export function BannerStatsCard({
+  stats,
   title,
   description,
-  pullCost,
-  cardPoolType,
   bgImgSrc,
 }: Props) {
-  const { getCardPoolTypeStatistics } = useConveneHistory();
-
-  const [stats, setStats] = useState<BannerStats | null>(null);
   const [filter, setFilter] = useState<Array<Filtertype>>([
     Filtertype.FIVE_STARS,
     Filtertype.FOUR_STARS,
@@ -73,17 +66,6 @@ export function BannerStatsCard({
       return false;
     }
   }
-
-  useEffect(() => {
-    const getBannerStats = async () => {
-      const fetchedBannerStats = await getCardPoolTypeStatistics(
-        cardPoolType,
-        pullCost,
-      );
-      setStats(fetchedBannerStats);
-    };
-    getBannerStats();
-  }, [cardPoolType, getCardPoolTypeStatistics, pullCost]);
 
   return (
     <div className="flex w-full flex-col gap-8">
