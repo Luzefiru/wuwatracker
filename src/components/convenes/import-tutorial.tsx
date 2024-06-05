@@ -29,6 +29,8 @@ import {
 import CopyButton from "@/components/ui/copy-button";
 import { useHover } from "usehooks-ts";
 import Link from "next/link";
+import isValidConveneHistoryUrl from "@/lib/isValidConveneHistoryUrl";
+import isValidGamePath from "@/lib/isValidGamePath";
 
 interface Props {
   redirectToHistory: () => void;
@@ -45,23 +47,16 @@ export function ImportTutorial({ redirectToHistory }: Props) {
 
   const script = createImportScript(gamePath);
   const codeBlockRef = useRef<HTMLTextAreaElement | null>(null);
-  // matches valid Windows paths
-  const gamePathRegex =
-    /^[a-zA-Z]:\\(?:[^\\/:*?"<>|\r\n]+\\)*[^\\/:*?"<>|\r\n]*$/;
-  const isValidGamePath = gamePathRegex.test(gamePath);
-  // matches valid Convene History API URLs
-  const conveneHistoryUrlRegex =
-    /^https:\/\/aki-gm-resources-oversea\.aki-game\.net\/aki\/gacha\/index\.html\#\/record\?(?=.*\bplayer_id=\w+\b)(?=.*\brecord_id=\w+\b)(?=.*\bsvr_id=\w+\b).*$/;
-  const isValidConveneHistoryUrl =
-    conveneHistoryUrl !== "" && conveneHistoryUrlRegex.test(conveneHistoryUrl);
+  const isValidPathInput = isValidGamePath(gamePath);
+  const isValidUrlInput = isValidConveneHistoryUrl(conveneHistoryUrl);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!isValidGamePath) {
-      toast.error("Invalid Game Path");
+      return toast.error("Invalid Game Path");
     } else if (!isValidConveneHistoryUrl) {
-      toast.error("Invalid Convene History URL");
+      return toast.error("Invalid Convene History URL");
     }
 
     saveConveneHistoryUrl(conveneHistoryUrl);
@@ -90,7 +85,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                 <Input
                   className={cn({
                     "border-red-500 focus-visible:ring-0 focus-visible:outline-none":
-                      gamePath && !isValidGamePath,
+                      gamePath && !isValidPathInput,
                   })}
                   id="wuwa-install-path"
                   placeholder="Your installation directory"
@@ -124,12 +119,12 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                         cols={3}
                         className="font-mono focus:outline-none focus-visible:ring-none disabled:cursor-text bg-muted"
                         value={
-                          isValidGamePath
+                          isValidPathInput
                             ? script
                             : "Input a valid installation directory first!"
                         }
                       ></Textarea>
-                      {isValidGamePath && isHoverCodeBlockContainer ? (
+                      {isValidPathInput && isHoverCodeBlockContainer ? (
                         <CopyButton
                           className="absolute top-2 right-2"
                           textToCopy={script}
@@ -168,7 +163,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                 <Input
                   className={cn({
                     "border-red-500 focus-visible:ring-0 focus-visible:outline-none":
-                      conveneHistoryUrl && !isValidConveneHistoryUrl,
+                      conveneHistoryUrl && !isValidUrlInput,
                   })}
                   id="wuwa-convene-url"
                   placeholder="Your Convene History URL"
