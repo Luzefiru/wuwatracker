@@ -1,11 +1,14 @@
+"use client";
+
 import { BannerTypeSlug, BannerTypeSlugEnum } from "@/types/BannerTypeSlugEnum";
 import { Sidebar } from "@/components/ui/sidebar";
 import { BannerStatsCard } from "@/components/convenes/banner-stats-card";
 import { bannerMetadata } from "@/data/banners";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { usePullHistory } from "@/contexts/pullHistoryContext";
 import { Import } from "lucide-react";
+import Link from "next/link";
 
 export default function Page({
   params,
@@ -15,6 +18,24 @@ export default function Page({
   if (!Object.keys(BannerTypeSlug).includes(params.name)) {
     notFound();
   }
+
+  const {
+    limitedCharacterStats,
+    limitedWeaponStats,
+    permanentCharacterStats,
+    permanentWeaponStats,
+    starterStats,
+    starterSelectorStats,
+  } = usePullHistory();
+
+  const banner = {
+    "limited-character": limitedCharacterStats,
+    "limited-weapon": limitedWeaponStats,
+    "permanent-character": permanentCharacterStats,
+    "permanent-weapon": permanentWeaponStats,
+    "starter-selector": starterSelectorStats,
+    starter: starterStats,
+  };
 
   return (
     <div className="flex flex-col h-full justify-between">
@@ -28,7 +49,10 @@ export default function Page({
               </Link>
             </Button>
           </div>
-          <BannerStatsCard {...bannerMetadata[params.name]} />
+          <BannerStatsCard
+            stats={banner[params.name]}
+            {...bannerMetadata[params.name]}
+          />
         </section>
       </div>
     </div>

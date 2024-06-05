@@ -38,7 +38,7 @@ export function ConveneAvatar({
     } else {
       if (pullNumber >= 65) {
         return "destructive";
-      } else if (pullNumber >= 40){
+      } else if (pullNumber >= 40) {
         return "warning";
       } else {
         return "success";
