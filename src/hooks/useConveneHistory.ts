@@ -97,5 +97,6 @@ export function useConveneHistory() {
     getHistoryByCardPoolType,
     getCardPoolTypePity,
     getCardPoolTypeStatistics,
+    queryArgs,
   };
 }
