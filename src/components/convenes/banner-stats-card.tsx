@@ -84,7 +84,7 @@ export function BannerStatsCard({
               <div className="flex gap-1">
                 <h1 className="text-lg">{stats ? stats.totalAstrites : 0}</h1>
                 <Image
-                  src={"/icons/astrites.png"}
+                  src={"/icons/astrite.png"}
                   width={30}
                   height={8}
                   alt="Astrites"
@@ -96,9 +96,13 @@ export function BannerStatsCard({
               <div className="flex gap-1">
                 <h1 className="text-lg">{stats ? stats.totalPulls : 0}</h1>
                 <Image
-                  src={"/icons/special-convene.png"}
-                  width={30}
-                  height={8}
+                  src={
+                    description.includes("Event")
+                      ? "/icons/radiant-tide.webp"
+                      : "/icons/lustrous-tide.webp"
+                  }
+                  width={25}
+                  height={7}
                   alt="Special Convene"
                 />
               </div>
