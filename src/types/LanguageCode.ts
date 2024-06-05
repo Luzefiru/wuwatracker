@@ -9,4 +9,4 @@ export const LanguageCodeEnumSchema = z.preprocess(
   (_) => LanguageCode.en,
   z.nativeEnum(LanguageCode).default(LanguageCode.en),
 );
-export type LangaugeCodeEnum = z.infer<typeof LanguageCodeEnumSchema>;
+export type LanguageCodeEnum = z.infer<typeof LanguageCodeEnumSchema>;
