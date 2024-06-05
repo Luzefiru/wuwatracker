@@ -17,6 +17,7 @@ import useAuth from "@/hooks/useAuth";
 export default function CloudSyncSetting() {
   const isClient = useIsClient();
   const { user, signOut, signInWithGoogle } = useAuth();
+  console.log(user);
 
   if (!isClient) {
     return <SettingCardSkeleton />;
