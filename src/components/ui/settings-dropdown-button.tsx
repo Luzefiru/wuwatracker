@@ -12,39 +12,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useState, useEffect } from "react";
-import { createClient } from "@/lib/supabase/client";
-import type { User } from "@supabase/supabase-js";
-import { useRouter } from "next/navigation";
+import DropDownSignInItem from "./dropdown-sign-in-item";
 
 export function SettingsDropdownButton() {
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
-  const [isLoggingOut, setIsLoggingOut] = useState(false);
-  const [user, setUser] = useState<User | null>(null);
-  const supabase = createClient();
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      setUser(user);
-      setIsLoading(false);
-    };
-    fetchUser();
-  }, [supabase.auth]);
-
-  const signOut = async () => {
-    setIsLoggingOut(true);
-    supabase.auth.signOut();
-    setIsLoggingOut(false);
-    router.push("/auth/login");
-  };
-
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger disabled={isLoading} asChild>
+      <DropdownMenuTrigger asChild>
         <Button size="icon" variant="outline">
           <Settings className="w-[1.2rem] h-[1.2rem]" />
         </Button>
@@ -82,23 +55,7 @@ export function SettingsDropdownButton() {
           </DropdownMenuItem>
         </Link>
         <DropdownMenuSeparator />
-        {user ? (
-          <DropdownMenuItem
-            disabled={isLoggingOut}
-            onClick={signOut}
-            className="text-destructive-foreground"
-          >
-            <LogOut className="mr-2 h-4 w-4" />
-            <span>Log out</span>
-          </DropdownMenuItem>
-        ) : (
-          <Link href="/auth/login">
-            <DropdownMenuItem>
-              <LogIn className="mr-2 h-4 w-4" />
-              <span>Log in</span>
-            </DropdownMenuItem>
-          </Link>
-        )}
+        <DropDownSignInItem />
       </DropdownMenuContent>
     </DropdownMenu>
   );

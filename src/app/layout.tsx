@@ -2,12 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { Footer } from "@/components/ui/footer";
-import { Header } from "@/components/ui/header";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

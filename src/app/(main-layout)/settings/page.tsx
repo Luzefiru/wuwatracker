@@ -1,4 +1,5 @@
 import ConveneHistoryUrlSetting from "@/components/settings/convene-history-url-setting";
+import CloudSyncSetting from "@/components/settings/cloud-sync-setting";
 
 export default async function Settings() {
   return (
@@ -12,6 +13,7 @@ export default async function Settings() {
       <div className="grid items-start gap-6">
         <div className="grid gap-6">
           <ConveneHistoryUrlSetting />
+          <CloudSyncSetting />
         </div>
       </div>
     </>
