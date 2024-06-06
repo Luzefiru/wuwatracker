@@ -9,6 +9,7 @@ import type { User as UserSession } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/client";
 import syncConveneHistoryUrl from "@/services/syncConveneHistoryUrl";
 import extractGachaRecordQueryArgs from "@/lib/extractGachaRecordQueryArgs";
+import { toast } from "sonner";
 
 type UserContext = {
   supabase: SupabaseClient<Database> | null;
@@ -123,14 +124,20 @@ export const UserContextProvider = ({
         conveneHistoryUrl: localConveneHistoryUrl,
       });
     } else {
-      const queryArgs = extractGachaRecordQueryArgs(localConveneHistoryUrl);
+      const { isValidQueryArgs, queryArgs } = extractGachaRecordQueryArgs(
+        localConveneHistoryUrl,
+      );
 
-      await syncConveneHistoryUrl(supabase, {
-        userId: user.id,
-        isSharingData: true,
-        conveneHistoryUrl: localConveneHistoryUrl,
-        playerId: Number(queryArgs.playerId),
-      });
+      if (isValidQueryArgs) {
+        await syncConveneHistoryUrl(supabase, {
+          userId: user.id,
+          isSharingData: true,
+          conveneHistoryUrl: localConveneHistoryUrl,
+          playerId: Number(queryArgs.playerId),
+        });
+      } else {
+        toast.error("Sync Error: malformatted Convene History URL!");
+      }
     }
   };
 
