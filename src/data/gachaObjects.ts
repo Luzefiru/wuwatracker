@@ -67,7 +67,7 @@ export const fiveStarWeaponMetadata = {
     imgSrc:
       "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21030015_UI.png",
   },
-  "String Master": {
+  Stringmaster: {
     qualityLevel: 5,
     imgSrc:
       "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21050016_UI.png",

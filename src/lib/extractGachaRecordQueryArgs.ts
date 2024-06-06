@@ -41,6 +41,7 @@ export default function extractGachaRecordQueryArgs(
     playerId: queryArgs.player_id,
     recordId: queryArgs.record_id,
     serverId: queryArgs.svr_id,
+    serverArea: queryArgs.svr_area,
   };
 
   const { success, data } =
