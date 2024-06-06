@@ -5,13 +5,21 @@ import { useState, useEffect } from "react";
 import { toast } from "sonner";
 import { LogOut } from "lucide-react";
 import { Skeleton } from "./skeleton";
-import useAuth from "@/hooks/useAuth";
 import { ConfirmationDialog } from "./confirmation-dialog";
+import { useUserContext } from "@/contexts/userContext";
 
 export default function DropDownSignInItem() {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
-  const { user, signInWithGoogle, signOut } = useAuth();
+  const { user, signInWithGoogle, signOut } = useUserContext();
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading || !signOut || !signInWithGoogle) {
+    return <Skeleton className="w-full h-7" />;
+  }
 
   const handleSignOut = async () => {
     setIsLoggingOut(true);
@@ -19,14 +27,6 @@ export default function DropDownSignInItem() {
     setIsLoggingOut(false);
     toast.success("Signed out successfully.");
   };
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
-
-  if (isLoading) {
-    return <Skeleton className="w-full h-7" />;
-  }
 
   return (
     <>
