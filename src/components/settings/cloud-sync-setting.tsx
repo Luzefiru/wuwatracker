@@ -14,12 +14,13 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import useAuth from "@/hooks/useAuth";
 import { ConfirmationDialog } from "@/components/ui/confirmation-dialog";
+import { useUserContext } from "@/contexts/userContext";
 
 export default function CloudSyncSetting() {
   const isClient = useIsClient();
-  const { user, signOut, signInWithGoogle } = useAuth();
+  const { user, signOut, signInWithGoogle } = useUserContext();
 
-  if (!isClient) {
+  if (!isClient || !signOut || !signInWithGoogle) {
     return <SettingCardSkeleton />;
   }
 

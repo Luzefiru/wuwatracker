@@ -6,7 +6,8 @@ import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { PullHistoryContextProvider } from "@/contexts/pullHistoryContext";
-import SyncIndicator from "@/components/auth/SyncIndicator";
+import { UserContextProvider } from "@/contexts/userContext";
+import SyncIndicator from "@/components/auth/sync-indicator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,20 +25,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <PullHistoryContextProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem={false}
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-          <Toaster richColors />
-          <SyncIndicator />
-          <Analytics />
-          <SpeedInsights />
-        </PullHistoryContextProvider>
+        <UserContextProvider>
+          <PullHistoryContextProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem={false}
+              disableTransitionOnChange
+            >
+              {children}
+            </ThemeProvider>
+            <Toaster richColors />
+            <SyncIndicator />
+            <Analytics />
+            <SpeedInsights />
+          </PullHistoryContextProvider>
+        </UserContextProvider>
       </body>
     </html>
   );
