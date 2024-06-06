@@ -9,10 +9,11 @@ import getUserByUserId from "@/services/getUserByUserId";
 import { useState } from "react";
 import { User } from "@/types/User";
 import { toast } from "sonner";
+import { useUserContext } from "@/contexts/userContext";
 
 export default function SyncIndicator() {
   const isClient = useIsClient();
-  const { user } = useAuth();
+  const { user } = useUserContext();
   const { conveneHistoryUrl, saveConveneHistoryUrl, queryArgs } =
     useConveneHistory();
   const [fetchedUser, setFetchedUser] = useState<User | null>(null);
