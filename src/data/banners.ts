@@ -4,7 +4,7 @@ export const bannerMetadata = {
   [BannerTypeSlug["limited-character"]]: {
     cardPoolType: 1,
     title: "When Thunder Pours",
-    description: "Character Event Convene",
+    description: "Featured Resonator Convene",
     pullCost: 160,
     fiveStarPity: 80,
     fourStarPity: 10,
@@ -17,7 +17,7 @@ export const bannerMetadata = {
   [BannerTypeSlug["limited-weapon"]]: {
     cardPoolType: 2,
     title: "Absolute Pulsation",
-    description: "Weapon Event Convene",
+    description: "Featured Weapon Convene",
     pullCost: 160,
     fiveStarPity: 80,
     fourStarPity: 10,
