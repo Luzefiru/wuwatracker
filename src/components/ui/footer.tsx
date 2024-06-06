@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t pt-2 bg-background flex justify-center">
+    <footer className="border-t pt-2 bg-background flex justify-center mt-auto">
       <div className="w-full max-w-screen-desktop p-4 py-6 lg:py-8 lg:px-12">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -13,8 +13,9 @@ export function Footer() {
                 <Image
                   className="object-cover invert dark:invert-0"
                   src="/icons/convene-icon.png"
-                  layout="fill"
+                  fill
                   alt="Wuwa Convene Tracker"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <span className="self-center text-2xl font-semibold whitespace-nowrap">

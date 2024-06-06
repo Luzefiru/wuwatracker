@@ -1,16 +1,31 @@
 "use client";
+
 import { ModeToggle } from "./mode-toggle";
-import * as React from "react";
 import Link from "next/link";
 import { Button } from "./button";
 import { Sheet, SheetTrigger, SheetContent } from "./sheet";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
+import { SettingsDropdownButton } from "./settings-dropdown-button";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export function Header() {
+  const pathName = usePathname();
+
+  /**
+   * Checks if the `href` is the current `pathName`, if so, give it active link classes.
+   */
+  const getLinkClassName = (href: string) => {
+    return cn(
+      "transition-colors hover:text-foreground",
+      href === pathName ? "text-foreground" : "text-muted-foreground ",
+    );
+  };
+
   return (
-    <header className="sticky top-0 flex py-1.5 items-center gap-4 border-b px-4 z-40 bg-background">
+    <header className="sticky top-0 flex py-1.5 items-center gap-4 border-b px-2 md:px-4 z-40 bg-background">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           href="/"
@@ -20,7 +35,8 @@ export function Header() {
             <Image
               className="object-cover invert dark:invert-0"
               src="/icons/convene-icon.png"
-              layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fill
               alt="Wuwa Tracker"
             />
           </div>
@@ -29,15 +45,15 @@ export function Header() {
         </Link>
         <Link
           href={getFirstConveneBannerHref()}
-          className="text-muted-foreground transition-colors hover:text-foreground"
+          className={getLinkClassName(getFirstConveneBannerHref())}
         >
           History
         </Link>
-        <Link
-          href="/import"
-          className="text-muted-foreground transition-colors hover:text-foreground"
-        >
+        <Link href="/import" className={getLinkClassName("/import")}>
           Import
+        </Link>
+        <Link href="/settings" className={getLinkClassName("/settings")}>
+          Settings
         </Link>
       </nav>
 
@@ -58,7 +74,7 @@ export function Header() {
                 <Image
                   className="object-cover invert dark:invert-0"
                   src="/icons/convene-icon.png"
-                  layout="fill"
+                  fill
                   alt="Wuwa Tracker"
                 />
               </div>
@@ -66,27 +82,28 @@ export function Header() {
             </Link>
             <Link
               href={getFirstConveneBannerHref()}
-              className="text-muted-foreground hover:text-foreground"
+              className={getLinkClassName(getFirstConveneBannerHref())}
             >
               History
             </Link>
-            <Link
-              href="/import"
-              className="text-muted-foreground hover:text-foreground"
-            >
+            <Link href="/import" className={getLinkClassName("/import")}>
               Import
+            </Link>
+            <Link href="/settings" className={getLinkClassName("/settings")}>
+              Settings
             </Link>
             <Link
               href="/privacy-policy"
-              className="text-muted-foreground hover:text-foreground"
+              className={getLinkClassName("/privacy-policy")}
             >
               Privacy Policy
             </Link>
           </nav>
         </SheetContent>
       </Sheet>
-      <span className="ms-auto">
+      <span className="ms-auto flex gap-2">
         <ModeToggle />
+        <SettingsDropdownButton />
       </span>
     </header>
   );

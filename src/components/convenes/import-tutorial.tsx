@@ -29,6 +29,8 @@ import {
 import CopyButton from "@/components/ui/copy-button";
 import { useHover } from "usehooks-ts";
 import Link from "next/link";
+import isValidConveneHistoryUrl from "@/lib/isValidConveneHistoryUrl";
+import isValidGamePath from "@/lib/isValidGamePath";
 
 interface Props {
   redirectToHistory: () => void;
@@ -45,23 +47,16 @@ export function ImportTutorial({ redirectToHistory }: Props) {
 
   const script = createImportScript(gamePath);
   const codeBlockRef = useRef<HTMLTextAreaElement | null>(null);
-  // matches valid Windows paths
-  const gamePathRegex =
-    /^[a-zA-Z]:\\(?:[^\\/:*?"<>|\r\n]+\\)*[^\\/:*?"<>|\r\n]*$/;
-  const isValidGamePath = gamePathRegex.test(gamePath);
-  // matches valid Convene History API URLs
-  const conveneHistoryUrlRegex =
-    /^https:\/\/aki-gm-resources-oversea\.aki-game\.net\/aki\/gacha\/index\.html\#\/record\?(?=.*\bplayer_id=\w+\b)(?=.*\brecord_id=\w+\b)(?=.*\bsvr_id=\w+\b).*$/;
-  const isValidConveneHistoryUrl =
-    conveneHistoryUrl !== "" && conveneHistoryUrlRegex.test(conveneHistoryUrl);
+  const isValidPathInput = isValidGamePath(gamePath);
+  const isValidUrlInput = isValidConveneHistoryUrl(conveneHistoryUrl);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!isValidGamePath) {
-      toast.error("Invalid Game Path");
+      return toast.error("Invalid Game Path");
     } else if (!isValidConveneHistoryUrl) {
-      toast.error("Invalid Convene History URL");
+      return toast.error("Invalid Convene History URL");
     }
 
     saveConveneHistoryUrl(conveneHistoryUrl);
@@ -90,7 +85,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                 <Input
                   className={cn({
                     "border-red-500 focus-visible:ring-0 focus-visible:outline-none":
-                      gamePath && !isValidGamePath,
+                      gamePath && !isValidPathInput,
                   })}
                   id="wuwa-install-path"
                   placeholder="Your installation directory"
@@ -98,6 +93,16 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                   onBlur={(e) => setGamePath(e.target.value)}
                 />
               </div>
+              <ul className="flex flex-col gap-2 md:ps-8 md:list-disc mt-2 mb-4">
+                <li>
+                  <p className="text-sm font-normal text-muted-foreground">
+                    Warning: If you edited your <code>Engine.ini</code> file to
+                    disable logs, you&apos;ll have to re-enable them before
+                    opening your convene history, otherwise the script
+                    won&apos;t work.
+                  </p>
+                </li>
+              </ul>
             </li>
             <li className="mb-10 ms-8">
               <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
@@ -124,12 +129,12 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                         cols={3}
                         className="font-mono focus:outline-none focus-visible:ring-none disabled:cursor-text bg-muted"
                         value={
-                          isValidGamePath
+                          isValidPathInput
                             ? script
                             : "Input a valid installation directory first!"
                         }
                       ></Textarea>
-                      {isValidGamePath && isHoverCodeBlockContainer ? (
+                      {isValidPathInput && isHoverCodeBlockContainer ? (
                         <CopyButton
                           className="absolute top-2 right-2"
                           textToCopy={script}
@@ -144,17 +149,21 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                   </TooltipContent>
                 </Tooltip>
               </div>
-              <p className="my-4 text-sm font-normal text-muted-foreground">
-                Note: The script does not edit your files, it simply extracts
-                the URL from your logs. You can view the script{" "}
-                <Link
-                  className="text-yellow-500 hover:text-yellow-600"
-                  href="https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c"
-                >
-                  here
-                </Link>
-                .
-              </p>
+              <ul className="flex flex-col gap-2 md:ps-8 md:list-disc mt-2 mb-4">
+                <li>
+                  <p className="text-sm font-normal text-muted-foreground">
+                    Note: The script does not edit your files, it simply
+                    extracts the URL from your logs. You can view the script{" "}
+                    <Link
+                      className="text-yellow-500 hover:text-yellow-600"
+                      href="https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c"
+                    >
+                      here
+                    </Link>
+                    .
+                  </p>
+                </li>
+              </ul>
             </li>
             <li className="mb-10 ms-8">
               <span className="absolute -start-4 bg-accent rounded-full w-8 h-8 p-3 flex justify-center items-center">
@@ -168,7 +177,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                 <Input
                   className={cn({
                     "border-red-500 focus-visible:ring-0 focus-visible:outline-none":
-                      conveneHistoryUrl && !isValidConveneHistoryUrl,
+                      conveneHistoryUrl && !isValidUrlInput,
                   })}
                   id="wuwa-convene-url"
                   placeholder="Your Convene History URL"

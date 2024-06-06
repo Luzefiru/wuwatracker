@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { LanguageCodeEnumSchema } from "./LangaugeCode";
+import { LanguageCodeEnumSchema } from "./LanguageCode";
 
 export const ResourceType = {
   Resonators: "Resonators",
