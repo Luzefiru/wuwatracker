@@ -109,7 +109,7 @@ export const UserContextProvider = ({
   };
 
   /**
-   * Updates an existing user account's with the localStorage Convene History URL, otherwise creates the account.
+   * Updates an existing user account's with the localStorage Convene History URL, otherwise creates the account first before updating.
    */
   const uploadConveneHistoryUrl = async (localConveneHistoryUrl: string) => {
     if (!user) {
@@ -118,11 +118,15 @@ export const UserContextProvider = ({
     }
 
     if (userData) {
+      console.log("Uploading", localConveneHistoryUrl);
+
       // User data exists, upload local Convene History URL
-      await syncConveneHistoryUrl(supabase, {
+      const syncedUser = await syncConveneHistoryUrl(supabase, {
         ...userData,
         conveneHistoryUrl: localConveneHistoryUrl,
       });
+
+      setUserData(syncedUser);
     } else {
       const { isValidQueryArgs, queryArgs } = extractGachaRecordQueryArgs(
         localConveneHistoryUrl,
@@ -135,6 +139,7 @@ export const UserContextProvider = ({
           conveneHistoryUrl: localConveneHistoryUrl,
           playerId: Number(queryArgs.playerId),
         });
+        toast.success("Successfully uploaded history to your Google Account.");
       } else {
         toast.error("Sync Error: malformatted Convene History URL!");
       }
@@ -143,7 +148,8 @@ export const UserContextProvider = ({
 
   const deleteConveneHistoryUrl = async () => {
     if (!user) {
-      throw new Error("User is not logged in! Cancelling deletion.");
+      console.warn("User is not logged in! Cancelling deletion.");
+      return;
     }
 
     if (userData) {
@@ -152,6 +158,8 @@ export const UserContextProvider = ({
         ...userData,
         conveneHistoryUrl: null,
       });
+
+      toast.error("Deleted your history in the cloud.");
     }
   };
 

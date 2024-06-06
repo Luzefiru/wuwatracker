@@ -18,17 +18,19 @@ export function ConfirmationDialog({
   continueText = "Continue",
   onCancel,
   onContinue,
+  open,
 }: Readonly<{
-  triggerChildren: React.ReactNode;
+  triggerChildren?: React.ReactNode;
   title: string;
   description: string;
   cancelText?: string;
   continueText?: string;
   onCancel?: () => void;
   onContinue?: () => void;
+  open?: boolean;
 }>) {
   return (
-    <AlertDialog>
+    <AlertDialog open={open}>
       <AlertDialogTrigger asChild>{triggerChildren}</AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>

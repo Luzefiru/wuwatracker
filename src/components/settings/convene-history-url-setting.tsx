@@ -24,74 +24,46 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import { toast } from "sonner";
-import { useUserContext } from "@/contexts/userContext";
 
 export default function ConveneHistoryUrlSetting() {
   const {
     conveneHistoryUrl: localConveneHistoryUrl,
-    saveConveneHistoryUrl,
-    removeConveneHistoryUrl,
+    saveConveneHistoryUrl: saveLocalConveneHistoryUrl,
+    removeConveneHistoryUrl: removeLocalConveneHistoryUrl,
   } = useConveneHistory();
-  const [conveneHistoryUrlInput, setConveneHistoryUrlInput] = useState(
+  const [conveneHistoryUrlInput, setConveneHistoryUrlInput] = useState<string>(
     localConveneHistoryUrl,
   );
   const [isLoading, setIsLoading] = useState(true);
   const [isClicked, setIsClicked] = useState(false);
-  const { userData, uploadConveneHistoryUrl, deleteConveneHistoryUrl } =
-    useUserContext();
 
   const isValidConveneHistoryUrlInput = isValidConveneHistoryUrl(
     conveneHistoryUrlInput,
   );
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return <SettingCardSkeleton />;
+  }
 
   const handleSave = () => {
     if (!isValidConveneHistoryUrlInput) {
       return toast.error("Please input a valid Convene History URL.");
     }
 
-    // Synchronizes to the cloud, if possible
-    if (uploadConveneHistoryUrl) {
-      uploadConveneHistoryUrl(conveneHistoryUrlInput);
-    }
+    saveLocalConveneHistoryUrl(conveneHistoryUrlInput);
 
-    saveConveneHistoryUrl(conveneHistoryUrlInput);
-
-    toast.success("Successfully imported Convene History URL!");
+    toast.success("Successfully imported Convene History URL locally!");
   };
 
   const handleDelete = async () => {
-    // Deletes on the cloud save as well, if possible
-    if (deleteConveneHistoryUrl) {
-      try {
-        await deleteConveneHistoryUrl();
-      } catch (e) {
-        toast((e as Error).message);
-      }
-    }
-
-    removeConveneHistoryUrl();
-    toast.error("Your local Convene History was deleted.");
+    removeLocalConveneHistoryUrl();
+    setConveneHistoryUrlInput("");
+    toast.error("Deleted local history data.");
   };
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
-
-  useEffect(() => {
-    if (userData?.conveneHistoryUrl) {
-      setConveneHistoryUrlInput(userData.conveneHistoryUrl);
-    } else {
-      setConveneHistoryUrlInput(localConveneHistoryUrl);
-    }
-  }, [localConveneHistoryUrl, userData?.conveneHistoryUrl]);
-
-  useEffect(() => {
-    setConveneHistoryUrlInput(localConveneHistoryUrl ?? "");
-  }, [localConveneHistoryUrl]);
-
-  if (isLoading) {
-    return <SettingCardSkeleton />;
-  }
 
   return (
     <Card>
@@ -117,7 +89,7 @@ export default function ConveneHistoryUrlSetting() {
             onClick={() => {
               setIsClicked(true);
             }}
-            value={conveneHistoryUrlInput}
+            value={conveneHistoryUrlInput ?? ""}
           />
         </form>
       </CardContent>
@@ -145,6 +117,7 @@ export default function ConveneHistoryUrlSetting() {
             <TooltipTrigger asChild>
               <Button
                 onClick={handleDelete}
+                disabled={!conveneHistoryUrlInput}
                 className="ml-auto mr-2 h-11 w-11"
                 variant="outline"
                 size="icon"
