@@ -97,7 +97,7 @@ export function BannerStatsCard({
                 <h1 className="text-lg">{stats ? stats.totalPulls : 0}</h1>
                 <Image
                   src={
-                    description.includes("Event")
+                    description.includes("Featured")
                       ? "/icons/radiant-tide.webp"
                       : "/icons/lustrous-tide.webp"
                   }
