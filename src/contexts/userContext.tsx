@@ -41,7 +41,6 @@ export const UserContextProvider = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  // const { user, signOut, signInWithGoogle } = useAuth();
   const [user, setUser] = useState<UserSession | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [userData, setUserData] = useState<User | null>(null);

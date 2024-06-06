@@ -12,7 +12,6 @@ import { SettingCardSkeleton } from "./setting-card-skeleton";
 import { useIsClient } from "usehooks-ts";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-import useAuth from "@/hooks/useAuth";
 import { ConfirmationDialog } from "@/components/ui/confirmation-dialog";
 import { useUserContext } from "@/contexts/userContext";
 

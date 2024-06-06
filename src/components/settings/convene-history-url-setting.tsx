@@ -86,7 +86,7 @@ export default function ConveneHistoryUrlSetting() {
   }, [localConveneHistoryUrl, userData?.conveneHistoryUrl]);
 
   useEffect(() => {
-    setConveneHistoryUrlInput(localConveneHistoryUrl);
+    setConveneHistoryUrlInput(localConveneHistoryUrl ?? "");
   }, [localConveneHistoryUrl]);
 
   if (isLoading) {
