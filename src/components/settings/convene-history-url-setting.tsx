@@ -25,7 +25,6 @@ import {
 import Link from "next/link";
 import { toast } from "sonner";
 import { useUserContext } from "@/contexts/userContext";
-import syncConveneHistoryUrl from "@/services/syncConveneHistoryUrl";
 
 export default function ConveneHistoryUrlSetting() {
   const {
@@ -38,7 +37,8 @@ export default function ConveneHistoryUrlSetting() {
   );
   const [isLoading, setIsLoading] = useState(true);
   const [isClicked, setIsClicked] = useState(false);
-  const { userData, user } = useUserContext();
+  const { userData, uploadConveneHistoryUrl, deleteConveneHistoryUrl } =
+    useUserContext();
 
   const isValidConveneHistoryUrlInput = isValidConveneHistoryUrl(
     conveneHistoryUrlInput,
@@ -49,19 +49,27 @@ export default function ConveneHistoryUrlSetting() {
       return toast.error("Please input a valid Convene History URL.");
     }
 
+    // Synchronizes to the cloud, if possible
+    if (uploadConveneHistoryUrl) {
+      uploadConveneHistoryUrl(conveneHistoryUrlInput);
+    }
+
     saveConveneHistoryUrl(conveneHistoryUrlInput);
 
     toast.success("Successfully imported Convene History URL!");
   };
 
   const handleDelete = async () => {
-    if (user && userData) {
-      await syncConveneHistoryUrl({ ...userData, conveneHistoryUrl: null });
+    // Deletes on the cloud save as well, if possible
+    if (deleteConveneHistoryUrl) {
+      try {
+        await deleteConveneHistoryUrl();
+      } catch (e) {
+        toast((e as Error).message);
+      }
     }
 
     removeConveneHistoryUrl();
-    setConveneHistoryUrlInput("");
-
     toast.error("Your local Convene History was deleted.");
   };
 
@@ -76,6 +84,10 @@ export default function ConveneHistoryUrlSetting() {
       setConveneHistoryUrlInput(localConveneHistoryUrl);
     }
   }, [localConveneHistoryUrl, userData?.conveneHistoryUrl]);
+
+  useEffect(() => {
+    setConveneHistoryUrlInput(localConveneHistoryUrl);
+  }, [localConveneHistoryUrl]);
 
   if (isLoading) {
     return <SettingCardSkeleton />;
