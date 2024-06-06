@@ -4,6 +4,7 @@ import {
   GachaRecordQueryArgs,
 } from "@/types/GachaRecordQuery";
 import axios from "axios";
+import getServerUrlByArea from "@/lib/getServerUrlByArea";
 
 /**
  * Fetches the gacha records of a cardPoolType given the `GachaRecordQueryArgs` fetched from a user's Convene History URL fetched from the game logs.
@@ -43,9 +44,9 @@ export default async function fetchGachaRecordByCardPoolType(
   cardPoolType: number,
   args: GachaRecordQueryArgs,
 ): Promise<GachaRecordQueryResult> {
-  // TODO: Consider decoupling this when this API endpoint is reused in multiple places
-  const BASE_URL = "https://gmserver-api.aki-game2.net";
-  const requestUrl = `${BASE_URL}/gacha/record/query`;
+  const baseUrl = getServerUrlByArea(args.serverArea);
+
+  const requestUrl = `${baseUrl}/gacha/record/query`;
   const requestBody = {
     cardPoolType: cardPoolType,
     languageCode: args.languageCode,

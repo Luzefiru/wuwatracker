@@ -39,6 +39,7 @@ export default function extractGachaRecordQueryArgs(
     playerId: parsedQueryArgs.player_id,
     recordId: parsedQueryArgs.record_id,
     serverId: parsedQueryArgs.svr_id,
+    serverArea: parsedQueryArgs.svr_area,
   };
 
   return GachaRecordQueryArgsSchema.parse(gachaRecordQueryArgs);
