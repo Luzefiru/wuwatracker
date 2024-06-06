@@ -60,6 +60,7 @@ export default function ConveneHistoryUrlSetting() {
     }
 
     removeConveneHistoryUrl();
+    setConveneHistoryUrlInput("");
 
     toast.error("Your local Convene History was deleted.");
   };
