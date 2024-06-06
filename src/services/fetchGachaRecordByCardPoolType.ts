@@ -4,6 +4,7 @@ import {
   GachaRecordQueryArgs,
 } from "@/types/GachaRecordQuery";
 import axios from "axios";
+import { toast } from "sonner";
 
 /**
  * Fetches the gacha records of a cardPoolType given the `GachaRecordQueryArgs` fetched from a user's Convene History URL fetched from the game logs.
@@ -54,7 +55,25 @@ export default async function fetchGachaRecordByCardPoolType(
     serverId: args.serverId,
   };
 
-  const { data } = await axios.post(requestUrl, requestBody);
+  const { data: fetchedData } = await axios.post(requestUrl, requestBody);
 
-  return GachaRecordQueryResultSchema.parse(data);
+  const { success, data } = GachaRecordQueryResultSchema.safeParse(fetchedData);
+
+  if (!success) {
+    // TODO: there's probably a better way to do this
+    const EMPTY_PLACEHOLDER = {
+      code: 0,
+      message: "success",
+      data: [],
+    };
+
+    console.error(
+      "Unsuccessful in retrieving data. Try re-importing your URL again or contact the developers with this error message.",
+      requestBody,
+    );
+
+    return EMPTY_PLACEHOLDER;
+  } else {
+    return data;
+  }
 }
