@@ -35,7 +35,8 @@ export function Header() {
             <Image
               className="object-cover invert dark:invert-0"
               src="/icons/convene-icon.png"
-              layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fill
               alt="Wuwa Tracker"
             />
           </div>
@@ -73,7 +74,7 @@ export function Header() {
                 <Image
                   className="object-cover invert dark:invert-0"
                   src="/icons/convene-icon.png"
-                  layout="fill"
+                  fill
                   alt="Wuwa Tracker"
                 />
               </div>
