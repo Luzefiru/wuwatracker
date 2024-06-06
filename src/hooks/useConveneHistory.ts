@@ -16,11 +16,8 @@ export function useConveneHistory() {
     setSavedConveneHistoryUrl,
     removeSavedConveneHistoryUrl,
   ] = useLocalStorage(LOCALSTORAGE_KEY, "");
-  const queryArgs = useMemo(
-    () =>
-      savedConveneHistoryUrl && savedConveneHistoryUrl !== ""
-        ? extractGachaRecordQueryArgs(savedConveneHistoryUrl)
-        : null,
+  const { queryArgs, isValidQueryArgs } = useMemo(
+    () => extractGachaRecordQueryArgs(savedConveneHistoryUrl),
     [savedConveneHistoryUrl],
   );
 
@@ -98,5 +95,6 @@ export function useConveneHistory() {
     getCardPoolTypePity,
     getCardPoolTypeStatistics,
     queryArgs,
+    isValidQueryArgs,
   };
 }
