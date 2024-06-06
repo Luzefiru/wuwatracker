@@ -7,6 +7,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
 import { SettingCardSkeleton } from "./setting-card-skeleton";
 import { useIsClient } from "usehooks-ts";
@@ -14,7 +20,7 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { ConfirmationDialog } from "@/components/ui/confirmation-dialog";
 import { useUserContext } from "@/contexts/userContext";
-import { RefreshCw } from "lucide-react";
+import { RefreshCw, LogOut } from "lucide-react";
 import { useState } from "react";
 import { useConveneHistory } from "@/hooks/useConveneHistory";
 import extractGachaRecordQueryArgs from "@/lib/extractGachaRecordQueryArgs";
@@ -176,22 +182,35 @@ export default function CloudSyncSetting() {
           />
         ) : (
           <>
-            <Button variant="outline" size="lg" onClick={handleSignOut}>
-              Sign out
-            </Button>
-            <Button
-              className={cn("h-11 w-11 transition-colors", {
-                "bg-accent": isSyncing,
-              })}
-              variant="outline"
-              size="icon"
-              type="button"
-              onClick={handleSync}
-              disabled={!userData}
-            >
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    className={cn("h-11 w-11 transition-colors", {
+                      "bg-accent": isSyncing,
+                    })}
+                    variant="outline"
+                    size="icon"
+                    type="button"
+                    onClick={handleSync}
+                    disabled={!userData}
+                  >
+                    <LogOut
+                      className={cn("h-4 w-4", { "animate-spin": isSyncing })}
+                    />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Log Out</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            <Button variant="secondary" size="lg" onClick={handleSignOut}>
               <RefreshCw
-                className={cn("h-4 w-4", { "animate-spin": isSyncing })}
+                className={cn("h-4 w-4 mr-2", { "animate-spin": isSyncing })}
               />
+              Sync Data
             </Button>
           </>
         )}

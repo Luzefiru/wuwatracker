@@ -99,7 +99,7 @@ export default function ConveneHistoryUrlSetting() {
             <TooltipTrigger asChild>
               <Button
                 className="mr-2 h-11 w-11"
-                variant="outline"
+                variant="ghost"
                 size="icon"
                 type="button"
                 asChild
@@ -131,7 +131,9 @@ export default function ConveneHistoryUrlSetting() {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-        <Button onClick={handleSave}>Save</Button>
+        <Button variant="secondary" onClick={handleSave}>
+          Save
+        </Button>
       </CardFooter>
     </Card>
   );
