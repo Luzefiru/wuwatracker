@@ -7,17 +7,23 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import {
+  fiveStarWeaponMetadata,
+  fourStarWeaponMetadata,
+} from "@/data/gachaObjects";
+import { ItemAvatar } from "./item-avatar";
+
 export default function WeaponSequences() {
   return (
-    <Card>
-      <CardHeader className="pb-6">
-        <CardTitle>Convene History Data</CardTitle>
-        <CardDescription>
-          Export or change your Convene History URL here.
-        </CardDescription>
-      </CardHeader>
-      <CardContent></CardContent>
-      <CardFooter className="border-t px-6 py-4"></CardFooter>
+    <Card className="flex items-center justify-center">
+      <CardContent className="flex-row flex gap-2  py-6 md:flex-wrap">
+        {Object.entries(fiveStarWeaponMetadata).map(([key, value]) => (
+          <ItemAvatar key={key} qualityLevel={value.qualityLevel} name={key} />
+        ))}
+        {Object.entries(fourStarWeaponMetadata).map(([key, value]) => (
+          <ItemAvatar key={key} qualityLevel={value.qualityLevel} name={key} />
+        ))}
+      </CardContent>
     </Card>
   );
 }
