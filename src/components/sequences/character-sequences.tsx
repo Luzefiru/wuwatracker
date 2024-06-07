@@ -7,17 +7,20 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import {
+  fiveStarCharacterMetadata,
+  fourStarCharacterMetadata,
+} from "@/data/gachaObjects";
+import { ItemAvatar } from "./item-avatar";
+
 export default function CharacterSequences() {
   return (
     <Card>
-      <CardHeader className="pb-6">
-        <CardTitle>Convene History Data</CardTitle>
-        <CardDescription>
-          Export or change your Convene History URL here.
-        </CardDescription>
-      </CardHeader>
-      <CardContent></CardContent>
-      <CardFooter className="border-t px-6 py-4"></CardFooter>
+      <CardContent>
+        {Object.keys(fiveStarCharacterMetadata).map((c) => (
+          <ItemAvatar key={c} qualityLevel={c.qualityLevel} name={c.name} />
+        ))}
+      </CardContent>
     </Card>
   );
 }
