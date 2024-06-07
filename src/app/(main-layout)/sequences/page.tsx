@@ -24,12 +24,12 @@ export default function Import() {
           <div className="flex justify-between">
             <TabsContent value="character">
               <h2 className="scroll-m-20 text-2xl md:text-3xl font-semibold tracking-tight pb-2">
-                Sequences
+                Character Sequences
               </h2>
             </TabsContent>
             <TabsContent value="weapon">
               <h2 className="scroll-m-20 text-2xl md:text-3xl font-semibold tracking-tight pb-2">
-                Sequences
+                Weapon Sequences
               </h2>
             </TabsContent>
             <TabsList>
