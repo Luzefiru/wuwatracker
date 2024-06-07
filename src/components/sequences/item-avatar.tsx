@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 interface Props {
   name: string;
@@ -26,10 +27,16 @@ export function ItemAvatar({ name, qualityLevel }: Props) {
 
   return (
     <Card className="flex justify-between flex-col mb-1 ">
-      <CardContent className="py-2 h-fit ">
-        <div className="relative w-20 place-self-center h-fit">
+      <CardContent className="py-2 h-fit relative">
+        <div className="w-20 place-self-center h-fit">
           <Image src={imgSrc} width="404" height="560" alt={name} />
         </div>
+        <Badge
+          variant={qualityLevel === 5 ? "fiveStar" : "fourStar"}
+          className="absolute w-7 -right-1 -top-1 aspect-square flex items-center justify-center"
+        >
+          <span className="text-white">S1</span>
+        </Badge>
       </CardContent>
       <CardFooter className="pb-2 h-15 w-full flex items-center justify-center">
         <p className="w-20 text-center truncate">{name}</p>
