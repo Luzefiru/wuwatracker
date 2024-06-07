@@ -190,7 +190,7 @@ export default function CloudSyncSetting() {
                     variant="outline"
                     size="icon"
                     type="button"
-                    onClick={handleSync}
+                    onClick={handleSignOut}
                     disabled={!userData}
                   >
                     <LogOut
@@ -204,7 +204,7 @@ export default function CloudSyncSetting() {
               </Tooltip>
             </TooltipProvider>
 
-            <Button variant="secondary" size="lg" onClick={handleSignOut}>
+            <Button variant="secondary" size="lg" onClick={handleSync}>
               <RefreshCw
                 className={cn("h-4 w-4 mr-2", { "animate-spin": isSyncing })}
               />
