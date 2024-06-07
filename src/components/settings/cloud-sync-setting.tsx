@@ -131,7 +131,8 @@ export default function CloudSyncSetting() {
         </CardTitle>
         <CardDescription>
           Save your data using your Google Account and access your data in any
-          device.
+          device. Once logged in, just click the &quot;Sync Data&quot; button to
+          upload or download your data into your device.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-wrap gap-3 items-center content-center">

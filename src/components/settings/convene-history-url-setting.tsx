@@ -45,6 +45,10 @@ export default function ConveneHistoryUrlSetting() {
     setIsLoading(false);
   }, []);
 
+  useEffect(() => {
+    setConveneHistoryUrlInput(localConveneHistoryUrl);
+  }, [localConveneHistoryUrl]);
+
   if (isLoading) {
     return <SettingCardSkeleton />;
   }
