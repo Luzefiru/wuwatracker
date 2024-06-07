@@ -134,11 +134,9 @@ export default function CloudSyncSetting() {
           device.
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-wrap gap-2 items-center">
-        <p className="text-sm mr-auto mb-4 md:mb-0">
-          <div className="text-yellow-500 truncate max-w-52">
-            {user?.email ?? "Guest"}
-          </div>
+      <CardContent className="flex flex-wrap gap-3 items-center content-center">
+        <p className="text-sm mr-auto text-muted-foreground truncate max-w-52">
+          {user?.email ?? "Guest"}
         </p>
         {!user ? (
           <ConfirmationDialog
@@ -181,7 +179,7 @@ export default function CloudSyncSetting() {
             }
           />
         ) : (
-          <>
+          <div className="flex gap-2">
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -212,7 +210,7 @@ export default function CloudSyncSetting() {
               />
               Sync Data
             </Button>
-          </>
+          </div>
         )}
       </CardContent>
       <ConfirmationDialog
