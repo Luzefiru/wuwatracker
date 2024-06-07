@@ -6,19 +6,43 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+  CardFooter,
 } from "@/components/ui/card";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
 import { SettingCardSkeleton } from "./setting-card-skeleton";
 import { useIsClient } from "usehooks-ts";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-import useAuth from "@/hooks/useAuth";
 import { ConfirmationDialog } from "@/components/ui/confirmation-dialog";
 import { useUserContext } from "@/contexts/userContext";
+import { RefreshCw, LogOut } from "lucide-react";
+import { useState } from "react";
+import { useConveneHistory } from "@/hooks/useConveneHistory";
+import extractGachaRecordQueryArgs from "@/lib/extractGachaRecordQueryArgs";
 
 export default function CloudSyncSetting() {
   const isClient = useIsClient();
-  const { user, signOut, signInWithGoogle } = useUserContext();
+  const [isOpenOverwriteDialog, setIsOpenOverwriteDialog] = useState(false);
+  useState(false);
+  const { user, userData, signOut, signInWithGoogle, uploadConveneHistoryUrl } =
+    useUserContext();
+  const [isSyncing, setIsSyncing] = useState(false);
+  const {
+    conveneHistoryUrl: localConveneHistoryUrl,
+    saveConveneHistoryUrl: saveLocalConveneHistoryUrl,
+    queryArgs: localQueryArgs,
+  } = useConveneHistory();
+
+  // We use URL because playerId in the database is not consistent
+  const { queryArgs: googleQueryArgs } = extractGachaRecordQueryArgs(
+    userData?.conveneHistoryUrl ?? "",
+  );
 
   if (!isClient || !signOut || !signInWithGoogle) {
     return <SettingCardSkeleton />;
@@ -29,34 +53,95 @@ export default function CloudSyncSetting() {
     toast.success("Signed out successfully.");
   };
 
+  const handleSync = async () => {
+    if (!user || !userData) {
+      return toast.error("You must login before being able to sync.");
+    }
+
+    setIsSyncing(true);
+
+    // If the user has no data at all
+    if (!userData.conveneHistoryUrl && !localConveneHistoryUrl) {
+      toast.error("Import your data first to start syncing!");
+    }
+    // If the user has no cloud saved URL yet
+    else if (!userData.conveneHistoryUrl && uploadConveneHistoryUrl) {
+      uploadConveneHistoryUrl(localConveneHistoryUrl);
+    }
+    // If they don't have local history data
+    else if (!localConveneHistoryUrl) {
+      setIsOpenOverwriteDialog(true);
+    }
+    // They have both, but are different
+    else if (
+      userData.conveneHistoryUrl &&
+      localConveneHistoryUrl &&
+      localConveneHistoryUrl !== userData.conveneHistoryUrl
+    ) {
+      setIsOpenOverwriteDialog(true);
+    }
+    // They have both & they're the same
+    else {
+      toast.success("Data is in sync with your Google Account.");
+    }
+
+    setIsSyncing(false);
+  };
+
+  const handlePickGoogleData = () => {
+    if (userData && userData.conveneHistoryUrl) {
+      saveLocalConveneHistoryUrl(userData.conveneHistoryUrl);
+    }
+    setIsOpenOverwriteDialog(false);
+  };
+
+  const handlePickBrowserData = async () => {
+    if (uploadConveneHistoryUrl) {
+      await uploadConveneHistoryUrl(localConveneHistoryUrl);
+      setIsOpenOverwriteDialog(false);
+    }
+  };
+
   return (
     <Card>
       <CardHeader className="pb-6">
         <CardTitle className="relative">
           <div className="flex gap-2.5">
             Cloud Backup
-            <span className="relative flex h-3.5 w-3.5">
-              <span
-                className={cn(
-                  "animate-pulse absolute inline-flex h-full w-full rounded-full opacity-75",
-                  user ? "bg-green-500" : "bg-destructive",
-                )}
-              ></span>
-              <span
-                className={cn(
-                  "relative inline-flex rounded-full h-3.5 w-3.5 animate-ping",
-                  user ? "bg-green-500" : "bg-destructive",
-                )}
-              ></span>
-            </span>
+            {!!user && (
+              <span className="relative flex h-3.5 w-3.5">
+                <span
+                  className={cn(
+                    "animate-pulse absolute inline-flex h-full w-full rounded-full opacity-75",
+                    localConveneHistoryUrl === userData?.conveneHistoryUrl
+                      ? "bg-green-500"
+                      : "bg-destructive",
+                  )}
+                ></span>
+                <span
+                  className={cn(
+                    "relative inline-flex rounded-full h-3.5 w-3.5 animate-ping",
+                    localConveneHistoryUrl === userData?.conveneHistoryUrl
+                      ? "bg-green-500"
+                      : "bg-destructive",
+                  )}
+                ></span>
+              </span>
+            )}
           </div>
         </CardTitle>
         <CardDescription>
           Save your data using your Google Account and access your data in any
-          device.
+          device. Once logged in, just click the &quot;Sync Data&quot; button to
+          upload or download your data into your device.
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex flex-wrap gap-3 items-center content-center">
+        <p className="text-sm mr-auto text-muted-foreground truncate max-w-52">
+          {user?.email ?? "Guest"}
+        </p>
+      </CardContent>
+      <CardFooter className="border-t px-6 py-4 justify-end">
         {!user ? (
           <ConfirmationDialog
             title="Warning: this feature is still experimental!"
@@ -98,11 +183,50 @@ export default function CloudSyncSetting() {
             }
           />
         ) : (
-          <Button variant="outline" size="lg" onClick={handleSignOut}>
-            Sign out
-          </Button>
+          <div className="flex gap-2">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    className={cn("h-11 w-11 transition-colors", {
+                      "bg-accent": isSyncing,
+                    })}
+                    variant="outline"
+                    size="icon"
+                    type="button"
+                    onClick={handleSignOut}
+                    disabled={!userData}
+                  >
+                    <LogOut
+                      className={cn("h-4 w-4", { "animate-spin": isSyncing })}
+                    />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Log Out</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            <Button variant="secondary" size="lg" onClick={handleSync}>
+              <RefreshCw
+                className={cn("h-4 w-4 mr-2", { "animate-spin": isSyncing })}
+              />
+              Sync Data
+            </Button>
+          </div>
         )}
-      </CardContent>
+      </CardFooter>
+
+      <ConfirmationDialog
+        title="Your local browser data is different from your Google Account data."
+        description={`Your local data with player ID (${localQueryArgs?.playerId ?? "N/A"}) conflicts with your Google Account's player ID (${googleQueryArgs?.playerId ?? "N/A"}). Would you like to keep your browser's local data or would you like to use your Google Account data instead?`}
+        open={isOpenOverwriteDialog}
+        continueText="Google Data"
+        onContinue={handlePickGoogleData}
+        cancelText="Browser Data"
+        onCancel={handlePickBrowserData}
+      />
     </Card>
   );
 }

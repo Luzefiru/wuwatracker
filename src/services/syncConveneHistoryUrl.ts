@@ -1,7 +1,11 @@
-import supabase from "@/lib/supabase/client/instance";
 import { User, UserSchema } from "@/types/User";
+import { SupabaseClient } from "@supabase/supabase-js";
+import { Database } from "@/types/Database";
 
-export default async function syncConveneHistoryUrl(user: User): Promise<User> {
+export default async function syncConveneHistoryUrl(
+  supabase: SupabaseClient<Database>,
+  user: User,
+): Promise<User> {
   const { data, error } = await supabase
     .from("users")
     .upsert({

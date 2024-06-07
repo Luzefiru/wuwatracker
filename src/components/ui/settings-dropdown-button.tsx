@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, LogIn, LogOut, Settings } from "lucide-react";
+import { Github, Settings, CloudUpload } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,8 +13,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import DropDownSignInItem from "./dropdown-sign-in-item";
+import { useUserContext } from "@/contexts/userContext";
 
 export function SettingsDropdownButton() {
+  const { user } = useUserContext();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -23,13 +26,21 @@ export function SettingsDropdownButton() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuLabel className="text-muted-foreground truncate">
+          {user?.email ? `${user.email}` : "Guest"}
+        </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <Link href="/settings">
             <DropdownMenuItem>
               <Settings className="mr-2 h-4 w-4" />
               <span>Settings</span>
+            </DropdownMenuItem>
+          </Link>
+          <Link href="/settings">
+            <DropdownMenuItem>
+              <CloudUpload className="mr-2 h-4 w-4" />
+              <span>Sync Data</span>
             </DropdownMenuItem>
           </Link>
         </DropdownMenuGroup>

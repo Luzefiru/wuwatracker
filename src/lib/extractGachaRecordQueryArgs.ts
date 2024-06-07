@@ -1,8 +1,11 @@
-import { ConveneHistoryURLParamsSchema } from "@/types/ConveneHistoryURLParams";
 import {
   GachaRecordQueryArgs,
   GachaRecordQueryArgsSchema,
 } from "@/types/GachaRecordQuery";
+
+type ReturnType =
+  | { isValidQueryArgs: true; queryArgs: GachaRecordQueryArgs }
+  | { isValidQueryArgs: false; queryArgs: null };
 
 /**
  * Extracts the query string parameters from a Convene History URL.
@@ -24,7 +27,7 @@ import {
  */
 export default function extractGachaRecordQueryArgs(
   conveneHistoryUrl: string,
-): GachaRecordQueryArgs {
+): ReturnType {
   const queryString = conveneHistoryUrl.split("?")[1];
   const params = new URLSearchParams(queryString);
   const queryArgs: Record<string, string> = {};
@@ -33,14 +36,20 @@ export default function extractGachaRecordQueryArgs(
     queryArgs[key] = value;
   });
 
-  const parsedQueryArgs = ConveneHistoryURLParamsSchema.parse(queryArgs);
   const gachaRecordQueryArgs = {
-    languageCode: parsedQueryArgs.lang,
-    playerId: parsedQueryArgs.player_id,
-    recordId: parsedQueryArgs.record_id,
-    serverId: parsedQueryArgs.svr_id,
-    serverArea: parsedQueryArgs.svr_area,
+    languageCode: queryArgs.lang,
+    playerId: queryArgs.player_id,
+    recordId: queryArgs.record_id,
+    serverId: queryArgs.svr_id,
+    serverArea: queryArgs.svr_area,
   };
 
-  return GachaRecordQueryArgsSchema.parse(gachaRecordQueryArgs);
+  const { success, data } =
+    GachaRecordQueryArgsSchema.safeParse(gachaRecordQueryArgs);
+
+  if (success) {
+    return { isValidQueryArgs: true, queryArgs: data };
+  } else {
+    return { isValidQueryArgs: false, queryArgs: null };
+  }
 }

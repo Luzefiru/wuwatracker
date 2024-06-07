@@ -24,62 +24,50 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import { toast } from "sonner";
-import { useUserContext } from "@/contexts/userContext";
-import syncConveneHistoryUrl from "@/services/syncConveneHistoryUrl";
 
 export default function ConveneHistoryUrlSetting() {
   const {
     conveneHistoryUrl: localConveneHistoryUrl,
-    saveConveneHistoryUrl,
-    removeConveneHistoryUrl,
+    saveConveneHistoryUrl: saveLocalConveneHistoryUrl,
+    removeConveneHistoryUrl: removeLocalConveneHistoryUrl,
   } = useConveneHistory();
-  const [conveneHistoryUrlInput, setConveneHistoryUrlInput] = useState(
+  const [conveneHistoryUrlInput, setConveneHistoryUrlInput] = useState<string>(
     localConveneHistoryUrl,
   );
   const [isLoading, setIsLoading] = useState(true);
   const [isClicked, setIsClicked] = useState(false);
-  const { userData, user } = useUserContext();
 
   const isValidConveneHistoryUrlInput = isValidConveneHistoryUrl(
     conveneHistoryUrlInput,
   );
-
-  const handleSave = () => {
-    if (!isValidConveneHistoryUrlInput) {
-      return toast.error("Please input a valid Convene History URL.");
-    }
-
-    saveConveneHistoryUrl(conveneHistoryUrlInput);
-
-    toast.success("Successfully imported Convene History URL!");
-  };
-
-  const handleDelete = async () => {
-    if (user && userData) {
-      await syncConveneHistoryUrl({ ...userData, conveneHistoryUrl: null });
-    }
-
-    removeConveneHistoryUrl();
-    setConveneHistoryUrlInput("");
-
-    toast.error("Your local Convene History was deleted.");
-  };
 
   useEffect(() => {
     setIsLoading(false);
   }, []);
 
   useEffect(() => {
-    if (userData?.conveneHistoryUrl) {
-      setConveneHistoryUrlInput(userData.conveneHistoryUrl);
-    } else {
-      setConveneHistoryUrlInput(localConveneHistoryUrl);
-    }
-  }, [localConveneHistoryUrl, userData?.conveneHistoryUrl]);
+    setConveneHistoryUrlInput(localConveneHistoryUrl);
+  }, [localConveneHistoryUrl]);
 
   if (isLoading) {
     return <SettingCardSkeleton />;
   }
+
+  const handleSave = () => {
+    if (!isValidConveneHistoryUrlInput) {
+      return toast.error("Please input a valid Convene History URL.");
+    }
+
+    saveLocalConveneHistoryUrl(conveneHistoryUrlInput);
+
+    toast.success("Successfully imported Convene History URL locally!");
+  };
+
+  const handleDelete = async () => {
+    removeLocalConveneHistoryUrl();
+    setConveneHistoryUrlInput("");
+    toast.error("Deleted local history data.");
+  };
 
   return (
     <Card>
@@ -105,7 +93,7 @@ export default function ConveneHistoryUrlSetting() {
             onClick={() => {
               setIsClicked(true);
             }}
-            value={conveneHistoryUrlInput}
+            value={conveneHistoryUrlInput ?? ""}
           />
         </form>
       </CardContent>
@@ -115,7 +103,7 @@ export default function ConveneHistoryUrlSetting() {
             <TooltipTrigger asChild>
               <Button
                 className="mr-2 h-11 w-11"
-                variant="outline"
+                variant="ghost"
                 size="icon"
                 type="button"
                 asChild
@@ -133,6 +121,7 @@ export default function ConveneHistoryUrlSetting() {
             <TooltipTrigger asChild>
               <Button
                 onClick={handleDelete}
+                disabled={!conveneHistoryUrlInput}
                 className="ml-auto mr-2 h-11 w-11"
                 variant="outline"
                 size="icon"
@@ -146,7 +135,9 @@ export default function ConveneHistoryUrlSetting() {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-        <Button onClick={handleSave}>Save</Button>
+        <Button variant="secondary" onClick={handleSave}>
+          Save
+        </Button>
       </CardFooter>
     </Card>
   );

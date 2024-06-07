@@ -55,7 +55,25 @@ export default async function fetchGachaRecordByCardPoolType(
     serverId: args.serverId,
   };
 
-  const { data } = await axios.post(requestUrl, requestBody);
+  const { data: fetchedData } = await axios.post(requestUrl, requestBody);
 
-  return GachaRecordQueryResultSchema.parse(data);
+  const { success, data } = GachaRecordQueryResultSchema.safeParse(fetchedData);
+
+  if (!success) {
+    // TODO: there's probably a better way to do this
+    const EMPTY_PLACEHOLDER = {
+      code: 0,
+      message: "success",
+      data: [],
+    };
+
+    console.error(
+      "Unsuccessful in retrieving data. Try re-importing your URL again or contact the developers with this error message.",
+      requestBody,
+    );
+
+    return EMPTY_PLACEHOLDER;
+  } else {
+    return data;
+  }
 }

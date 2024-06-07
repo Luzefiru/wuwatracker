@@ -1,5 +1,9 @@
+import extractGachaRecordQueryArgs from "./extractGachaRecordQueryArgs";
+
 export default function isValidConveneHistoryUrl(s: string) {
+  const { isValidQueryArgs } = extractGachaRecordQueryArgs(s);
   const conveneHistoryUrlRegex =
-    /^https:\/\/(?:aki-gm-resources-oversea\.aki-game\.net|aki-gm-resources\.aki-game\.com)\/aki\/gacha\/index\.html\#\/record\?(?=.*\bplayer_id=\w+\b)(?=.*\brecord_id=\w+\b)(?=.*\bsvr_id=\w+\b).*$/;
-  return conveneHistoryUrlRegex.test(s);
+    /^https:\/\/(?:aki-gm-resources(?:-oversea)?\.aki-game\.(?:net|com))\/aki\/gacha\/index\.html\#\/record/;
+
+  return isValidQueryArgs && conveneHistoryUrlRegex.test(s);
 }

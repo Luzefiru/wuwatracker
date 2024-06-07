@@ -7,11 +7,12 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { PullHistoryContextProvider } from "@/contexts/pullHistoryContext";
 import { UserContextProvider } from "@/contexts/userContext";
-import SyncIndicator from "@/components/auth/sync-indicator";
+import env from "@/config/env";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(env.VERCEL_URL),
   title: "Wuwa Tracker",
   description:
     "A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!",
@@ -36,7 +37,6 @@ export default function RootLayout({
               {children}
             </ThemeProvider>
             <Toaster richColors />
-            <SyncIndicator />
             <Analytics />
             <SpeedInsights />
           </PullHistoryContextProvider>
