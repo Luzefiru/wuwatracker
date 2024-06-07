@@ -16,9 +16,12 @@ import { ItemAvatar } from "./item-avatar";
 export default function CharacterSequences() {
   return (
     <Card>
-      <CardContent>
-        {Object.keys(fiveStarCharacterMetadata).map((c) => (
-          <ItemAvatar key={c} qualityLevel={c.qualityLevel} name={c.name} />
+      <CardContent className="flex-row flex gap-3 py-6 md:flex-wrap mx-auto">
+        {Object.entries(fiveStarCharacterMetadata).map(([key, value]) => (
+          <ItemAvatar key={key} qualityLevel={value.qualityLevel} name={key} />
+        ))}
+        {Object.entries(fourStarCharacterMetadata).map(([key, value]) => (
+          <ItemAvatar key={key} qualityLevel={value.qualityLevel} name={key} />
         ))}
       </CardContent>
     </Card>

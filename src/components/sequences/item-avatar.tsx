@@ -2,7 +2,14 @@
 
 import Image from "next/image";
 import { fiveStarObjects, fourStarObjects } from "@/data/gachaObjects";
-import { Sparkles } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 interface Props {
   name: string;
@@ -18,16 +25,12 @@ export function ItemAvatar({ name, qualityLevel }: Props) {
         fourStarObjects[name]?.imgSrc ?? "/icons/unknown-four-star.png";
 
   return (
-    <>
-      <div className="relative w-16 h-16 place-self-center">
-        <div className="rounded-full w-16 h-16 bg-background overflow-hidden">
+    <Card>
+      <CardContent>
+        <div className="relative w-20 h-20 place-self-center">
           <Image src={imgSrc} width="404" height="560" alt={name} />
         </div>
-
-        {qualityLevel === 5 && (
-          <Sparkles className="h-[1rem] w-[1rem] rotate-0 scale-100 text-xl transition-all absolute text-yellow-400 fill-yellow-400 left-0 top-0 aspect-square"></Sparkles>
-        )}
-      </div>
-    </>
+      </CardContent>
+    </Card>
   );
 }
