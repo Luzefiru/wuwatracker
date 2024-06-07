@@ -52,6 +52,9 @@ export function Header() {
         <Link href="/import" className={getLinkClassName("/import")}>
           Import
         </Link>
+        <Link href="/sequences" className={getLinkClassName("/sequences")}>
+          Sequences
+        </Link>
         <Link href="/settings" className={getLinkClassName("/settings")}>
           Settings
         </Link>
