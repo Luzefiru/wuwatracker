@@ -41,7 +41,7 @@ export function FAQ() {
         <AccordionContent>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
             Rest assured, we are players just like you and want to help
-            Wuthering Waves grow by building useful tools for the all the Rovers
+            Wuthering Waves grow by building useful tools for all Rovers
             in the world.
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
