@@ -25,12 +25,15 @@ export function ItemAvatar({ name, qualityLevel }: Props) {
         fourStarObjects[name]?.imgSrc ?? "/icons/unknown-four-star.png";
 
   return (
-    <Card>
-      <CardContent>
-        <div className="relative w-20 h-20 place-self-center">
+    <Card className="flex flex-col ">
+      <CardContent className="py-2 h-fit">
+        <div className="relative w-20 place-self-center h-fit">
           <Image src={imgSrc} width="404" height="560" alt={name} />
         </div>
       </CardContent>
+      <CardFooter className={"pb-2 h-15 flex items-center justify-center "}>
+        <p>{name}</p>
+      </CardFooter>
     </Card>
   );
 }

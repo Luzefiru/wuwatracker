@@ -22,7 +22,7 @@ export default function Import() {
   return (
     <div className="flex flex-col h-full w-full gap-3 max-w-screen-lg justify-self-center">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center sm:text-start">
-        <Tabs defaultValue="character" className="w-full">
+        <Tabs defaultValue="character">
           <div className="flex justify-between">
             <TabsContent value="character">
               <h2 className="scroll-m-20 text-2xl md:text-3xl font-semibold tracking-tight pb-2">
