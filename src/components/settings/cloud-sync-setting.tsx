@@ -6,6 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+  CardFooter,
 } from "@/components/ui/card";
 import {
   Tooltip,
@@ -139,6 +140,8 @@ export default function CloudSyncSetting() {
         <p className="text-sm mr-auto text-muted-foreground truncate max-w-52">
           {user?.email ?? "Guest"}
         </p>
+      </CardContent>
+      <CardFooter className="border-t px-6 py-4 justify-end">
         {!user ? (
           <ConfirmationDialog
             title="Warning: this feature is still experimental!"
@@ -213,7 +216,8 @@ export default function CloudSyncSetting() {
             </Button>
           </div>
         )}
-      </CardContent>
+      </CardFooter>
+
       <ConfirmationDialog
         title="Your local browser data is different from your Google Account data."
         description={`Your local data with player ID (${localQueryArgs?.playerId ?? "N/A"}) conflicts with your Google Account's player ID (${googleQueryArgs?.playerId ?? "N/A"}). Would you like to keep your browser's local data or would you like to use your Google Account data instead?`}
