@@ -10,22 +10,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import createImportScript from "@/lib/createImportScript";
 import { useConveneHistory } from "@/hooks/useConveneHistory";
-import Image from "next/image";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
 import CopyButton from "@/components/ui/copy-button";
 import { useHover } from "usehooks-ts";
 import Link from "next/link";
@@ -198,42 +198,47 @@ export function ImportTutorial({ redirectToHistory }: Props) {
             </li>
           </ol>
 
-          <div className="grid md:flex gap-4 md:justify-end">
-            <Drawer>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <DrawerTrigger asChild>
-                    <Button variant="outline" size="lg" type="button">
-                      <FileQuestion className="h-4 w-4 mr-2" /> Need Help?
-                    </Button>
-                  </DrawerTrigger>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>View a Video Tutorial</p>
-                </TooltipContent>
-              </Tooltip>
-              <DrawerContent className="justify-center">
-                <DrawerHeader>
-                  <DrawerTitle className="text-3xl text-center">
-                    Import Video Tutorial
-                  </DrawerTitle>
-                  <DrawerFooter className="text-center text-muted-foreground">
-                    Note: You have to open your in-game Convene History first!
-                  </DrawerFooter>
-                  <DrawerDescription className="flex w-full justify-center pb-8">
-                    <div className="relative w-[80%] max-w-screen-lg rounded-xl shadow-2xl self-center overflow-hidden">
-                      <Image
-                        src="/gif/tutorial.gif"
-                        width="1893"
-                        height="968"
-                        alt="Import Tutorial"
-                        loading="eager"
-                      />
-                    </div>
-                  </DrawerDescription>
-                </DrawerHeader>
-              </DrawerContent>
-            </Drawer>
+          <div className="grid md:flex gap-4 md:justify-end items-center">
+            <Dialog>
+              <DialogTrigger>
+                <Button
+                  className="w-full h-12"
+                  variant="outline"
+                  size="lg"
+                  type="button"
+                >
+                  <FileQuestion className="h-4 w-4 mr-2" /> Need Help?
+                </Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>PC Import Tutorial Video</DialogTitle>
+                  <DialogDescription className="pb-4">
+                    Follow this step-by-step YouTube tutorial to import your
+                    data on PC. Please join our{" "}
+                    <Link
+                      className="text-yellow-500 hover:text-yellow-600"
+                      href="https://discord.gg/mADnEXwZGT"
+                    >
+                      Discord Server
+                    </Link>{" "}
+                    to ask for any help!
+                  </DialogDescription>
+                  <div className="w-full h-80 rounded-2xl overflow-hidden flex justify-center">
+                    <iframe
+                      className="w-full"
+                      src="https://www.youtube.com/embed/Ue3T_9lZZGU?si=r4LJ5tkYinLCMbVP"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>
+
             <Button size="lg" type="submit">
               <Import className="mr-2 h-4 w-4" /> Import History
             </Button>
