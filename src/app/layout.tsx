@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(env.VERCEL_URL),
   title: "Wuwa Tracker",
   description:
-    "A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!",
+    "A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Synchronize your data across devices and share your pulls with your friends and track your account easily!",
 };
 
 export default function RootLayout({

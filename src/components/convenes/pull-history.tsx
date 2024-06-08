@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+
 import React from "react";
 import InfiniteScroll from "../ui/scroll-area";
 import getPullNumber from "@/lib/getPullNumber";

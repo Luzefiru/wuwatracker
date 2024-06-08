@@ -10,7 +10,7 @@ export default function MainLayout({
   return (
     <>
       <Image
-        src="/bg/cover.png"
+        src="https://cdn.wanderer.moe/wuthering-waves/backgrounds/T_RogueBg.png"
         width="2560"
         height="1440"
         alt="Cover Image"
