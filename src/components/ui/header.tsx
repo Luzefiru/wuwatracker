@@ -15,12 +15,24 @@ export function Header() {
   const pathName = usePathname();
 
   /**
-   * Checks if the `href` is the current `pathName`, if so, give it active link classes.
+   * Checks if the `pathName` starts with the `pathSegment`, if so, give it active link classes.
+   *
+   * @example
+   * // Assuming pathName = "/home/dashboard"
+   * getLinkClassName("/home");
+   * // Returns "transition-colors hover:text-foreground text-foreground"
+   *
+   * @example
+   * // Assuming pathName = "/home/dashboard"
+   * getLinkClassName("/profile");
+   * // Returns "transition-colors hover:text-foreground text-muted-foreground"
    */
-  const getLinkClassName = (href: string) => {
+  const getLinkClassName = (pathSegment: string) => {
     return cn(
       "transition-colors hover:text-foreground",
-      href === pathName ? "text-foreground" : "text-muted-foreground ",
+      pathName.startsWith(pathSegment)
+        ? "text-foreground"
+        : "text-muted-foreground ",
     );
   };
 
@@ -45,7 +57,7 @@ export function Header() {
         </Link>
         <Link
           href={getFirstConveneBannerHref()}
-          className={getLinkClassName(getFirstConveneBannerHref())}
+          className={getLinkClassName("/convene")}
         >
           History
         </Link>
@@ -82,7 +94,7 @@ export function Header() {
             </Link>
             <Link
               href={getFirstConveneBannerHref()}
-              className={getLinkClassName(getFirstConveneBannerHref())}
+              className={getLinkClassName("/convene")}
             >
               History
             </Link>
