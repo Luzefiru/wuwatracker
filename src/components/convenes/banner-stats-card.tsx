@@ -22,10 +22,9 @@ import { BannerStatsSkeleton } from "./banner-stats-skeleton";
 interface Props {
   title: string;
   description: string;
-  bgImgSrc: string;
 }
 
-export function BannerStatsCard({ title, description, bgImgSrc }: Props) {
+export function BannerStatsCard({ title, description }: Props) {
   const pathname = usePathname();
   const pathSegment = pathname.split("/").pop(); // For example, if pathname is "/convene/starter", this will be "starter"
   const [isLoading, setIsLoading] = useState(true);
@@ -108,10 +107,7 @@ export function BannerStatsCard({ title, description, bgImgSrc }: Props) {
 
   return (
     <div className="flex w-full flex-col gap-8">
-      <Card
-        className="bg-background/80 backdrop-blur-sm w-full"
-        style={{ backgroundImage: `url${bgImgSrc}` }}
-      >
+      <Card className="bg-background/80 backdrop-blur-sm w-full">
         <div className="w-full">
           <CardHeader className="text-center md:text-start">
             <CardTitle>{title}</CardTitle>
