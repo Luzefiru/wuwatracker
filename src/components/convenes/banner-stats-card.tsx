@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import * as React from "react";
 import { useState, useEffect } from "react";
 import {
   Card,
@@ -15,24 +14,64 @@ import { ConveneAvatar } from "./convene-avatar";
 import { AvatarFilter as Filtertype } from "@/types/AvatarFilter";
 import AvatarFilter from "./avatar-filter";
 import { PullHistory } from "./pull-history";
+import { usePathname } from "next/navigation";
+import { usePullHistory } from "@/contexts/pullHistoryContext";
+import { BannerTypeSlugEnum } from "@/types/BannerTypeSlugEnum";
+import { BannerStatsSkeleton } from "./banner-stats-skeleton";
 
 interface Props {
-  stats: BannerStats | null;
   title: string;
   description: string;
   bgImgSrc: string;
 }
 
-export function BannerStatsCard({
-  stats,
-  title,
-  description,
-  bgImgSrc,
-}: Props) {
+export function BannerStatsCard({ title, description, bgImgSrc }: Props) {
+  const pathname = usePathname();
+  const pathSegment = pathname.split("/").pop(); // For example, if pathname is "/convene/starter", this will be "starter"
+  const [isLoading, setIsLoading] = useState(true);
+
   const [filter, setFilter] = useState<Array<Filtertype>>([
     Filtertype.FIVE_STARS,
     Filtertype.FOUR_STARS,
   ]);
+
+  const [stats, setStats] = useState<BannerStats | null>(null);
+  const {
+    limitedCharacterStats,
+    limitedWeaponStats,
+    permanentCharacterStats,
+    permanentWeaponStats,
+    starterStats,
+    starterSelectorStats,
+  } = usePullHistory();
+
+  useEffect(() => {
+    setIsLoading(false);
+
+    const pathToStatsMap = {
+      "limited-character": limitedCharacterStats,
+      "limited-weapon": limitedWeaponStats,
+      "permanent-character": permanentCharacterStats,
+      "permanent-weapon": permanentWeaponStats,
+      "starter-selector": starterSelectorStats,
+      starter: starterStats,
+    } as const;
+
+    setStats(pathToStatsMap[pathSegment as BannerTypeSlugEnum]);
+  }, [
+    limitedCharacterStats,
+    limitedWeaponStats,
+    permanentCharacterStats,
+    permanentWeaponStats,
+    starterSelectorStats,
+    starterStats,
+    pathname,
+    pathSegment,
+  ]);
+
+  if (isLoading) {
+    return <BannerStatsSkeleton />;
+  }
 
   function filterAvatars() {
     if (stats?.fiveStarObjects.length || stats?.fourStarObjects.length) {
