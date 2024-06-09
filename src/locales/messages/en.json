@@ -11,10 +11,10 @@
       "Sync Data": "Sync Data",
       "Support": "Support",
       "DropDownSignInItem": {
-        "Signed out successfully.": "Signed out successfully.",
+        "Signed out successfully": "Signed out successfully",
         "Sign Out": "Sign Out",
         "Warning: this feature is still experimental!": "Warning: this feature is still experimental!",
-        "Cloud sync is not guaranteed to work in all scenarios as it is a new website feature. By proceeding, you understand the risk that you may lose your previously imported URL. Would you still like to use cloud sync?": "Cloud sync is not guaranteed to work in all scenarios as it is a new website feature. By proceeding, you understand the risk that you may lose your previously imported URL. Would you still like to use cloud sync?",
+        "Cloud Sync Warning": "Cloud sync is not guaranteed to work in all scenarios as it is a new website feature. By proceeding, you understand the risk that you may lose your previously imported URL. Would you still like to use cloud sync?",
         "Cancel": "Cancel",
         "I understand the risks": "I understand the risks",
         "Sync Data with Google": "Sync Data with Google"
@@ -30,7 +30,7 @@
     "Kuro Games": "Kuro Games",
     "Terms & Conditions": "Terms & Conditions",
     "Privacy Policy": "Privacy Policy",
-    "All game assets and trademarks are the property of their respective owners.": "All game assets and trademarks are the property of their respective owners.",
+    "All game assets and trademarks are the property of their respective owners": "All game assets and trademarks are the property of their respective owners",
     "Discord community": "Discord community"
   },
   "LandingPage": {
@@ -66,6 +66,15 @@
       "If you want to support us financially, we have a": "If you want to support us financially, we have a",
       "Ko-fi page": "Ko-fi page",
       "to accept any donations to keep the website running!": "to accept any donations to keep the website running!"
+    }
+  },
+  "Settings": {
+    "Settings": "Settings",
+    "Edit your preferences for global statistics and synchronization here": "Edit your preferences for global statistics and synchronization here",
+    "ConveneHistoryUrlSetting": {
+      "Please input a valid Convene History URL": "Please input a valid Convene History URL",
+      "Successfully imported Convene History URL locally!": "Successfully imported Convene History URL locally!",
+      "Deleted local history data": "Deleted local history data"
     }
   },
   "GachaItems": {

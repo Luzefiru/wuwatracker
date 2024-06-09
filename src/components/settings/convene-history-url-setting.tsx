@@ -24,8 +24,11 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 export default function ConveneHistoryUrlSetting() {
+  const t = useTranslations("Settings.ConveneHistoryUrlSetting");
+
   const {
     conveneHistoryUrl: localConveneHistoryUrl,
     saveConveneHistoryUrl: saveLocalConveneHistoryUrl,
@@ -55,18 +58,18 @@ export default function ConveneHistoryUrlSetting() {
 
   const handleSave = () => {
     if (!isValidConveneHistoryUrlInput) {
-      return toast.error("Please input a valid Convene History URL.");
+      return toast.error(`${t("Please input a valid Convene History URL")}.`);
     }
 
     saveLocalConveneHistoryUrl(conveneHistoryUrlInput);
 
-    toast.success("Successfully imported Convene History URL locally!");
+    toast.success(t("Successfully imported Convene History URL locally!"));
   };
 
   const handleDelete = async () => {
     removeLocalConveneHistoryUrl();
     setConveneHistoryUrlInput("");
-    toast.error("Deleted local history data.");
+    toast.error(`${t("Deleted local history data")}.`);
   };
 
   return (

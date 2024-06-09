@@ -103,8 +103,9 @@ export function Footer() {
             </Link>
             <br />
             {t(
-              "All game assets and trademarks are the property of their respective owners.",
+              "All game assets and trademarks are the property of their respective owners",
             )}
+            .
           </span>
           <div className="flex justify-center mt-4 sm:mt-0">
             <Link

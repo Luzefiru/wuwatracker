@@ -27,7 +27,7 @@ export default function DropDownSignInItem() {
     setIsLoggingOut(true);
     await signOut();
     setIsLoggingOut(false);
-    toast.success(t("Signed out successfully."));
+    toast.success(t("Signed out successfully") + ".");
   };
 
   return (
@@ -44,9 +44,7 @@ export default function DropDownSignInItem() {
       ) : (
         <ConfirmationDialog
           title={t("Warning: this feature is still experimental!")}
-          description={t(
-            "Cloud sync is not guaranteed to work in all scenarios as it is a new website feature. By proceeding, you understand the risk that you may lose your previously imported URL. Would you still like to use cloud sync?",
-          )}
+          description={`${t("Cloud Sync Warning")}`}
           cancelText={t("Cancel")}
           continueText={t("I understand the risks")}
           onContinue={() => {
