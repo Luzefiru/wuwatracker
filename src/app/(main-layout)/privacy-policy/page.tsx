@@ -1,7 +1,8 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Wuwa Tracker",
+  title: "Wuwa Tracker | Privacy Policy",
   description:
     "This privacy policy document outlines the types of personal information that is received and collected by Wuwa Tracker and how it is used. Wuwa Tracker is a pity counter for Wuthering Waves, using the up-to-date data with global statistics and more.",
 };
@@ -37,16 +38,25 @@ export default function PrivacyPolicy() {
         <p className="leading-7 [&:not(:first-child)]:mt-6 dark:text-muted-foreground">
           By using Wuwa Tracker, you consent to the use of local storage for
           storing application data. You can clear your browser&apos;s local
-          storage at any time through your browser settings, which will remove
-          any stored data associated with Wuwa Tracker.
+          storage at any time through the{" "}
+          <Link
+            className="text-yellow-500 hover:text-yellow-600"
+            href="/settings"
+            target="_blank"
+          >
+            Settings page
+          </Link>{" "}
+          or your own browser settings, which will remove any stored data
+          associated with Wuwa Tracker.
         </p>
         <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
           Analytics
         </h2>
         <p className="leading-7 [&:not(:first-child)]:mt-6 dark:text-muted-foreground">
-          Wuwa Tracker uses Vercel Analytics to collect and analyze data about
-          how our application is used. This information helps us understand user
-          behavior, improve our application, and enhance user experience.
+          Wuwa Tracker uses Vercel Analytics and Speed Insights to collect and
+          analyze data about how our application is used. This information helps
+          us understand user behavior, improve our application, and enhance user
+          experience.
         </p>
         <p className="leading-7 [&:not(:first-child)]:mt-6 dark:text-muted-foreground">
           Vercel Analytics collects data such as page views, clicks, and other
@@ -58,6 +68,28 @@ export default function PrivacyPolicy() {
           information by Vercel Analytics for the purpose of improving our
           application. The data collected through Vercel Analytics is used
           solely for analytics purposes and is not shared with third parties.
+        </p>
+        <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+          Supabase Auth and Database
+        </h2>
+        <p className="leading-7 [&:not(:first-child)]:mt-6 dark:text-muted-foreground">
+          Wuwa Tracker uses Supabase Auth for authentication and Supabase&apos;s
+          database services to store users&apos; Convene data. This data is used
+          for backup purposes and to enhance application features, ensuring a
+          better user experience.
+        </p>
+        <p className="leading-7 [&:not(:first-child)]:mt-6 dark:text-muted-foreground">
+          The data stored in the Supabase database includes your Convene History
+          URL and Wuthering Waves player ID. This data is used solely for the
+          improvement and welfare of the user and is securely stored and
+          managed. Supabase employs industry-standard security measures to
+          protect your data.
+        </p>
+        <p className="leading-7 [&:not(:first-child)]:mt-6 dark:text-muted-foreground">
+          By using Wuwa Tracker, you consent to the use of Supabase Auth and
+          database for storing your data. We are committed to ensuring that your
+          data remains secure and is used only for enhancing your experience
+          with Wuwa Tracker.
         </p>
         <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
           Changes to This Privacy Policy
