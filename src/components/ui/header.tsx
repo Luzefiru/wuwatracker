@@ -10,9 +10,11 @@ import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
 import { SettingsDropdownButton } from "./settings-dropdown-button";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 export function Header() {
   const pathName = usePathname();
+  const t = useTranslations("Header");
 
   /**
    * Checks if the `pathName` starts with the `pathSegment`, if so, give it active link classes.
@@ -59,13 +61,13 @@ export function Header() {
           href={getFirstConveneBannerHref()}
           className={getLinkClassName("/convene")}
         >
-          History
+          {t("History")}
         </Link>
         <Link href="/import" className={getLinkClassName("/import")}>
-          Import
+          {t("Import")}
         </Link>
         <Link href="/settings" className={getLinkClassName("/settings")}>
-          Settings
+          {t("Settings")}
         </Link>
       </nav>
 
@@ -73,7 +75,7 @@ export function Header() {
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="shrink-0 md:hidden">
             <Menu className="h-5 w-5" />
-            <span className="sr-only">Toggle navigation menu</span>
+            <span className="sr-only">{t("Toggle navigation menu")}</span>
           </Button>
         </SheetTrigger>
         <SheetContent side="left">
@@ -96,19 +98,19 @@ export function Header() {
               href={getFirstConveneBannerHref()}
               className={getLinkClassName("/convene")}
             >
-              History
+              {t("History")}
             </Link>
             <Link href="/import" className={getLinkClassName("/import")}>
-              Import
+              {t("Import")}
             </Link>
             <Link href="/settings" className={getLinkClassName("/settings")}>
-              Settings
+              {t("Settings")}
             </Link>
             <Link
               href="/privacy-policy"
               className={getLinkClassName("/privacy-policy")}
             >
-              Privacy Policy
+              {t("Privacy Policy")}
             </Link>
           </nav>
         </SheetContent>

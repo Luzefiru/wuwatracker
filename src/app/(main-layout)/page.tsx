@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/button";
 import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
 import { Spotlight } from "@/components/ui/spotlight";
 import { FAQ } from "@/components/home/faq";
+import { useTranslations } from "next-intl";
 
 export default function LandingPage() {
+  const t = useTranslations("Index");
+
   return (
     <>
       <section>
@@ -16,7 +19,7 @@ export default function LandingPage() {
             role="alert"
           >
             <span className="text-xs bg-primary-600 rounded-full text-muted-foreground px-2.5 py-1.5">
-              v1.2
+              v1.3
             </span>
             <span className="text-sm">Wuwa Tracker</span>
             <svg

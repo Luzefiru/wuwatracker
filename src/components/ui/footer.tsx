@@ -1,8 +1,10 @@
-import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="border-t pt-2 bg-background flex justify-center mt-auto">
       <div className="w-full max-w-screen-desktop p-4 py-6 lg:py-8 lg:px-12">
@@ -26,7 +28,7 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase">
-                Developers
+                {t("Developers")}
               </h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
@@ -34,7 +36,7 @@ export function Footer() {
                     href="https://github.com/Luzefiru/wuwatracker"
                     target="_blank"
                   >
-                    Report a Bug
+                    {t("Report a Bug")}
                   </Link>
                 </li>
                 <li>
@@ -43,7 +45,7 @@ export function Footer() {
                     className="flex gap-2 items-center"
                     target="_blank"
                   >
-                    <span>Support Us</span>{" "}
+                    <span>{t("Support Us")}</span>{" "}
                     <div className="aspect-square relative w-6 flex items-center">
                       <Image
                         className="object-cover"
@@ -59,7 +61,7 @@ export function Footer() {
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase">
-                Resources
+                {t("Resources")}
               </h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
@@ -67,12 +69,12 @@ export function Footer() {
                     href="https://wutheringwaves.kurogames.com/"
                     target="_blank"
                   >
-                    Wuthering Waves
+                    {t("Wuthering Waves")}
                   </Link>
                 </li>
                 <li>
                   <Link href="https://kurogames.com/" target="_blank">
-                    Kuro Games
+                    {t("Kuro Games")}
                   </Link>
                 </li>
               </ul>
@@ -83,11 +85,11 @@ export function Footer() {
               <ul className="text-muted-foreground">
                 <li className="mb-4">
                   <Link href="/terms-and-conditions">
-                    Terms &amp; Conditions
+                    {t("Terms & Conditions")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy-policy">Privacy Policy</Link>
+                  <Link href="/privacy-policy">{t("Privacy Policy")}</Link>
                 </li>
               </ul>
             </div>
@@ -100,8 +102,9 @@ export function Footer() {
               Wuwa Tracker
             </Link>
             <br />
-            All game assets and trademarks are the property of their respective
-            owners.
+            {t(
+              "All game assets and trademarks are the property of their respective owners.",
+            )}
           </span>
           <div className="flex justify-center mt-4 sm:mt-0">
             <Link
@@ -118,7 +121,7 @@ export function Footer() {
               >
                 <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
               </svg>
-              <span className="sr-only">Discord community</span>
+              <span className="sr-only">{t("Discord community")}</span>
             </Link>
             <Link
               href="https://x.com/wuwatracker"
@@ -138,7 +141,7 @@ export function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="sr-only">Twitter page</span>
+              <span className="sr-only">Twitter</span>
             </Link>
             <Link
               href="https://www.reddit.com/r/wuwatracker/"
@@ -170,7 +173,7 @@ export function Footer() {
                 />
               </svg>
 
-              <span className="sr-only">Reddit page</span>
+              <span className="sr-only">Reddit</span>
             </Link>
             <Link
               href="https://github.com/Luzefiru"

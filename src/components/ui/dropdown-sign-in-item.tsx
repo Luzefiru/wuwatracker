@@ -7,11 +7,13 @@ import { LogOut } from "lucide-react";
 import { Skeleton } from "./skeleton";
 import { ConfirmationDialog } from "./confirmation-dialog";
 import { useUserContext } from "@/contexts/userContext";
+import { useTranslations } from "next-intl";
 
 export default function DropDownSignInItem() {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
   const { user, signInWithGoogle, signOut } = useUserContext();
+  const t = useTranslations("Header.SettingsDropdownButton.DropDownSignInItem");
 
   useEffect(() => {
     setIsLoading(false);
@@ -25,7 +27,7 @@ export default function DropDownSignInItem() {
     setIsLoggingOut(true);
     await signOut();
     setIsLoggingOut(false);
-    toast.success("Signed out successfully.");
+    toast.success(t("Signed out successfully."));
   };
 
   return (
@@ -37,14 +39,16 @@ export default function DropDownSignInItem() {
           className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 text-destructive-foreground"
         >
           <LogOut className="mr-2 h-4 w-4" />
-          <span>Sign out</span>
+          <span>{t("Sign Out")}</span>
         </DropdownMenuItem>
       ) : (
         <ConfirmationDialog
-          title="Warning: this feature is still experimental!"
-          description="Cloud sync is not guaranteed to work in all scenarios as it is a new website feature. By proceeding, you understand the risk that you may lose your previously imported URL. Would you still like to use cloud sync?"
-          cancelText="Cancel"
-          continueText="I understand the risks"
+          title={t("Warning: this feature is still experimental!")}
+          description={t(
+            "Cloud sync is not guaranteed to work in all scenarios as it is a new website feature. By proceeding, you understand the risk that you may lose your previously imported URL. Would you still like to use cloud sync?",
+          )}
+          cancelText={t("Cancel")}
+          continueText={t("I understand the risks")}
           onContinue={() => {
             signInWithGoogle(window.location.href);
           }}
@@ -75,7 +79,7 @@ export default function DropDownSignInItem() {
                 />
                 <path d="M1 1h22v22H1z" fill="none" />
               </svg>
-              <span>Sync Data with Google</span>
+              <span>{t("Sync Data with Google")}</span>
             </div>
           }
         />
