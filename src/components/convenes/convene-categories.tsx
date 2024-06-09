@@ -38,7 +38,7 @@ export function ConveneCategories() {
 
   return (
     <>
-      <div className="mb-2 flex flex-col md:flex-row justify-between gap-8">
+      <div className="mb-1 flex flex-col md:flex-row justify-between gap-8">
         <div className="flex w-full">
           <h2 className="scroll-m-20 text-4xl font-semibold tracking-tight text-center md:text-start">
             Convene Tracker

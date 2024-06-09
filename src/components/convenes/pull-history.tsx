@@ -26,8 +26,8 @@ export function PullHistory({ stats }: Props) {
       <CardHeader className="pb-6">
         <CardTitle>Pull History</CardTitle>
       </CardHeader>
-      <div className="max-h-[300px] w-full  overflow-y-auto">
-        <div className="flex w-full flex-col items-center  gap-3">
+      <div className="max-h-[500px] w-full overflow-y-auto">
+        <div className="flex w-full flex-col items-center gap-3">
           <CardContent className="w-full">
             {stats?.fiveStarObjects.length || stats?.fourStarObjects.length ? (
               <Table className="text-md">
