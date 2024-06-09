@@ -29,6 +29,7 @@ export default function TutorialTabs() {
             risk. Please join our{" "}
             <Link
               className="text-foreground hover:text-muted-foreground"
+              target="_blank"
               href="https://discord.gg/mADnEXwZGT"
             >
               Discord Server

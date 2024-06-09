@@ -45,11 +45,11 @@ export default function LandingPage() {
             statistics will automatically refresh whenever you pull.
           </p>
 
-          <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+          <div className="flex items-center flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             <Button size="lg" asChild>
               <Link href="/import">Import Tutorial</Link>
             </Button>
-            <Button size="lg" asChild variant="ghost">
+            <Button size="lg" asChild variant="ghost" className="h-11">
               <Link href={getFirstConveneBannerHref()}>
                 Go to History <ArrowRight className="ml-2 h-5 w-5" />{" "}
               </Link>
