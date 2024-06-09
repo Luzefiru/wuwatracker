@@ -160,6 +160,7 @@ export function AndroidImportTutorial() {
                     <Link
                       className="text-yellow-500 hover:text-yellow-600"
                       href="https://gist.github.com/Mirai0009/8615e52e09083de9c0ea2dc00dc62ea8#troubleshooting"
+                      target="_blank"
                     >
                       this text guide
                     </Link>{" "}
@@ -167,6 +168,7 @@ export function AndroidImportTutorial() {
                     <Link
                       className="text-yellow-500 hover:text-yellow-600"
                       href="https://www.youtube.com/watch?v=zFJ8QBEA0vI"
+                      target="_blank"
                     >
                       YouTube video
                     </Link>{" "}

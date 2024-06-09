@@ -153,6 +153,7 @@ export function PCImportTutorial() {
                     <Link
                       className="text-yellow-500 hover:text-yellow-600"
                       href="https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c"
+                      target="_blank"
                     >
                       here
                     </Link>
@@ -215,6 +216,7 @@ export function PCImportTutorial() {
                     <Link
                       className="text-yellow-500 hover:text-yellow-600"
                       href="https://discord.gg/mADnEXwZGT"
+                      target="_blank"
                     >
                       Discord Server
                     </Link>{" "}
