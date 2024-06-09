@@ -2,22 +2,20 @@
 
 import Image from "next/image";
 import { fiveStarObjects, fourStarObjects } from "@/data/gachaObjects";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { usePullHistory } from "@/contexts/pullHistoryContext";
 
 interface Props {
   name: string;
   qualityLevel: number;
+  type: string;
 }
 
-export function ItemAvatar({ name, qualityLevel }: Props) {
+export function ItemAvatar({ name, qualityLevel, type }: Props) {
+  function getNumberOfSequences(name: string) {
+    const initialSequences = -1;
+  }
   const imgSrc =
     qualityLevel === 5
       ? /* @ts-ignore, TODO - find a way to index this without throwing a type error*/

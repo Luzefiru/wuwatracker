@@ -18,10 +18,20 @@ export default function WeaponSequences() {
     <Card className="flex items-center justify-center">
       <CardContent className="flex-row flex gap-2  py-6 md:flex-wrap">
         {Object.entries(fiveStarWeaponMetadata).map(([key, value]) => (
-          <ItemAvatar key={key} qualityLevel={value.qualityLevel} name={key} />
+          <ItemAvatar
+            key={key}
+            qualityLevel={value.qualityLevel}
+            name={key}
+            type="weapon"
+          />
         ))}
         {Object.entries(fourStarWeaponMetadata).map(([key, value]) => (
-          <ItemAvatar key={key} qualityLevel={value.qualityLevel} name={key} />
+          <ItemAvatar
+            key={key}
+            qualityLevel={value.qualityLevel}
+            name={key}
+            type="weapon"
+          />
         ))}
       </CardContent>
     </Card>
