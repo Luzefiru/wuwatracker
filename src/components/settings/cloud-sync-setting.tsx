@@ -195,7 +195,7 @@ export default function CloudSyncSetting() {
                     size="icon"
                     type="button"
                     onClick={handleSignOut}
-                    disabled={!userData}
+                    disabled={!user}
                   >
                     <LogOut
                       className={cn("h-4 w-4", { "animate-spin": isSyncing })}
