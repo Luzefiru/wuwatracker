@@ -7,7 +7,7 @@ import { FAQ } from "@/components/home/faq";
 import { useTranslations } from "next-intl";
 
 export default function LandingPage() {
-  const t = useTranslations("Index");
+  const t = useTranslations("LandingPage");
 
   return (
     <>
@@ -37,24 +37,23 @@ export default function LandingPage() {
             </svg>
           </a>
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Track your Convene History
+            {t("Track your Convene History")}
             <Spotlight
               className="-top-40 left-0 md:left-60 md:-top-20"
               fill="white"
             />
           </h1>
           <p className="mb-8 leading-7 [&:not(:first-child)]:mt-6">
-            Wuwa Tracker makes counting your pity easy. Once you set it up, your
-            statistics will automatically refresh whenever you pull.
+            {t("Description")}
           </p>
 
           <div className="flex items-center flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             <Button size="lg" asChild>
-              <Link href="/import">Import Tutorial</Link>
+              <Link href="/import">{t("Import Tutorial")}</Link>
             </Button>
             <Button size="lg" asChild variant="ghost" className="h-11">
               <Link href={getFirstConveneBannerHref()}>
-                Go to History <ArrowRight className="ml-2 h-5 w-5" />{" "}
+                {t("Go to History")} <ArrowRight className="ml-2 h-5 w-5" />{" "}
               </Link>
             </Button>
           </div>
