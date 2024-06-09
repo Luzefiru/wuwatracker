@@ -82,14 +82,12 @@ export function Footer() {
               <h2 className="mb-6 text-sm font-semibold uppercase">Legal</h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <Link href="/terms-and-conditions" target="_blank">
+                  <Link href="/terms-and-conditions">
                     Terms &amp; Conditions
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy-policy" target="_blank">
-                    Privacy Policy
-                  </Link>
+                  <Link href="/privacy-policy">Privacy Policy</Link>
                 </li>
               </ul>
             </div>
