@@ -1,6 +1,8 @@
 /**
  * Creates a script the user must copy-paste to get their Convene History URL.
  *
+ * See more info about the script here: https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c.
+ *
  * @param gamePath - their Wuthering Waves installation directory containing `Wuthering Waves.exe` and the `Client` directory.
  * @returns a string containing the script the user will paste & run into PowerShell
  */
