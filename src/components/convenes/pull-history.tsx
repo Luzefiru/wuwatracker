@@ -33,7 +33,9 @@ export function PullHistory({ stats }: Props) {
               <Table className="text-md">
                 <TableHeader>
                   <TableRow>
-                    <TableHead className="w-[100px]">Pull No.</TableHead>
+                    <TableHead className="min-w-[50px] truncate">
+                      Pull No.
+                    </TableHead>
                     <TableHead>Item</TableHead>
                     <TableHead className="hidden sm:table-cell">Pity</TableHead>
                     <TableHead className="text-right hidden sm:table-cell">
