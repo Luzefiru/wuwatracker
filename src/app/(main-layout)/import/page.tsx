@@ -1,22 +1,9 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ImportTutorial } from "@/components/convenes/import-tutorial";
 import { ChevronLeft } from "lucide-react";
-import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
+import TutorialTabs from "@/components/import/tutorial-tabs";
 
 export default function Import() {
-  const router = useRouter();
-
-  const handleBack = () => {
-    router.push("/");
-  };
-
-  const redirectToHistory = () => {
-    router.push(getFirstConveneBannerHref());
-  };
-
   return (
     <div className="flex flex-col h-full w-full gap-3 max-w-screen-lg justify-self-center">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center sm:text-start">
@@ -25,23 +12,20 @@ export default function Import() {
             Import Convene History
           </h2>
           <p className="text-muted-foreground">
-            Note: This method is only confirmed to work with Windows 10 and
-            above.
+            Select your platform and follow the tutorial to start tracking your
+            Convene history!
           </p>
         </div>
 
         <div className="flex justify-around md:justify-end w-full md:w-auto">
-          <Button
-            variant="outline"
-            size="lg"
-            className="gap-2 pr-10"
-            onClick={handleBack}
-          >
-            <ChevronLeft className="h-5 w-5" /> Back
+          <Button asChild variant="outline" size="lg" className="gap-2 pr-10">
+            <Link href="/">
+              <ChevronLeft className="h-5 w-5" /> Back
+            </Link>
           </Button>
         </div>
       </div>
-      <ImportTutorial redirectToHistory={redirectToHistory} />
+      <TutorialTabs />
     </div>
   );
 }
