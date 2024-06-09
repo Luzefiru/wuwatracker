@@ -30,7 +30,10 @@ export function Footer() {
               </h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <Link href="https://github.com/Luzefiru/wuwatracker">
+                  <Link
+                    href="https://github.com/Luzefiru/wuwatracker"
+                    target="_blank"
+                  >
                     Report a Bug
                   </Link>
                 </li>
@@ -38,8 +41,9 @@ export function Footer() {
                   <Link
                     href="https://ko-fi.com/luzefiru"
                     className="flex gap-2 items-center"
+                    target="_blank"
                   >
-                    <span>Ko-fi</span>{" "}
+                    <span>Support Us</span>{" "}
                     <div className="aspect-square relative w-6 flex items-center">
                       <Image
                         className="object-cover"
@@ -59,12 +63,17 @@ export function Footer() {
               </h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <Link href="https://wutheringwaves.kurogames.com/">
+                  <Link
+                    href="https://wutheringwaves.kurogames.com/"
+                    target="_blank"
+                  >
                     Wuthering Waves
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://kurogames.com/">Kuro Games</Link>
+                  <Link href="https://kurogames.com/" target="_blank">
+                    Kuro Games
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -98,6 +107,7 @@ export function Footer() {
             <Link
               href="https://discord.gg/mADnEXwZGT"
               className="text-muted-foreground hover:text-primary transition-all"
+              target="_blank"
             >
               <svg
                 className="w-4 h-4"
@@ -113,6 +123,7 @@ export function Footer() {
             <Link
               href="https://x.com/wuwatracker"
               className="text-muted-foreground ms-5 hover:text-primary transition-all"
+              target="_blank"
             >
               <svg
                 className="w-4 h-4"
@@ -132,6 +143,7 @@ export function Footer() {
             <Link
               href="https://www.reddit.com/r/wuwatracker/"
               className="text-muted-foreground ms-5 hover:text-primary transition-all"
+              target="_blank"
             >
               <svg
                 className="w-4 h-4"
@@ -163,6 +175,7 @@ export function Footer() {
             <Link
               href="https://github.com/Luzefiru"
               className="text-muted-foreground ms-5 hover:text-primary transition-all"
+              target="_blank"
             >
               <svg
                 className="w-4 h-4"

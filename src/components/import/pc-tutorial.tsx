@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { useState, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -20,23 +19,20 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-
+import { useRouter } from "next/navigation";
 import CopyButton from "@/components/ui/copy-button";
 import { useHover } from "usehooks-ts";
 import Link from "next/link";
 import isValidConveneHistoryUrl from "@/lib/isValidConveneHistoryUrl";
 import isValidGamePath from "@/lib/isValidGamePath";
+import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
 
-interface Props {
-  redirectToHistory: () => void;
-}
-
-export function ImportTutorial({ redirectToHistory }: Props) {
+export function PCImportTutorial() {
+  const router = useRouter();
   const { saveConveneHistoryUrl } = useConveneHistory();
 
   const [gamePath, setGamePath] = useState("");
@@ -62,7 +58,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
     saveConveneHistoryUrl(conveneHistoryUrl);
 
     toast.success("Successfully imported Convene History URL!");
-    redirectToHistory();
+    router.push(getFirstConveneBannerHref());
   };
 
   return (
@@ -157,6 +153,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                     <Link
                       className="text-yellow-500 hover:text-yellow-600"
                       href="https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c"
+                      target="_blank"
                     >
                       here
                     </Link>
@@ -200,9 +197,9 @@ export function ImportTutorial({ redirectToHistory }: Props) {
 
           <div className="grid md:flex gap-4 md:justify-end items-center">
             <Dialog>
-              <DialogTrigger>
+              <DialogTrigger asChild>
                 <Button
-                  className="w-full h-12"
+                  className="h-12"
                   variant="outline"
                   size="lg"
                   type="button"
@@ -219,6 +216,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                     <Link
                       className="text-yellow-500 hover:text-yellow-600"
                       href="https://discord.gg/mADnEXwZGT"
+                      target="_blank"
                     >
                       Discord Server
                     </Link>{" "}
