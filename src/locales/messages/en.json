@@ -74,7 +74,34 @@
     "ConveneHistoryUrlSetting": {
       "Please input a valid Convene History URL": "Please input a valid Convene History URL",
       "Successfully imported Convene History URL locally!": "Successfully imported Convene History URL locally!",
-      "Deleted local history data": "Deleted local history data"
+      "Deleted local history data": "Deleted local history data",
+      "Convene History Data": "Convene History Data",
+      "Export or change your Convene History URL here": "Export or change your Convene History URL here",
+      "Your Convene History URL": "Your Convene History URL",
+      "Go to Import Tutorial": "Go to Import Tutorial",
+      "Delete your local data": "Delete your local data",
+      "Save": "Save"
+    },
+    "CloudSyncSetting": {
+      "Signed out successfully": "Signed out successfully",
+      "You must login before being able to sync": "You must login before being able to sync",
+      "Import your data first to start syncing": "Import your data first to start syncing",
+      "Data is in sync with your Google Account": "Data is in sync with your Google Account",
+      "Cloud Backup": "Cloud Backup",
+      "Description": "Save your data using your Google Account and access your data in any device. Once logged in, just click the \"Sync Data\" button to upload or download your data into your device.",
+      "Please sign in to start syncing!": "Please sign in to start syncing!",
+      "Sign In with Google": "Sign In with Google",
+      "Warning: this feature is still experimental!": "Warning: this feature is still experimental!",
+      "Cloud Sync Warning Description": "Cloud sync is not guaranteed to work in all scenarios as it is a new website feature. By proceeding, you understand the risk that you may lose your previously imported URL. Would you still like to use cloud sync?",
+      "Cancel": "Cancel",
+      "I understand the risks": "I understand the risks",
+      "Your local browser data is different from your Google Account data": "Your local browser data is different from your Google Account data",
+      "Log Out": "Log Out",
+      "Google Data": "Google Data",
+      "Browser Data": "Browser Data",
+      "Your local data with player ID": "Your local data with player ID",
+      "conflicts with your Google Account's player ID": "conflicts with your Google Account's player ID",
+      "Would you like to keep your browser's local data or would you like to use your Google Account data instead": "Would you like to keep your browser's local data or would you like to use your Google Account data instead"
     }
   },
   "GachaItems": {

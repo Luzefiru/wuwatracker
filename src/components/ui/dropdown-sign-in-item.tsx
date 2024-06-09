@@ -27,7 +27,7 @@ export default function DropDownSignInItem() {
     setIsLoggingOut(true);
     await signOut();
     setIsLoggingOut(false);
-    toast.success(t("Signed out successfully") + ".");
+    toast.success(`${t("Signed out successfully")}.`);
   };
 
   return (

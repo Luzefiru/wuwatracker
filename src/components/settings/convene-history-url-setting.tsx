@@ -75,9 +75,9 @@ export default function ConveneHistoryUrlSetting() {
   return (
     <Card>
       <CardHeader className="pb-6">
-        <CardTitle>Convene History Data</CardTitle>
+        <CardTitle>{t("Convene History Data")}</CardTitle>
         <CardDescription>
-          Export or change your Convene History URL here.
+          {t("Export or change your Convene History URL here")}.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -88,7 +88,7 @@ export default function ConveneHistoryUrlSetting() {
                 isClicked && !isValidConveneHistoryUrlInput,
             })}
             id="wuwa-convene-url"
-            placeholder="Your Convene History URL"
+            placeholder={t("Your Convene History URL")}
             required
             onChange={(e) => {
               setConveneHistoryUrlInput(e.target.value);
@@ -117,7 +117,7 @@ export default function ConveneHistoryUrlSetting() {
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Go to Import Tutorial</p>
+              <p>{t("Go to Import Tutorial")}</p>
             </TooltipContent>
           </Tooltip>
           <Tooltip>
@@ -134,12 +134,12 @@ export default function ConveneHistoryUrlSetting() {
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Delete your local data</p>
+              <p>{t("Delete your local data")}</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
         <Button variant="secondary" onClick={handleSave}>
-          Save
+          {t("Save")}
         </Button>
       </CardFooter>
     </Card>

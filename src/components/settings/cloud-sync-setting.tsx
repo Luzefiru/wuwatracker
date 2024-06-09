@@ -25,8 +25,10 @@ import { RefreshCw, LogOut } from "lucide-react";
 import { useState } from "react";
 import { useConveneHistory } from "@/hooks/useConveneHistory";
 import extractGachaRecordQueryArgs from "@/lib/extractGachaRecordQueryArgs";
+import { useTranslations } from "next-intl";
 
 export default function CloudSyncSetting() {
+  const t = useTranslations("Settings.CloudSyncSetting");
   const isClient = useIsClient();
   const [isOpenOverwriteDialog, setIsOpenOverwriteDialog] = useState(false);
   useState(false);
@@ -50,19 +52,19 @@ export default function CloudSyncSetting() {
 
   const handleSignOut = async () => {
     await signOut();
-    toast.success("Signed out successfully.");
+    toast.success(`${t("Signed out successfully")}.`);
   };
 
   const handleSync = async () => {
     if (!user || !userData) {
-      return toast.error("You must login before being able to sync.");
+      return toast.error(`${t("You must login before being able to sync")}.`);
     }
 
     setIsSyncing(true);
 
     // If the user has no data at all
     if (!userData.conveneHistoryUrl && !localConveneHistoryUrl) {
-      toast.error("Import your data first to start syncing!");
+      toast.error(`${t("Import your data first to start syncing")}!`);
     }
     // If the user has no cloud saved URL yet
     else if (!userData.conveneHistoryUrl && uploadConveneHistoryUrl) {
@@ -82,7 +84,7 @@ export default function CloudSyncSetting() {
     }
     // They have both & they're the same
     else {
-      toast.success("Data is in sync with your Google Account.");
+      toast.success(`${t("Data is in sync with your Google Account")}.`);
     }
 
     setIsSyncing(false);
@@ -107,7 +109,7 @@ export default function CloudSyncSetting() {
       <CardHeader className="pb-6">
         <CardTitle className="relative">
           <div className="flex gap-2.5">
-            Cloud Backup
+            {t("Cloud Backup")}
             {!!user && (
               <span className="relative flex h-3.5 w-3.5">
                 <span
@@ -130,24 +132,20 @@ export default function CloudSyncSetting() {
             )}
           </div>
         </CardTitle>
-        <CardDescription>
-          Save your data using your Google Account and access your data in any
-          device. Once logged in, just click the &quot;Sync Data&quot; button to
-          upload or download your data into your device.
-        </CardDescription>
+        <CardDescription>{t("Description")}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-wrap gap-3 items-center content-center">
         <p className="text-sm mr-auto text-muted-foreground truncate max-w-52">
-          {user?.email ?? "Guest"}
+          {user?.email ?? t("Please sign in to start syncing!")}
         </p>
       </CardContent>
       <CardFooter className="border-t px-6 py-4 justify-end">
         {!user ? (
           <ConfirmationDialog
-            title="Warning: this feature is still experimental!"
-            description="Cloud sync is not guaranteed to work in all scenarios as it is a new website feature. By proceeding, you understand the risk that you may lose your previously imported URL. Would you still like to use cloud sync?"
-            cancelText="Cancel"
-            continueText="I understand the risks"
+            title={t("Warning: this feature is still experimental!")}
+            description={t("Cloud Sync Warning Description")}
+            cancelText={t("Cancel")}
+            continueText={t("I understand the risks")}
             onContinue={() => {
               signInWithGoogle(window.location.href);
             }}
@@ -178,7 +176,7 @@ export default function CloudSyncSetting() {
                   />
                   <path d="M1 1h22v22H1z" fill="none" />
                 </svg>
-                Sign In with Google
+                {t("Sign In with Google")}
               </Button>
             }
           />
@@ -203,7 +201,7 @@ export default function CloudSyncSetting() {
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>Log Out</p>
+                  <p>{t("Log Out")}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -219,12 +217,12 @@ export default function CloudSyncSetting() {
       </CardFooter>
 
       <ConfirmationDialog
-        title="Your local browser data is different from your Google Account data."
-        description={`Your local data with player ID (${localQueryArgs?.playerId ?? "N/A"}) conflicts with your Google Account's player ID (${googleQueryArgs?.playerId ?? "N/A"}). Would you like to keep your browser's local data or would you like to use your Google Account data instead?`}
+        title={`${t("Your local browser data is different from your Google Account data")}.`}
+        description={`${t("Your local data with player ID")} (${localQueryArgs?.playerId ?? "N/A"}) ${t("conflicts with your Google Account's player ID")} (${googleQueryArgs?.playerId ?? "N/A"}). ${t("Would you like to keep your browser's local data or would you like to use your Google Account data instead")}?`}
         open={isOpenOverwriteDialog}
-        continueText="Google Data"
+        continueText={t("Google Data")}
         onContinue={handlePickGoogleData}
-        cancelText="Browser Data"
+        cancelText={t("Browser Data")}
         onCancel={handlePickBrowserData}
       />
     </Card>
