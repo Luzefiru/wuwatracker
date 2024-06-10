@@ -24,7 +24,9 @@ export function ItemAvatar({ name, qualityLevel, numOfSequences }: Props) {
         fourStarObjects[name]?.imgSrc ?? "/icons/unknown-four-star.png";
 
   return (
-    <Card className="flex justify-between flex-col mb-1 ">
+    <Card
+      className={`flex justify-between flex-col mb-1 ${qualityLevel === 5 ? "border-yellow-400" : "border-purple-500"}`}
+    >
       <CardContent className="py-2 h-fit relative">
         <div className="w-20 place-self-center h-fit">
           <Image src={imgSrc} width="404" height="560" alt={name} />
@@ -38,7 +40,10 @@ export function ItemAvatar({ name, qualityLevel, numOfSequences }: Props) {
           </Badge>
         )}
       </CardContent>
-      <CardFooter className="pb-2 h-15 w-full flex items-center justify-center">
+      <CardFooter className="pb-2 h-15 w-full flex flex-col items-center justify-center">
+        <p className="text-lg text-yellow-500">
+          {qualityLevel === 5 ? "✦✦✦✦✦" : "✦✦✦✦"}
+        </p>
         <p className="w-20 text-center truncate">{name}</p>
       </CardFooter>
     </Card>

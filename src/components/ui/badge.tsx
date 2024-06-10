@@ -19,10 +19,8 @@ const badgeVariants = cva(
         warning:
           "border-transparent bg-yellow-700 text-white hover:bg-yellow-700/80",
         outline: "text-foreground",
-        fiveStar:
-          "border-transparent bg-yellow-600 text-white hover:bg-yellow-700/80",
-        fourStar:
-          "border-transparent bg-purple-700 text-white hover:bg-yellow-700/80",
+        fiveStar: "border-transparent bg-yellow-600 text-white ",
+        fourStar: "border-transparent bg-purple-700 text-white ",
       },
     },
     defaultVariants: {

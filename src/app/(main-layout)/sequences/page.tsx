@@ -23,7 +23,7 @@ export default function Sequences() {
     ...(permanentWeaponStats?.fiveStarObjects || []),
     ...(limitedWeaponStats?.fiveStarObjects || []),
   ];
-
+  console.log(fiveStarObjects);
   const fourStarObjects = [
     ...(limitedCharacterStats?.fourStarObjects || []),
     ...(permanentCharacterStats?.fourStarObjects || []),
@@ -54,7 +54,7 @@ export default function Sequences() {
             </TabsList>
           </div>
           <p className="text-muted-foreground pb-1">
-            Note: This only includes sequences earned through your convene
+            Note: This only includes sequences earned within your convene
             history.
           </p>
           <TabsContent value="character">
