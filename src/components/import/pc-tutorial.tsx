@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { useState, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -10,33 +9,30 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import createImportScript from "@/lib/createImportScript";
 import { useConveneHistory } from "@/hooks/useConveneHistory";
-import Image from "next/image";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { useRouter } from "next/navigation";
 import CopyButton from "@/components/ui/copy-button";
 import { useHover } from "usehooks-ts";
 import Link from "next/link";
 import isValidConveneHistoryUrl from "@/lib/isValidConveneHistoryUrl";
 import isValidGamePath from "@/lib/isValidGamePath";
+import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
 
-interface Props {
-  redirectToHistory: () => void;
-}
-
-export function ImportTutorial({ redirectToHistory }: Props) {
+export function PCImportTutorial() {
+  const router = useRouter();
   const { saveConveneHistoryUrl } = useConveneHistory();
 
   const [gamePath, setGamePath] = useState("");
@@ -62,7 +58,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
     saveConveneHistoryUrl(conveneHistoryUrl);
 
     toast.success("Successfully imported Convene History URL!");
-    redirectToHistory();
+    router.push(getFirstConveneBannerHref());
   };
 
   return (
@@ -157,6 +153,7 @@ export function ImportTutorial({ redirectToHistory }: Props) {
                     <Link
                       className="text-yellow-500 hover:text-yellow-600"
                       href="https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c"
+                      target="_blank"
                     >
                       here
                     </Link>
@@ -198,42 +195,48 @@ export function ImportTutorial({ redirectToHistory }: Props) {
             </li>
           </ol>
 
-          <div className="grid md:flex gap-4 md:justify-end">
-            <Drawer>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <DrawerTrigger asChild>
-                    <Button variant="outline" size="lg" type="button">
-                      <FileQuestion className="h-4 w-4 mr-2" /> Need Help?
-                    </Button>
-                  </DrawerTrigger>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>View a Video Tutorial</p>
-                </TooltipContent>
-              </Tooltip>
-              <DrawerContent className="justify-center">
-                <DrawerHeader>
-                  <DrawerTitle className="text-3xl text-center">
-                    Import Video Tutorial
-                  </DrawerTitle>
-                  <DrawerFooter className="text-center text-muted-foreground">
-                    Note: You have to open your in-game Convene History first!
-                  </DrawerFooter>
-                  <DrawerDescription className="flex w-full justify-center pb-8">
-                    <div className="relative w-[80%] max-w-screen-lg rounded-xl shadow-2xl self-center overflow-hidden">
-                      <Image
-                        src="/gif/tutorial.gif"
-                        width="1893"
-                        height="968"
-                        alt="Import Tutorial"
-                        loading="eager"
-                      />
-                    </div>
-                  </DrawerDescription>
-                </DrawerHeader>
-              </DrawerContent>
-            </Drawer>
+          <div className="grid md:flex gap-4 md:justify-end items-center">
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button
+                  className="h-12"
+                  variant="outline"
+                  size="lg"
+                  type="button"
+                >
+                  <FileQuestion className="h-4 w-4 mr-2" /> Need Help?
+                </Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>PC Import Tutorial Video</DialogTitle>
+                  <DialogDescription className="pb-4">
+                    Follow this step-by-step YouTube tutorial to import your
+                    data on PC. Please join our{" "}
+                    <Link
+                      className="text-yellow-500 hover:text-yellow-600"
+                      href="https://discord.gg/mADnEXwZGT"
+                      target="_blank"
+                    >
+                      Discord Server
+                    </Link>{" "}
+                    to ask for any help!
+                  </DialogDescription>
+                  <div className="w-full h-80 rounded-2xl overflow-hidden flex justify-center">
+                    <iframe
+                      className="w-full"
+                      src="https://www.youtube.com/embed/Ue3T_9lZZGU?si=r4LJ5tkYinLCMbVP"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>
+
             <Button size="lg" type="submit">
               <Import className="mr-2 h-4 w-4" /> Import History
             </Button>

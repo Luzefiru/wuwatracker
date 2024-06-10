@@ -54,18 +54,18 @@ export default function CloudSyncSetting() {
   };
 
   const handleSync = async () => {
-    if (!user || !userData) {
+    if (!user) {
       return toast.error("You must login before being able to sync.");
     }
 
     setIsSyncing(true);
 
     // If the user has no data at all
-    if (!userData.conveneHistoryUrl && !localConveneHistoryUrl) {
+    if (!userData?.conveneHistoryUrl && !localConveneHistoryUrl) {
       toast.error("Import your data first to start syncing!");
     }
     // If the user has no cloud saved URL yet
-    else if (!userData.conveneHistoryUrl && uploadConveneHistoryUrl) {
+    else if (!userData?.conveneHistoryUrl && uploadConveneHistoryUrl) {
       uploadConveneHistoryUrl(localConveneHistoryUrl);
     }
     // If they don't have local history data
@@ -74,7 +74,7 @@ export default function CloudSyncSetting() {
     }
     // They have both, but are different
     else if (
-      userData.conveneHistoryUrl &&
+      userData?.conveneHistoryUrl &&
       localConveneHistoryUrl &&
       localConveneHistoryUrl !== userData.conveneHistoryUrl
     ) {
@@ -195,7 +195,7 @@ export default function CloudSyncSetting() {
                     size="icon"
                     type="button"
                     onClick={handleSignOut}
-                    disabled={!userData}
+                    disabled={!user}
                   >
                     <LogOut
                       className={cn("h-4 w-4", { "animate-spin": isSyncing })}

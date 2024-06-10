@@ -15,19 +15,32 @@ export function FAQ() {
     >
       <AccordionItem value="item-1">
         <AccordionTrigger className="text-start">
-          Do you store my data when I import my history?
+          Where is my data being stored when I import?
         </AccordionTrigger>
         <AccordionContent>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
-            No, your URL is only saved to your web browser. Clearing your
-            browser data on this website will delete your stored data. If you
-            want to check your history, you&apos;ll need to import it again.
+            Your URL is only saved to your web browser. Clearing your browser
+            data on this website will delete your stored data. If you want to
+            check your history, you&apos;ll need to import it again.
+          </p>
+          <p className="leading-7 [&:not(:first-child)]:mt-4">
+            You also have to option to safely backup your URL using your Google
+            Account inside the{" "}
+            <Link
+              className="text-yellow-500 hover:text-yellow-600"
+              href="/settings"
+              target="_blank"
+            >
+              Settings page
+            </Link>
+            .
           </p>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
             More information regarding our data collection can be found in our{" "}
             <Link
               className="text-yellow-500 hover:text-yellow-600"
               href="/privacy-policy"
+              target="_blank"
             >
               Privacy Policy page.
             </Link>
@@ -36,7 +49,7 @@ export function FAQ() {
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger className="text-start">
-          How do I know this website won&apos;t steal my data anyway?
+          How do I know this website won&apos;t steal my data?
         </AccordionTrigger>
         <AccordionContent>
           <p className="leading-7 [&:not(:first-child)]:mt-4">
@@ -50,6 +63,7 @@ export function FAQ() {
             <Link
               className="text-yellow-500 hover:text-yellow-600"
               href="https://github.com/Luzefiru/wuwatracker"
+              target="_blank"
             >
               GitHub repository
             </Link>
@@ -73,6 +87,7 @@ export function FAQ() {
             <Link
               className="text-yellow-500 hover:text-yellow-600"
               href="https://ko-fi.com/luzefiru"
+              target="_blank"
             >
               create an issue in our GitHub repository
             </Link>
@@ -90,6 +105,7 @@ export function FAQ() {
             <Link
               className="text-yellow-500 hover:text-yellow-600"
               href="https://ko-fi.com/luzefiru"
+              target="_blank"
             >
               create an issue in our GitHub repository
             </Link>{" "}
@@ -113,6 +129,7 @@ export function FAQ() {
             <Link
               className="text-yellow-500 hover:text-yellow-600"
               href="https://ko-fi.com/luzefiru"
+              target="_blank"
             >
               Ko-fi page
             </Link>{" "}

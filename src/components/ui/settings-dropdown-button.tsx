@@ -45,13 +45,13 @@ export function SettingsDropdownButton() {
           </Link>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <Link href="https://github.com/Luzefiru/wuwatracker">
+        <Link href="https://github.com/Luzefiru/wuwatracker" target="_blank">
           <DropdownMenuItem>
             <Github className="mr-2 h-4 w-4" />
             <span>GitHub</span>
           </DropdownMenuItem>
         </Link>
-        <Link href="https://discord.gg/mADnEXwZGT">
+        <Link href="https://discord.gg/mADnEXwZGT" target="_blank">
           <DropdownMenuItem>
             <svg
               className="w-4 h-4 mr-2"
