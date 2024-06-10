@@ -141,7 +141,7 @@ export const fourStarWeaponMetadata = {
   Autumntrace: {
     qualityLevel: 4,
     imgSrc:
-      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_LuckdraWeapon05.png",
+      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21010023_UI.png",
   },
   Discord: {
     qualityLevel: 4,
@@ -242,7 +242,7 @@ export const fourStarWeaponMetadata = {
     qualityLevel: 4,
     imgSrc:
       // TODO - replace for consistent angle version, wanderer.moe doesn't have the image last time I checked
-      "https://static.wikia.nocookie.net/wutheringwaves/images/2/2d/Weapon_Lumingloss.png/revision/latest?cb=20240526015614",
+      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21020013_UI.png",
   },
   "Lunar Cutter": {
     qualityLevel: 4,
