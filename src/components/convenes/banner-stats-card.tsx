@@ -17,6 +17,7 @@ import { PullHistory } from "./pull-history";
 import { usePathname } from "next/navigation";
 import { usePullHistory } from "@/contexts/pullHistoryContext";
 import { BannerTypeSlugEnum } from "@/types/BannerTypeSlugEnum";
+import { useTranslations } from "next-intl";
 
 interface Props {
   title: string;
@@ -24,6 +25,8 @@ interface Props {
 }
 
 export function BannerStatsCard({ title, description }: Props) {
+  const t = useTranslations("Convene.BannerStatsCard");
+  const tt = useTranslations("GachaBanners");
   const pathname = usePathname();
   const pathSegment = pathname.split("/").pop() as BannerTypeSlugEnum; // For example, if pathname is "/convene/starter", this will be "starter"
   const [_, setIsLoading] = useState(true);
@@ -105,12 +108,12 @@ export function BannerStatsCard({ title, description }: Props) {
       <Card className="bg-background/80 backdrop-blur-sm w-full">
         <div className="w-full">
           <CardHeader className="text-center md:text-start">
-            <CardTitle>{title}</CardTitle>
-            <CardDescription>{description}</CardDescription>
+            <CardTitle>{tt(title)}</CardTitle>
+            <CardDescription>{tt(description)}</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col mt-3 gap-3">
             <div className="py-4 px-3 flex justify-between bg-accent dark:opacity-80 rounded-lg">
-              <h4 className="text-lg">Astrites Spent</h4>
+              <h4 className="text-lg">{t("Astrites Spent")}</h4>
               <div className="flex gap-1">
                 <span className="text-lg">
                   {stats ? stats.totalAstrites : 0}
@@ -124,7 +127,7 @@ export function BannerStatsCard({ title, description }: Props) {
               </div>
             </div>
             <div className="py-4 px-3 flex justify-between bg-accent dark:opacity-80 rounded-lg">
-              <h4 className="text-lg">Total Convenes</h4>
+              <h4 className="text-lg">{t("Total Convenes")}</h4>
               <div className="flex gap-1">
                 <span className="text-lg">{stats ? stats.totalPulls : 0}</span>
                 <Image
@@ -135,18 +138,18 @@ export function BannerStatsCard({ title, description }: Props) {
                   }
                   width={25}
                   height={7}
-                  alt="Special Convene"
+                  alt="Convene Tide"
                 />
               </div>
             </div>
             <div className="py-4 px-3 flex justify-between bg-accent dark:opacity-80 rounded-lg">
-              <h4 className="text-lg">5✦ Pulls</h4>
+              <h4 className="text-lg">5✦ {t("Pulls")}</h4>
               <div className="flex">
                 <span className="text-lg">{stats ? stats.fiveStars : 0}</span>
               </div>
             </div>
             <div className="py-4 px-3 flex justify-between bg-accent dark:opacity-80 rounded-lg">
-              <h4 className="text-lg">4✦ Pulls</h4>
+              <h4 className="text-lg">4✦ {t("Pulls")}</h4>
               <div className="flex">
                 <span className="text-lg">{stats ? stats.fourStars : 0}</span>
               </div>
@@ -162,16 +165,19 @@ export function BannerStatsCard({ title, description }: Props) {
                 filter.includes(FilterType.FOUR_STARS)) ||
               filter.length === 0 ? (
                 <CardTitle>
-                  Recent <span className="text-yellow-500">5✦</span> and{" "}
-                  <span className="text-purple-500">4✦</span> Convenes
+                  {t("Recent")} <span className="text-yellow-500">5✦</span>{" "}
+                  {t("and")} <span className="text-purple-500">4✦</span>{" "}
+                  {t("Convenes")}
                 </CardTitle>
               ) : filter.includes(FilterType.FIVE_STARS) ? (
                 <CardTitle>
-                  Recent <span className="text-yellow-500">5✦</span> Convenes
+                  {t("Recent")} <span className="text-yellow-500">5✦</span>{" "}
+                  {t("Convenes")}
                 </CardTitle>
               ) : (
                 <CardTitle>
-                  Recent <span className="text-purple-500">4✦</span> Convenes
+                  {t("Recent")} <span className="text-purple-500">4✦</span>{" "}
+                  {t("Convenes")}
                 </CardTitle>
               )}
               <p className="text-xs text-muted-foreground opacity-60 mb-1 md:mb-0">
@@ -191,7 +197,9 @@ export function BannerStatsCard({ title, description }: Props) {
                   );
                 })
             ) : (
-              <p className="text-muted-foreground text-sm">No records found.</p>
+              <p className="text-muted-foreground text-sm">
+                {t("No records found")}.
+              </p>
             )}
           </CardContent>
         </div>

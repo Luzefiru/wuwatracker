@@ -73,6 +73,55 @@
     "Verdant Summit": "Verdant Summit"
   },
 
+  "GachaBanners": {
+    "Featured Resonator Convene": "Featured Resonator Convene",
+    "When Thunder Pours": "When Thunder Pours",
+    "Featured Weapon Convene": "Featured Weapon Convene",
+    "Absolute Pulsation": "Absolute Pulsation",
+    "Permanent Character Convene": "Permanent Character Convene",
+    "Tidal Chorus": "Tidal Chorus",
+    "Winter Brume Banner": "Winter Brume Banner",
+    "Weapon Permanent Convene": "Weapon Permanent Convene",
+    "Utterance of Marvels": "Utterance of Marvels",
+    "Beginner Convene": "Beginner Convene",
+    "Beginner Selector": "Beginner's Choice Convene",
+    "Beginner's Choice Convene": "Beginner's Choice Convene"
+  },
+
+  "Convene": {
+    "BannerStatsCard": {
+      "Astrites Spent": "Astrites Spent",
+      "Total Convenes": "Total Convenes",
+      "Pulls": "Pulls",
+      "Recent": "Recent",
+      "and": "and",
+      "Convenes": "Convenes",
+      "No records found": "No records found"
+    },
+    "Sidebar": {
+      "ConveneCategories": {
+        "No banners selected": "No banners selected",
+        "Convene Tracker": "Convene Tracker",
+        "Import": "Import"
+      }
+    },
+    "ConveneFilter": {
+      "Banners to Display": "Banners to Display",
+      "Reset": "Reset",
+      "Select All": "Select All"
+    },
+    "ConveneCategoryCard": {
+      "Pity": "Pity"
+    },
+    "PullHistory": {
+      "Pull History": "Pull History",
+      "Pull #": "Pull #",
+      "Item": "Item",
+      "Date Received": "Date Received",
+      "No records found": "No records found"
+    }
+  },
+
   "Header": {
     "History": "History",
     "Import": "Import",

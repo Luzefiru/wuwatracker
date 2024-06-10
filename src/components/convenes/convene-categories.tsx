@@ -1,7 +1,5 @@
 "use client";
 
-import * as React from "react";
-
 import ConveneCategoryCard from "./convene-category-card";
 import { bannerMetadata } from "@/data/banners";
 import { Button } from "@/components/ui/button";
@@ -11,8 +9,10 @@ import { ConveneFilter } from "./convene-filter";
 import { useBannerFilters } from "@/hooks/useBannerFilters";
 import { useState, useEffect } from "react";
 import { ConveneCategoryCardSkeleton } from "./convene-category-card-skeleton";
+import { useTranslations } from "next-intl";
 
 export function ConveneCategories() {
+  const t = useTranslations("Convene.Sidebar.ConveneCategories");
   const [isLoading, setIsLoading] = useState(false);
   const { bannerFilters } = useBannerFilters();
 
@@ -32,7 +32,7 @@ export function ConveneCategories() {
     })
   ) : (
     <p className="text-muted-foreground text-sm text-center md:text-start">
-      No banners selected.
+      {t("No banners selected")}.
     </p>
   );
 
@@ -41,7 +41,7 @@ export function ConveneCategories() {
       <div className="mb-1 flex flex-col md:flex-row justify-between gap-8">
         <div className="flex w-full">
           <h2 className="scroll-m-20 text-4xl font-semibold tracking-tight text-center md:text-start">
-            Convene Tracker
+            {t("Convene Tracker")}
           </h2>
           <ConveneFilter btnClassName="lg:inline-flex hidden ml-auto size-11" />
         </div>
@@ -53,7 +53,7 @@ export function ConveneCategories() {
             size="lg"
           >
             <Link href="/import">
-              <Filter className="mr-2 h-4 w-4" /> Import
+              <Filter className="mr-2 h-4 w-4" /> {t("Import")}
             </Link>
           </Button>
           <ConveneFilter btnClassName="lg:hidden size-11" />

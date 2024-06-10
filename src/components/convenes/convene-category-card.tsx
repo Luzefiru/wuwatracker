@@ -6,6 +6,7 @@ import { useConveneHistory } from "@/hooks/useConveneHistory";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 interface Props {
   title: string;
@@ -25,6 +26,8 @@ export default function ConveneCategoryCard({
   fourStarPity,
   href,
 }: Props) {
+  const t = useTranslations("Convene.ConveneCategoryCard");
+  const tt = useTranslations("GachaBanners");
   const { getCardPoolTypePity } = useConveneHistory();
 
   const [stats, setStats] = useState<BannerPityDisplayStats | null>(null);
@@ -55,18 +58,20 @@ export default function ConveneCategoryCard({
           </div>
           <div className="w-full">
             <CardHeader>
-              <CardTitle className="text-md sm:text-lg pb-2">{title}</CardTitle>
+              <CardTitle className="text-md sm:text-lg pb-2">
+                {tt(title)}
+              </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col text-sm desktop:text-md">
               <div className="flex justify-between text-yellow-500 font-semibold">
-                <p>5✦ Pity</p>
+                <p>5✦ {t("Pity")}</p>
                 <p>
                   {stats ? stats.fiveStarCurrent : 0}/
                   {stats ? stats.fiveStarPity : 80}
                 </p>
               </div>
               <div className="flex justify-between text-purple-500 font-semibold">
-                <p>4✦ Pity</p>
+                <p>4✦ {t("Pity")}</p>
                 <p>
                   {stats ? stats.fourStarCurrent : 0}/
                   {stats ? stats.fourStarPity : 10}

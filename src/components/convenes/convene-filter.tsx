@@ -1,8 +1,5 @@
 "use client";
 
-import * as React from "react";
-import { Eye } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   FilterDropdownMenu,
@@ -16,12 +13,15 @@ import { Filter } from "lucide-react";
 import { BannerTypeSlugEnum } from "@/types/BannerTypeSlugEnum";
 import { bannerMetadata } from "@/data/banners";
 import { useBannerFilters } from "@/hooks/useBannerFilters";
+import { useTranslations } from "next-intl";
 
 interface Props {
   btnClassName: string;
 }
 
 export function ConveneFilter({ btnClassName }: Props) {
+  const t = useTranslations("Convene.ConveneFilter");
+  const tt = useTranslations("GachaBanners");
   const isChecked = (slug: BannerTypeSlugEnum) =>
     [...bannerFilters.map((i) => i.slug)].includes(slug);
 
@@ -51,7 +51,7 @@ export function ConveneFilter({ btnClassName }: Props) {
       </FilterDropdownMenuTrigger>
       <FilterDropdownMenuContent className="px-2 gap-2">
         <FilterDropdownMenuLabel className="text-lg">
-          Banners to Display
+          {t("Banners to Display")}
         </FilterDropdownMenuLabel>
         <FilterDropdownMenuSeparator />
         {allBannerFilters.map((f) => {
@@ -64,7 +64,7 @@ export function ConveneFilter({ btnClassName }: Props) {
                 e.preventDefault();
               }}
             >
-              {bannerMetadata[f.slug].title}
+              {tt(bannerMetadata[f.slug].title)}
             </FilterDropdownMenuCheckboxItem>
           );
         })}
@@ -76,10 +76,10 @@ export function ConveneFilter({ btnClassName }: Props) {
             size="sm"
             onClick={resetBannerFilters}
           >
-            Reset
+            {t("Reset")}
           </Button>{" "}
           <Button onClick={selectAllBannerFilters} variant="outline" size="sm">
-            Select All
+            {t("Select All")}
           </Button>
         </div>
       </FilterDropdownMenuContent>

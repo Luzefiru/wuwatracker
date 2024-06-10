@@ -3,6 +3,7 @@ import { Import } from "lucide-react";
 import { Sidebar } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Wuwa Tracker | History",
@@ -15,6 +16,8 @@ export default function ConveneLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const t = useTranslations("Header");
+
   return (
     <>
       <div className="flex flex-col h-full justify-between">
@@ -24,7 +27,7 @@ export default function ConveneLayout({
             <div className="justify-around md:justify-end w-full md:w-auto mb-4 hidden lg:flex">
               <Button asChild variant="default" size="lg">
                 <Link href="/import">
-                  <Import className="mr-2 h-4 w-4" /> Import
+                  <Import className="mr-2 h-4 w-4" /> {t("Import")}
                 </Link>
               </Button>
             </div>

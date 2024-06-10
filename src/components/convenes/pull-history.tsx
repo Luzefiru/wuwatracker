@@ -15,16 +15,20 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { TableItemName } from "../ui/table-item-name";
+import { useTranslations } from "next-intl";
 
 interface Props {
   stats: BannerStats | null;
 }
 
 export function PullHistory({ stats }: Props) {
+  const t = useTranslations("Convene.PullHistory");
+  const tt = useTranslations("GachaItems");
+
   return (
     <Card className="w-full">
       <CardHeader className="pb-6">
-        <CardTitle>Pull History</CardTitle>
+        <CardTitle>{t("Pull History")}</CardTitle>
       </CardHeader>
       <div className="max-h-[500px] w-full overflow-y-auto">
         <div className="flex w-full flex-col items-center gap-3">
@@ -34,12 +38,12 @@ export function PullHistory({ stats }: Props) {
                 <TableHeader>
                   <TableRow>
                     <TableHead className="min-w-[50px] truncate">
-                      Pull No.
+                      {t("Pull #")}
                     </TableHead>
-                    <TableHead>Item</TableHead>
+                    <TableHead>{t("Item")}</TableHead>
                     <TableHead className="hidden sm:table-cell">Pity</TableHead>
                     <TableHead className="text-right hidden sm:table-cell">
-                      Date Received
+                      {t("Date Received")}
                     </TableHead>
                   </TableRow>
                 </TableHeader>
@@ -75,7 +79,9 @@ export function PullHistory({ stats }: Props) {
                 </TableBody>
               </Table>
             ) : (
-              <p className="text-muted-foreground text-sm">No records found.</p>
+              <p className="text-muted-foreground text-sm">
+                {t("No records found")}.
+              </p>
             )}
           </CardContent>
           <InfiniteScroll threshold={1}></InfiniteScroll>

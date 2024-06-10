@@ -1,5 +1,6 @@
 import { fiveStarObjects, fourStarObjects } from "@/data/gachaObjects";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface Props {
   qualityLevel: number;
@@ -7,6 +8,8 @@ interface Props {
 }
 
 export function TableItemName({ qualityLevel, name }: Props) {
+  const t = useTranslations("GachaItems");
+
   const imgSrc =
     qualityLevel === 5
       ? /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
@@ -16,7 +19,7 @@ export function TableItemName({ qualityLevel, name }: Props) {
 
   return (
     <div className="flex items-center gap-3">
-      <Image src={imgSrc} width="25" height="25" alt={name} />
+      <Image src={imgSrc} width="25" height="25" alt={t(name)} />
       <p
         className={
           qualityLevel === 4
@@ -24,7 +27,7 @@ export function TableItemName({ qualityLevel, name }: Props) {
             : "text-yellow-500 font-semibold truncate"
         }
       >
-        {name}
+        {t(name)}
       </p>
     </div>
   );
