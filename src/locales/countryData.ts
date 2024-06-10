@@ -13,7 +13,7 @@ const countryLocaleData = [
   { value: "ms", label: "Bahasa Melayu" },
   { value: "sv", label: "Svenska" },
   { value: "th", label: "ไทย" },
-  { value: "uk", label: "українська" },
+  { value: "uk", label: "Українська" },
   { value: "vi", label: "Tiếng Việt" },
   { value: "zh", label: "中文" },
 ];
