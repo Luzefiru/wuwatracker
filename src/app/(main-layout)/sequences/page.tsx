@@ -34,7 +34,7 @@ export default function Sequences() {
   ];
 
   return (
-    <div className="flex flex-col h-full w-full gap-3 max-w-screen-lg justify-self-center">
+    <div className="flex flex-col h-full w-full gap-3 max-w-[1145px] justify-self-center">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center sm:text-start">
         <Tabs defaultValue="character">
           <div className="flex justify-between">

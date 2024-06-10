@@ -27,8 +27,8 @@ export function ItemAvatar({ name, qualityLevel, numOfSequences }: Props) {
     <Card
       className={`flex justify-between flex-col mb-1 ${qualityLevel === 5 ? "border-yellow-400" : "border-purple-500"}`}
     >
-      <CardContent className="py-2 h-fit relative">
-        <div className="w-20 place-self-center h-fit">
+      <CardContent className="py-2 h-fit relative px-0 flex items-center justify-center ">
+        <div className="w-24 place-self-center h-fit">
           <Image src={imgSrc} width="404" height="560" alt={name} />
         </div>
         {numOfSequences > 0 && (
