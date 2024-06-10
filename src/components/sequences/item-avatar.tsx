@@ -10,9 +10,10 @@ interface Props {
   name: string;
   qualityLevel: number;
   type: string;
+  numOfSequences: number;
 }
 
-export function ItemAvatar({ name, qualityLevel, type }: Props) {
+export function ItemAvatar({ name, qualityLevel, numOfSequences }: Props) {
   function getNumberOfSequences(name: string) {
     const initialSequences = -1;
   }
@@ -33,7 +34,7 @@ export function ItemAvatar({ name, qualityLevel, type }: Props) {
           variant={qualityLevel === 5 ? "fiveStar" : "fourStar"}
           className="absolute w-7 -right-1 -top-1 aspect-square flex items-center justify-center"
         >
-          <span className="text-white">S1</span>
+          <span className="text-white">S{numOfSequences}</span>
         </Badge>
       </CardContent>
       <CardFooter className="pb-2 h-15 w-full flex items-center justify-center">

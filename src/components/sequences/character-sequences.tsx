@@ -12,35 +12,22 @@ export default function CharacterSequences() {
     permanentCharacterStats,
     starterStats,
     starterSelectorStats,
-    limitedWeaponStats,
-    permanentWeaponStats,
   } = usePullHistory();
 
-  console.log(limitedCharacterStats);
-
   const fiveStarCharacters = [
-    ...limitedCharacterStats?.fiveStarObjects,
-    ...permanentCharacterStats?.fiveStarObjects,
-    ...starterSelectorStats?.fiveStarObjects,
-    ...starterStats?.fiveStarObjects,
+    ...(limitedCharacterStats?.fiveStarObjects || []),
+    ...(permanentCharacterStats?.fiveStarObjects || []),
+    ...(starterSelectorStats?.fiveStarObjects || []),
+    ...(starterStats?.fiveStarObjects || []),
   ];
 
   const fourStarCharacters = [
-    ...limitedCharacterStats?.fourStarObjects,
-    ...permanentCharacterStats?.fourStarObjects,
-    ...starterSelectorStats?.fourStarObjects,
-    ...starterStats?.fourStarObjects,
+    ...(limitedCharacterStats?.fourStarObjects || []),
+    ...(permanentCharacterStats?.fourStarObjects || []),
+    ...(starterSelectorStats?.fourStarObjects || []),
+    ...(starterStats?.fourStarObjects || []),
   ];
 
-  const fiveStarWeapons = [
-    ...permanentWeaponStats?.fiveStarObjects,
-    ...limitedWeaponStats?.fiveStarObjects,
-  ];
-
-  const fourStarWeapons = [
-    ...permanentWeaponStats?.fourStarObjects,
-    ...limitedWeaponStats?.fourStarObjects,
-  ];
   return (
     <Card className="flex items-center justify-center">
       <CardContent className="flex-row flex gap-2  py-6 md:flex-wrap">
@@ -50,6 +37,9 @@ export default function CharacterSequences() {
             qualityLevel={value.qualityLevel}
             name={key}
             type="character"
+            numOfSequences={
+              fiveStarCharacters.filter((c) => c.name === key).length
+            }
           />
         ))}
         {Object.entries(fourStarCharacterMetadata).map(([key, value]) => (
@@ -58,6 +48,9 @@ export default function CharacterSequences() {
             qualityLevel={value.qualityLevel}
             name={key}
             type="character"
+            numOfSequences={
+              fourStarCharacters.filter((c) => c.name === key).length
+            }
           />
         ))}
       </CardContent>
