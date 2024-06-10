@@ -18,4 +18,6 @@ const locales = [
   "zh",
 ];
 
+console.log(locales.join("|"));
+
 export default locales;

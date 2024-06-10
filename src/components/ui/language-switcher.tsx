@@ -88,13 +88,13 @@ export function LanguageSwitcher() {
             <CommandEmpty>No langauge found.</CommandEmpty>
             <CommandItem className="flex justify-center cursor-pointer">
               <Link
-                href="https://github.com/Luzefiru/wuwatracker/tree/main/src/locales"
+                href="https://github.com/Luzefiru/wuwatracker/tree/staging/src/locales"
                 target="_blank"
-                className="flex"
+                className="flex items-center text-muted-foreground hover:text-foreground"
               >
                 We need translators
                 <svg
-                  className="ml-2 w-4 h-4"
+                  className="ml-2 w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
