@@ -12,20 +12,26 @@ export default function CharacterSequences() {
     permanentCharacterStats,
     starterStats,
     starterSelectorStats,
+    limitedWeaponStats,
+    permanentWeaponStats,
   } = usePullHistory();
 
-  const fiveStarCharacters = [
+  const fiveStarObjects = [
     ...(limitedCharacterStats?.fiveStarObjects || []),
     ...(permanentCharacterStats?.fiveStarObjects || []),
     ...(starterSelectorStats?.fiveStarObjects || []),
     ...(starterStats?.fiveStarObjects || []),
+    ...(permanentWeaponStats?.fiveStarObjects || []),
+    ...(limitedWeaponStats?.fiveStarObjects || []),
   ];
 
-  const fourStarCharacters = [
+  const fourStarObjects = [
     ...(limitedCharacterStats?.fourStarObjects || []),
     ...(permanentCharacterStats?.fourStarObjects || []),
     ...(starterSelectorStats?.fourStarObjects || []),
     ...(starterStats?.fourStarObjects || []),
+    ...(permanentWeaponStats?.fourStarObjects || []),
+    ...(limitedWeaponStats?.fourStarObjects || []),
   ];
 
   return (
@@ -36,9 +42,8 @@ export default function CharacterSequences() {
             key={key}
             qualityLevel={value.qualityLevel}
             name={key}
-            type="character"
             numOfSequences={
-              fiveStarCharacters.filter((c) => c.name === key).length
+              fiveStarObjects.filter((c) => c.name === key).length
             }
           />
         ))}
@@ -47,9 +52,8 @@ export default function CharacterSequences() {
             key={key}
             qualityLevel={value.qualityLevel}
             name={key}
-            type="character"
             numOfSequences={
-              fourStarCharacters.filter((c) => c.name === key).length
+              fourStarObjects.filter((c) => c.name === key).length
             }
           />
         ))}

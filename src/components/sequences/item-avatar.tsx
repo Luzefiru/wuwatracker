@@ -9,7 +9,6 @@ import { usePullHistory } from "@/contexts/pullHistoryContext";
 interface Props {
   name: string;
   qualityLevel: number;
-  type: string;
   numOfSequences: number;
 }
 
@@ -30,12 +29,14 @@ export function ItemAvatar({ name, qualityLevel, numOfSequences }: Props) {
         <div className="w-20 place-self-center h-fit">
           <Image src={imgSrc} width="404" height="560" alt={name} />
         </div>
-        <Badge
-          variant={qualityLevel === 5 ? "fiveStar" : "fourStar"}
-          className="absolute w-7 -right-1 -top-1 aspect-square flex items-center justify-center"
-        >
-          <span className="text-white">S{numOfSequences}</span>
-        </Badge>
+        {numOfSequences > 0 && (
+          <Badge
+            variant={qualityLevel === 5 ? "fiveStar" : "fourStar"}
+            className="absolute w-7 -right-1 -top-1 aspect-square flex items-center justify-center"
+          >
+            <span className="text-white">{`S${numOfSequences - 1}`}</span>
+          </Badge>
+        )}
       </CardContent>
       <CardFooter className="pb-2 h-15 w-full flex items-center justify-center">
         <p className="w-20 text-center truncate">{name}</p>

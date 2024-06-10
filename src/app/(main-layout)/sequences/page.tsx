@@ -1,23 +1,37 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft } from "lucide-react";
-import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CharacterSequences from "@/components/sequences/character-sequences";
 import WeaponSequences from "@/components/sequences/weapon-sequences";
+import { usePullHistory } from "@/contexts/pullHistoryContext";
 
-export default function Import() {
-  const router = useRouter();
+export default function Sequences() {
+  const {
+    limitedCharacterStats,
+    permanentCharacterStats,
+    starterStats,
+    starterSelectorStats,
+    limitedWeaponStats,
+    permanentWeaponStats,
+  } = usePullHistory();
 
-  const handleBack = () => {
-    router.push("/");
-  };
+  const fiveStarObjects = [
+    ...(limitedCharacterStats?.fiveStarObjects || []),
+    ...(permanentCharacterStats?.fiveStarObjects || []),
+    ...(starterSelectorStats?.fiveStarObjects || []),
+    ...(starterStats?.fiveStarObjects || []),
+    ...(permanentWeaponStats?.fiveStarObjects || []),
+    ...(limitedWeaponStats?.fiveStarObjects || []),
+  ];
 
-  const redirectToHistory = () => {
-    router.push(getFirstConveneBannerHref());
-  };
+  const fourStarObjects = [
+    ...(limitedCharacterStats?.fourStarObjects || []),
+    ...(permanentCharacterStats?.fourStarObjects || []),
+    ...(starterSelectorStats?.fourStarObjects || []),
+    ...(starterStats?.fourStarObjects || []),
+    ...(permanentWeaponStats?.fourStarObjects || []),
+    ...(limitedWeaponStats?.fourStarObjects || []),
+  ];
 
   return (
     <div className="flex flex-col h-full w-full gap-3 max-w-screen-lg justify-self-center">
@@ -39,8 +53,15 @@ export default function Import() {
               <TabsTrigger value="weapon">Weapon</TabsTrigger>
             </TabsList>
           </div>
+          <p className="text-muted-foreground pb-1">
+            Note: This only includes sequences earned through your convene
+            history.
+          </p>
           <TabsContent value="character">
-            <CharacterSequences />
+            <CharacterSequences
+              fiveStars={fiveStarObjects}
+              fourStars={fourStarObjects}
+            />
           </TabsContent>
           <TabsContent value="weapon">
             <WeaponSequences />

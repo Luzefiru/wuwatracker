@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 import {
   fiveStarWeaponMetadata,
@@ -15,14 +8,29 @@ import { ItemAvatar } from "./item-avatar";
 import { usePullHistory } from "@/contexts/pullHistoryContext";
 
 export default function WeaponSequences() {
-  const { limitedWeaponStats, permanentWeaponStats } = usePullHistory();
+  const {
+    limitedCharacterStats,
+    permanentCharacterStats,
+    starterStats,
+    starterSelectorStats,
+    limitedWeaponStats,
+    permanentWeaponStats,
+  } = usePullHistory();
 
-  const fiveStarWeapons = [
+  const fiveStarObjects = [
+    ...(limitedCharacterStats?.fiveStarObjects || []),
+    ...(permanentCharacterStats?.fiveStarObjects || []),
+    ...(starterSelectorStats?.fiveStarObjects || []),
+    ...(starterStats?.fiveStarObjects || []),
     ...(permanentWeaponStats?.fiveStarObjects || []),
     ...(limitedWeaponStats?.fiveStarObjects || []),
   ];
 
-  const fourStarWeapons = [
+  const fourStarObjects = [
+    ...(limitedCharacterStats?.fourStarObjects || []),
+    ...(permanentCharacterStats?.fourStarObjects || []),
+    ...(starterSelectorStats?.fourStarObjects || []),
+    ...(starterStats?.fourStarObjects || []),
     ...(permanentWeaponStats?.fourStarObjects || []),
     ...(limitedWeaponStats?.fourStarObjects || []),
   ];
@@ -35,9 +43,8 @@ export default function WeaponSequences() {
             key={key}
             qualityLevel={value.qualityLevel}
             name={key}
-            type="weapon"
             numOfSequences={
-              fiveStarWeapons.filter((w) => w.name === key).length
+              fiveStarObjects.filter((w) => w.name === key).length
             }
           />
         ))}
@@ -46,9 +53,8 @@ export default function WeaponSequences() {
             key={key}
             qualityLevel={value.qualityLevel}
             name={key}
-            type="weapon"
             numOfSequences={
-              fourStarWeapons.filter((w) => w.name === key).length
+              fourStarObjects.filter((w) => w.name === key).length
             }
           />
         ))}
