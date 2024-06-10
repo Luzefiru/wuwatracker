@@ -13,8 +13,8 @@ interface Props {
 
 export default function CharacterSequences({ fiveStars, fourStars }: Props) {
   return (
-    <Card className="flex items-center justify-center">
-      <CardContent className="flex-row flex gap-2  py-6 md:flex-wrap">
+    <Card className="flex items-center justify-center bg-background/80">
+      <CardContent className="flex-row flex gap-3 py-6 flex-wrap justify-center md:justify-start">
         {Object.entries(fiveStarCharacterMetadata).map(([key, value]) => (
           <ItemAvatar
             key={key}

@@ -23,7 +23,7 @@ export default function Sequences() {
     ...(permanentWeaponStats?.fiveStarObjects || []),
     ...(limitedWeaponStats?.fiveStarObjects || []),
   ];
-  console.log(fiveStarObjects);
+
   const fourStarObjects = [
     ...(limitedCharacterStats?.fourStarObjects || []),
     ...(permanentCharacterStats?.fourStarObjects || []),
@@ -34,29 +34,32 @@ export default function Sequences() {
   ];
 
   return (
-    <div className="flex flex-col h-full w-full gap-3 max-w-[1145px] justify-self-center">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center sm:text-start">
+    <div className="flex flex-col h-full w-full gap-3 max-w-[1160px] justify-self-center">
+      <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 text-center sm:text-start">
         <Tabs defaultValue="character">
-          <div className="flex justify-between">
-            <TabsContent value="character">
-              <h2 className="scroll-m-20 text-2xl md:text-3xl font-semibold tracking-tight pb-2">
-                Character Sequences
-              </h2>
-            </TabsContent>
-            <TabsContent value="weapon">
-              <h2 className="scroll-m-20 text-2xl md:text-3xl font-semibold tracking-tight pb-2">
-                Weapon Sequences
-              </h2>
-            </TabsContent>
-            <TabsList>
+          <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-start pb-1">
+            <div className="flex flex-col gap-2 justify-between pb-2 md:pr-4">
+              <TabsContent value="character">
+                <h2 className="scroll-m-20 text-2xl md:text-3xl font-semibold tracking-tight">
+                  Character Sequences
+                </h2>
+              </TabsContent>
+              <TabsContent value="weapon">
+                <h2 className="scroll-m-20 text-2xl md:text-3xl font-semibold tracking-tight">
+                  Weapon Sequences
+                </h2>
+              </TabsContent>
+              <p className="text-muted-foreground pb-1">
+                Note: This only includes sequences earned within your convene
+                history.
+              </p>
+            </div>
+            <TabsList className="w-fit self-center md:self-auto justify-self-center dark:bg-accent bg-slate-200/30">
               <TabsTrigger value="character">Character</TabsTrigger>
               <TabsTrigger value="weapon">Weapon</TabsTrigger>
             </TabsList>
           </div>
-          <p className="text-muted-foreground pb-1">
-            Note: This only includes sequences earned within your convene
-            history.
-          </p>
+
           <TabsContent value="character">
             <CharacterSequences
               /* @ts-ignore*/
