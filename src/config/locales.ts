@@ -1,7 +1,9 @@
 const locales = [
-  "en",
+  "br",
   "de",
+  "en",
   "es",
+  "fil",
   "fr",
   "id",
   "in",
@@ -13,6 +15,7 @@ const locales = [
   "th",
   "uk",
   "vi",
+  "zh",
 ];
 
 export default locales;

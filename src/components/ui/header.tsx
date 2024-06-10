@@ -11,13 +11,14 @@ import { SettingsDropdownButton } from "./settings-dropdown-button";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "./language-switcher";
 
 export function Header() {
   const pathName = usePathname();
   const t = useTranslations("Header");
 
   /**
-   * Checks if the `pathName` starts with the `pathSegment`, if so, give it active link classes.
+   * Checks if the `pathName` ends with the `pathSegment`, if so, give it active link classes.
    *
    * @example
    * // Assuming pathName = "/home/dashboard"
@@ -32,7 +33,7 @@ export function Header() {
   const getLinkClassName = (pathSegment: string) => {
     return cn(
       "transition-colors hover:text-foreground",
-      pathName.startsWith(pathSegment)
+      pathName.endsWith(pathSegment)
         ? "text-foreground"
         : "text-muted-foreground ",
     );
@@ -67,7 +68,7 @@ export function Header() {
           {t("Import")}
         </Link>
         <Link href="/sequences" className={getLinkClassName("/sequences")}>
-          Sequences
+          {t("Sequences")}
         </Link>
         <Link href="/settings" className={getLinkClassName("/settings")}>
           {t("Settings")}
@@ -121,6 +122,7 @@ export function Header() {
       <span className="ms-auto flex gap-2">
         <ModeToggle />
         <SettingsDropdownButton />
+        <LanguageSwitcher />
       </span>
     </header>
   );

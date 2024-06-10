@@ -23,7 +23,7 @@ export function SettingsDropdownButton() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="icon" variant="outline">
+        <Button size="icon" variant="ghost">
           <Settings className="w-[1.2rem] h-[1.2rem]" />
         </Button>
       </DropdownMenuTrigger>
