@@ -4,16 +4,19 @@ import { AndroidImportTutorial } from "./android-tutorial";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { TriangleAlert } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function TutorialTabs() {
+  const t = useTranslations("Import.TutorialTabs");
+
   return (
     <Tabs defaultValue="pc" className="w-full">
       <TabsList className="w-full flex md:my-4 h-11">
         <TabsTrigger className="flex-1 h-9" value="pc">
-          PC
+          {t("PC")}
         </TabsTrigger>
         <TabsTrigger className="flex-1 h-9" value="android">
-          Android
+          {t("Android")}
         </TabsTrigger>
       </TabsList>
       <TabsContent value="pc">
@@ -23,18 +26,20 @@ export default function TutorialTabs() {
         {" "}
         <Alert variant="destructive" className="bg-background md:mb-8">
           <TriangleAlert className="h-4 w-4" />
-          <AlertTitle>Disclaimer</AlertTitle>
+          <AlertTitle>{t("Disclaimer")}</AlertTitle>
           <AlertDescription>
-            This method is not yet thoroughly tested, so use this at your own
-            risk. Please join our{" "}
+            {t(
+              "This method is not yet thoroughly tested, so use this at your own risk",
+            )}
+            . {t("Please join our")}{" "}
             <Link
               className="text-foreground hover:text-muted-foreground"
               target="_blank"
               href="https://discord.gg/mADnEXwZGT"
             >
-              Discord Server
+              {t("Discord Server")}
             </Link>{" "}
-            to ask for any help!
+            {t("to ask for any help!")}
           </AlertDescription>
         </Alert>
         <AndroidImportTutorial />

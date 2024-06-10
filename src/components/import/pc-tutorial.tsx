@@ -30,8 +30,10 @@ import Link from "next/link";
 import isValidConveneHistoryUrl from "@/lib/isValidConveneHistoryUrl";
 import isValidGamePath from "@/lib/isValidGamePath";
 import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
+import { useTranslations } from "next-intl";
 
 export function PCImportTutorial() {
+  const t = useTranslations("Import.TutorialTabs.PCImportTutorial");
   const router = useRouter();
   const { saveConveneHistoryUrl } = useConveneHistory();
 
@@ -50,14 +52,14 @@ export function PCImportTutorial() {
     e.preventDefault();
 
     if (!isValidGamePath) {
-      return toast.error("Invalid Game Path");
+      return toast.error(t("Invalid Game Path"));
     } else if (!isValidConveneHistoryUrl) {
-      return toast.error("Invalid Convene History URL");
+      return toast.error(t("Invalid Convene History URL"));
     }
 
     saveConveneHistoryUrl(conveneHistoryUrl);
 
-    toast.success("Successfully imported Convene History URL!");
+    toast.success(t("Successfully imported Convene History URL!"));
     router.push(getFirstConveneBannerHref());
   };
 
@@ -71,11 +73,13 @@ export function PCImportTutorial() {
                 <p className="text-sm">1</p>
               </span>
               <h3 className="flex items-center mb-1 text-lg font-semibold text-foreground">
-                Copy Your Installation Directory
+                {t("Copy Your Installation Directory")}
               </h3>
               <p className="mb-4 text-base font-normal text-muted-foreground">
-                Find the folder that contains &quot;Wuthering Waves.exe&quot;
-                and a &quot;Client&quot; folder.
+                {t(
+                  'Find the folder that contains "Wuthering Waves exe" and a "Client" folder',
+                )}
+                .
               </p>
               <div className="grid w-full items-center gap-1.5">
                 <Input
@@ -84,7 +88,7 @@ export function PCImportTutorial() {
                       gamePath && !isValidPathInput,
                   })}
                   id="wuwa-install-path"
-                  placeholder="Your installation directory"
+                  placeholder={t("Your installation directory")}
                   required
                   onBlur={(e) => setGamePath(e.target.value)}
                 />
@@ -92,10 +96,11 @@ export function PCImportTutorial() {
               <ul className="flex flex-col gap-2 md:ps-8 md:list-disc mt-2 mb-4">
                 <li>
                   <p className="text-sm font-normal text-muted-foreground">
-                    Warning: If you edited your <code>Engine.ini</code> file to
-                    disable logs, you&apos;ll have to re-enable them before
-                    opening your convene history, otherwise the script
-                    won&apos;t work.
+                    {t("Warning: If you edited your")} <code>Engine.ini</code>{" "}
+                    {t(
+                      "file to disable logs, you'll have to re-enable them before opening your convene history, otherwise the script won't work",
+                    )}
+                    .
                   </p>
                 </li>
               </ul>
@@ -105,12 +110,15 @@ export function PCImportTutorial() {
                 <p className="text-sm">2</p>
               </span>
               <h3 className="flex items-center mb-1 text-lg font-semibold text-foreground">
-                Launch Wuthering Waves on PC and Open Your In-game Convene
-                History
+                {t(
+                  "Launch Wuthering Waves on PC and Open Your In-game Convene History",
+                )}
               </h3>
               <p className="mb-4 text-base font-normal text-muted-foreground">
-                Afterwards, open Windows PowerShell, and then paste the
-                following script.
+                {t(
+                  "Afterwards, open Windows PowerShell, and then paste the following script",
+                )}
+                .
               </p>
               <div className="flex w-full items-center space-x-2">
                 <Tooltip>
@@ -127,7 +135,7 @@ export function PCImportTutorial() {
                         value={
                           isValidPathInput
                             ? script
-                            : "Input a valid installation directory first!"
+                            : t("Input a valid installation directory first!")
                         }
                       ></Textarea>
                       {isValidPathInput && isHoverCodeBlockContainer ? (
@@ -141,21 +149,23 @@ export function PCImportTutorial() {
                     </div>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Stuck? Click the “Need Help?” button</p>
+                    <p>{t("Stuck? Click the “Need Help?” button")}</p>
                   </TooltipContent>
                 </Tooltip>
               </div>
               <ul className="flex flex-col gap-2 md:ps-8 md:list-disc mt-2 mb-4">
                 <li>
                   <p className="text-sm font-normal text-muted-foreground">
-                    Note: The script does not edit your files, it simply
-                    extracts the URL from your logs. You can view the script{" "}
+                    {t(
+                      "Note: The script does not edit your files, it simply extracts the URL from your logs",
+                    )}
+                    . {t("You can view the script")}{" "}
                     <Link
                       className="text-yellow-500 hover:text-yellow-600"
                       href="https://gist.github.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c"
                       target="_blank"
                     >
-                      here
+                      {t("here")}
                     </Link>
                     .
                   </p>
@@ -167,7 +177,7 @@ export function PCImportTutorial() {
                 <p className="text-sm">3</p>
               </span>
               <h3 className="mb-4 text-lg font-semibold text-foreground">
-                Paste the URL Here
+                {t("Paste the URL Here")}
               </h3>
 
               <div className="grid w-full items-center gap-1.5">
@@ -177,7 +187,7 @@ export function PCImportTutorial() {
                       conveneHistoryUrl && !isValidUrlInput,
                   })}
                   id="wuwa-convene-url"
-                  placeholder="Your Convene History URL"
+                  placeholder={t("Your Convene History URL")}
                   required
                   onChange={(e) => {
                     setConveneHistoryUrl(e.target.value);
@@ -190,7 +200,7 @@ export function PCImportTutorial() {
                 <p className="text-sm">4</p>
               </span>
               <h3 className="mb-4 text-lg font-semibold text-foreground">
-                Press the &ldquo;Import History&rdquo; Button on this Website
+                {t('Press the "Import History" Button on this Website')}
               </h3>
             </li>
           </ol>
@@ -204,23 +214,25 @@ export function PCImportTutorial() {
                   size="lg"
                   type="button"
                 >
-                  <FileQuestion className="h-4 w-4 mr-2" /> Need Help?
+                  <FileQuestion className="h-4 w-4 mr-2" /> {t("Need Help?")}
                 </Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>PC Import Tutorial Video</DialogTitle>
+                  <DialogTitle>{t("PC Import Tutorial Video")}</DialogTitle>
                   <DialogDescription className="pb-4">
-                    Follow this step-by-step YouTube tutorial to import your
-                    data on PC. Please join our{" "}
+                    {t(
+                      "Follow this step-by-step YouTube tutorial to import your data on PC",
+                    )}
+                    . {t("Please join our")}{" "}
                     <Link
                       className="text-yellow-500 hover:text-yellow-600"
                       href="https://discord.gg/mADnEXwZGT"
                       target="_blank"
                     >
-                      Discord Server
+                      {t("Discord Server")}
                     </Link>{" "}
-                    to ask for any help!
+                    {t("to ask for any help!")}
                   </DialogDescription>
                   <div className="w-full h-80 rounded-2xl overflow-hidden flex justify-center">
                     <iframe
@@ -238,7 +250,7 @@ export function PCImportTutorial() {
             </Dialog>
 
             <Button size="lg" type="submit">
-              <Import className="mr-2 h-4 w-4" /> Import History
+              <Import className="mr-2 h-4 w-4" /> {t("Import History")}
             </Button>
           </div>
         </form>
