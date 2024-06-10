@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "Mga Tuntunin at Kundisyon",
       "description": "Maunawaan kung paano gumagana ang Wuwa Tracker at anong mga datos ang iniimbak at ginagamit upang mapabuti ang iyong karanasan bilang user. Wuwa Tracker bilang ng awa para sa Wuthering Waves, na gumagamit ng pinakabagong mga datos kasama ang pandaigdigang estadistika at higit pa. Ibahagi ang iyong mga resulta ng pag-draw sa iyong mga kaibigan at subaybayan ang iyong account!"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | Mga Sunod",
+      "description": "Bilangin at ipakita ang iyong mga dobleng Resonators at Weapons at tingnan ang impormasyon kaugnay nila. Maaari mong ipakita ang mga ito sa iyong mga kaibigan!"
     }
   },
 
@@ -337,5 +341,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }

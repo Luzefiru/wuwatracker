@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://wuwatracker.tech/import",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: "https://wuwatracker.tech/privacy-policy",
@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://wuwatracker.tech/convene",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: "https://wuwatracker.tech/convene/limited-character",
@@ -64,25 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: "https://wuwatracker.tech/permanent-character",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://wuwatracker.tech/permanent-weapon",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://wuwatracker.tech/starter",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://wuwatracker.tech/starter-selector",
+      url: "https://wuwatracker.tech/sequences",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

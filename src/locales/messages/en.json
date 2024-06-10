@@ -88,33 +88,6 @@
     "Beginner's Choice Convene": "Beginner's Choice Convene"
   },
 
-  "Metadata": {
-    "Generic": {
-      "title": "Wuwa Tracker",
-      "description": "A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Synchronize your data across devices and share your pulls with your friends and track your account easily!"
-    },
-    "History": {
-      "title": "Wuwa Tracker | History",
-      "description": "Check your latest Wuthering Waves pull statistics! Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
-    },
-    "Import": {
-      "title": "Wuwa Tracker | Import",
-      "description": "Follow our interactive tutorial to display your Wuthering Waves data and view your statistics. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
-    },
-    "Settings": {
-      "title": "Wuwa Tracker | Settings",
-      "description": "Synchronize your data over Google by signing in. Manage your data all in one place. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
-    },
-    "Privacy Policy": {
-      "title": "Privacy Policy",
-      "description": "Understand how Wuwa Tracker works and what data is being stored and utilized to enhance your user experience. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
-    },
-    "Terms & Conditions": {
-      "title": "Terms & Conditions",
-      "description": "Understand how Wuwa Tracker works and what data is being stored and utilized to enhance your user experience. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
-    }
-  },
-
   "Convene": {
     "BannerStatsCard": {
       "Astrites Spent": "Astrites Spent",
@@ -336,6 +309,45 @@
         "to ask for any help!": "to ask for any help!",
         "Import History": "Import History"
       }
+    }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
+  },
+
+  "Metadata": {
+    "Generic": {
+      "title": "Wuwa Tracker",
+      "description": "A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Synchronize your data across devices and share your pulls with your friends and track your account easily!"
+    },
+    "History": {
+      "title": "Wuwa Tracker | History",
+      "description": "Check your latest Wuthering Waves pull statistics! Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+    },
+    "Import": {
+      "title": "Wuwa Tracker | Import",
+      "description": "Follow our interactive tutorial to display your Wuthering Waves data and view your statistics. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+    },
+    "Settings": {
+      "title": "Wuwa Tracker | Settings",
+      "description": "Synchronize your data over Google by signing in. Manage your data all in one place. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+    },
+    "Privacy Policy": {
+      "title": "Privacy Policy",
+      "description": "Understand how Wuwa Tracker works and what data is being stored and utilized to enhance your user experience. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+    },
+    "Terms & Conditions": {
+      "title": "Terms & Conditions",
+      "description": "Understand how Wuwa Tracker works and what data is being stored and utilized to enhance your user experience. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | Sequences",
+      "description": "Count and showcase your duplicate Resonators and Weapons and see information related to them. You can showcase them to your friends!"
     }
   }
 }

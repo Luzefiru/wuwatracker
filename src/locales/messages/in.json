@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "शर्तें और नियम",
       "description": "जानें कि Wuwa Tracker कैसे काम करता है और आपके उपयोगकर्ता अनुभव को बढ़ाने के लिए कौन से डेटा संग्रहित और उपयोग किए जाते हैं। अपने दोस्तों के साथ अपनी खींचाई साझा करें और अपने खाता का ट्रैक करें! इस्तेमाल करके, आप इस ऐप की शर्तें और नियमों को स्वीकार करते हैं जो व्यक्तिगत और गोपनीयता के प्रकार, डेटा संग्रहण, और उपयोग को सम्मिलित करते हैं।"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | क्रम",
+      "description": "अपने डुप्लिकेट रिसोनेटर और वेपन की गिनती करें और उनसे संबंधित जानकारी देखें। आप इन्हें अपने दोस्तों को दिखा सकते हैं!"
     }
   },
 
@@ -337,5 +341,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }

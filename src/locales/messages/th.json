@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "ข้อกำหนดและเงื่อนไข",
       "description": "เข้าใจว่าWuwa Trackerทำงานอย่างไรและข้อมูลใดถูกจัดเก็บและใช้เพื่อเสริมประสบการณ์ของผู้ใช้ คนทำข้อกำหนดและเงื่อนไขของคุณเคาน์เตอร์ความเสียดายวูวาสำหรับ Wuthering Waves โดยใช้ข้อมูลล่าสุดพร้อมสถิติทั่วโลกและอื่น ๆ แชร์การดึงของคุณกับเพื่อน ๆ และติดตามบัญชีของคุณ!"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | ลำดับ",
+      "description": "นับและแสดง Resonators และ Weapons ที่ซ้ำกันของคุณและดูข้อมูลที่เกี่ยวข้องกับพวกเขา คุณสามารถแสดงให้เพื่อนได้!"
     }
   },
 
@@ -337,5 +341,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }

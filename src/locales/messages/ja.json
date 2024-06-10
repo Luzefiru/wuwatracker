@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "利用規約",
       "description": "Wuwa Trackerの仕組みと、ユーザーエクスペリエンスを向上させるために保存・利用されるデータについて理解しましょう。最新データとグローバル統計を使用した Wuthering Waves の Wuwa Tracker ピティカウンター。友達と引いた結果を共有し、アカウントを追跡しましょう！"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | シーケンス",
+      "description": "重複したレゾネーターや武器を数えて表示し、それに関連する情報を確認します。友達に見せることができます！"
     }
   },
 
@@ -337,5 +341,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }

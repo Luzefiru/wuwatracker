@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "Điều Khoản & Điều Kiện",
       "description": "Hiểu cách Wuwa Tracker hoạt động và dữ liệu nào được lưu trữ và sử dụng để cải thiện trải nghiệm người dùng của bạn. Bộ đếm sự thương hại Wuwa cho sóng Wuthering, sử dụng dữ liệu mới nhất với thống kê toàn cầu và nhiều hơn nữa. Chia sẻ kết quả rút của bạn với bạn bè và theo dõi tài khoản của bạn!"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | Chuỗi",
+      "description": "Đếm và hiển thị Resonators và Vũ khí trùng lặp của bạn và xem thông tin liên quan. Bạn có thể hiển thị chúng cho bạn bè của mình!"
     }
   },
 
@@ -337,5 +341,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }

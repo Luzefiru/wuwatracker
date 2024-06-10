@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "Villkor",
       "description": "Förstå hur Wuwa Tracker fungerar och vilka data som lagras och används för att förbättra din användarupplevelse. Wuwa Tracker medlidandets räknare för Wuthering Waves, med de senaste uppgifterna och global statistik med mera. Dela dina dragningsresultat med vänner och följ ditt konto!"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | Sekvenser",
+      "description": "Räkna och visa dina dubbla Resonators och Vapen och se information relaterad till dem. Du kan visa dem för dina vänner!"
     }
   },
 
@@ -337,5 +341,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }

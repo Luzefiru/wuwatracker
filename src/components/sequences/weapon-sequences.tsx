@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 
 import {
@@ -5,15 +7,36 @@ import {
   fourStarWeaponMetadata,
 } from "@/data/gachaObjects";
 import { ItemAvatar } from "./item-avatar";
+import { usePullHistory } from "@/contexts/pullHistoryContext";
 
-import { BannerStats } from "@/types/BannerStats";
+export default function WeaponSequences() {
+  const {
+    limitedCharacterStats,
+    permanentCharacterStats,
+    starterStats,
+    starterSelectorStats,
+    limitedWeaponStats,
+    permanentWeaponStats,
+  } = usePullHistory();
 
-interface Props {
-  fiveStars: Array<BannerStats>;
-  fourStars: Array<BannerStats>;
-}
+  const fiveStars = [
+    ...(limitedCharacterStats?.fiveStarObjects || []),
+    ...(permanentCharacterStats?.fiveStarObjects || []),
+    ...(starterSelectorStats?.fiveStarObjects || []),
+    ...(starterStats?.fiveStarObjects || []),
+    ...(permanentWeaponStats?.fiveStarObjects || []),
+    ...(limitedWeaponStats?.fiveStarObjects || []),
+  ];
 
-export default function WeaponSequences({ fiveStars, fourStars }: Props) {
+  const fourStars = [
+    ...(limitedCharacterStats?.fourStarObjects || []),
+    ...(permanentCharacterStats?.fourStarObjects || []),
+    ...(starterSelectorStats?.fourStarObjects || []),
+    ...(starterStats?.fourStarObjects || []),
+    ...(permanentWeaponStats?.fourStarObjects || []),
+    ...(limitedWeaponStats?.fourStarObjects || []),
+  ];
+
   return (
     <Card className="flex items-center justify-center bg-background/80">
       <CardContent className="flex-row flex gap-3  py-6 flex-wrap justify-center md:justify-start">

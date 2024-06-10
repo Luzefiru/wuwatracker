@@ -1,10 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import { fiveStarObjects, fourStarObjects } from "@/data/gachaObjects";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { usePullHistory } from "@/contexts/pullHistoryContext";
+import { useTranslations } from "next-intl";
 
 interface Props {
   name: string;
@@ -13,9 +11,8 @@ interface Props {
 }
 
 export function ItemAvatar({ name, qualityLevel, numOfSequences }: Props) {
-  function getNumberOfSequences(name: string) {
-    const initialSequences = -1;
-  }
+  const t = useTranslations("GachaItems");
+
   const imgSrc =
     qualityLevel === 5
       ? /* @ts-ignore, TODO - find a way to index this without throwing a type error*/
@@ -29,7 +26,7 @@ export function ItemAvatar({ name, qualityLevel, numOfSequences }: Props) {
     >
       <CardContent className="py-2 h-fit relative px-0 flex items-center justify-center pb-0">
         <div className="w-24 place-self-center h-fit">
-          <Image src={imgSrc} width="404" height="560" alt={name} />
+          <Image src={imgSrc} width="404" height="560" alt={t(name)} />
         </div>
         {numOfSequences > 0 && (
           <Badge
@@ -44,7 +41,7 @@ export function ItemAvatar({ name, qualityLevel, numOfSequences }: Props) {
         <p className="text-lg text-yellow-500">
           {qualityLevel === 5 ? "✦✦✦✦✦" : "✦✦✦✦"}
         </p>
-        <p className="w-20 text-center truncate z-20">{name}</p>
+        <p className="w-20 text-center truncate z-20">{t(name)}</p>
 
         <div
           className={`rounded-lg absolute inset-x-0 bottom-0 h-[90%] bg-gradient-to-t  via-transparent to-transparent z-10 ${qualityLevel === 5 ? "from-yellow-400/30" : "from-purple-400/30"}`}

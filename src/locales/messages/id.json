@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "Syarat & Ketentuan",
       "description": "Pahami bagaimana Wuwa Tracker bekerja dan data apa yang disimpan dan digunakan untuk meningkatkan pengalaman pengguna Anda. Pelacak kesedihan Wuwa untuk Gelombang Wuthering, menggunakan data terbaru dengan statistik global dan lainnya. Bagikan tarikan Anda dengan teman-teman dan pantau akun Anda!"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | Urutan",
+      "description": "Hitung dan tunjukkan Resonator dan Senjata duplikat Anda serta lihat informasi terkait. Anda dapat menampilkannya kepada teman-teman Anda!"
     }
   },
   "Convene": {
@@ -336,5 +340,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }

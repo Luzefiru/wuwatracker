@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "Términos y condiciones",
       "description": "Comprende cómo funciona Wuwa Tracker y qué datos se almacenan y utilizan para mejorar tu experiencia de usuario. Contador de piedad de Wuwa Tracker para Wuthering Waves, utilizando los datos más actualizados con estadísticas globales y más. ¡Comparte tus tiradas con tus amigos y rastrea tu cuenta!"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | Secuencias",
+      "description": "Cuenta y muestra tus Resonadores y Armas duplicados y ve información relacionada con ellos. ¡Puedes mostrarlos a tus amigos!"
     }
   },
 
@@ -337,5 +341,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }

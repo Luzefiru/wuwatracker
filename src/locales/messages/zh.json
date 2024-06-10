@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "条款和条件",
       "description": "了解 Wuwa Tracker的工作原理以及存储和使用的数据，以提升您的用户体验。Wuthering Waves 的 Wuwa Tracker怜悯计数器，使用最新数据和全球统计等。与朋友分享您的抽卡，并跟踪您的账户！"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | 序列",
+      "description": "计数并展示您的重复共振器和武器，并查看与之相关的信息。您可以向朋友展示它们！"
     }
   },
 
@@ -337,5 +341,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }

@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "Terma & Syarat",
       "description": "Fahami bagaimana Wuwa Tracker berfungsi dan data apa yang disimpan dan digunakan untuk meningkatkan pengalaman pengguna anda. Pengira belas kasihan Wuwa untuk Gelombang Wuthering, menggunakan data terkini dengan statistik global dan banyak lagi. Kongsi tarikan anda dengan rakan-rakan anda dan pantau akaun anda!"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | Urutan",
+      "description": "Kira dan tunjukkan Pemancar dan Senjata berganda anda dan lihat maklumat berkaitan. Anda boleh menunjukkannya kepada rakan-rakan anda!"
     }
   },
 
@@ -337,5 +341,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }

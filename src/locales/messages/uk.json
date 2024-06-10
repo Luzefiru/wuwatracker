@@ -112,6 +112,10 @@
     "Terms & Conditions": {
       "title": "Умови та положення",
       "description": "Зрозумійте, як працює Wuwa Tracker та які дані зберігаються та використовуються для покращення вашого користувацького досвіду. Лічильник жалю для Wuthering Waves, використовуючи оновлені дані зі світовою статистикою та більше. Діліться своїми витягами з друзями та легко відстежуйте свій обліковий запис!"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | Послідовності",
+      "description": "Підрахуйте та покажіть ваші подвійні Резонатори та Зброю та побачте інформацію, що стосується їх. Ви можете показати їх своїм друзям!"
     }
   },
 
@@ -337,5 +341,13 @@
         "Import History": "Import History"
       }
     }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
   }
 }
