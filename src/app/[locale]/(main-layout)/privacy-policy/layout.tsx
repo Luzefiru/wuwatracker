@@ -1,11 +1,21 @@
-import { Metadata } from "next";
 import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Wuwa Tracker | Privacy Policy",
-  description:
-    "Understand how Wuwa Tracker works and what data is being stored and utilized to enhance your user experience. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!",
-};
+export async function generateMetadata({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  const t = await getTranslations({
+    locale,
+    namespace: "Metadata.Privacy Policy",
+  });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default function PrivacyPolicyLayout({
   children,

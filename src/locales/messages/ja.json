@@ -91,27 +91,27 @@
   "Metadata": {
     "Generic": {
       "title": "Wuwa Tracker",
-      "description": "A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Synchronize your data across devices and share your pulls with your friends and track your account easily!"
+      "description": "最新データとグローバル統計を使用した Wuthering Waves のピティカウンター。デバイス間でデータを同期し、友達と引いた結果を共有し、アカウントを簡単に追跡しましょう！"
     },
     "History": {
-      "title": "Wuwa Tracker | History",
-      "description": "Check your latest Wuthering Waves pull statistics! Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      "title": "Wuwa Tracker | 履歴",
+      "description": "最新の Wuthering Waves の引き統計を確認しましょう！最新データとグローバル統計を使用した Wuthering Waves の Wuwa Tracker ピティカウンター。友達と引いた結果を共有し、アカウントを追跡しましょう！"
     },
     "Import": {
-      "title": "Wuwa Tracker | Import",
-      "description": "Follow our interactive tutorial to display your Wuthering Waves data and view your statistics. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      "title": "Wuwa Tracker | インポート",
+      "description": "インタラクティブなチュートリアルに従って Wuthering Waves のデータを表示し、統計情報を確認しましょう。最新データとグローバル統計を使用した Wuthering Waves の Wuwa Tracker ピティカウンター。友達と引いた結果を共有し、アカウントを追跡しましょう！"
     },
     "Settings": {
-      "title": "Wuwa Tracker | Settings",
-      "description": "Synchronize your data over Google by signing in. Manage your data all in one place. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      "title": "Wuwa Tracker | 設定",
+      "description": "Google にサインインしてデータを同期しましょう。すべてのデータを一元管理。最新データとグローバル統計を使用した Wuthering Waves の Wuwa Tracker ピティカウンター。友達と引いた結果を共有し、アカウントを追跡しましょう！"
     },
     "Privacy Policy": {
-      "title": "Privacy Policy",
-      "description": "Understand how Wuwa Tracker works and what data is being stored and utilized to enhance your user experience. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      "title": "プライバシーポリシー",
+      "description": "Wuwa Trackerの仕組みと、ユーザーエクスペリエンスを向上させるために保存・利用されるデータについて理解しましょう。最新データとグローバル統計を使用した Wuthering Waves の Wuwa Tracker ピティカウンター。友達と引いた結果を共有し、アカウントを追跡しましょう！"
     },
     "Terms & Conditions": {
-      "title": "Terms & Conditions",
-      "description": "Understand how Wuwa Tracker works and what data is being stored and utilized to enhance your user experience. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      "title": "利用規約",
+      "description": "Wuwa Trackerの仕組みと、ユーザーエクスペリエンスを向上させるために保存・利用されるデータについて理解しましょう。最新データとグローバル統計を使用した Wuthering Waves の Wuwa Tracker ピティカウンター。友達と引いた結果を共有し、アカウントを追跡しましょう！"
     }
   },
 

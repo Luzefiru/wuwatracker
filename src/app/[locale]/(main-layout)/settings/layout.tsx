@@ -1,11 +1,18 @@
-import { Metadata } from "next";
 import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Wuwa Tracker | Settings",
-  description:
-    "Synchronize your data over Google by signing in. Manage your data all in one place. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!",
-};
+export async function generateMetadata({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  const t = await getTranslations({ locale, namespace: "Metadata.Settings" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default function SettingsLayout({
   children,

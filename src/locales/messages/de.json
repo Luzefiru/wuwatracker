@@ -88,6 +88,33 @@
     "Beginner's Choice Convene": "Beginner's Choice Convene"
   },
 
+  "Metadata": {
+    "Generic": {
+      "title": "Wuwa Tracker",
+      "description": "Ein Mitleidszähler für Wuthering Waves, der die neuesten Daten mit globalen Statistiken und mehr verwendet. Synchronisieren Sie Ihre Daten über verschiedene Geräte hinweg, teilen Sie Ihre Ziehungen mit Ihren Freunden und verfolgen Sie Ihr Konto ganz einfach!"
+    },
+    "History": {
+      "title": "Wuwa Tracker | Verlauf",
+      "description": "Überprüfen Sie Ihre neuesten Wuthering Waves Ziehstatistiken! Wuwa Tracker Mitleidszähler für Wuthering Waves, der die neuesten Daten mit globalen Statistiken und mehr verwendet. Teilen Sie Ihre Ziehungen mit Ihren Freunden und verfolgen Sie Ihr Konto!"
+    },
+    "Import": {
+      "title": "Wuwa Tracker | Import",
+      "description": "Folgen Sie unserem interaktiven Tutorial, um Ihre Wuthering Waves Daten anzuzeigen und Ihre Statistiken zu sehen. Wuwa Tracker Mitleidszähler für Wuthering Waves, der die neuesten Daten mit globalen Statistiken und mehr verwendet. Teilen Sie Ihre Ziehungen mit Ihren Freunden und verfolgen Sie Ihr Konto!"
+    },
+    "Settings": {
+      "title": "Wuwa Tracker | Einstellungen",
+      "description": "Synchronisieren Sie Ihre Daten über Google, indem Sie sich anmelden. Verwalten Sie Ihre Daten an einem Ort. Wuwa Tracker Mitleidszähler für Wuthering Waves, der die neuesten Daten mit globalen Statistiken und mehr verwendet. Teilen Sie Ihre Ziehungen mit Ihren Freunden und verfolgen Sie Ihr Konto!"
+    },
+    "Privacy Policy": {
+      "title": "Datenschutzerklärung",
+      "description": "Verstehen Sie, wie Wuwa Tracker funktioniert und welche Daten gespeichert und verwendet werden, um Ihre Benutzererfahrung zu verbessern. Wuwa Tracker Mitleidszähler für Wuthering Waves, der die neuesten Daten mit globalen Statistiken und mehr verwendet. Teilen Sie Ihre Ziehungen mit Ihren Freunden und verfolgen Sie Ihr Konto!"
+    },
+    "Terms & Conditions": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "description": "Verstehen Sie, wie Wuwa Tracker funktioniert und welche Daten gespeichert und verwendet werden, um Ihre Benutzererfahrung zu verbessern. Wuwa Tracker Mitleidszähler für Wuthering Waves, der die neuesten Daten mit globalen Statistiken und mehr verwendet. Teilen Sie Ihre Ziehungen mit Ihren Freunden und verfolgen Sie Ihr Konto!"
+    }
+  },
+
   "Convene": {
     "BannerStatsCard": {
       "Astrites Spent": "Astrites Spent",

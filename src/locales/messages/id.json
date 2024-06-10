@@ -91,30 +91,29 @@
   "Metadata": {
     "Generic": {
       "title": "Wuwa Tracker",
-      "description": "A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Synchronize your data across devices and share your pulls with your friends and track your account easily!"
+      "description": "Sebuah penghitung kesedihan untuk Gelombang Wuthering, menggunakan data terbaru dengan statistik global dan lainnya. Sinkronkan data Anda di berbagai perangkat, bagikan hasil tarikan Anda dengan teman-teman, dan pantau akun Anda dengan mudah!"
     },
     "History": {
-      "title": "Wuwa Tracker | History",
-      "description": "Check your latest Wuthering Waves pull statistics! Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      "title": "Wuwa Tracker | Riwayat",
+      "description": "Periksa statistik tarikan Gelombang Wuthering terbaru Anda! Pelacak kesedihan Wuwa untuk Gelombang Wuthering, menggunakan data terbaru dengan statistik global dan lainnya. Bagikan tarikan Anda dengan teman-teman dan pantau akun Anda!"
     },
     "Import": {
-      "title": "Wuwa Tracker | Import",
-      "description": "Follow our interactive tutorial to display your Wuthering Waves data and view your statistics. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      "title": "Wuwa Tracker | Impor",
+      "description": "Ikuti tutorial interaktif kami untuk menampilkan data Gelombang Wuthering Anda dan lihat statistik Anda. Pelacak kesedihan Wuwa untuk Gelombang Wuthering, menggunakan data terbaru dengan statistik global dan lainnya. Bagikan tarikan Anda dengan teman-teman dan pantau akun Anda!"
     },
     "Settings": {
-      "title": "Wuwa Tracker | Settings",
-      "description": "Synchronize your data over Google by signing in. Manage your data all in one place. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      "title": "Wuwa Tracker | Pengaturan",
+      "description": "Sinkronkan data Anda melalui Google dengan masuk. Kelola semua data Anda di satu tempat. Pelacak kesedihan Wuwa untuk Gelombang Wuthering, menggunakan data terbaru dengan statistik global dan lainnya. Bagikan tarikan Anda dengan teman-teman dan pantau akun Anda!"
     },
     "Privacy Policy": {
-      "title": "Privacy Policy",
-      "description": "Understand how Wuwa Tracker works and what data is being stored and utilized to enhance your user experience. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      "title": "Kebijakan Privasi",
+      "description": "Pahami bagaimana Wuwa Tracker bekerja dan data apa yang disimpan dan digunakan untuk meningkatkan pengalaman pengguna Anda. Pelacak kesedihan Wuwa untuk Gelombang Wuthering, menggunakan data terbaru dengan statistik global dan lainnya. Bagikan tarikan Anda dengan teman-teman dan pantau akun Anda!"
     },
     "Terms & Conditions": {
-      "title": "Terms & Conditions",
-      "description": "Understand how Wuwa Tracker works and what data is being stored and utilized to enhance your user experience. Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      "title": "Syarat & Ketentuan",
+      "description": "Pahami bagaimana Wuwa Tracker bekerja dan data apa yang disimpan dan digunakan untuk meningkatkan pengalaman pengguna Anda. Pelacak kesedihan Wuwa untuk Gelombang Wuthering, menggunakan data terbaru dengan statistik global dan lainnya. Bagikan tarikan Anda dengan teman-teman dan pantau akun Anda!"
     }
   },
-
   "Convene": {
     "BannerStatsCard": {
       "Astrites Spent": "Astrites Spent",

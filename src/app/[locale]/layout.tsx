@@ -9,18 +9,24 @@ import { PullHistoryContextProvider } from "@/contexts/pullHistoryContext";
 import { UserContextProvider } from "@/contexts/userContext";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import env from "@/config/env";
 import locales from "@/config/locales";
 import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  const t = await getTranslations({ locale, namespace: "Metadata.Generic" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  metadataBase: new URL(env.VERCEL_URL),
-  title: "Wuwa Tracker",
-  description:
-    "A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Synchronize your data across devices and share your pulls with your friends and track your account easily!",
-};
 
 export default async function RootLayout({
   children,

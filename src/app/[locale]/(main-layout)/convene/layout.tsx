@@ -1,16 +1,23 @@
-import { Metadata } from "next";
 import { Import } from "lucide-react";
 import { Sidebar } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Wuwa Tracker | History",
-  description:
-    "Check your latest Wuthering Waves pull statistics! Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!",
-};
+export async function generateMetadata({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  const t = await getTranslations({ locale, namespace: "Metadata.History" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default function ConveneLayout({
   children,

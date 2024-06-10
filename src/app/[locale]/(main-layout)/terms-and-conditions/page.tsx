@@ -2,12 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions | Wuwa Tracker",
-  description:
-    "These terms and conditions outline the rules and regulations for the use of Wuwa Tracker's website and services.",
-};
-
 export default function TermsAndConditions({
   params: { locale },
 }: Readonly<{
