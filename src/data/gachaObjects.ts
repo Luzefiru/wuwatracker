@@ -141,7 +141,7 @@ export const fourStarWeaponMetadata = {
   Autumntrace: {
     qualityLevel: 4,
     imgSrc:
-      "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_Luckdraw21010023_UI.png",
+      "https://cdn.wanderer.moe/wuthering-waves/weapon-icons/T_IconWeapon21010074_UI.png",
   },
   Discord: {
     qualityLevel: 4,
