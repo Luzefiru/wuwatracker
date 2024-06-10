@@ -1,5 +1,4 @@
 import "@/app/globals.css";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
@@ -39,7 +38,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth">
       <body className={inter.className}>
         <UserContextProvider>
           <PullHistoryContextProvider>

@@ -67,7 +67,7 @@ export default function CloudSyncSetting() {
       toast.error(`${t("Import your data first to start syncing")}!`);
     }
     // If the user has no cloud saved URL yet
-    else if (!userData.conveneHistoryUrl && uploadConveneHistoryUrl) {
+    else if (!userData?.conveneHistoryUrl && uploadConveneHistoryUrl) {
       uploadConveneHistoryUrl(localConveneHistoryUrl);
     }
     // If they don't have local history data
@@ -76,7 +76,7 @@ export default function CloudSyncSetting() {
     }
     // They have both, but are different
     else if (
-      userData.conveneHistoryUrl &&
+      userData?.conveneHistoryUrl &&
       localConveneHistoryUrl &&
       localConveneHistoryUrl !== userData.conveneHistoryUrl
     ) {
