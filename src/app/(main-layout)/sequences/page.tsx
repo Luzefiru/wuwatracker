@@ -59,12 +59,19 @@ export default function Sequences() {
           </p>
           <TabsContent value="character">
             <CharacterSequences
+              /* @ts-ignore*/
               fiveStars={fiveStarObjects}
+              /* @ts-ignore*/
               fourStars={fourStarObjects}
             />
           </TabsContent>
           <TabsContent value="weapon">
-            <WeaponSequences />
+            <WeaponSequences
+              /* @ts-ignore*/
+              fiveStars={fiveStarObjects}
+              /* @ts-ignore*/
+              fourStars={fourStarObjects}
+            />
           </TabsContent>
         </Tabs>
       </div>

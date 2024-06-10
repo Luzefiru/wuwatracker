@@ -4,36 +4,14 @@ import {
   fourStarCharacterMetadata,
 } from "@/data/gachaObjects";
 import { ItemAvatar } from "./item-avatar";
-import { usePullHistory } from "@/contexts/pullHistoryContext";
+import { BannerStats } from "@/types/BannerStats";
 
-export default function CharacterSequences() {
-  const {
-    limitedCharacterStats,
-    permanentCharacterStats,
-    starterStats,
-    starterSelectorStats,
-    limitedWeaponStats,
-    permanentWeaponStats,
-  } = usePullHistory();
+interface Props {
+  fiveStars: Array<BannerStats>;
+  fourStars: Array<BannerStats>;
+}
 
-  const fiveStarObjects = [
-    ...(limitedCharacterStats?.fiveStarObjects || []),
-    ...(permanentCharacterStats?.fiveStarObjects || []),
-    ...(starterSelectorStats?.fiveStarObjects || []),
-    ...(starterStats?.fiveStarObjects || []),
-    ...(permanentWeaponStats?.fiveStarObjects || []),
-    ...(limitedWeaponStats?.fiveStarObjects || []),
-  ];
-
-  const fourStarObjects = [
-    ...(limitedCharacterStats?.fourStarObjects || []),
-    ...(permanentCharacterStats?.fourStarObjects || []),
-    ...(starterSelectorStats?.fourStarObjects || []),
-    ...(starterStats?.fourStarObjects || []),
-    ...(permanentWeaponStats?.fourStarObjects || []),
-    ...(limitedWeaponStats?.fourStarObjects || []),
-  ];
-
+export default function CharacterSequences({ fiveStars, fourStars }: Props) {
   return (
     <Card className="flex items-center justify-center">
       <CardContent className="flex-row flex gap-2  py-6 md:flex-wrap">
@@ -42,9 +20,8 @@ export default function CharacterSequences() {
             key={key}
             qualityLevel={value.qualityLevel}
             name={key}
-            numOfSequences={
-              fiveStarObjects.filter((c) => c.name === key).length
-            }
+            /* @ts-ignore*/
+            numOfSequences={fiveStars.filter((c) => c.name === key).length}
           />
         ))}
         {Object.entries(fourStarCharacterMetadata).map(([key, value]) => (
@@ -52,9 +29,8 @@ export default function CharacterSequences() {
             key={key}
             qualityLevel={value.qualityLevel}
             name={key}
-            numOfSequences={
-              fourStarObjects.filter((c) => c.name === key).length
-            }
+            /* @ts-ignore*/
+            numOfSequences={fourStars.filter((c) => c.name === key).length}
           />
         ))}
       </CardContent>
