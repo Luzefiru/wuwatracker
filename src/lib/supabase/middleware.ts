@@ -1,14 +1,18 @@
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { type NextRequest, NextResponse } from "next/server";
 import env from "@/config/env";
+import createIntlMiddleware from "next-intl/middleware";
+import locales from "@/config/locales";
+
+// Need to integrate next-intl inside the Supaase middleware as per: https://next-intl-docs.vercel.app/docs/routing/middleware#example-integrating-with-supabase-authentication
+const handleI18nRouting = createIntlMiddleware({
+  locales,
+  defaultLocale: "en",
+  localePrefix: "as-needed",
+});
 
 export const updateSession = async (request: NextRequest) => {
-  // Create an unmodified response
-  let response = NextResponse.next({
-    request: {
-      headers: request.headers,
-    },
-  });
+  let response = handleI18nRouting(request);
 
   if (!env.NEXT_PUBLIC_SUPABASE_URL || !env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
     if (env.NODE_ENV === "production") {

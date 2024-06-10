@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/theme-provider";
@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { PullHistoryContextProvider } from "@/contexts/pullHistoryContext";
 import { UserContextProvider } from "@/contexts/userContext";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import env from "@/config/env";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,14 +22,15 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-}: Readonly<{
+  params: { locale },
+}: {
   children: React.ReactNode;
-}>) {
-  const locale = await getLocale();
+  params: { locale: string };
+}) {
   const messages = await getMessages();
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={inter.className}>
         <UserContextProvider>
           <PullHistoryContextProvider>
