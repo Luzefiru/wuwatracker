@@ -4,6 +4,7 @@ import { Sidebar } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Wuwa Tracker | History",
@@ -13,9 +14,12 @@ export const metadata: Metadata = {
 
 export default function ConveneLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("Header");
 
   return (

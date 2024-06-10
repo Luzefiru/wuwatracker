@@ -1,12 +1,17 @@
 import Image from "next/image";
 import { Header } from "@/components/ui/header";
 import { Footer } from "@/components/ui/footer";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export default function MainLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  unstable_setRequestLocale(locale);
+
   return (
     <>
       <Image

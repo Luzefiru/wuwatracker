@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Wuwa Tracker | Settings",
@@ -8,9 +9,12 @@ export const metadata: Metadata = {
 
 export default function SettingsLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  unstable_setRequestLocale(locale);
   return (
     <div className="flex mx-auto w-full flex-col gap-4 md:gap-8 max-w-screen-lg">
       {children}

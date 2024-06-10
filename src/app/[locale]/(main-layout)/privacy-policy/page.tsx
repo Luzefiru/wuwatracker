@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Wuwa Tracker | Privacy Policy",
@@ -7,7 +8,13 @@ export const metadata: Metadata = {
     "This privacy policy document outlines the types of personal information that is received and collected by Wuwa Tracker and how it is used. Wuwa Tracker is a pity counter for Wuthering Waves, using the up-to-date data with global statistics and more.",
 };
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicy({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  unstable_setRequestLocale(locale);
+
   return (
     <div className="flex flex-col items-center h-full w-full gap-16 py-8">
       <div className="flex flex-col sm:text-start max-w-screen-md">

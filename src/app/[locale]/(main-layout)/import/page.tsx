@@ -3,8 +3,15 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import TutorialTabs from "@/components/import/tutorial-tabs";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Import() {
+export default function Import({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  unstable_setRequestLocale(locale);
+
   const t = useTranslations("Import");
 
   return (

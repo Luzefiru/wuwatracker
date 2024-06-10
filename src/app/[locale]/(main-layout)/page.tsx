@@ -5,8 +5,14 @@ import getFirstConveneBannerHref from "@/lib/getFirstConveneBannerHref";
 import { Spotlight } from "@/components/ui/spotlight";
 import { FAQ } from "@/components/home/faq";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function LandingPage() {
+export default function LandingPage({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("LandingPage");
 
   return (

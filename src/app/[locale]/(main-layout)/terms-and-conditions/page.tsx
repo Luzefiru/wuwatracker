@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | Wuwa Tracker",
@@ -7,7 +8,12 @@ export const metadata: Metadata = {
     "These terms and conditions outline the rules and regulations for the use of Wuwa Tracker's website and services.",
 };
 
-export default function TermsAndConditions() {
+export default function TermsAndConditions({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  unstable_setRequestLocale(locale);
   return (
     <div className="flex flex-col items-center h-full w-full gap-16 py-8">
       <div className="flex flex-col sm:text-start max-w-screen-md">

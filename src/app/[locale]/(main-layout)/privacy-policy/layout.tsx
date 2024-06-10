@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Wuwa Tracker | Privacy Policy",
@@ -8,8 +9,11 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  unstable_setRequestLocale(locale);
   return <>{children}</>;
 }

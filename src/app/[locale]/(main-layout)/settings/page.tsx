@@ -1,8 +1,14 @@
 import ConveneHistoryUrlSetting from "@/components/settings/convene-history-url-setting";
 import CloudSyncSetting from "@/components/settings/cloud-sync-setting";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Settings() {
+export default function Settings({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("Settings");
 
   return (

@@ -10,6 +10,8 @@ import { UserContextProvider } from "@/contexts/userContext";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import env from "@/config/env";
+import locales from "@/config/locales";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +29,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
@@ -52,4 +55,8 @@ export default async function RootLayout({
       </body>
     </html>
   );
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }

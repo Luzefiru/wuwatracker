@@ -3,8 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Home } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function NotFound() {
+export default function NotFound({
+  locale,
+}: Readonly<{
+  locale: string;
+}>) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("NotFound");
 
   return (
