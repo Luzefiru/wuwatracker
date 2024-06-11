@@ -1,7 +1,5 @@
-import { BannerTypeSlug } from "@/types/BannerTypeSlugEnum";
-
 export const bannerMetadata = {
-  [BannerTypeSlug["limited-character"]]: {
+  "limited-character": {
     cardPoolType: 1,
     title: "When Thunder Pours",
     description: "Featured Resonator Convene",
@@ -14,7 +12,7 @@ export const bannerMetadata = {
       "https://cdn.wanderer.moe/wuthering-waves/backgrounds/T_RoleShare_01.png",
     href: "/convene/limited-character",
   },
-  [BannerTypeSlug["limited-weapon"]]: {
+  "limited-weapon": {
     cardPoolType: 2,
     title: "Absolute Pulsation",
     description: "Featured Weapon Convene",
@@ -27,7 +25,7 @@ export const bannerMetadata = {
       "https://cdn.wanderer.moe/wuthering-waves/backgrounds/T_WeaponShare_06.png",
     href: "/convene/limited-weapon",
   },
-  [BannerTypeSlug["permanent-character"]]: {
+  "permanent-character": {
     cardPoolType: 3,
     title: "Tidal Chorus",
     description: "Permanent Character Convene",
@@ -40,7 +38,7 @@ export const bannerMetadata = {
       "https://cdn.wanderer.moe/wuthering-waves/backgrounds/T_RoleShare_04.png",
     href: "/convene/permanent-character",
   },
-  [BannerTypeSlug["permanent-weapon"]]: {
+  "permanent-weapon": {
     cardPoolType: 4,
     title: "Weapon Permanent Convene",
     description: "Winter Brume Banner",
@@ -53,7 +51,7 @@ export const bannerMetadata = {
       "https://cdn.wanderer.moe/wuthering-waves/backgrounds/T_WeaponShare_03.png",
     href: "/convene/permanent-weapon",
   },
-  [BannerTypeSlug["starter"]]: {
+  starter: {
     cardPoolType: 5,
     title: "Beginner Convene",
     description: "Utterance of Marvels",
@@ -66,7 +64,7 @@ export const bannerMetadata = {
       "https://cdn.wanderer.moe/wuthering-waves/luckdraw/T_LuckdraRole00.png",
     href: "/convene/starter",
   },
-  [BannerTypeSlug["starter-selector"]]: {
+  "starter-selector": {
     cardPoolType: 6,
     title: "Beginner's Choice Convene",
     description: "Beginner Selector",
