@@ -1,0 +1,353 @@
+{
+  "GachaItems": {
+    "Aalto": "Aalto",
+    "Baizhi": "Baizhi",
+    "Calcharo": "Calcharo",
+    "Chixia": "Chixia",
+    "Danjin": "Danjin",
+    "Encore": "Encore",
+    "Jianxin": "Jianxin",
+    "Jiyan": "Jiyan",
+    "Lingyang": "Lingyang",
+    "Mortefi": "Mortefi",
+    "Sanhua": "Sanhua",
+    "Taoqi": "Taoqi",
+    "Verina": "Verina",
+    "Yangyang": "Yangyang",
+    "Yinlin": "Yinlin",
+    "Yuanwu": "Yuanwu",
+
+    "Broadblade of Night": "Broadblade of Night",
+    "Broadblade of Voyager": "Broadblade of Voyager",
+    "Gauntlets of Night": "Gauntlets of Night",
+    "Gauntlets of Voyager": "Gauntlets of Voyager",
+    "Guardian Broadblade": "Guardian Broadblade",
+    "Guardian Gauntlets": "Guardian Gauntlets",
+    "Guardian Pistols": "Guardian Pistols",
+    "Guardian Rectifier": "Guardian Rectifier",
+    "Guardian Sword": "Guardian Sword",
+    "Originite: Type I": "Originite: Type I",
+    "Originite: Type II": "Originite: Type II",
+    "Originite: Type III": "Originite: Type III",
+    "Originite: Type IV": "Originite: Type IV",
+    "Originite: Type V": "Originite: Type V",
+    "Pistols of Night": "Pistols of Night",
+    "Pistols of Voyager": "Pistols of Voyager",
+    "Rectifier of Night": "Rectifier of Night",
+    "Rectifier of Voyager": "Rectifier of Voyager",
+    "Sword of Night": "Sword of Night",
+    "Sword of Voyager": "Sword of Voyager",
+
+    "Amity Accord": "Amity Accord",
+    "Autumntrace": "Autumntrace",
+    "Broadblade#41": "Broadblade#41",
+    "Cadenza": "Cadenza",
+    "Commando of Conviction": "Commando of Conviction",
+    "Comet Flare": "Comet Flare",
+    "Dauntless Evernight": "Dauntless Evernight",
+    "Discord": "Discord",
+    "Gauntlets#21D": "Gauntlets#21D",
+    "Helios Cleaver": "Helios Cleaver",
+    "Hollow Mirage": "Hollow Mirage",
+    "Jinzhou Keeper": "Jinzhou Keeper",
+    "Lumar Cutter": "Lunar Cutter",
+    "Lumingloss": "Lumingloss",
+    "Marcato": "Marcato",
+    "Novaburst": "Novaburst",
+    "Overture": "Overture",
+    "Pistols#26": "Pistols#26",
+    "Rectifier#25": "Rectifier#25",
+    "Scale: Slasher": "Scale: Slasher",
+    "Stonard": "Stonard",
+    "Sword#18": "Sword#18",
+    "Thunderbolt": "Thunderbolt",
+    "Undying Flame": "Undying Flame",
+    "Variation": "Variation",
+
+    "Abyss Surges": "Abyss Surges",
+    "Cosmic Ripples": "Cosmic Ripples",
+    "Emerald of Genesis": "Emerald of Genesis",
+    "Lustrous Razor": "Lustrous Razor",
+    "Static Mist": "Static Mist",
+    "Stringmaster": "Stringmaster",
+    "Verdant Summit": "Verdant Summit"
+  },
+
+  "GachaBanners": {
+    "Featured Resonator Convene": "Featured Resonator Convene",
+    "When Thunder Pours": "When Thunder Pours",
+    "Featured Weapon Convene": "Featured Weapon Convene",
+    "Absolute Pulsation": "Absolute Pulsation",
+    "Permanent Character Convene": "Permanent Character Convene",
+    "Tidal Chorus": "Tidal Chorus",
+    "Winter Brume Banner": "Winter Brume Banner",
+    "Weapon Permanent Convene": "Weapon Permanent Convene",
+    "Utterance of Marvels": "Utterance of Marvels",
+    "Beginner Convene": "Beginner Convene",
+    "Beginner Selector": "Beginner's Choice Convene",
+    "Beginner's Choice Convene": "Beginner's Choice Convene"
+  },
+
+  "Metadata": {
+    "Generic": {
+      "title": "Wuwa Tracker",
+      "description": "Un compteur de pitié pour Wuthering Waves, utilisant les données les plus récentes avec des statistiques globales et plus encore. Synchronisez vos données sur plusieurs appareils, partagez vos tirages avec vos amis et suivez facilement votre compte !"
+    },
+    "History": {
+      "title": "Wuwa Tracker | Historique",
+      "description": "Vérifiez vos dernières statistiques de tirage de Wuthering Waves ! Compteur de pitié Wuwa Tracker pour Wuthering Waves, utilisant les données les plus récentes avec des statistiques globales et plus encore. Partagez vos tirages avec vos amis et suivez votre compte !"
+    },
+    "Import": {
+      "title": "Wuwa Tracker | Importation",
+      "description": "Suivez notre tutoriel interactif pour afficher vos données de Wuthering Waves et voir vos statistiques. Compteur de pitié Wuwa Tracker pour Wuthering Waves, utilisant les données les plus récentes avec des statistiques globales et plus encore. Partagez vos tirages avec vos amis et suivez votre compte !"
+    },
+    "Settings": {
+      "title": "Wuwa Tracker | Paramètres",
+      "description": "Synchronisez vos données via Google en vous connectant. Gérez toutes vos données en un seul endroit. Compteur de pitié Wuwa Tracker pour Wuthering Waves, utilisant les données les plus récentes avec des statistiques globales et plus encore. Partagez vos tirages avec vos amis et suivez votre compte !"
+    },
+    "Privacy Policy": {
+      "title": "Politique de confidentialité",
+      "description": "Comprenez comment fonctionne Wuwa Tracker et quelles données sont stockées et utilisées pour améliorer votre expérience utilisateur. Compteur de pitié Wuwa Tracker pour Wuthering Waves, utilisant les données les plus récentes avec des statistiques globales et plus encore. Partagez vos tirages avec vos amis et suivez votre compte !"
+    },
+    "Terms & Conditions": {
+      "title": "Conditions générales",
+      "description": "Comprenez comment fonctionne Wuwa Tracker et quelles données sont stockées et utilisées pour améliorer votre expérience utilisateur. Compteur de pitié Wuwa Tracker pour Wuthering Waves, utilisant les données les plus récentes avec des statistiques globales et plus encore. Partagez vos tirages avec vos amis et suivez votre compte !"
+    },
+    "Sequences": {
+      "title": "Wuwa Tracker | Séquences",
+      "description": "Comptez et présentez vos Resonateurs et Armes en double et consultez les informations les concernant. Vous pouvez les montrer à vos amis !"
+    }
+  },
+
+  "Convene": {
+    "BannerStatsCard": {
+      "Astrites Spent": "Astrites Spent",
+      "Total Convenes": "Total Convenes",
+      "Pulls": "Pulls",
+      "Recent": "Recent",
+      "and": "and",
+      "Convenes": "Convenes",
+      "No records found": "No records found"
+    },
+    "Sidebar": {
+      "ConveneCategories": {
+        "No banners selected": "No banners selected",
+        "Convene Tracker": "Convene Tracker",
+        "Import": "Import"
+      }
+    },
+    "ConveneFilter": {
+      "Banners to Display": "Banners to Display",
+      "Reset": "Reset",
+      "Select All": "Select All"
+    },
+    "ConveneCategoryCard": {
+      "Pity": "Pity"
+    },
+    "PullHistory": {
+      "Pull History": "Pull History",
+      "Pull #": "Pull #",
+      "Item": "Item",
+      "Date Received": "Date Received",
+      "No records found": "No records found"
+    }
+  },
+
+  "Header": {
+    "History": "History",
+    "Import": "Import",
+    "Sequences": "Sequences",
+    "Settings": "Settings",
+    "Toggle navigation menu": "Toggle navigation menu",
+    "Privacy Policy": "Privacy Policy",
+    "SettingsDropdownButton": {
+      "Guest": "Guest",
+      "Settings": "Settings",
+      "Sync Data": "Sync Data",
+      "Support": "Support",
+      "DropDownSignInItem": {
+        "Signed out successfully": "Signed out successfully",
+        "Sign Out": "Sign Out",
+        "Warning: this feature is still experimental!": "Warning: this feature is still experimental!",
+        "Cloud Sync Warning": "Cloud sync is not guaranteed to work in all scenarios as it is a new website feature. By proceeding, you understand the risk that you may lose your previously imported URL. Would you still like to use cloud sync?",
+        "Cancel": "Cancel",
+        "I understand the risks": "I understand the risks",
+        "Sync Data with Google": "Sync Data with Google"
+      }
+    }
+  },
+
+  "Footer": {
+    "Developers": "Developers",
+    "Report a Bug": "Report a Bug",
+    "Support Us": "Support Us",
+    "Resources": "Resources",
+    "Wuthering Waves": "Wuthering Waves",
+    "Kuro Games": "Kuro Games",
+    "Terms & Conditions": "Terms & Conditions",
+    "Privacy Policy": "Privacy Policy",
+    "All game assets and trademarks are the property of their respective owners": "All game assets and trademarks are the property of their respective owners",
+    "Discord community": "Discord community"
+  },
+
+  "NotFound": {
+    "Whoops!": "Whoops!",
+    "Are you lost": "Are you lost",
+    "Rover": "Rover",
+    "The page you're looking for doesn't exist": "The page you're looking for doesn't exist",
+    "Go Home": "Go Home"
+  },
+
+  "LandingPage": {
+    "Track your Convene History": "Track your Convene History",
+    "Description": "Wuwa Tracker makes counting your pity easy. Once you set it up, your statistics will automatically refresh whenever you pull.",
+    "Import Tutorial": "Import Tutorial",
+    "Go to History": "Go to History",
+
+    "FAQ": {
+      "Where is my data being stored when I import?": "Where is my data being stored when I import?",
+      "Your URL is only saved to your web browser": "Your URL is only saved to your web browser",
+      "Clearing your browser data on this website will delete your stored data": "Clearing your browser data on this website will delete your stored data",
+      "If you want to check your history, you'll need to import it again": "If you want to check your history, you'll need to import it again",
+      "You also have to option to safely backup your URL using your Google Account inside the": "You also have to option to safely backup your URL using your Google Account inside the",
+      "Settings page": "Settings page",
+      "More information regarding our data collection can be found in our": "More information regarding our data collection can be found in our",
+      "Privacy Policy page": "Privacy Policy page",
+      "How do I know this website won't steal my data?": "How do I know this website won't steal my data?",
+      "Rest assured, we are players just like you and want to help Wuthering Waves grow by building useful tools for the all the Rovers in the world": "Rest assured, we are players just like you and want to help Wuthering Waves grow by building useful tools for the all the Rovers in the world",
+      "Your data will only be used for future site improvements, but for more information, please check our": "Your data will only be used for future site improvements, but for more information, please check our",
+      "My history is not automatically updating, what's wrong?": "My history is not automatically updating, what's wrong?",
+      "Just like in-game, your history does not instantly update": "Just like in-game, your history does not instantly update",
+      "Try checking again later to see if your history is updated, otherwise it could be a bug": "Try checking again later to see if your history is updated, otherwise it could be a bug",
+      "If you suspect that there's something wrong with this website, please": "If you suspect that there's something wrong with this website, please",
+      "You can": "You can",
+      "create an issue in our GitHub repository": "create an issue in our GitHub repository",
+      "How do I raise a bug report or suggest a feature?": "How do I raise a bug report or suggest a feature?",
+      "using the proper template so that we can address your concern as soon as possible": "using the proper template so that we can address your concern as soon as possible",
+      "Your contribution will help us create a better experience for our users, so we would greatly appreciate it!": "Your contribution will help us create a better experience for our users, so we would greatly appreciate it!",
+      "How can I support this website?": "How can I support this website?",
+      "Thank you for using this website": "Thank you for using this website",
+      "As you continue to use it, you also inspire us to keep improving it": "As you continue to use it, you also inspire us to keep improving it",
+      "If you want to support us financially, we have a": "If you want to support us financially, we have a",
+      "Ko-fi page": "Ko-fi page",
+      "to accept any donations to keep the website running!": "to accept any donations to keep the website running!"
+    }
+  },
+
+  "Settings": {
+    "Settings": "Settings",
+    "Edit your preferences for global statistics and synchronization here": "Edit your preferences for global statistics and synchronization here",
+
+    "ConveneHistoryUrlSetting": {
+      "Please input a valid Convene History URL": "Please input a valid Convene History URL",
+      "Successfully imported Convene History URL locally!": "Successfully imported Convene History URL locally!",
+      "Deleted local history data": "Deleted local history data",
+      "Convene History Data": "Convene History Data",
+      "Export or change your Convene History URL here": "Export or change your Convene History URL here",
+      "Your Convene History URL": "Your Convene History URL",
+      "Go to Import Tutorial": "Go to Import Tutorial",
+      "Delete your local data": "Delete your local data",
+      "Save": "Save"
+    },
+
+    "CloudSyncSetting": {
+      "Signed out successfully": "Signed out successfully",
+      "You must login before being able to sync": "You must login before being able to sync",
+      "Import your data first to start syncing": "Import your data first to start syncing",
+      "Data is in sync with your Google Account": "Data is in sync with your Google Account",
+      "Cloud Backup": "Cloud Backup",
+      "Description": "Save your data using your Google Account and access your data in any device. Once logged in, just click the \"Sync Data\" button to upload or download your data into your device.",
+      "Please sign in to start syncing!": "Please sign in to start syncing!",
+      "Sign In with Google": "Sign In with Google",
+      "Warning: this feature is still experimental!": "Warning: this feature is still experimental!",
+      "Cloud Sync Warning Description": "Cloud sync is not guaranteed to work in all scenarios as it is a new website feature. By proceeding, you understand the risk that you may lose your previously imported URL. Would you still like to use cloud sync?",
+      "Cancel": "Cancel",
+      "I understand the risks": "I understand the risks",
+      "Your local browser data is different from your Google Account data": "Your local browser data is different from your Google Account data",
+      "Log Out": "Log Out",
+      "Google Data": "Google Data",
+      "Browser Data": "Browser Data",
+      "Your local data with player ID": "Your local data with player ID",
+      "conflicts with your Google Account's player ID": "conflicts with your Google Account's player ID",
+      "Would you like to keep your browser's local data or would you like to use your Google Account data instead": "Would you like to keep your browser's local data or would you like to use your Google Account data instead"
+    }
+  },
+
+  "Import": {
+    "Import Convene History": "Import Convene History",
+    "Select your platform and follow the tutorial to start tracking your Convene history!": "Select your platform and follow the tutorial to start tracking your Convene history!",
+    "Back": "Back",
+    "TutorialTabs": {
+      "PC": "PC",
+      "Android": "Android",
+      "Disclaimer": "Disclaimer",
+      "This method is not yet thoroughly tested, so use this at your own risk": "This method is not yet thoroughly tested, so use this at your own risk",
+      "Please join our": "Please join our",
+      "Discord Server": "Discord Server",
+      "to ask for any help!": "to ask for any help!",
+
+      "AndroidImportTutorial": {
+        "Invalid Convene History URL": "Invalid Convene History URL",
+        "Successfully imported Convene History URL!": "Successfully imported Convene History URL!",
+        "Use Ascent To Get Convene History URL": "Use Ascent To Get Convene History URL",
+        "Similar to getting your history in Genshin Impact or Honkai Star Rail, follow": "Similar to getting your history in Genshin Impact or Honkai Star Rail, follow",
+        "this guide by": "this guide by",
+        "to download and use": "to download and use",
+        "to get your URL": "to get your URL",
+        "Note": "Note",
+        "Wuwa Tracker is not directly associated with Ascent, so please use this method at your own risk": "Wuwa Tracker is not directly associated with Ascent, so please use this method at your own risk",
+        "This method only supports Android versions 11 and above": "This method only supports Android versions 11 and above",
+        "If it's not working properly, check the": "If it's not working properly, check the",
+        "troubleshooting section": "troubleshooting section",
+        "Paste the URL Here": "Paste the URL Here",
+        "Your Convene History URL": "Your Convene History URL",
+        "Press the \"Import History\" Button on this Website": "Press the \"Import History\" Button on this Website",
+        "Need Help?": "Need Help?",
+        "PC Import Tutorial Video": "PC Import Tutorial Video",
+        "First, read this carefully read": "First, read this carefully read",
+        "this text guide": "this text guide",
+        "then follow this": "then follow this",
+        "YouTube video": "YouTube video",
+        "to get your data on Android": "to get your data on Android",
+        "All credits goes to": "All credits goes to",
+        "Import History": "Import History"
+      },
+
+      "PCImportTutorial": {
+        "Invalid Game Path": "Invalid Game Path",
+        "Invalid Convene History URL": "Invalid Convene History URL",
+        "Successfully imported Convene History URL!": "Successfully imported Convene History URL!",
+        "Copy Your Installation Directory": "Copy Your Installation Directory",
+        "Find the folder that contains \"Wuthering Waves exe\" and a \"Client\" folder": "Find the folder that contains \"Wuthering Waves.exe\" and a \"Client\" folder.",
+        "Your installation directory": "Your installation directory",
+        "Warning: If you edited your": "Warning: If you edited your",
+        "file to disable logs, you'll have to re-enable them before opening your convene history, otherwise the script won't work": "file to disable logs, you'll have to re-enable them before opening your convene history, otherwise the script won't work",
+        "Launch Wuthering Waves on PC and Open Your In-game Convene History": "Launch Wuthering Waves on PC and Open Your In-game Convene History",
+        "Afterwards, open Windows PowerShell, and then paste the following script": "Afterwards, open Windows PowerShell, and then paste the following script",
+        "Input a valid installation directory first!": "Input a valid installation directory first!",
+        "Stuck? Click the “Need Help?” button": "Stuck? Click the “Need Help?” button",
+        "Note: The script does not edit your files, it simply extracts the URL from your logs": "Note: The script does not edit your files, it simply extracts the URL from your logs",
+        "You can view the script": "You can view the script",
+        "here": "here",
+        "Paste the URL Here": "Paste the URL Here",
+        "Your Convene History URL": "Your Convene History URL",
+        "Press the \"Import History\" Button on this Website": "Press the \"Import History\" Button on this Website",
+        "Need Help?": "Need Help?",
+        "PC Import Tutorial Video": "PC Import Tutorial Video",
+        "Follow this step-by-step YouTube tutorial to import your data on PC": "Follow this step-by-step YouTube tutorial to import your data on PC",
+        "Please join our": "Please join our",
+        "Discord Server": "Discord Server",
+        "to ask for any help!": "to ask for any help!",
+        "Import History": "Import History"
+      }
+    }
+  },
+
+  "Sequences": {
+    "Character": "Character",
+    "Weapon": "Weapon",
+    "Sequences": "Sequences",
+    "Weapon Sequences": "Weapon Sequences",
+    "Note: This only includes sequences earned within your convene history": "Note: This only includes sequences earned within your convene history"
+  }
+}
