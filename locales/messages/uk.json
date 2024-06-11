@@ -18,25 +18,25 @@
     "Yuanwu": "Янву",
 
     "Broadblade of Night": "Широке лезо Ночі",
-    "Broadblade of Voyager": "Широке лезо Вояджера",
+    "Broadblade of Voyager": "Широке лезо Мандрівника",
     "Gauntlets of Night": "Рукавиці Ночі",
-    "Gauntlets of Voyager": "Рукавиці Вояджера",
+    "Gauntlets of Voyager": "Рукавиці Мандрівника",
     "Guardian Broadblade": "Широкий клинок Вартового",
-    "Guardian Gauntlets": "Руковиці Вартового",
+    "Guardian Gauntlets": "Рукавиці Вартового",
     "Guardian Pistols": "Пістолети Вартового",
     "Guardian Rectifier": "Випрямляч Вартового",
-    "Guardian Sword": "Вартового меч",
+    "Guardian Sword": "Меч Вартового",
     "Originite: Type I": "Оригініт: Тип I",
     "Originite: Type II": "Оригініт: Тип II",
     "Originite: Type III": "Оригініт: Тип III",
     "Originite: Type IV": "Оригініт: Тип IV",
     "Originite: Type V": "Оригініт: Тип V",
     "Pistols of Night": "Пістолети Ночі",
-    "Pistols of Voyager": "Пістолети Вояджера",
+    "Pistols of Voyager": "Пістолети Мандрівника",
     "Rectifier of Night": "Випрямляч Ночі",
-    "Rectifier of Voyager": "Випрямляч Вояджера",
+    "Rectifier of Voyager": "Випрямляч Мандрівника",
     "Sword of Night": "Меч Ночі",
-    "Sword of Voyager": "Меч Вояджера",
+    "Sword of Voyager": "Меч Мандрівника",
 
     "Amity Accord": "Дружня угода",
     "Autumntrace": "Осінній слід",
@@ -57,7 +57,7 @@
     "Overture": "Увертюра",
     "Pistols#26": "Пістолети#26",
     "Rectifier#25": "Випрямляч#25",
-    "Scale: Slasher": "Масштаб: Слэшер",
+    "Scale: Slasher": "Масштаб: Слешер",
     "Stonard": "Стонард",
     "Sword#18": "Меч#18",
     "Thunderbolt": "Блискавка",
@@ -91,31 +91,31 @@
   "Metadata": {
     "Generic": {
       "title": "Wuwa Tracker",
-      "description": "Лічильник удачі та круток для Wuthering Waves, використовуючи актуальні дані з глобальною статистикою та інше. Синхронізуйте свої дані між пристроями, діліться своїми результатами з друзями та легко відстежуйте в своєму обліковому записі!"
+      "description": "Лічильник удачі та круток для Wuthering Waves, який використовує актуальні дані з глобальною статистикою та інше. Синхронізуйте свої дані між пристроями, діліться своїми результатами з друзями та легко відстежуйте в своєму обліковому записі!"
     },
     "History": {
       "title": "Wuwa Tracker | Історія",
-      "description": "Перевір свій останній витягувань Wuthering Waves в статистиці! Wuwa Tracker лічилнний пулів Wuthering Waves, використовує оновленні дані з глобальної статистики та більше. Діліться своїми результатами з друзями та відстежуйте свій обліковий запис!"
+      "description": "Перевірте свою історію витягувань Wuthering Waves в статистиці! Wuwa Tracker лічільник пулів Wuthering Waves, який використовує оновленні дані з глобальної статистики та інше. Діліться своїми результатами з друзями та відстежуйте свій обліковий запис!"
     },
     "Import": {
       "title": "Wuwa Tracker | Імпорт",
-      "description": "Слідуйте нашому інтерактивному підручнику, щоб відобразити свої дані з Wuthering Waves та переглянути свою статистику. Лічильник удачі та круток Wuwa Tracker для Wuthering Waves, використовуючи актуальні дані з глобальною статистикою та інше. Діліться своїми результатами з друзями та відстежуйте свій обліковий запис!"
+      "description": "Слідуйте нашій інтерактивній інструкції, щоб відобразити свої дані з Wuthering Waves та переглянути свою статистику. Лічильник удачі та круток Wuwa Tracker для Wuthering Waves, використовує актуальні дані з глобальною статистикою та інше. Діліться своїми результатами з друзями та відстежуйте свій обліковий запис!"
     },
     "Settings": {
       "title": "Wuwa Tracker | Налаштування",
-      "description": "Синхронізуйте свої дані через Google, увійшовши в систему. Керуйте своїми даними в одному місці. Лічильник удачі Wuwa Tracker для Wuthering Waves, використовуючи актуальні дані з глобальною статистикою та інше. Діліться своїми результатами з друзями та відстежуйте свій обліковий запис!"
+      "description": "Синхронізуйте свої дані через Google, увійшовши в систему. Керуйте своїми даними в одному місці. Лічильник удачі Wuwa Tracker для Wuthering Waves, використовує актуальні дані з глобальною статистикою та інше. Діліться своїми результатами з друзями та відстежуйте свій обліковий запис!"
     },
     "Privacy Policy": {
       "title": "Політика конфіденційності",
-      "description": "Розумміня як Wuwa Tracker працює і які дані зберігаються та використовуються для покращення вашого користувацького досвіду. Лічильник удачі Wuwa Tracker для Wuthering Waves, використовуючи актуальні дані з глобальною статистикою та інше. Діліться своїми результатами з друзями та відстежуйте свій обліковий запис!"
+      "description": "Інформація як Wuwa Tracker працює і які дані зберігаються та використовуються для покращення вашого користувацького досвіду. Лічильник удачі Wuwa Tracker для Wuthering Waves, використовує актуальні дані з глобальною статистикою та інше. Діліться своїми результатами з друзями та відстежуйте свій обліковий запис!"
     },
     "Terms & Conditions": {
       "title": "Умови та положення",
-      "description": "Зрозумійте, як працює Wuwa Tracker і які дані зберігаються та використовуються для покращення вашого користувацького досвіду. Лічильник удачі Wuwa Tracker для Wuthering Waves, використовуючи актуальні дані з глобальною статистикою та інше. Діліться своїми результатами з друзями та відстежуйте свій обліковий запис!"
+      "description": "Інформація як працює Wuwa Tracker і які дані зберігаються та використовуються для покращення вашого користувацького досвіду. Лічильник удачі Wuwa Tracker для Wuthering Waves, використовує актуальні дані з глобальною статистикою та інше. Діліться своїми результатами з друзями та відстежуйте свій обліковий запис!"
     },
     "Sequences": {
       "title": "Wuwa Tracker | Послідовності",
-      "description": "ідраховуйте та демонструйте свої дублікати Резонаторів і Зброї та переглядайте інформацію про них. Ви можете демонструвати їх своїм друзям!"
+      "description": "Підраховуйте та демонструйте свої дублікати Резонаторів і Зброї та переглядайте інформацію про них. Ви можете демонструвати їх своїм друзям!"
     }
   },
 
@@ -123,8 +123,8 @@
     "BannerStatsCard": {
       "Astrites Spent": "Витрачено Астрітів",
       "Total Convenes": "Всього Скликань",
-      "Pulls": "Крутоки",
-      "Recent": "Недавні",
+      "Pulls": "Крутки",
+      "Recent": "Нещодавні",
       "and": "та",
       "Convenes": "Скликань",
       "No records found": "Записів не знайдено"
@@ -169,7 +169,7 @@
         "Signed out successfully": "Вихід виконано успішно",
         "Sign Out": "Вийти",
         "Warning: this feature is still experimental!": "Увага: ця функція поки що експериментальна!",
-        "Cloud Sync Warning": "Хмарна синхронізація не гарантує, що вона буде працювати у всіх сценаріях, оскільки це нова функція веб-сайту. Продовжуючи, ви розумієте, що можете втратити раніше імпортовану URL-адресу. Ви все ще хочете використовувати хмарну синхронізацію?",
+        "Cloud Sync Warning": "Хмарна синхронізація не гарантує, що вона буде працювати у всіх сценаріях, оскільки це нова функція веб-сайту. Продовжуючи, ви розумієте, що можете втратити раніше імпортовану URL-адресу. Ви впевнені що все ще хочете використовувати хмарну синхронізацію?",
         "Cancel": "Відмінити",
         "I understand the risks": "Я погоджуюсь на ризик",
         "Sync Data with Google": "Синхронізація даних з Google"
@@ -210,9 +210,9 @@
       "Clearing your browser data on this website will delete your stored data": "Очищення даних браузера на цьому веб-сайті призведе до видалення ваших збережених даних",
       "If you want to check your history, you'll need to import it again": "Якщо ви хочете перевірити свою історію, вам потрібно буде імпортувати її знову",
       "You also have to option to safely backup your URL using your Google Account inside the": "Ви також можете безпечно створити резервну копію URL-адреси за допомогою свого облікового запису Google у розділі",
-      "Settings page": "налаштувань",
+      "Settings page": "Налаштування",
       "More information regarding our data collection can be found in our": "Більше інформації про наш збір даних можна знайти в сторінці",
-      "Privacy Policy page": "Політики конфіденційності",
+      "Privacy Policy page": "Політика конфіденційності",
       "How do I know this website won't steal my data?": "Як я можу бути впевнений, що цей сайт не вкраде мої дані?",
       "Rest assured, we are players just like you and want to help Wuthering Waves grow by building useful tools for the all the Rovers in the world": "Будьте певні, ми такі ж гравці, як і ви, і хочемо допомогти Wuthering Waves розвиватися, створюючи корисні інструменти для всіх Роверів у світі",
       "If you want to make sure, this website is open source and you can view the code & scripts anytime at our": "Якщо ви хочете переконатися в цьому, цей веб-сайт має відкритий вихідний код, і ви можете переглянути код і скрипти в будь-який час на нашому",
@@ -222,12 +222,12 @@
       "Try checking again later to see if your history is updated, otherwise it could be a bug": "Спробуйте перевірити ще раз пізніше, щоб переконатися, що історія оновилася, інакше це може бути помилкою",
       "If you suspect that there's something wrong with this website, please": "Якщо ви підозрюєте, що з цим сайтом щось не так, будь ласка",
       "You can": "Ви можете",
-      "create an issue in our GitHub repository": "строрити issue на нашому GitHub репозиторію",
+      "create an issue in our GitHub repository": "створити issue на нашому GitHub репозиторію",
       "How do I raise a bug report or suggest a feature?": "Як створити звіт про помилку або запропонувати функцію?",
       "using the proper template so that we can address your concern as soon as possible": "використовуючи відповідний шаблон, щоб ми могли вирішити вашу проблему якнайшвидше",
       "Your contribution will help us create a better experience for our users, so we would greatly appreciate it!": "Ваш внесок допоможе нам створити кращий досвід для наших користувачів, тому ми будемо дуже вдячні!",
       "How can I support this website?": "Як я можу підтримати цей сайт?",
-      "Thank you for using this website": "Дякую вам за використанням нагого сайту!",
+      "Thank you for using this website": "Дякую вам за використанням нашого сайту!",
       "As you continue to use it, you also inspire us to keep improving it": "Користуючись ним надалі, ви також надихаєте нас на подальше вдосконалення",
       "If you want to support us financially, we have a": "Якщо ви хочете підтримати нас фінансово, у нас є строрінка на",
       "Ko-fi page": "Ko-fi",
@@ -237,11 +237,11 @@
 
   "Settings": {
     "Settings": "Settings",
-    "Edit your preferences for global statistics and synchronization here": "Відредагуйте свої налаштування глобальної статистики та синхронізації тут",
+    "Edit your preferences for global statistics and synchronization here": "Керуйте своїми налаштуваннями глобальної статистики та синхронізації тут",
 
     "ConveneHistoryUrlSetting": {
-      "Please input a valid Convene History URL": "Будь ласка, введіть дійсну URL-адресу історії Скликань",
-      "Successfully imported Convene History URL locally!": "Успішно імпортовано URL-адресу  історії Скликань локально!",
+      "Please input a valid Convene History URL": "Будь-ласка, введіть дійсну URL-адресу історії Скликань",
+      "Successfully imported Convene History URL locally!": "Успішно імпортовано URL-адресу історії Скликань локально!",
       "Deleted local history data": "Видалити локальні дані Історії",
       "Convene History Data": "Дані істрої Скликань",
       "Export or change your Convene History URL here": "Експортуйте або змініть свою URL-адресу історії Скликань тут",
@@ -285,7 +285,7 @@
       "This method is not yet thoroughly tested, so use this at your own risk": "Цей метод ще не був ретельно протестований, тому використовуйте його на свій страх і ризик",
       "Please join our": "Будь ласка, приєднуйтесь до нашого",
       "Discord Server": "Discord сервера",
-      "to ask for any help!": "просити про будь-яку допомогу!",
+      "to ask for any help!": "щоб отримати допомогу!",
 
       "AndroidImportTutorial": {
         "Invalid Convene History URL": "Невірна URL-адреса історії Скликань",
@@ -326,7 +326,7 @@
         "Launch Wuthering Waves on PC and Open Your In-game Convene History": "Запустіть Wuthering Waves на ПК та відкрийте історію ігрових Скликань",
         "Afterwards, open Windows PowerShell, and then paste the following script": "Після цього відкрийте Windows PowerShell, а потім вставте наступний скрипт",
         "Input a valid installation directory first!": "Спочатку введіть правильний каталог встановлення!",
-        "Stuck? Click the “Need Help?” button": "Застрягли? Натисніть кнопку «Потрібна допомога?»",
+        "Stuck? Click the “Need Help?” button": "Щось не так? Натисніть кнопку «Потрібна допомога?»",
         "Note: The script does not edit your files, it simply extracts the URL from your logs": "Примітка: Скрипт не редагує ваші файли, він просто витягує URL-адресу з журналу.",
         "You can view the script": "Ви можете переглянути скрипт",
         "here": "тут",
@@ -338,7 +338,7 @@
         "Follow this step-by-step YouTube tutorial to import your data on PC": "Дотримуйтесь цієї покрокової інструкції на YouTube, щоб імпортувати ваші дані на ПК",
         "Please join our": "Будь ласка, приєднуйтесь до нашого",
         "Discord Server": "серверу Discord",
-        "to ask for any help!": "щоб попросити будь-яку допомогу!",
+        "to ask for any help!": "щоб отримати допомогу!",
         "Import History": "Імпортувати історію"
       }
     }
