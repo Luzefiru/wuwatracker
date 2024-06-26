@@ -85,4 +85,29 @@ export const events: { banners: Event[]; activities: Event[] } = {
       endDate: '2024-06-27 03:59',
     },
   ],
+  recurring: [
+    {
+      id: 80000,
+      name: 'Tower of Adversity',
+      img: 'https://i.gyazo.com/7d3c94f6f59e9074babfe060ac1ae2e5.png',
+      startDate: '2024-06-23 04:00',
+      endDate: '2024-07-08 03:59',
+    },
+    {
+      id: 80501,
+      name: 'Depths of Illusive Realm',
+      img: 'https://i.gyazo.com/b4e79733131536f81036e57d556ce091.jpg',
+      startDate: '2024-05-23 04:00',
+      endDate: '2024-06-26 03:59',
+    },
+        {
+      id: 80502,
+      name: 'Depths of Illusive Realm',
+      img: 'https://i.gyazo.com/b4e79733131536f81036e57d556ce091.jpg',
+      startDate: '2024-06-26 04:00',
+      endDate: '2024-07-30 03:59',
+    },
+
+    
+  ],
 };
