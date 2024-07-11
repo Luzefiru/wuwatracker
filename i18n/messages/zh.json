@@ -98,62 +98,62 @@
   "Metadata": {
     "Generic": {
       "title": "Wuwa Tracker",
-      "description": "Wuthering Waves 的哀歌計數器，使用最新數據和全球統計等。在設備間同步數據，與朋友分享抽卡結果，輕鬆追踪您的帳戶！"
+      "description": "Wuthering Waves的哀歌计数器，使用最新数据和全球统计信息等。在设备间同步数据，与朋友分享抽卡结果，并轻松跟踪您的账户！"
     },
     "Achievements": {
       "title": "成就 - Wuwa Tracker",
-      "description": "追踪您在 Wuthering Waves 中的成就，自由導入/導出數據至各設備！Wuwa Tracker 是 Wuthering Waves 的哀歌計數器，使用最新數據和全球統計等。與朋友分享抽卡結果，輕鬆追踪您的帳戶！"
+      "description": "跟踪您在Wuthering Waves中的成就，并自由导入/导出数据至各设备！Wuwa Tracker 是Wuthering Waves的哀歌计数器，使用最新数据和全球统计信息等。与朋友分享抽卡结果，并轻松跟踪您的账户！"
     },
     "Convene": {
       "Index": {
-        "title": "歷史會集記錄 - Wuwa Tracker",
-        "description": "查看您在 Wuthering Waves 中的更新抽卡統計和最近的會集記錄。使用適合截圖的儀表板向朋友炫耀！Wuwa Tracker 是 Wuthering Waves 的哀歌計數器，使用最新數據和全球統計等。與朋友分享抽卡結果，輕鬆追踪您的帳戶！"
+        "title": "历史会集记录 - Wuwa Tracker",
+        "description": "查看您在Wuthering Waves中的更新抽卡统计和最近的会集记录。使用适合截图的仪表板向朋友炫耀！Wuwa Tracker 是Wuthering Waves的哀歌计数器，使用最新数据和全球统计信息等。与朋友分享抽卡结果，并轻松跟踪您的账户！"
       },
       "Global": {
-        "title": "全球統計數據 - Wuwa Tracker",
-        "description": "查看 {currentBanner} 橫幅的全球抽卡統計數據，特色是 {currentFeaturedResonator}！使用適合截圖的儀表板向朋友炫耀！Wuwa Tracker 是 Wuthering Waves 的哀歌計數器，使用最新數據和全球統計等。與朋友分享抽卡結果，輕鬆追踪您的帳戶！"
+        "title": "全球统计数据 - Wuwa Tracker",
+        "description": "查看{currentBanner}横幅的全球抽卡统计数据，特色是{currentFeaturedResonator}！使用适合截图的仪表板向朋友炫耀！Wuwa Tracker 是Wuthering Waves的哀歌计数器，使用最新数据和全球统计信息等。与朋友分享抽卡结果，并轻松跟踪您的账户！"
       },
       "Share": {
-        "title": "分享歷史記錄 - Wuwa Tracker",
-        "description": "創建一張包含您的抽卡歷史的會集記錄卡片，與朋友分享！Wuwa Tracker 是 Wuthering Waves 的哀歌計數器，使用最新數據和全球統計等。與朋友分享抽卡結果，輕鬆追踪您的帳戶！"
+        "title": "分享历史记录 - Wuwa Tracker",
+        "description": "创建一张包含您的抽卡历史的会集记录卡片，与朋友分享！Wuwa Tracker 是Wuthering Waves的哀歌计数器，使用最新数据和全球统计信息等。与朋友分享抽卡结果，并轻松跟踪您的账户！"
       }
     },
     "Error": {
-      "title": "發生錯誤",
-      "description": "使用 Wuwa Tracker 時發生錯誤。請將報告發送至我們的 Discord 伺服器，以便我們盡快解決問題。"
+      "title": "发生错误",
+      "description": "使用Wuwa Tracker时发生错误。请将报告发送到我们的Discord服务器，以便我们尽快解决问题。"
     },
     "Import": {
-      "title": "導入會集歷史 - Wuwa Tracker",
-      "description": "按照我們的互動教程顯示您的 Wuthering Waves 數據並查看您的統計信息。我們支持從 PC、Android 和 iOS 設備導入數據，使用自動方法。Wuwa Tracker 是 Wuthering Waves 的哀歌計數器，使用最新數據和全球統計等。與朋友分享抽卡結果，輕鬆追踪您的帳戶！"
+      "title": "导入会集历史 - Wuwa Tracker",
+      "description": "按照我们的互动教程显示您的Wuthering Waves数据并查看您的统计信息。我们支持从PC、Android和iOS设备导入数据，采用自动方法。Wuwa Tracker 是Wuthering Waves的哀歌计数器，使用最新数据和全球统计信息等。与朋友分享抽卡结果，并轻松跟踪您的账户！"
     },
     "Not Found": {
-      "title": "未找到頁面",
-      "description": "在 Wuwa Tracker 上找不到此頁面。請返回主頁開始追踪您的 Wuthering Waves 會集歷史數據。"
+      "title": "未找到页面",
+      "description": "Wuwa Tracker上找不到此页面。请返回主页面开始跟踪您的Wuthering Waves会集历史数据。"
     },
     "Privacy Policy": {
-      "title": "隱私政策 - Wuwa Tracker",
-      "description": "本隱私政策文件概述了 Wuwa Tracker 接收和收集的個人信息類型及其使用方式。Wuwa Tracker 是 Wuthering Waves 的哀歌計數器，使用最新數據和全球統計等。"
+      "title": "隐私政策 - Wuwa Tracker",
+      "description": "本隐私政策文件概述了Wuwa Tracker接收和收集的个人信息类型及其使用方式。Wuwa Tracker 是Wuthering Waves的哀歌计数器，使用最新数据和全球统计信息等。"
     },
     "Sequences": {
       "title": "序列 - Wuwa Tracker",
-      "description": "計算並展示您的重複共振器和武器，並查看與它們相關的信息。您可以向朋友展示它們！"
+      "description": "计算和展示您的重复共振器和武器，并查看与它们相关的信息。您可以向朋友展示它们！"
     },
     "Settings": {
-      "title": "設置 - Wuwa Tracker",
-      "description": "通過 Google 登錄以同步您的數據。在一個地方管理您的 Wuthering Waves 抽卡數據。Wuwa Tracker 是 Wuthering Waves 的哀歌計數器，使用最新數據和全球統計等。與朋友分享抽卡結果，輕鬆追踪您的帳戶！"
+      "title": "设置 - Wuwa Tracker",
+      "description": "通过Google登录以同步您的数据。在一个地方管理您的Wuthering Waves抽卡数据。Wuwa Tracker 是Wuthering Waves的哀歌计数器，使用最新数据和全球统计信息等。与朋友分享抽卡结果，并轻松跟踪您的账户！"
     },
     "Terms & Conditions": {
-      "title": "條款和條件 - Wuwa Tracker",
-      "description": "本條款和條件概述了 Wuwa Tracker 網站和服務的使用規則和規定。"
+      "title": "条款和条件 - Wuwa Tracker",
+      "description": "本条款和条件概述了Wuwa Tracker网站和服务的使用规则和规定。"
     },
     "Timeline": {
-      "title": "事件時間線 - Wuwa Tracker",
-      "description": "使用您的本地時區或任何 Wuthering Waves 伺服器時區，您可以查看每個橫幅時間表、遊戲內事件、逆境之塔和幻境深淵的期間 - 一切盡在一處。Wuwa Tracker 是 Wuthering Waves 的哀歌計數器，使用最新數據和全球統計等。與朋友分享抽卡結果，輕鬆追踪您的帳戶！"
+      "title": "事件时间线 - Wuwa Tracker",
+      "description": "使用您的本地时区或任何Wuthering Waves服务器时区，您可以查看每个横幅时间表、游戏内事件、逆境之塔和幻境深渊的期间 - 一切尽在一处。Wuwa Tracker 是Wuthering Waves的哀歌计数器，使用最新数据和全球统计信息等。与朋友分享抽卡结果，并轻松跟踪您的账户！"
     }
   },
   "Layout": {
     "LocaleSwitcher": {
-      "label": "幫助翻譯"
+      "label": "帮助翻译"
     }
   },
   "Dashboard": {
