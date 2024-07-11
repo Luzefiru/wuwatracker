@@ -18,7 +18,6 @@
     "Yangyang": "Yangyang",
     "Yinlin": "Yinlin",
     "Yuanwu": "Yuanwu",
-
     "Abyss Surges": "Abyss Surges",
     "Ages of Harvest": "Ages of Harvest",
     "Amity Accord": "Amity Accord",
@@ -75,7 +74,6 @@
     "Variation": "Variation",
     "Verdant Summit": "Verdant Summit"
   },
-
   "CardPoolNames": {
     "Featured Resonator": "Featured Resonator",
     "Featured Weapon": "Featured Weapon",
@@ -84,19 +82,19 @@
     "Beginner Convene": "Beginner Convene",
     "Beginner's Choice": "Beginner's Choice",
     "Selector Ticket": "Selector Ticket",
-
     "Tidal Chorus": "Tidal Chorus",
     "Winter Brume Banner": "Winter Brume Banner",
     "Utterance of Marvels": "Utterance of Marvels",
     "Beginner Selector": "Beginner's Choice Convene",
     "Convene Giveback Event": "Absolute Pulsation",
-
     "Absolute Pulsation": "Absolute Pulsation",
     "Prevail the Lasting Night": "Prevail the Lasting Night",
     "When Thunder Pours": "When Thunder Pours",
     "Thawborn Renewal": "Thawborn Renewal"
   },
-
+  "Common": {
+    "Import History": "Import History"
+  },
   "Metadata": {
     "Generic": {
       "title": "Wuwa Tracker",
@@ -153,13 +151,11 @@
       "description": "Sử dụng múi giờ địa phương của bạn hoặc bất kỳ múi giờ máy chủ Wuthering Waves nào để xem lịch biểu của từng biểu ngữ, các sự kiện trong trò chơi, Tháp Cản Trở & Các Câu chuyện về Diệu Hư không gian - tất cả trong một nơi. Wuwa Tracker là bộ đếm tiếc thương cho Wuthering Waves, sử dụng dữ liệu mới nhất với thống kê toàn cầu và nhiều tính năng khác. Chia sẻ kết quả với bạn bè và dễ dàng theo dõi tài khoản!"
     }
   },
-
   "Layout": {
     "LocaleSwitcher": {
       "label": "Hỗ trợ dịch"
     }
   },
-
   "Dashboard": {
     "title": "Dashboard",
     "Greeting": {
@@ -177,7 +173,6 @@
     "Tutorial": {
       "title": "Get Started",
       "description": "Welcome, Rover. Let's get you started, shall we?",
-      "Import History": "Import History",
       "View Pull History": "View Pull History",
       "Sync Your Data": "Sync Your Data",
       "Your data will now sync automatically!": "Your data will now sync automatically!"
@@ -190,7 +185,6 @@
       "title": "Community"
     }
   },
-
   "Achievements": {
     "title": "Achievements",
     "description": "Credits to <link>StarDB's WuWa Achievements V1.1 spreadsheet</link> for the initial data.",
@@ -216,7 +210,6 @@
       "Need Tips?": "Need Tips?"
     }
   },
-
   "Convene": {
     "title": "Convene Tracker",
     "ConveneCategoryGlobal": {
@@ -291,7 +284,6 @@
       "Download": "Download"
     }
   },
-
   "Import": {
     "Import Tutorial": "Import Tutorial",
     "PC": {
@@ -309,7 +301,6 @@
       "description": "If the automatic method doesn't work for you, try doing it manually using the other tutorial. If you still need help, please visit our <link>Discord Server</link>.",
       "description-android": "If the first method doesn't work for you, try the other one. If you still need help, please visit our <link>Discord Server</link>."
     },
-
     "PC1Tutorial": {
       "invalid-url": "Invalid Convene History URL.",
       "import-success": "Successfully imported Convene History URL!",
@@ -326,10 +317,8 @@
       },
       "3": {
         "title": "Press the \"Import History\" Button on this Website"
-      },
-      "Import History": "Import History"
+      }
     },
-
     "PC2Tutorial": {
       "invalid-url": "Invalid Convene History URL.",
       "import-success": "Successfully imported Convene History URL!",
@@ -352,10 +341,8 @@
       },
       "Video Tutorial": "Video Tutorial",
       "PC Import Tutorial Video": "PC Import Tutorial Video",
-      "video-tutorial-desc": "Follow this step-by-step YouTube tutorial by <highlight>cacaowithwater</highlight> from our <link>Discord Server</link> to import your data on PC.",
-      "Import History": "Import History"
+      "video-tutorial-desc": "Follow this step-by-step YouTube tutorial by <highlight>cacaowithwater</highlight> from our <link>Discord Server</link> to import your data on PC."
     },
-
     "PC3Tutorial": {
       "invalid-path": "Invalid Game Path",
       "invalid-url": "Invalid Convene History URL",
@@ -382,10 +369,8 @@
       },
       "Video Tutorial": "Video Tutorial",
       "PC Import Tutorial Video": "PC Import Tutorial Video",
-      "video-tutorial-desc": "Follow this step-by-step YouTube tutorial to import your data on PC. Please join our <link>Discord Server</link> to ask for any help!",
-      "Import History": "Import History"
+      "video-tutorial-desc": "Follow this step-by-step YouTube tutorial to import your data on PC. Please join our <link>Discord Server</link> to ask for any help!"
     },
-
     "IOSTutorial": {
       "invalid-json": "Invalid JSON data - make sure to copy the semicolons",
       "invalid-url": "Invalid Convene History URL",
@@ -402,10 +387,8 @@
       },
       "3": {
         "title": "Press the \"Import History\" Button on this Website"
-      },
-      "Import History": "Import History"
+      }
     },
-
     "Android1Tutorial": {
       "invalid-url": "Invalid Convene History URL",
       "import-success": "Successfully imported Convene History URL!",
@@ -424,10 +407,8 @@
       },
       "Video Tutorial": "Video Tutorial",
       "Android Ascent Import Tutorial Video": "Android Ascent Import Tutorial Video",
-      "video-tutorial-desc": "First, read this carefully read <guide>this text guide</guide> then follow this <video>YouTube video</video> to get your data on Android. All credits goes to Mirai0009.",
-      "Import History": "Import History"
+      "video-tutorial-desc": "First, read this carefully read <guide>this text guide</guide> then follow this <video>YouTube video</video> to get your data on Android. All credits goes to Mirai0009."
     },
-
     "Android2Tutorial": {
       "invalid-url": "Invalid Convene History URL",
       "import-success": "Successfully imported Convene History URL!",
@@ -441,10 +422,8 @@
       },
       "3": {
         "title": "Press the \"Import History\" Button on this Website"
-      },
-      "Import History": "Import History"
+      }
     },
-
     "Android3Tutorial": {
       "invalid-url": "Invalid Convene History URL",
       "import-success": "Successfully imported Convene History URL!",
@@ -462,17 +441,14 @@
       },
       "3": {
         "title": "Press the \"Import History\" Button on this Website"
-      },
-      "Import History": "Import History"
+      }
     }
   },
-
   "Settings": {
     "title": "Settings",
     "Google Account": "Google Account",
     "Browser Data": "Browser Data",
     "Report an Issue": "Report an Issue",
-
     "SettingCloudSync": {
       "sign-out-success": "Signed out successfully.",
       "login-to-sync": "You must login before being able to sync.",
@@ -491,13 +467,11 @@
       "browser-data-different": "Your local browser data is different from your Google Account data.",
       "browser-data-different-confirmation": "Your local data with player ID ({localId}) conflicts with your Google Account's player ID (${googleId}). Would you like to keep your browser's local data or would you like to use your Google Account data instead?"
     },
-
     "SignInButton": {
       "sign-out-success": "Signed out successfully.",
       "Sign out": "Sign out",
       "Sign In to Google": "Sign In to Google"
     },
-
     "SettingConveneHistoryUrl": {
       "require-url-before-downloading": "You need a valid Convene History URL before downloading.",
       "download-failed": "Failed to start download.",
@@ -515,17 +489,14 @@
       "Delete your local data": "Delete your local data",
       "Save": "Save"
     },
-
     "SettingGlobalStats": {
       "title": "Privacy",
       "description": "Manage Wuwa Tracker's permissions when it comes to handling your data."
     },
-
     "GlobalStatsCheckbox": {
       "Submit pull data for global statistics": "Submit pull data for global statistics"
     }
   },
-
   "Timeline": {
     "title": "Timeline",
     "heading": "Event Timeline",
