@@ -17,6 +17,7 @@ We need more translators to help us translate the rest of the pages in Crowdin.
 | en.json    | United States   | English             | en       |
 | es.json    | Spain           | Spanish             | es       |
 | fr.json    | France          | French              | fr       |
+| hu.json    | Hungary         | Hungarian           | hu       |
 | id.json    | Indonesia       | Indonesian          | id       |
 | in.json    | India           | Hindi               | hi       |
 | ja.json    | Japan           | Japanese            | ja       |
