@@ -22,4 +22,5 @@ export const localeLabels: CountryInformation[] = [
   { value: 'vi', label: 'Tiếng Việt', shortLabel: '🇻🇳' },
   { value: 'zh-CN', label: '中文', shortLabel: '🇨🇳' },
   { value: 'zh-TW', label: '繁體中文', shortLabel: '🇨🇳' },
+  { value: 'pl', label: 'Polski', shortLabel: '🇵🇱' },
 ];

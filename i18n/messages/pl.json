@@ -1,0 +1,535 @@
+{
+    "Items": {
+      "Aalto": "Aalto",
+      "Baizhi": "Baizhi",
+      "Calcharo": "Calcharo",
+      "Changli": "Changli",
+      "Chixia": "Chixia",
+      "Danjin": "Danjin",
+      "Encore": "Encore",
+      "Jianxin": "Jianxin",
+      "Jinhsi": "Jinhsi",
+      "Jiyan": "Jiyan",
+      "Lingyang": "Lingyang",
+      "Mortefi": "Mortefi",
+      "Sanhua": "Sanhua",
+      "Taoqi": "Taoqi",
+      "Verina": "Verina",
+      "Yangyang": "Yangyang",
+      "Yinlin": "Yinlin",
+      "Yuanwu": "Yuanwu",
+      "Abyss Surges": "Abyss Surges",
+      "Ages of Harvest": "Ages of Harvest",
+      "Amity Accord": "Amity Accord",
+      "Autumntrace": "Autumntrace",
+      "Beguiling Melody": "Beguiling Melody",
+      "Blazing Brilliance": "Blazing Brilliance",
+      "Broadblade of Night": "Broadblade of Night",
+      "Broadblade of Voyager": "Broadblade of Voyager",
+      "Broadblade#41": "Broadblade#41",
+      "Cadenza": "Cadenza",
+      "Commando of Conviction": "Commando of Conviction",
+      "Comet Flare": "Comet Flare",
+      "Cosmic Ripples": "Cosmic Ripples",
+      "Dauntless Evernight": "Dauntless Evernight",
+      "Discord": "Discord",
+      "Emerald of Genesis": "Emerald of Genesis",
+      "Gauntlets of Night": "Gauntlets of Night",
+      "Gauntlets of Voyager": "Gauntlets of Voyager",
+      "Gauntlets#21D": "Gauntlets#21D",
+      "Guardian Broadblade": "Guardian Broadblade",
+      "Guardian Gauntlets": "Guardian Gauntlets",
+      "Guardian Pistols": "Guardian Pistols",
+      "Guardian Rectifier": "Guardian Rectifier",
+      "Guardian Sword": "Guardian Sword",
+      "Helios Cleaver": "Helios Cleaver",
+      "Hollow Mirage": "Hollow Mirage",
+      "Jinzhou Keeper": "Jinzhou Keeper",
+      "Lunar Cutter": "Lunar Cutter",
+      "Lumingloss": "Lumingloss",
+      "Lustrous Razor": "Lustrous Razor",
+      "Marcato": "Marcato",
+      "Novaburst": "Novaburst",
+      "Originite: Type I": "Originite: Type I",
+      "Originite: Type II": "Originite: Type II",
+      "Originite: Type III": "Originite: Type III",
+      "Originite: Type IV": "Originite: Type IV",
+      "Originite: Type V": "Originite: Type V",
+      "Overture": "Overture",
+      "Pistols of Night": "Pistols of Night",
+      "Pistols of Voyager": "Pistols of Voyager",
+      "Pistols#26": "Pistols#26",
+      "Rectifier of Night": "Rectifier of Night",
+      "Rectifier of Voyager": "Rectifier of Voyager",
+      "Rectifier#25": "Rectifier#25",
+      "Static Mist": "Static Mist",
+      "Stonard": "Stonard",
+      "Stringmaster": "Stringmaster",
+      "Sword of Night": "Sword of Night",
+      "Sword of Voyager": "Sword of Voyager",
+      "Sword#18": "Sword#18",
+      "Thunderbolt": "Thunderbolt",
+      "Undying Flame": "Undying Flame",
+      "Variation": "Variation",
+      "Verdant Summit": "Verdant Summit"
+    },
+    "CardPoolNames": {
+      "Featured Resonator": "Wyróżniony rezonator",
+      "Featured Weapon": "Wyróżniona broń",
+      "Permanent Resonator": "Permanentny rezonator",
+      "Permanent Weapon": "Permanentna broń",
+      "Beginner Convene": "Początkujący baner",
+      "Beginner's Choice": "Wybór początkującego",
+      "Selector Ticket": "Bilet wyboru",
+      "Tidal Chorus": "Tidal Chorus",
+      "Winter Brume Banner": "Baner Winter Brume",
+      "Utterance of Marvels": "Utterance of Marvels",
+      "Beginner Selector": "Baner Wyboru początkującego",
+      "Convene Giveback Event": "Wydarzenie zwrot historii",
+      "Absolute Pulsation": "Absolute Pulsation",
+      "Prevail the Lasting Night": "Prevail the Lasting Night",
+      "When Thunder Pours": "When Thunder Pours",
+      "Thawborn Renewal": "Thawborn Renewal",
+      "Vermillion's Ploy": "Vermillion's Ploy"
+    },
+    "Common": {
+      "Import History": "Importuj Historię"
+    },
+    "Metadata": {
+      "Generic": {
+        "description": "Licznik pity dla Wuthering Waves, wykorzystujący aktualne dane ze statystykami globalnymi i nie tylko. Synchronizuj swoje dane na różnych urządzeniach, udostępniaj swoje pull'e znajomym i łatwo śledź swoje konto!"
+      },
+      "Achievements": {
+        "title": "Osiągniecia - Wuwa Tracker",
+        "description": "Śledź swoje osiągnięcia w Wuthering Waves i swobodnie importuj i eksportuj dane na różnych urządzeniach! Wuwa Tracker to licznik pity dla Wuthering Waves, wykorzystujący aktualne dane z globalnymi statystykami i nie tylko. Podziel się swoimi ze znajomymi i śledź swoje konto!"
+      },
+      "Convene": {
+        "Index": {
+          "title": "Historia - Wuwa Tracker",
+          "description": "View your updated Wuthering Waves pull statistics and recent Convenes. Use screenshot-ready dashboards to brag to your friends! Wuwa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+        },
+        "Global": {
+          "title": "Globalne Statystyki - Wuwa Tracker",
+          "description": "Zobacz globalne statystyki banera {currentBanner} z udziałem {currentFeaturedResonator}! Użyj pulpitów nawigacyjnych gotowych do zrzutów ekranu, aby pochwalić się znajomym! Licznik pity Wuwa Tracker dla Wuthering Waves, wykorzystujący aktualne dane z globalnymi statystykami i nie tylko. Podziel się swoimi wyciągami ze znajomymi i śledź swoje konto!"
+        },
+        "Share": {
+          "title": "Udostępnij Historię - Wuwa Tracker",
+          "description": "Utwórz kartę historii Convene z historią ściągania, aby udostępnić ją znajomym! Licznik pity Wuwa Tracker dla Wuthering Waves, wykorzystujący aktualne dane z globalnymi statystykami i nie tylko. Podziel się swoimi wyciągami ze znajomymi i śledź swoje konto!"
+        }
+      },
+      "Error": {
+        "title": "Wystąpił Błąd",
+        "description": "Wystąpił błąd podczas korzystania z Wuwa Tracker. Prosimy o przesłanie zgłoszenia na nasz serwer Discord, abyśmy mogli szybko się nim zająć."
+      },
+      "Import": {
+        "title": "Importuj Historię - Wuwa Tracker",
+        "description": "Skorzystaj z naszego interaktywnego samouczka, aby wyświetlić dane Wuthering Waves i przeglądać statystyki. Obsługujemy import z urządzeń PC, Android i iOS metodami automatycznymi. Licznik pity Wuwa Tracker dla Wuthering Waves, wykorzystujący aktualne dane z globalnymi statystykami i nie tylko. Podziel się swoimi życzeniami ze znajomymi i śledź swoje konto!"
+      },
+      "Not Found": {
+        "title": "Nie Znaleziono Strony",
+        "description": "Tej strony nie można znaleźć w Wuwa Tracker. Wróć do strony głównej, aby rozpocząć śledzenie danych historii życzeń Wuthering Waves."
+      },
+      "Privacy Policy": {
+        "title": "Polityka Prywatnośći - Wuwa Tracker",
+        "description": "Ten dokument polityki prywatności opisuje rodzaje danych osobowych otrzymywanych i gromadzonych przez Wuwa Tracker oraz sposób ich wykorzystania. Wuwa Tracker to licznik pity dla Wuthering Waves, wykorzystujący aktualne dane z globalnymi statystykami i nie tylko."
+      },
+      "Sequences": {
+        "title": "Sekwencje - Wuwa Tracker",
+        "description": "Policz i zaprezentuj swoje duplikaty rezonatorów i broni oraz przeglądaj powiązane z nimi informacje. Możesz zaprezentować je swoim znajomym!"
+      },
+      "Settings": {
+        "title": "Ustawienia - Wuwa Tracker",
+        "description": "Zsynchronizuj swoje dane przez Google, logując się. Zarządzaj danymi pobieranymi z Wuthering Waves w jednym miejscu. Licznik pity Wuwa Tracker dla Wuthering Waves, wykorzystujący aktualne dane z globalnymi statystykami i nie tylko. Podziel się swoimi wyciągami ze znajomymi i śledź swoje konto!"
+      },
+      "Terms & Conditions": {
+        "title": "Zasady i Warunki - Wuwa Tracker",
+        "description": "Niniejsze warunki określają zasady i regulacje korzystania ze strony internetowej i usług Wuwa Tracker."
+      },
+      "Timeline": {
+        "title": "Kalendarium wydarzeń - Wuwa Tracker",
+        "description": "Korzystając z lokalnej strefy czasowej lub dowolnej strefy czasowej serwera Wuthering Waves, możesz przeglądać harmonogram wszystkich banerów, wydarzenia w grze, okresy Tower of Adversity i Depths of Illusive - wszystko w jednym miejscu. Licznik pity Wuwa Tracker dla Wuthering Waves, wykorzystujący aktualne dane z globalnymi statystykami i nie tylko. Podziel się swoimi wyciągami ze znajomymi i śledź swoje konto!"
+      }
+    },
+    "Layout": {
+      "LocaleSwitcher": {
+        "label": "Pomóż tłumaczyć"
+      },
+      "Footer": {
+        "disclaimer": "Nie jesteśmy powiązani z Wuthering Waves. Wszystkie zasoby, zawartość gry i materiały są znakami towarowymi i prawami autorskimi Kuro Games.",
+        "Privacy Policy": "Polityka Prywatności",
+        "Terms & Conditions": "Zasady i Warunki"
+      }
+    },
+    "MenuList": {
+      "Tools": "Narzędzia",
+      "Guides": "Poradniki",
+      "Config": "Konfiguracja",
+      "Convene Tracker": "Śledzenie Historii",
+      "Global Stats": "Globalne Statystyki",
+      "Share History": "Udostępnij Historię",
+      "Sequences": "Sekwencje",
+      "Achievements": "Osiągnięcia",
+      "Timeline": "Kalendarium",
+      "Import": "Importuj",
+      "Settings": "Ustawienia",
+      "Support Us": "Wesprzyj Nas",
+      "Sign In To Google": "Zaloguj się przez Google",
+      "Sign Out": "Wyloguj się"
+    },
+    "Dashboard": {
+      "title": "Wuwa Tracker",
+      "Greeting": {
+        "AnimatedWords": {
+          "pulls": "pull'e",
+          "pity": "pity",
+          "events": "wydarzenia",
+          "statistics": "statystyki",
+          "data": "dane",
+          "updates": "aktualizacje"
+        },
+        "title": "Wuwa Tracker pomaga Ci śledzić swoje życzenia.",
+        "description": "Licznik pity dla Wuthering Waves, wykorzystujący aktualne dane ze statystykami globalnymi i nie tylko. Naszym celem jest zapewnienie najlepszych narzędzi do prezentowania znajomym postępów w Wuthering Waves."
+      },
+      "Tutorial": {
+        "title": "Samouczek",
+        "description": "Witaj, Rover. Zacznijmy, dobrze?",
+        "View Pull History": "Zobacz Historię",
+        "Sync Your Data": "Synchronizuj Dane",
+        "Your data will now sync automatically!": "Twoje dane będą teraz synchronizowane automatycznie!"
+      },
+      "Changelogs": {
+        "title": "Aktualizacje",
+        "description": "Zobacz najnowsze zmiany i aktualizacje."
+      },
+      "Community": {
+        "title": "Społeczność"
+      }
+    },
+    "Achievements": {
+      "title": "Osiągnięcia",
+      "description": "Prawa autorskie <link>StarDB's WuWa Achievements V1.1 spreadsheet</link> dla danych początkowych.",
+      "AchievementsPageContent": {
+        "toast": {
+          "import-success": "Pomyślnie zaimportowano dane.",
+          "import-invalid": "Nieprawidłowy plik JSON.",
+          "parse-fail": "Nie udało się przetworzyć pliku JSON.",
+          "download-fail": "Nie udało się rozpocząć pobierania.",
+          "download-start": "Pobieranie rozpocznie się wkrótce."
+        },
+        "description": "Użyj filtrów, aby znaleźć brakujące osiągnięcia.",
+        "Completed": "Ukończone",
+        "ImportDialog": {
+          "title": "Importuj Osiągnięcia",
+          "description": "Wykorzystaj wcześniej wyeksportowane dane i zsynchronizuj je z przeglądarką."
+        },
+        "Hidden": "Ukryte",
+        "Click to upload": "Kliknij, aby przesłać",
+        "or drag and drop": "lub przeciągnij i upuść",
+        "Import": "Importuj",
+        "Export as JSON": "Eksportuj jako JSON",
+        "Need Tips?": "Potrzebujesz wskazówek?"
+      }
+    },
+    "Convene": {
+      "title": "Historia",
+      "ConvenePageContent": {
+        "Scroll for More": "Przewiń w dół, aby zobaczyć więcej"
+      },
+      "ConveneCategoryGlobal": {
+        "Global Statistics": "Globalne Statystyki"
+      },
+      "ConveneCategoryNav": {
+        "Convene Categories": "Kategorie Historii"
+      },
+      "UserRecentConvenes": {
+        "Recent": "Ostatnie",
+        "and": "i",
+        "Convenes": "Historie",
+        "no-filters": "Brak filtrów",
+        "no-records": "Brak rekordów"
+      },
+      "UserPullHistoryTable": {
+        "Pull History": "Historia wish'y",
+        "Pull Num": "Numer",
+        "Item": "Przedmiot",
+        "Pity": "Pity",
+        "Date Received": "Data Otrzymania",
+        "no-records": "Brak rekordów"
+      },
+      "UserBannerStats": {
+        "Total": "Łącznie",
+        "Astrites": "Astrites",
+        "Pulls": "Pull'e"
+      },
+      "UserBannerStatsLuckCards": {
+        "Luck": "Szczęście",
+        "no-luck": "Ten baner nie ma statystyk szczęścia.",
+        "no-records": "Brak rekordów",
+        "calibrating": "Kalibracja...",
+        "Percentiles": {
+          "AvgPity": {
+            "title": "Średnie Pity",
+            "formula": "Jakie jest Twoje pity na rzadkośći {qualityLevel}?"
+          },
+          "PullRatio": {
+            "title": "Stosunek Pull'ów",
+            "formula": "Jaki był procent wszystkich Twoich pull'ów na rzadkośći {qualityLevel}?"
+          },
+          "RateUpWins": {
+            "title": "Wygrane 50/50",
+            "formula": "Jaki procent pull'ów 50/50 udało Ci się wygrać?"
+          },
+          "RateUpWins4": {
+            "title": "Wygrane 50/50 rzadkośći 4",
+            "formula": "Jak często Twoje 4-gwiazdkowe pull'e wzrastały?"
+          }
+        }
+      },
+      "GlobalStatsPageContent": {
+        "title": "Globalne Statystyki",
+        "Switch Banner": "Zmień Baner",
+        "Banner List": "Lista Banerów",
+        "Pulls Per Day": "Pull'e na Dzień",
+        "Pulls By Pity": "Pull'e według Pity",
+        "Pulls By Name": "Pull'e według Nazwy",
+        "Pulls": "Pull'e"
+      },
+      "SharePageContent": {
+        "title": "Udostępnij Kartę Historii",
+        "description": "Dostosuj i pobierz historię Wuthering Waves, aby udostępnić ją innym!",
+        "Customize": "Dostosuj",
+        "Edit Share Card": "Edytuj Kartę Udostępniania",
+        "edit-description": "Twoja karta jest aktualizowana w czasie rzeczywistym, gdy wprowadzasz zmiany.",
+        "Select Banner": "Wybierz Baner",
+        "Background": "Tło",
+        "Foreground": "Tekst",
+        "recommendation": "W przypadku obrazów o rozdzielczości 2048x2048 zalecamy współczynnik proporcji 1:1.",
+        "Download": "Pobierz"
+      }
+    },
+    "Import": {
+      "title": "Importuj Historię",
+      "Import Tutorial": "Samouczek Importu",
+      "PC": {
+        "title": "PC",
+        "Automatic": "Automatycznie",
+        "Manual": "Ręcznie"
+      },
+      "Android": {
+        "title": "Android",
+        "Airplane": "Tryb Samolotowy"
+      },
+      "iOS": "iOS",
+      "Heading": {
+        "title": "Wybierz Metodę",
+        "description": "Jeśli metoda automatyczna nie działa, spróbuj zrobić to ręcznie, korzystając z innego samouczka. Jeśli nadal potrzebujesz pomocy, odwiedź nasz <link>Serwer Discord</link>.",
+        "description-android": "Jeśli pierwsza metoda nie działa, wypróbuj drugą. Jeśli nadal potrzebujesz pomocy, odwiedź nasz <link>Serwer Discord</link>."
+      },
+      "PC1Tutorial": {
+        "1": {
+          "title": "Najpierw uruchom Wuthering Waves i otwórz historię w grze",
+          "description": "Następnie otwórz Windows PowerShell i wklej następujący skrypt.",
+          "History URL Script": "Skrypt na link Historii",
+          "Click the copy button on the right": "Kliknij przycisk kopiowania po prawej stronie",
+          "note": "Uwaga: skrypt nie edytuje plików, po prostu wyodrębnia link z logów. Możesz <link>zobaczyć skrypt tutaj</link>."
+        },
+        "2": {
+          "title": "Wklej link tutaj",
+          "Your Convene History URL": "Twój link Historii"
+        },
+        "3": {
+          "title": "Kliknij przycisk \"Importuj Historię\" na tej stronie"
+        },
+        "invalid-url": "Nieprawidłowy link Historii.",
+        "import-success": "Pomyślnie zaimportowano link Historii!"
+      },
+      "PC2Tutorial": {
+        "1": {
+          "title": "Najpierw uruchom Wuthering Waves i otwórz historię w grze"
+        },
+        "2": {
+          "title": "Znajdź folder instalacyjny Wuthering Waves",
+          "description": "Kliknij prawym przyciskiem myszy program uruchamiający grę Wuthering Waves i wybierz <code>Otwórz lokalizację pliku</code>. Powinieneś zobaczyć plik <code>launcher.exe</code> i wiele plików <code>.dll</code>."
+        },
+        "3": {
+          "title": "Wyszukaj plik <code>debug.log</code> w Eksploratorze plików i prześlij go tutaj"
+        },
+        "4": {
+          "title": "Kliknij przycisk \"Importuj Historię\" na tej stronie"
+        },
+        "invalid-url": "Nieprawidłowy link Historii.",
+        "import-success": "Pomyślnie zaimportowano link Historii!",
+        "found-url": "Znaleźliśmy link! Kliknij przycisk Importuj Historię aby kontynuować.",
+        "not-found-url": "Nie znaleziono link Historii.",
+        "Click to upload": "Kliknij, aby przesłać",
+        "or drag and drop": "lub przeciągnij i upuść",
+        "Video Tutorial": "Film Instruktażowy",
+        "PC Import Tutorial Video": "Film Instruktażowy Importu na PC",
+        "video-tutorial-desc": "Postępuj zgodnie z tym szczegółowym samouczkiem YouTube autorstwa <highlight>cacaowithwater</highlight> z naszego <link>serwera Discord</link>, aby zaimportować dane na komputer."
+      },
+      "PC3Tutorial": {
+        "1": {
+          "title": "Zkopiuj folder instalacyjny z plikami Wuthering Waves",
+          "description": "Znajdź folder zawierający plik <code>Wuthering Waves.exe</code> i folder <code>Client</code>.",
+          "Your installation directory": "Twój katalog instalacyjny",
+          "warning": "Ostrzeżenie: jeśli edytowałeś plik <code>Engine.ini</code>, aby wyłączyć logi, będziesz musiał je ponownie włączyć przed otwarciem historii Convene, w przeciwnym razie skrypt nie będzie działać."
+        },
+        "2": {
+          "title": "Uruchom Wuthering Waves na PC i otwórz historię spotkań w grze",
+          "description": "Następnie otwórz Windows PowerShell i wklej następujący skrypt.",
+          "invalid-directory": "Najpierw wprowadź prawidłowy katalog instalacyjny!",
+          "Stuck? Click the “Need Help?” button": "Utknąłęś? Kliknij przycisk „Potrzebujesz pomocy?”",
+          "note": "Uwaga: skrypt nie edytuje plików, po prostu wyodrębnia adres link z logów. Skrypt możesz zobaczyć <link>tutaj</link>."
+        },
+        "3": {
+          "title": "Wklej link tutaj",
+          "Your Convene History URL": "Twój link Historii"
+        },
+        "4": {
+          "title": "Kliknij przycisk \"Importuj Historię\" na tej stronie"
+        },
+        "invalid-path": "Nieprawidłowa ścieżka instalacji.",
+        "invalid-url": "Nieprawidłowy link Historii.",
+        "import-success": "Pomyślnie zaimportowano link Historii!",
+        "Video Tutorial": "Film Instruktażowy",
+        "PC Import Tutorial Video": "Film Instruktażowy Importu na PC",
+        "video-tutorial-desc": "Postępuj zgodnie z tym samouczkiem YouTube krok po kroku, aby zaimportować dane na komputer. Dołącz do naszego <link>Serwera Discord</link>, aby poprosić o pomoc!"
+      },
+      "IOSTutorial": {
+        "1": {
+          "title": "Użyj naszego samouczka wideo",
+          "description": "Podobnie jak w przypadku pobierania historii w Genshin Impact lub Honkai Star Rail, skorzystaj z <video>tego samouczka wideo autorstwa Chario</video>, aby pobrać i używać <app>Stream — narzędzie do debugowania sieci</app>.",
+          "Video Tutorial": "Film Instruktażowy",
+          "iOS Import Tutorial Video": "Film Instruktażowy Importu na iOS",
+          "video-tutorial-desc": "Postępuj zgodnie z tym szczegółowym samouczkiem YouTube autorstwa <highlight>Chario</highlight> z naszego <link>serwera Discord</link>, aby zaimportować dane na komputer."
+        },
+        "2": {
+          "title": "Wklej JSON tutaj"
+        },
+        "3": {
+          "title": "Kliknij przycisk \"Importuj Historię\" na tej stronie"
+        },
+        "invalid-json": "Nieprawidłowy JSON - pamiętaj o skopiowaniu średników",
+        "invalid-url": "Nieprawidłowy link Historii.",
+        "import-success": "Pomyślnie zaimportowano link Historii!"
+      },
+      "Android1Tutorial": {
+        "1": {
+          "title": "Użyj Ascent, aby uzyskać adres link historii spotkań",
+          "description": "Podobnie jak w przypadku pobierania historii w Genshin Impact lub Honkai Star Rail, postępuj zgodnie z <video>tym przewodnikiem Mirai0009</video>, aby pobrać i używać aplikacji <app>Ascent v2.1.6</app> do uzyskania adresu URL.",
+          "note": "Ta metoda obsługuje tylko wersje Androida 11 i nowsze.",
+          "troubleshooting": "Jeśli nie działa poprawnie, sprawdź <link>sekcję rozwiązywania problemów</link>."
+        },
+        "2": {
+          "title": "Wklej link tutaj",
+          "Your Convene History URL": "Twój link Historii"
+        },
+        "3": {
+          "title": " Press the \"Import History\" Button on this Website"
+        },
+        "invalid-url": "Invalid Convene History link",
+        "import-success": "Successfully imported Convene History link!",
+        "Video Tutorial": "Video Tutorial",
+        "Android Ascent Import Tutorial Video": "Android Ascent Import Tutorial Video",
+        "video-tutorial-desc": "First, read this carefully read <guide>this text guide</guide> then follow this <video>YouTube video</video> to get your data on Android. All credits goes to Mirai0009."
+      },
+      "Android2Tutorial": {
+        "1": {
+          "title": "Use Termux To Get Convene History link",
+          "description": "Similar to getting your history in Genshin Impact or Honkai Star Rail, follow <guide>this guide by eqdamini</guide> to download and use <app>Termux</app> to get your link."
+        },
+        "2": {
+          "title": "Paste the link Here",
+          "Your Convene History URL": "Your Convene History link"
+        },
+        "3": {
+          "title": "Kliknij przycisk \"Importuj Historię\" na tej stronie"
+        },
+        "invalid-url": "Nieprawidłowy link Historii.",
+        "import-success": "Pomyślnie zaimportowano link Historii!"
+      },
+      "Android3Tutorial": {
+        "1": {
+          "title": "Użyj naszego samouczka wideo",
+          "description": "Po otwarciu Wuthering Waves postępuj zgodnie z <link>tym samouczkiem wideo autorstwa yukio36</link>.",
+          "Video Tutorial": "Film Instruktażowy",
+          "Android Airplane Mode Import Tutorial Video": "Film instruktażowy dotyczący importowania trybu samolotowego w systemie Android",
+          "video-tutorial-desc": "Postępuj zgodnie z tym szczegółowym samouczkiem na YouTube autorstwa <highlight>yukio36</highlight> z naszego <link>serwera Discord</link>, aby zaimportować dane na Androida bez pobierania czegokolwiek.",
+          "note": "Uwaga: może to nie działać na każdym urządzeniu, więc jeśli się nie powiedzie, wypróbuj inne metody."
+        },
+        "2": {
+          "title": "Wklej link tutaj",
+          "Your Convene History URL": "Twój link Historii"
+        },
+        "3": {
+          "title": "Kliknij przycisk \"Importuj Historię\" na tej stronie"
+        },
+        "invalid-url": "Nieprawidłowy link Historii.",
+        "import-success": "Pomyślnie zaimportowano link Historii!"
+      }
+    },
+    "Settings": {
+      "title": "Ustawienia",
+      "Google Account": "Konto Google",
+      "Browser Data": "Dane Przeglądarki",
+      "Report an Issue": "Zgłoś Problem",
+      "SettingCloudSync": {
+        "sign-out-success": "Wylogowano pomyślnie.",
+        "login-to-sync": "Zaloguj się, aby rozpocząć synchronizację!",
+        "import-to-sync": "Zaimportuj dane, aby rozpocząć synchronizację!",
+        "data-is-in-sync": "Dane są zsynchronizowane",
+        "is-synced": "Dane są zsynchronizowane",
+        "is-not-synced": "Dane NIE są zsynchronizowane",
+        "Cloud Backup": "Kopia Zapasowa w Chmurze",
+        "description": "Zapisz swoje dane za pomocą konta Google i uzyskaj dostęp do swoich danych na dowolnym urządzeniu. Po zalogowaniu kliknij przycisk \"Synchronizuj dane\", aby przesłać lub pobrać dane na swoje urządzenie.",
+        "Guest": "Gość",
+        "Sign In to Google": "Zaloguj się przez Google",
+        "Log Out": "Wyloguj się",
+        "Sync Data": "Synchronizuj Dane",
+        "Google Data": "Dane Google",
+        "Browser Data": "Dane Przeglądarki",
+        "browser-data-different": "Dane Twojej lokalnej przeglądarki różnią się od danych Twojego konta Google.",
+        "browser-data-different-confirmation": "Twoje dane lokalne z identyfikatorem gracza ({localId}) są w konflikcie z identyfikatorem gracza na Twoim koncie Google (${googleId}). Czy chcesz zachować lokalne dane swojej przeglądarki, czy zamiast tego chcesz używać danych swojego konta Google?"
+      },
+      "SignInButton": {
+        "sign-out-success": "Wylogowano",
+        "Sign out": "Wyloguj się",
+        "Sign In to Google": "Zaloguj się przez Google"
+      },
+      "SettingConveneHistoryUrl": {
+        "require-url-before-downloading": "Przed pobraniem potrzebny jest prawidłowy adres URL historii spotkań.",
+        "download-failed": "Nie udało się rozpocząć pobierania.",
+        "download-starting": "Pobieranie rozpocznie się wkrótce.",
+        "invalid-url": "Nieprawidłowy URL Historii.",
+        "import-success": "Pomyślnie zaimportowano URL Historii!",
+        "delete-local-success": "Lokalne dane zostały usunięte.",
+        "Convene History Data": "Dane Historii Spotkań",
+        "Import Tutorial": "Samouczek Importu",
+        "Go to Import Tutorial": "Przejdź do Samouczka Importu",
+        "description": "Edytuj adres URL historii i wyeksportuj go jako JSON.",
+        "Your Convene History URL": "Twój URL Historii",
+        "Download Your History": "Pobierz Swoją Historię",
+        "Delete Browser Saved Data": "Usuń Zapisane Dane Przeglądarki",
+        "Delete your local data": "Usuń swoje lokalne dane",
+        "Save": "Zapisz"
+      },
+      "SettingGlobalStats": {
+        "title": "Prywatność",
+        "description": "Zarządzaj uprawnieniami Wuwa Tracker do przetwarzania Twoich danych."
+      },
+      "GlobalStatsCheckbox": {
+        "Submit pull data for global statistics": "Prześlij dane pull'i dla globalnych statystyk"
+      }
+    },
+    "Timeline": {
+      "title": "Kalendarium",
+      "heading": "Kalendarium wydarzeń",
+      "description": "Przeglądaj wydarzenia Wuthering Waves w Twojej lokalnej strefie czasowej lub w innych <link>Czasach serwera</link>.",
+      "github-update-message": "Zaktualizowano {time} przez: {author}.",
+      "Edit this page on GitHub": "Edytuj tę stronę na GitHub",
+      "ResetTimers": {
+        "title": "Codzienne resetowanie liczników serwera",
+        "description": "Porównaj swój czas lokalny z serwerami Wuthering Waves, aby zaplanować następną przygodę."
+      }
+    }
+  }
