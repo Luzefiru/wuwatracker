@@ -149,6 +149,16 @@
     "Timeline": {
       "title": "Cronograma de Eventos - WuWa Tracker",
       "description": "Utilizando tu zona horaria local o cualquier zona horaria del servidor de Wuthering Waves, puedes ver cada calendario de banners, eventos del juego, periodos de la Torre de la Adversidad y Profundidades del Reino Ilusorio, todo en un solo lugar. WuWa Tracker es un contador de pity para Wuthering Waves, utilizando los datos más actualizados con estadísticas globales y más. ¡Comparte tus invocaciones con tus amigos y sigue tu cuenta!"
+    },
+    "Wiki": {
+      "Resonator": {
+        "title": "Resonators - WuWa Tracker",
+        "description": "View Wuthering Waves Resonator information and use WuWa Tracker's material calculator to plan your Resonator upgrades. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      },
+      "Item": {
+        "title": "Items - WuWa Tracker",
+        "description": "View Wuthering Waves Item information. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      }
     }
   },
   "Layout": {
@@ -163,16 +173,19 @@
   },
   "MenuList": {
     "Tools": "Herramientas",
+    "Database": "Database",
     "Guides": "Guías",
     "Config": "Configuraciones",
     "Convene Tracker": "Mis tiradas",
     "Global Stats": "Datos Globales",
     "Share History": "Compartir historial",
     "Sequences": "Secuencias",
+    "Items": "Items",
     "Achievements": "Logros",
     "Timeline": "Cronograma",
     "Import": "Importar",
     "Settings": "Ajustes",
+    "Resonators": "Resonators",
     "Support Us": "Apóyanos",
     "Sign In To Google": "Iniciar sesión con Google",
     "Sign Out": "Cerrar Sesión"
@@ -550,6 +563,11 @@
     "ResetTimers": {
       "title": "Tiempos de reinicio diario de servidores",
       "description": "Compara tu tiempo local con el tiempo del servidor de Wuthering Waves para planear tu siguiente aventura."
+    }
+  },
+  "Wiki": {
+    "Resonator": {
+      "title": "Resonators"
     }
   }
 }

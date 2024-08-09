@@ -78,7 +78,7 @@
     "Featured Weapon": "Рекомендуемое оружие",
     "Permanent Resonator": "Постоянный Резонатор",
     "Permanent Weapon": "Постоянное оружие",
-    "Novice Convene": "Novice Convene",
+    "Novice Convene": "Баннер новичка",
     "Beginner's Choice": "Выбор новичка",
     "Selector Ticket": "Билетный баннер",
     "Tidal Chorus": "Tidal Chorus",
@@ -149,6 +149,16 @@
     "Timeline": {
       "title": "Календарь событий - WuWa Tracker",
       "description": "Используйте ваш часовой пояс или любой часовой пояс серверов Wuthering Waves, чтобы просматривать расписание каждого баннера, игровых событий, Башни Невзгод и Глубин Царства Иллюзий - все в одном месте. WuWa Tracker - это счетчик круток для Wuthering Waves, использующий актуальные данные с глобальной статистикой и многое другое. Делитесь своими достижениями с друзьями и отслеживайте прогресс своего аккаунта!"
+    },
+    "Wiki": {
+      "Resonator": {
+        "title": "Resonators - WuWa Tracker",
+        "description": "View Wuthering Waves Resonator information and use WuWa Tracker's material calculator to plan your Resonator upgrades. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      },
+      "Item": {
+        "title": "Items - WuWa Tracker",
+        "description": "View Wuthering Waves Item information. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      }
     }
   },
   "Layout": {
@@ -163,16 +173,19 @@
   },
   "MenuList": {
     "Tools": "Инструменты",
+    "Database": "Database",
     "Guides": "Руководства",
     "Config": "Конфигурация",
     "Convene Tracker": "История круток",
     "Global Stats": "Статистика",
     "Share History": "Поделиться",
     "Sequences": "Коллекция",
+    "Items": "Items",
     "Achievements": "Достижения",
     "Timeline": "Календарь",
     "Import": "Импорт данных",
     "Settings": "Настройки",
+    "Resonators": "Resonators",
     "Support Us": "Поддержите нас",
     "Sign In To Google": "Войти в Google",
     "Sign Out": "Выйти"
@@ -235,14 +248,14 @@
     "title": "История круток",
     "ConvenePageContent": {
       "Scroll for More": "Прокрутите чтобы увидеть больше",
-      "Switch View": "Switch View",
+      "Switch View": "Сменить вид",
       "Detailed View": "Подробный вид",
       "Import History": "Импортировать",
-      "Pull History": "Pull History",
+      "Pull History": "История круток",
       "Global Statistics": "Глобальная статистика",
       "Overview": "Упрощённый вид",
-      "Recent": "Recent",
-      "Table": "Table"
+      "Recent": "Последние",
+      "Table": "Таблица"
     },
     "ConveneCategoryGlobal": {
       "Global Statistics": "Глобальная статистика"
@@ -251,7 +264,7 @@
       "Convene Categories": "Категории круток"
     },
     "ConveneCategoryPity": {
-      "pity-counter": "{num}✦ Pity"
+      "pity-counter": "{num}✦ Гарант"
     },
     "UserRecentConvenes": {
       "Recent Convenes": "Последние крутки",
@@ -287,7 +300,7 @@
       "You need more pulls to view statistics": "Вам нужно сделать больше круток, чтобы увидеть статистику",
       "Percentiles": {
         "AvgPity": {
-          "title": "Ср. гарант",
+          "title": "Средний гарант",
           "formula": "Каков ваш средний {qualityLevel}-звёздочный гарант?"
         },
         "PullRatio": {
@@ -299,8 +312,8 @@
           "formula": "Каков ваш процент выигрыша в 50/50?"
         },
         "RateUpWins4": {
-          "title": "Rate-up Wins",
-          "formula": "Как часто ваши 4-звёздочные крутки были гарантированными?"
+          "title": "% круток до гаранта",
+          "formula": "Как часто ваши 4-звёздочные крутки были до гаранта?"
         }
       }
     },
@@ -312,7 +325,7 @@
       "Pulls By Pity": "Гарант по круткам",
       "Pulls By Name": "Крутки по именам",
       "Pulls": "Круток",
-      "Showing total pulls at each pull number": "Showing total pulls at each pull number"
+      "Showing total pulls at each pull number": "Глобальная статистика выпадений на каждой крутке"
     },
     "SharePageContent": {
       "title": "Поделиться",
@@ -526,7 +539,7 @@
       "Convene History Data": "Данные об истории круток",
       "Import Tutorial": "Руководство по импорту",
       "Go to Import Tutorial": "Перейти к руководству по импорту данных",
-      "description": "Здесь вы можете изменить вашу ссылку на историю круток, а также сохранить её локально в виде JSON файла.",
+      "description": "Здесь вы можете изменить вашу ссылку на историю круток, а также сохранить историю локально в виде JSON файла.",
       "Your Convene History URL": "Ваша ссылка на историю круток",
       "Download Your History": "Скачать свои данные",
       "Delete Browser Saved Data": "Удалить сохраненные в браузере данные",
@@ -550,6 +563,11 @@
     "ResetTimers": {
       "title": "Таймеры ежедневного обновления серверов",
       "description": "Сравните свое местное время со временем игровых серверов Wuthering Waves, чтобы спланировать свое следующее приключение."
+    }
+  },
+  "Wiki": {
+    "Resonator": {
+      "title": "Resonators"
     }
   }
 }

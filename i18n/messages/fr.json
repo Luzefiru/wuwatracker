@@ -32,7 +32,7 @@
     "Comet Flare": "Comète éclatant",
     "Cosmic Ripples": "Ondes cosmiques",
     "Dauntless Evernight": "Intrépide éternel",
-    "Discord": "Discord",
+    "Discord": "Discorde",
     "Emerald of Genesis": "Émeraude éternelle",
     "Gauntlets of Night": "Gantelets de Nuit",
     "Gauntlets of Voyager": "Gantelets du Voyageur",
@@ -149,6 +149,16 @@
     "Timeline": {
       "title": "Calendrier - WuWa Tracker",
       "description": "En utilisant votre fuseau horaire local ou tout autre horaire de serveur de Wuthering Waves, vous pouvez voir tous les calendriers des bannières, événements, périodes de la tour éprouvante et royaume fantôme. WuWa Tracker est un compteur de pity pour Wuthering Waves, utilisant les données les plus récentes avec des statistiques mondiales et plus encore. Partagez vos invocations avec vos amis et suivez votre compte !"
+    },
+    "Wiki": {
+      "Resonator": {
+        "title": "Resonators - WuWa Tracker",
+        "description": "View Wuthering Waves Resonator information and use WuWa Tracker's material calculator to plan your Resonator upgrades. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      },
+      "Item": {
+        "title": "Items - WuWa Tracker",
+        "description": "View Wuthering Waves Item information. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      }
     }
   },
   "Layout": {
@@ -163,16 +173,19 @@
   },
   "MenuList": {
     "Tools": "Outils",
+    "Database": "Base de données",
     "Guides": "Guides",
     "Config": "Configuration",
     "Convene Tracker": "Compteur d'invocations",
     "Global Stats": "Stats globale",
     "Share History": "Partager",
     "Sequences": "Séquences",
+    "Items": "Items",
     "Achievements": "Trophées",
     "Timeline": "Calendrier",
     "Import": "Importer",
     "Settings": "Paramètres",
+    "Resonators": "Resonators",
     "Support Us": "Soutenez-nous",
     "Sign In To Google": "Se connecter via Google",
     "Sign Out": "Se déconnecter"
@@ -550,6 +563,11 @@
     "ResetTimers": {
       "title": "Minuteur de réinitialisation quotidienne des serveurs",
       "description": "Comparez votre fuseau horaire à ceux des serveurs de Wuthering Waves pour planifier votre prochaine aventure."
+    }
+  },
+  "Wiki": {
+    "Resonator": {
+      "title": "Resonators"
     }
   }
 }

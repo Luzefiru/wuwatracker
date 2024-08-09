@@ -149,6 +149,16 @@
     "Timeline": {
       "title": "Розклад подій - WuWa Tracker",
       "description": "Використовуючи свій місцевий часовий пояс або будь-який часовий пояс сервера Wuthering Waves, ви можете переглядати розклад кожного банера, внутрішньоігрові події, періоди проходження Вежі Нещасть та Глибин Ілюзорного царства - і все це в одному місці. WuWa Tracker лічильник гаранту для Wuthering Waves, що використовує актуальні дані з глобальною статистикою та багато іншого. Діліться своїми витягуваннями з друзями та відстежуйте свій акаунт!"
+    },
+    "Wiki": {
+      "Resonator": {
+        "title": "Resonators - WuWa Tracker",
+        "description": "View Wuthering Waves Resonator information and use WuWa Tracker's material calculator to plan your Resonator upgrades. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      },
+      "Item": {
+        "title": "Items - WuWa Tracker",
+        "description": "View Wuthering Waves Item information. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      }
     }
   },
   "Layout": {
@@ -163,16 +173,19 @@
   },
   "MenuList": {
     "Tools": "Інструменти",
+    "Database": "Database",
     "Guides": "Інструкції",
     "Config": "Конфігурація",
     "Convene Tracker": "Скликання",
     "Global Stats": "Статистика",
     "Share History": "Поділитися",
     "Sequences": "Послідовності",
+    "Items": "Items",
     "Achievements": "Досягнення",
     "Timeline": "Розклад",
     "Import": "Імпорт",
     "Settings": "Налаштування",
+    "Resonators": "Resonators",
     "Support Us": "Підтримати",
     "Sign In To Google": "Вхід в Google",
     "Sign Out": "Вийти"
@@ -550,6 +563,11 @@
     "ResetTimers": {
       "title": "Таймери за розкладом сервера",
       "description": "Порівняйте свій місцевий час з часовими поясами серверами Wuthering Waves, щоб спланувати ваші наступні пригоди."
+    }
+  },
+  "Wiki": {
+    "Resonator": {
+      "title": "Resonators"
     }
   }
 }

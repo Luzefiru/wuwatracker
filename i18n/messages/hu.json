@@ -149,6 +149,16 @@
     "Timeline": {
       "title": "Event Timeline - WuWa Tracker",
       "description": "Using your local time zone or any Wuthering Waves server time zone, you can view every banner schedule, in-game events, Tower of Adversity & Depths of Illusive Realm periods - all in one place. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+    },
+    "Wiki": {
+      "Resonator": {
+        "title": "Resonators - WuWa Tracker",
+        "description": "View Wuthering Waves Resonator information and use WuWa Tracker's material calculator to plan your Resonator upgrades. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      },
+      "Item": {
+        "title": "Items - WuWa Tracker",
+        "description": "View Wuthering Waves Item information. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+      }
     }
   },
   "Layout": {
@@ -163,16 +173,19 @@
   },
   "MenuList": {
     "Tools": "Eszközök",
+    "Database": "Database",
     "Guides": "Útmutatók",
     "Config": "Konfiguráció",
     "Convene Tracker": "Húzás követés",
     "Global Stats": "Globális statisztikák",
     "Share History": "Előzmények megosztása",
     "Sequences": "Sorozatok",
+    "Items": "Items",
     "Achievements": "Teljesítmények",
     "Timeline": "Idővonal",
     "Import": "Importálás",
     "Settings": "Beállítások",
+    "Resonators": "Resonators",
     "Support Us": "Támogatás",
     "Sign In To Google": "Bejelentkezés Google-be",
     "Sign Out": "Kijelentkezés"
@@ -240,9 +253,9 @@
       "Import History": "Import History",
       "Pull History": "Pull History",
       "Global Statistics": "Global Statistics",
-      "Overview": "Overview",
-      "Recent": "Recent",
-      "Table": "Table"
+      "Overview": "Áttekintés",
+      "Recent": "Legújabb",
+      "Table": "Asztal"
     },
     "ConveneCategoryGlobal": {
       "Global Statistics": "Globális statisztikák"
@@ -251,11 +264,11 @@
       "Convene Categories": "Húzási kategóriák"
     },
     "ConveneCategoryPity": {
-      "pity-counter": "{num}✦ Pity"
+      "pity-counter": "{num}✦ Kívánság"
     },
     "UserRecentConvenes": {
-      "Recent Convenes": "Recent Convenes",
-      "no-filters": "no filters selected",
+      "Recent Convenes": "Legújabb húzások",
+      "no-filters": "nincs szűrő kiválasztva",
       "no-records": "no records to show",
       "note-max": "This summary only shows up to {num} recent pulls."
     },
@@ -291,16 +304,16 @@
           "formula": "What is your average {qualityLevel}-star pity?"
         },
         "PullRatio": {
-          "title": "Pull Ratio",
+          "title": "Húzási arány",
           "formula": "What percentage of your total pulls were {qualityLevel}-stars?"
         },
         "RateUpWins5": {
-          "title": "50/50 Wins",
-          "formula": "What percentage of 50/50 pulls did you win?"
+          "title": "50/50 nyerések",
+          "formula": "Az 50/50-es húzások hány százalékát nyerted meg?"
         },
         "RateUpWins4": {
-          "title": "Rate-up Wins",
-          "formula": "How often were your 4-star pulls rate-up?"
+          "title": "Felhúzási nyerések",
+          "formula": "Milyen gyakran voltak 4 csillagos húzások?"
         }
       }
     },
@@ -550,6 +563,11 @@
     "ResetTimers": {
       "title": "Szerver napi időzítő visszaállítása",
       "description": "Hasonlítsd össze a helyi idődet a Wuthering Waves játék szervereivel, hogy megtervezhesd a következő kalandodat."
+    }
+  },
+  "Wiki": {
+    "Resonator": {
+      "title": "Karakterek"
     }
   }
 }
