@@ -125,7 +125,7 @@
     "Chromatic Prose": "Prosa Cromática",
     "Til the Sea Turns Clear": "Até o Mar Ficar Claro",
     "End of Lost Trail": "Fim do Trilho Perdido",
-    "Yinlin & Xiangli Yao Rerun": "Yinlin & Xiangli Yao Rerun"
+    "Yinlin & Xiangli Yao Rerun": "Rerun de Yinlin & Xiangli Yao"
   },
   "Common": {
     "Import History": "Importar Histórico",
@@ -197,20 +197,20 @@
     "Wiki": {
       "Resonator": {
         "title": "Resonators - WuWa Tracker",
-        "description": "View Wuthering Waves Resonator information, profiles, and use WuWa Tracker's material calculator to plan your Resonator upgrades. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+        "description": "Veja informações sobre os Resonators de Wuthering Waves e seus perfis, e use a calculadora de WuWa Tracker para planejar as melhorias de seus Resonators. WuWa Tracker conta o pity de Wuthering Waves, usando dados atualizados com estatísticas globais e mais. Compartilhe os seus tiros com seus amigos e acompanhe a sua conta!"
       },
       "Item": {
         "title": "Items - WuWa Tracker",
-        "description": "View Wuthering Waves item information, drop locations, and track your inventory - all in one place. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+        "description": "Veja informações de itens, localizações de drop, e acompanhe o seu inventário de Wuthering Waves - tudo num só lugar. WuWa Tracker conta o pity de Wuthering Waves, usando dados atualizados com estatísticas globais e mais. Compartilhe os seus tiros com seus amigos e acompanhe a sua conta!"
       },
       "Weapon": {
         "title": "Armas - WuWa Tracker",
-        "description": "View Wuthering Waves weapon information, attributes, and track your inventory - all in one place. WuWa Tracker pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!"
+        "description": "Veja informações das armas, atributos, e acompanhe o seu inventário de Wuthering Waves - tudo num só lugar. WuWa Tracker conta o pity de Wuthering Waves, usando dados atualizados com estatísticas globais e mais. Compartilhe os seus tiros com seus amigos e acompanhe a sua conta!"
       }
     },
     "Planner": {
       "title": "Planeador de Materiais - WuWa Tracker",
-      "description": "The most powerful Wuthering Waves calculator for planning your Resonator Ascension level, skill, and EXP materials! WuWa Tracker has a rich suite of tools to enhance your game experience."
+      "description": "A melhor calculadora de Wuthering Waves para planejar o nível de Ascenção e habilidades dos Resonators, e materiais de EXP! WuWa Tracker tem uma grande variedade de ferramentas para melhorar a sua experiência de jogo."
     }
   },
   "Layout": {
